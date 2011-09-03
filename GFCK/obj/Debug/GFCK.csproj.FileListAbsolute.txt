@@ -3,3 +3,8 @@ c:\users\jed\documents\visual studio 2010\Projects\GFCK\GFCK\bin\GFCK.pdb
 c:\users\jed\documents\visual studio 2010\Projects\GFCK\GFCK\obj\Debug\ResolveAssemblyReference.cache
 c:\users\jed\documents\visual studio 2010\Projects\GFCK\GFCK\obj\Debug\GFCK.dll
 c:\users\jed\documents\visual studio 2010\Projects\GFCK\GFCK\obj\Debug\GFCK.pdb
+C:\Users\Josh\GFC\GFCK\GFCK\bin\GFCK.dll
+C:\Users\Josh\GFC\GFCK\GFCK\bin\GFCK.pdb
+C:\Users\Josh\GFC\GFCK\GFCK\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Josh\GFC\GFCK\GFCK\obj\Debug\GFCK.dll
+C:\Users\Josh\GFC\GFCK\GFCK\obj\Debug\GFCK.pdb

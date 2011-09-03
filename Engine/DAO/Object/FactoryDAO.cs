@@ -20,10 +20,10 @@ namespace Engine.DAO.Object
             _connectionString = ConfigurationManager.ConnectionStrings["GFC"].ConnectionString;
         }
 
-        public ISSODAO GetSSODAO()
-        {
-            return new SSODAO(_connectionString);
-        }
+        //public ISSODAO GetSSODAO()
+        //{
+        //    return new SSODAO(_connectionString);
+        //}
 
         public static FactoryDAO GetInstance()
         {
