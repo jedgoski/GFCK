@@ -1,13 +1,46 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="home.ascx.cs" Inherits="GFCK.UserControls.Coupon.home" %>
+    <div id="coupons" style="width: 49%;float:left;">
+        <div class="box_head">
+            <div class="innerbox1">
+                <div class="innerbox2">
+                    <div class="innerbox3">
+                        <div class="innerbox4">
+                            <div class="innerbox5">
+                                <div class="innerbox6">
+                                    <div class="innerbox7">
+                                        <div class="innerbox8">
+                                            <div class="innerbox9">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_inner1">
+                <div class="background-top-4">
+                    <div class="background-top-left-4">
+                        <div class="background-top-right-4">
+                            <div class="background-bottom-left-4">
+                                <div class="background-bottom-right-4">
+                                    <div class="background-bottom-right-44">
+                                        <div class="box-indent">
+                                            <div class="box1_body">
             <div class="centerBoxContentsFeatured centeredContent back" style="width: 49%; zoom: 1;">
                 <div style="margin-left: 0px; width: auto;">
-                    <table style="width: 100%;" >
+                    <table style="width: 200px;" >
                         <tr>
                             <td>
                                 <div class="img_box1">
                                     <a href="#">
                                         <img src="/images/123456789.gif" alt="Product #01" title=" Product #01 " width="95" /></a><br />
                                 </div>
+                                <div style="height: 5px;">
+                                        </div>
                             </td>
                             <td>
                                 <div style="width: 5px;">
@@ -31,8 +64,7 @@
                                         <a href="#">
                                             <img src="/images/buttons/english/button_goto_prod_details.gif" alt="Go To This Product's Detailed Information"
                                                 title=" Go To This Product's Detailed Information " width="55" height="19" /></a><br />
-                                        <div style="height: 30px;">
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </td>
@@ -45,3 +77,14 @@
                     </div>
                 </div>
             </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>

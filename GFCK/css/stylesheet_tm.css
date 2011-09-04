@@ -17,7 +17,7 @@ img {border:0;}
 .user_menu ul{list-style:none; text-transform:capitalize; margin-top:0; font-family:Arial, Helvetica, sans-serif; font-size:11px; float:right}
 .user_menu li{float:left; background:url(../images/user_menu_bg.gif) no-repeat 100% 5px; display:block;}
 .user_menu li.last{float:left; background:none; display:block;}
-.user_menu li a{display:block; padding:2px 7px 5px 7px; text-decoration:underline; color:#85b101}
+.user_menu li a{display:block; padding:2px 7px 5px 7px; text-decoration:underline; color:#424589}
 .user_menu li a:hover{text-decoration:none}
 
 .user_menu2 ul{list-style:none; text-transform:capitalize; margin-top:0; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
@@ -59,11 +59,11 @@ img {border:0;}
 
 .content_t{}
 
-.footer_t{border-top:solid 2px #79aa2a; text-align:center; color:#636363; font-size:12px; font-family:Arial, Helvetica, sans-serif}
+.footer_t{border-top:solid 2px #269557; text-align:center; color:#636363; font-size:12px; font-family:Arial, Helvetica, sans-serif}
 .footer_t a{text-decoration:none;}
 .footer_t a:hover{text-decoration:underline;}
-.footer_t div span{color:#85b101; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
-.footer_t div span a{color:#85b101; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
+.footer_t div span{color:#424589; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.footer_t div span a{color:#424589; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
 .footer_t div span a:hover{text-decoration:none;}
 
 
