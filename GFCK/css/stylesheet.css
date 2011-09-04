@@ -1,0 +1,580 @@
+#upcomingProductsTable td{padding:5px;}
+#upcomingProductsTable th{padding:5px;}
+
+
+
+CODE {
+        font-family:tahoma; font-size:11px; line-height:normal; color:#707070;
+        }
+
+FORM, SELECT, INPUT {
+       
+        }
+FORM	{margin:0px; padding:0px;}
+
+TEXTAREA {
+        width:380px;        }
+
+input:focus, select:focus, textarea:focus {
+
+        }
+		
+		
+FIELDSET#contactUsForm{padding:15px 0 15px 15px; width:91%;}
+#loginDefault FIELDSET{padding:15px;}
+#gvFaqDefault FIELDSET{padding:15px;}
+
+.ccinfo .inputLabelPayment {display:block; width:80%; padding:5px 0 5px 0;}
+
+.wrapperAttribsOptions .back{display:block !important; clear:both;}
+		
+		
+#ship-item-item{margin-right:7px;}		
+		
+
+FIELDSET {
+        padding: 0.5em;
+        margin: 0.5em 0em;
+		border:1px solid #ababab;
+        }
+
+LEGEND {
+        font-weight: bold; padding:0 5px; color:#000000;
+        }
+
+LABEL, h4.optionName {
+        
+        }
+
+LABEL.checkboxLabel, LABEL.radioButtonLabel {
+
+	margin-left:10px;
+	margin-right:15px;
+
+        }
+		
+#checkoutShipping input{vertical-align:middle;}
+
+.ccinfo label{padding-bottom:5px;}		
+.ccinfo label{ margin:0 !important;}	
+#pmt-moneyorder{margin-top:0px !important;}
+		
+		
+
+#logo, .centerBoxContents, .specialsListBoxContents, .categoryListBoxContents, .centerBoxContentsAlsoPurch, .attribImg {
+        float: left;
+        }
+		
+		
+#contactUsForm .inputLabel {}
+#loginDefault .inputLabel {}
+#loginDefault #newsletter-checkbox{margin:15px 5px 15px 0; vertical-align:middle;}
+		
+
+LABEL.inputLabel {
+        width: 11em;
+		padding-right:10px;
+		padding-bottom:3px;
+		float:left;		
+        }
+#indexProductList LABEL.inputLabel{display:block; width:90%;}
+
+LABEL.inputLabelPayment {
+        width: 15em;
+        float: left;
+        }
+
+LABEL.selectLabel, LABEL.switchedLabel, LABEL.uploadsLabel  {
+        width: 12em;
+        float: left;
+        }
+
+P, ADDRESS {
+        padding:2px 0 2px 0;
+        }
+
+ADDRESS {
+        font-style: normal;
+        }
+
+.clearBoth {
+        clear: both; font-size:2px; line-height:2px;
+        }
+		
+		
+		
+
+
+
+
+HR {
+	border:1px solid #000000;
+	margin:5px 0px;
+}
+
+/*warnings, errors, messages*/
+.messageStackWarning, .messageStackError, .messageStackSuccess, .messageStackCaution {
+        line-min-height: 1.8em;
+        padding: 0.2em;
+        
+        }
+
+.messageStackWarning, .messageStackError {
+        color:#FF0000; 
+        }
+
+.messageStackSuccess {
+        background-color: #F1F6E6;
+        color:#707070;
+        }
+
+.messageStackCaution {
+        background-color: #FFFF66;
+        color:#707070;
+        }
+
+/*wrappers - page or section containers*/
+#mainWrapper {
+        text-align: left;
+        vertical-align: top;
+        }
+
+
+
+#tagline {
+        color:#716d7a; margin-top:10px;
+        font-size: 12px;
+        text-align : center;
+        vertical-align: middle;
+        }
+
+#sendSpendWrapper {
+        border: 1px solid #cacaca;
+        float: right;
+        margin: 0em 0em 1em 1em;
+        }
+
+.floatingBox, #accountLinksWrapper, #sendSpendWrapper, #checkoutShipto, #checkoutBillto, #navEZPagesTOCWrapper {
+        margin: 0;
+        }
+.floatingBox a {}
+
+ul{list-style-type:circle; list-style-position:inside;}
+#productDetailsList li a{}
+#productDetailsList li {}
+.wrapperAttribsOptions { display:block;
+        margin: 0.3em 0em;
+        }
+
+/*navigation*/
+#sorter {margin:0 10px 0 29px;}
+.navSplitPagesResult {margin-top:0; margin-bottom:12px; padding-left:12px; margin-right:12px; font-size:11px; color:#707070 }
+.navSplitPagesResult a {color:#e87005;font-weight:normal;}
+.navSplitPagesLinks {margin-top:0; margin-bottom:0; margin-left:12px; margin-right:12px; font-size:11px; color:#707070}
+.navSplitPagesLinks a {color:#e87005;font-weight:normal;}
+.navNextPrevCounter {
+        margin: 0em;
+        font-size: 10px;
+        }
+.navNextPrevList {
+        display: inline;
+        white-space: nowrap;
+        margin:0px 2px 3px 0px;
+        list-style-type: none;
+        }
+.navNextPrevWrapper{
+		margin-bottom:2px;
+		}
+
+#navMainWrapper, #navSuppWrapper, #navCatTabsWrapper {
+       
+        }
+
+#navMain ul, #navSupp ul, #navCatTabs ul  {
+        margin: 0;
+        padding:  0.5em 0em;
+        list-style-type: none;
+        text-align: center;
+        line-min-height: 1.5em;
+        }
+
+#navMain ul li, #navSupp ul li, #navCatTabs ul li {
+       
+        }
+
+#navMain ul li a, #navSupp ul li a, #navCatTabs ul li a {
+      
+        }
+
+#navEZPagesTOCWrapper {
+        font-weight: bold; float:inherit;
+        min-height: 1%;
+		padding:0.5em;
+		margin:5px 0px;
+        border: 1px solid #b0d3f0;
+        }
+
+#navEZPagesTOC ul {
+        margin: 0;
+        padding:  0.5em 0em;
+        list-style-type: none;
+        line-min-height: 1.5em;
+        }
+
+#navEZPagesTOC ul li {
+        white-space: nowrap;
+        }
+
+#navEZPagesTOC ul li a {
+        padding: 0em 0.5em;
+        margin: 0;
+        }
+
+#navMainSearch, #navCategoryIcon {
+        margin:5px 5px 0 0px;
+        }
+
+
+
+#navEZPagesTop {
+        
+        }
+
+
+/*The main content classes*/
+#contentColumnMain, #navColumnOne, #navColumnTwo, .centerBoxContents, .specialsListBoxContents, .categoryListBoxContents, .additionalImages, .centerBoxContentsSpecials, .centerBoxContentsAlsoPurch, .centerBoxContentsFeatured, .centerBoxContentsNew, .alert {
+        vertical-align: top;
+        }
+
+/*.content,*/ #productDescription, .shippingEstimatorWrapper {
+        /*font-size: 1.2em;*/
+        /*padding: 0.5em;*/
+        }
+.content	{
+		margin:0;
+		}
+
+.alert {
+        color:#FF0000;
+        margin-left: 0.5em;
+		margin-right:5px;
+        }
+.advisory {}
+.important {
+        font-weight: bold;
+		margin:5px;
+        }
+.notice {}
+.rating{}
+.gvBal {
+        float: right;
+        }
+#bannerOne, #bannerTwo,  #bannerThree,  #bannerFour,  #bannerFive,  #bannerSix {
+        padding: 0em;
+        }
+
+.smallText, #siteinfoLegal, #siteinfoCredits, #siteinfoStatus, #siteinfoIP {
+        font-size: 0.9em;
+        }
+
+/*Shopping Cart Display*/
+
+.tableHeading TH {
+
+        }
+
+.tableHeading, #cartSubTotal { 
+      
+	  }
+
+
+.tableRow, .tableHeading, #cartSubTotal {
+        min-height: 2.2em;
+        }
+
+.cartUnitDisplay, .cartTotalDisplay {
+        text-align: right;
+        padding-right: 0.2em;
+        }
+
+#scUpdateQuantity {
+        width: 2em;
+        }
+
+.cartQuantity {
+        width: 4.7em;
+        }
+
+.cartNewItem {
+        color:#707070;
+        position: relative;  /*do not remove-fixes stupid IEbug*/
+        }
+
+.cartOldItem {
+        /*do not remove-fixes stupid IEbug*/
+        }
+
+.cartBoxTotal {
+        text-align: right;
+        font-weight: bold;
+        }
+
+.cartRemoveItemDisplay {
+        width: 3.5em;
+        }
+
+#cartAttribsList {
+        margin-left: 1em;
+        }
+
+#mediaManager {
+width: 50%; 
+margin: 0.2em;
+padding: 0.5em;
+}
+
+
+#cartBoxListWrapper ul, #ezPageBoxList ul {
+        list-style-type: none;
+		list-style-position:outside
+        }
+
+#cartBoxListWrapper li, #ezPageBoxList li, .cartBoxTotal {
+        margin: 0;
+        padding: 0.2em 0em;
+        } 
+
+.totalBox {
+        width: 5.5em;
+        text-align: right;
+        padding: 0.2em;
+        }
+
+.lineTitle, .amount {
+        text-align: right;
+        padding: 0.2em;
+        }
+
+.amount {
+        width: 5.5em;
+        }
+
+/*Image Display*/
+
+
+.categoryIcon {}
+#cartImage {
+        margin: 0.5em 1em;
+        }
+
+/*Attributes*/
+.attribImg {
+        width: 20%;
+        margin: 0.3em 0em;
+}
+
+.attributesComments {}
+
+/*list box contents*/
+.centerBoxContents, .specialsListBoxContents, .categoryListBoxContents, .additionalImages, .centerBoxContentsSpecials, .centerBoxContentsAlsoPurch, .centerBoxContentsFeatured, .centerBoxContentsNew {
+
+        }
+
+/*sideboxes*/
+.columnLeft {}
+.columnRight {}
+
+
+
+
+
+
+.sideBoxContent {
+        }
+
+
+
+.rightBoxHeading {
+        margin: 0em;
+        background-color: #663366;
+        padding: 0.2em 0em;
+        }
+
+h3.leftBoxHeading a:hover {
+        color: #FFFF33;
+        text-decoration: none;
+        } 
+
+h3.rightBoxHeading a:hover {
+        color: #FF0000;
+        text-decoration: none;
+        }
+
+.rightBoxContent {
+        margin-bottom: 1em;
+        }
+
+.centeredContent, TH, #cartEmptyText, #cartBoxGVButton, #navCatTabsWrapper, #navEZPageNextPrev, #bannerOne, #bannerTwo,  #bannerThree,  #bannerFour,  #bannerFive,  #bannerSix, #siteinfoLegal, #siteinfoCredits, #siteinfoStatus, #siteinfoIP, .center, .cartRemoveItemDisplay, .cartQuantityUpdate, .cartQuantity, #cartBoxGVBalance, .leftBoxHeading, .centerBoxHeading,.rightBoxHeading, .productListing-data, .accountQuantityDisplay, .ratingRow, LABEL#textAreaReviews, #productMainImage, #reviewsInfoDefaultProductImage, #productReviewsDefaultProductImage, #reviewWriteMainImage, .centerBoxContents, .specialsListBoxContents, .categoryListBoxContents, .additionalImages, .centerBoxContentsSpecials, .centerBoxContentsAlsoPurch, .centerBoxContentsFeatured, .centerBoxContentsNew, .gvBal, .attribImg {
+
+       width:auto;
+	   color:#8f949a;
+	    font-size:10px;
+		font-family:Tahoma;
+		line-height:12px;
+		
+        }
+		
+		
+#whosonlineContent{color:#646464; font-family:Arial, Helvetica, sans-serif; font-size:12px;}		
+		
+		
+#textAreaReviews{display:block;}
+		
+		
+.categoryListBoxContents a {text-decoration:none; color:#C00505; text-transform:uppercase; text-align:center;}
+
+.cartTotalsDisplay{
+
+}
+
+
+#bannerboxHeading {
+        background-color: #0000CC;
+}
+
+#upProductsHeading {
+        text-align: left;
+        }
+
+#upDateHeading {
+        text-align: right;
+        }
+
+/*misc*/
+.back {
+        float: left;
+        }
+
+.forward {
+        float: right;
+        }
+
+.bold {
+        font-weight: bold;
+        }
+
+.rowOdd {
+        
+        min-height: 1.5em;
+        vertical-align: top;
+        }
+
+.rowEven { padding:5px 5px 5px 5px;
+        
+        min-height: 1.5em;
+        vertical-align: top;
+        }
+
+CAPTION {
+        /*display: none;*/
+        }
+
+#myAccountGen li, #myAccountNotify li {
+        margin: 0;
+        } 
+
+.accountTotalDisplay, .accountTaxDisplay {
+        width: 20%;
+        text-align: right;
+        /*vertical-align: top*/
+        }
+
+.accountQuantityDisplay {
+        width: 10%;
+        vertical-align: top
+        }
+
+TR.tableHeading {
+        min-height: 2em;
+        }
+
+#siteMapList {
+        width: 90%;
+        float: right;
+        }
+
+.ratingRow {
+        margin: 1em 0em 1.5em 0em;
+        }
+
+LABEL#textAreaReviews {
+        font-weight: normal;
+        }
+
+
+/*!!!!!!!!!*/
+#gvFaqDefaultMainContent{margin:10px 15px 15px 0;}
+#gvFaqDefaultContent{margin:0 5px 0 5px;}
+#reviewsDefaultNoReviews{margin:0 5px 5px 5px;}
+#createAcctSuccessMainContent{ margin:5px;}
+
+
+.ee	{text-decoration:line-through;}
+
+
+
+
+
+
+/*  --------------- PRICES ---------------  */
+
+.normalprice, .productSpecialPriceSale {
+
+font-size:14px;
+color:#ababab;
+font-weight:bold;
+line-height:normal;
+ text-decoration:line-through;
+        
+}
+		
+.normalprice {color:#737373; font-size:12px; line-height:24px; text-decoration:line-through; font-weight:bold; font-family:Arial, Helvetica, sans-serif}
+.productSpecialPrice, .productSalePrice, .productSpecialPriceSale {color:#e87005; font-size:12px; line-height:24px; font-weight:bold; font-family:Arial, Helvetica, sans-serif}
+
+
+
+
+
+.productSpecialPriceSale {
+	text-decoration:line-through;
+}
+		
+.productPriceDiscount {color:#373737; font-size:12px;}
+
+
+
+
+/*  --------------- BUTTONS ---------------  */
+
+.buttonRow, .buttonRow2 {padding:7px 2px 7px 0;}
+
+.buttonRow input, .buttonRow2 input, .buttonRow3 input {border:none; padding:0; background:none;}
+
+
+
+
+#accountHistoryDefault .buttonRow, .buttonRow2 {
+float:left !important;
+overflow:hidden;
+margin:-7px 0 15px 0;
+position:absolute;
+}
+
+
+
+#tellAFriendDefault input{margin:2px 0 2px 0 !important;}
+#tellAFriendDefault textarea{margin:2px 0 2px 0 !important;}
+#tellAFriendDefault label{margin:2px 0 2px 0 !important;}
+
+
+

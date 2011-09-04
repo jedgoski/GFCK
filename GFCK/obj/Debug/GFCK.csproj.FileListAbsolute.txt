@@ -8,3 +8,8 @@ C:\Users\Josh\GFC\GFCK\GFCK\bin\GFCK.pdb
 C:\Users\Josh\GFC\GFCK\GFCK\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Josh\GFC\GFCK\GFCK\obj\Debug\GFCK.dll
 C:\Users\Josh\GFC\GFCK\GFCK\obj\Debug\GFCK.pdb
+C:\Users\Jed\GFCK\GFCK\bin\GFCK.dll
+C:\Users\Jed\GFCK\GFCK\bin\GFCK.pdb
+C:\Users\Jed\GFCK\GFCK\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jed\GFCK\GFCK\obj\Debug\GFCK.dll
+C:\Users\Jed\GFCK\GFCK\obj\Debug\GFCK.pdb
