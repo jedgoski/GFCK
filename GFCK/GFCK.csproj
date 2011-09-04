@@ -306,12 +306,19 @@
     <Content Include="images\user_menu_box_bg.gif" />
     <Content Include="Manufacturer\default.aspx" />
     <Content Include="Member\default.aspx" />
-    <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="UserControls\Coupon\home.ascx" />
+    <Content Include="UserControls\Footer.ascx" />
+    <Content Include="UserControls\Header.ascx" />
+    <Content Include="UserControls\LeftCallout.ascx" />
+    <Content Include="UserControls\LeftCategories.ascx" />
+    <Content Include="UserControls\RightCallout.ascx" />
+    <Content Include="UserControls\Search.ascx" />
+    <Content Include="UserControls\TopCategories.ascx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -394,6 +401,62 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Coupon\home.ascx.cs">
+      <DependentUpon>home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Coupon\home.ascx.designer.cs">
+      <DependentUpon>home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LeftCallout.ascx.cs">
+      <DependentUpon>LeftCallout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LeftCallout.ascx.designer.cs">
+      <DependentUpon>LeftCallout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LeftCategories.ascx.cs">
+      <DependentUpon>LeftCategories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\LeftCategories.ascx.designer.cs">
+      <DependentUpon>LeftCategories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RightCallout.ascx.cs">
+      <DependentUpon>RightCallout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RightCallout.ascx.designer.cs">
+      <DependentUpon>RightCallout.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Search.ascx.cs">
+      <DependentUpon>Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Search.ascx.designer.cs">
+      <DependentUpon>Search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TopCategories.ascx.cs">
+      <DependentUpon>TopCategories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\TopCategories.ascx.designer.cs">
+      <DependentUpon>TopCategories.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

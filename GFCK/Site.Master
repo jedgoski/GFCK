@@ -1,4 +1,11 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GFCK.SiteMaster" %>
+<%@ Register Src="~/UserControls/Header.ascx" TagPrefix="uc" TagName="Header" %>
+<%@ Register Src="~/UserControls/TopCategories.ascx" TagPrefix="uc" TagName="TopCategories" %>
+<%@ Register Src="~/UserControls/Search.ascx" TagPrefix="uc" TagName="Search" %>
+<%@ Register Src="~/UserControls/LeftCategories.ascx" TagPrefix="uc" TagName="LeftCategories" %>
+<%@ Register Src="~/UserControls/LeftCallout.ascx" TagPrefix="uc" TagName="LeftCallout" %>
+<%@ Register Src="~/UserControls/RightCallout.ascx" TagPrefix="uc" TagName="RightCallout" %>
+<%@ Register Src="~/UserControls/Footer.ascx" TagPrefix="uc" TagName="Footer" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
@@ -11,664 +18,66 @@
     <link rel="stylesheet" type="text/css" href="/css/stylesheet_main.css" />
     <link rel="stylesheet" type="text/css" href="/css/stylesheet_tm.css" />
     <link rel="stylesheet" type="text/css" media="print" href="/css/print_stylesheet.css" />
-
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body id="indexBody">
     <form runat="server">
-                
-<!--bof-header logo and navigation display-->
-<div class="main_t">
-  <div class="header_t">
-    <div class="row1">
-      <div class="col1"><img src="/images/pixel_trans.gif" alt="" width="1" height="26" /><br />
-         <a href="/default.aspx"><img src="/images/logo.jpg" alt=""  height="64" /></a><br />
-      </div>
-      <div class="col2 user_menu"><img src="/images/pixel_trans.gif" alt="" width="1" height="48" /><br />
-        <ul>
-		                
-                <li class="first"><a href="/default.aspx">Home</a></li>
-                
-                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                    <AnonymousTemplate>
-                        <li><a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a></li>
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        <li>Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]</li>
-                    </LoggedInTemplate>
-                </asp:LoginView> 
-            
-                                
-                </ul>
-        <div class="clear"></div>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div class="row2">
-      <div class="inner1">
-        <div class="inner2">
-          <div class="inner3 user_menu2">
- 
- 
-	                    	<ul>
-  <li><span><a href="#">Vitamins & Supplements</a></span></li>
-  <li><span><a href="#">Groceries</a></span></li>
-  <li><span><a href="#">Personal Care Products</a></span></li>
-  <li><span><a href="#">OTC Medicines</a></span></li>
-  <li class="last"><span><a href="#">Other</a></span></li>
-  
-
- 
-    </ul>
-    
-            
- 
-            <div class="clear"></div>
-          </div>
+    <!--bof-header logo and navigation display-->
+    <div class="main_t">
+        <div class="header_t">
+            <div class="row1">
+                <uc:Header id="Header" runat="server" />
+            </div>
+            <div class="row2">
+                <uc:TopCategories id="TopCategories" runat="server" />
+            </div>
+            <div class="row3">
+                <uc:Search id="Search" runat="server" />
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="row3">
-    
-    
-      <div class="col1">
-        <div class="indent">
-          <div class="col1">
-            <div class="inn1">
-              <div class="inn2">
-                <div class="inn3">
-                  <div class="inn4">
-                    <input type="hidden" name="main_page" value="advanced_search_result" /><input type="hidden" name="search_in_description" value="1" /><input type="text" name="keyword" size="6" maxlength="30" class="input_search" value="Enter search keywords here" onfocus="if (this.value == 'Enter search keywords here') this.value = '';" onblur="if (this.value == '') this.value = 'Enter search keywords here';" />                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col2">
-            <div style="padding-left:4px;"><img src="/images/pixel_trans.gif" alt="" width="1" height="1" /><br />
-               <input type="image" src="/images/buttons/english/b_search.gif" alt="Search" title=" Search " /><br />            </div>
-          </div>
-          <div class="clear"></div>
-    
+        <img src="/images/pixel_trans.gif" alt="" width="1" height="14" /><br />
+        <div class="content_t">
+            <table border="0" cellspacing="0" cellpadding="0" id="contentMainWrapper" style="width: 100%;">
+                <tr>
+                    <td id="column_left" style="width: 202px;">
+                        <div style="width: 202px;">
+                            <!--// bof: categories //-->
+                            <div id="categories" style="width: 202px;">
+                                <uc:LeftCategories id="LeftCategories" runat="server" />
+                            </div>
+                            <!--// eof: categories //-->
+                            <!--// bof: specials //-->
+                            <div id="specials" style="width: 202px;">
+                                <uc:LeftCallout id="LeftCallout" runat="server" />
+                            </div>
+                            <!--// eof: specials //-->
+                        </div>
+                        <td>
+                            <img src="/images/pixel_trans.gif" alt="" width="10" height="1" />
+                        </td>
+                        <td style="width: 100%;">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td id="column_center" valign="top" style="width: 100%;">
+                                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                                    </td>
+                                    <td>
+                                        <img src="/images/pixel_trans.gif" alt="" width="9" height="1" />
+                                    </td>
+                                    <td id="column_right" style="width: 202px">
+                                        <uc:RightCallout id="RightCallout" runat="server" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+            </table>
         </div>
-      </div>
-      <div class="clear"></div>
+        <div class="footer_t">
+            <uc:Footer id="Footer" runat="server" />
+        </div>
     </div>
-  </div>
-  <img src="/images/pixel_trans.gif" alt="" width="1" height="14" /><br />
-  <div class="content_t">
-    
-    
- 
- 
-    
-	
-    
- 
- 
- 
- 
-<table border="0" cellspacing="0" cellpadding="0" id="contentMainWrapper" style="width:100%;">
-	<tr>
-    
-		
-            <td id="column_left" style="width:202px;">
-				
-                
-            <div style="width:202px;" >
-			                    <!--// bof: categories //-->
- 
- 
- 
-<div id="categories" style="width:202px;">
- 
-            <div class="box_head">
-                <div class="innerbox1">
-                <div class="innerbox2">
-                <div class="innerbox3">
-                <div class="innerbox4">
-                <div class="innerbox5">
-                <div class="innerbox6">
-                <div class="innerbox7">
-                <div class="innerbox8">
-                <div class="innerbox9">
-					Categories                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-            </div>
- 
-            
- 
-<div class="box">
-	<div class="box_inner1">
-	<div class="background-top-4">
-	<div class="background-top-left-4">
-	<div class="background-top-right-4">
-	<div class="background-bottom-left-4">
-	<div class="background-bottom-right-4">
-	<div class="background-bottom-right-44">
-    
-    
-	
-    
-    
-    	
-            
-            <div class="box-indent">
-            <div class="box1_body">
-                <div id="categoriesContent" class="sideBoxContent">
-<ul>
-<li class="category-top_un"><span class="top-span"><a class="category-top_un" href="#"> Online Shopping Aisles</a></span></li><li class="category-top"><span class="top-span"><a class="category-top" href="#">Baby &amp; Child Care</a></span></li><li class="category-top"><span class="top-span"><a class="category-top" href="#">Cosmetics</a></span></li><li class="category-top"><span class="top-span"><a class="category-top" href="#">Diet &amp; Nutrition</a></span></li><li class="category-top"><span class="top-span"><a class="category-top" href="#">Gifts &amp; Specialty</a></span></li><li class="category-top"><span class="top-span"><a class="category-top" href="#">Home Medical Supplies-&gt;</a></span></li><li class="category-top"><span class="top-span"><a class="category-top" href="#">Household Items</a></span></li><li class="category-top"><span class="top-span"><a class="category-top" href="#">Medicine Cabinet</a></span></li></ul>
-</div>            </div> 
-            
-            
-        
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</div>
-</div>
- 
- 
-        
-<!--// eof: categories //-->
-<!--// bof: specials //-->
- 
- 
- 
-<div id="specials" style="width:202px;">
- 
-            <div class="box_head">
-                <div class="innerbox1">
-                <div class="innerbox2">
-                <div class="innerbox3">
-                <div class="innerbox4">
-                <div class="innerbox5">
-                <div class="innerbox6">
-                <div class="innerbox7">
-                <div class="innerbox8">
-                <div class="innerbox9">
-					<a href="#">Specials</a>                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-            </div>
- 
-            
- 
-<div class="box">
-	<div class="box_inner1">
-	<div class="background-top-4">
-	<div class="background-top-left-4">
-	<div class="background-top-right-4">
-	<div class="background-bottom-left-4">
-	<div class="background-bottom-right-4">
-	<div class="background-bottom-right-44">
-    
-    
-	
-    
-    
-    	
-            
-            <div class="box-indent">
-            <div class="box1_body">
-                <div class="sideBoxContent centeredContent">
-	
-	
-							<div class="img_box1">
-								<a href="#"><img src="/images/12.jpg" alt="Product #012" title=" Product #012 " width="95" height="95" /></a>
-								</div>
-								
-  
-	
-	<div class="clear"></div>
- 
- 
-	
-	
-	<div style="padding-left:0; padding-top:15px;  padding-bottom:10px; "><b><a href="#">Product #012</a></b></div><div style="padding-top:5px; padding-left:0; "><span class="normalprice">$189.00 </span>&nbsp;<span class="productSpecialPrice">$49.64</span></div>
-	
-	
-	
-				
-	
-</div>            </div> 
-            
-            
-        
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</div>
-</div>
- 
- 
-        
-<!--// eof: specials //-->
-            </div>               
-		
-            <td><img src="/images/pixel_trans.gif" alt="" width="10" height="1" /></td>
-            
-			
-			
-            
-            
-            <td style="width:100%;">
-            
-            
- 
- 
-            
-            
-            	<table style="width:100%;">
-                	<tr>
-<td id="column_center" valign="top" style="width:100%;">
- 
-				            
-             
-            
- 
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
- 
-                
-                
-                
- 
- 
- 
- 
- 
-    
-    
- 
-                <!-- bof BANNERS GROUPSET 4 -->
-                                    <!-- eof BANNERS GROUPSET 4 -->
-                
-                
-                
-                
-            </td>
-            
-            
-            					
-            <td><img src="/images/pixel_trans.gif" alt="" width="9" height="1" /></td>
-            
-            <td id="column_right" style="width:202px">
-            
-            
- 
-    
-                <div style="width:202px;" >
-                                        
-                                        
- 
- 
- 
- 
- 
-<!--// bof: shoppingcart //-->
- 
- 
-<div  id="shoppingcart" style="width:202px;">
- 
-            <div class="box_head">
-                <div class="innerbox1">
-                <div class="innerbox2">
-                <div class="innerbox3">
-                <div class="innerbox4">
-                <div class="innerbox5">
-                <div class="innerbox6">
-                <div class="innerbox7">
-                <div class="innerbox8">
-                <div class="innerbox9">
-					<a href="#">Shopping Cart</a>                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-            </div>
- 
-            
- 
-<div class="box">
-	<div class="box_inner1">
-	<div class="background-top-4">
-	<div class="background-top-left-4">
-	<div class="background-top-right-4">
-	<div class="background-bottom-left-4">
-	<div class="background-bottom-right-4">
-	<div class="background-bottom-right-44">
-	
-    
-    
-    	
-            
-            <div class="box-indent">
-            <div class="box1_body">
-                <div id="shoppingcartContent" class="sideBoxContent"><div id="cartBoxEmpty">
- 
- 
- 
- <table style="width:100%;" class="shop_box">
-	<tr>
-    	<td>	
-        	<span>Now in your cart</span><a href="#">0 items</a><br />
-        </td>
-    </tr>
-</table>
- 
- 
- 
- 
- 
- 
- </div></div>            </div> 
-            
-            
-        
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</div>
- 
-</div>
- 
- 
-<!--// eof: shoppingcart //-->
- 
-<!--// bof: information //-->
- 
- 
-<div  id="information" style="width:202px;">
- 
-            <div class="box_head">
-                <div class="innerbox1">
-                <div class="innerbox2">
-                <div class="innerbox3">
-                <div class="innerbox4">
-                <div class="innerbox5">
-                <div class="innerbox6">
-                <div class="innerbox7">
-                <div class="innerbox8">
-                <div class="innerbox9">
-					Information                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-            </div>
- 
-            
- 
-<div class="box">
-	<div class="box_inner1">
-	<div class="background-top-4">
-	<div class="background-top-left-4">
-	<div class="background-top-right-4">
-	<div class="background-bottom-left-4">
-	<div class="background-bottom-right-4">
-	<div class="background-bottom-right-44">
-	
-    
-    
-    	
-            
-            <div class="box-indent">
-            <div class="box1_body">
-                <div id="informationContent" class="sideBoxContent">
-<ul style="margin: 0; padding: 0; list-style-type: none;">
-<li class="category-top_un"><span class="top-span"><a href="#">Shipping &amp; Returns</a></span></li><li><span class="top-span"><a href="#">Privacy Notice</a></span></li><li><span class="top-span"><a href="#">Conditions of Use</a></span></li><li><span class="top-span"><a href="#contact_us">Contact Us</a></span></li><li><span class="top-span"><a href="#site_map">Site Map</a></span></li><li><span class="top-span"><a href="#gv_faq">Gift Certificate FAQ</a></span></li><li><span class="top-span"><a href="#discount_coupon">Discount Coupons</a></span></li><li><span class="top-span"><a href="#unsubscribe">Newsletter Unsubscribe</a></span></li></ul>
-</div>            </div> 
-            
-            
-        
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</div>
- 
-</div>
- 
- 
-<!--// eof: information //-->
- 
-<!--// bof: manufacturers //-->
- 
- 
-<div  id="manufacturers" style="width:202px;">
- 
-            <div class="box_head">
-                <div class="innerbox1">
-                <div class="innerbox2">
-                <div class="innerbox3">
-                <div class="innerbox4">
-                <div class="innerbox5">
-                <div class="innerbox6">
-                <div class="innerbox7">
-                <div class="innerbox8">
-                <div class="innerbox9">
-					<label>Manufacturers</label>                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-            </div>
- 
-            
- 
-<div class="box">
-	<div class="box_inner1">
-	<div class="background-top-4">
-	<div class="background-top-left-4">
-	<div class="background-top-right-4">
-	<div class="background-bottom-left-4">
-	<div class="background-bottom-right-4">
-	<div class="background-bottom-right-44">
-	
-    
-    
-    	
-            
-            <div class="box-indent">
-            <div class="box1_body">
-                <div id="manufacturersContent" class="sideBoxContent centeredContent"><form name="manufacturers_form" action="#index" method="get"><input type="hidden" name="main_page" value="index" /><select name="manufacturers_id" onchange="this.form.submit();" size="1" style="width: 90%; margin: auto;">
-  <option value="" selected="selected">Please Select</option>
-  <option value="1">Example 1</option>
-  <option value="2">Example 2</option>
-  <option value="3">Example 3</option>
-</select>
-</form></div>            </div> 
-            
-            
-        
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</div>
- 
-</div>
- 
- 
-<!--// eof: manufacturers //-->
- 
-<!--// bof: whosonline //-->
- 
- 
-<div  id="whosonline" style="width:202px;">
- 
-            <div class="box_head">
-                <div class="innerbox1">
-                <div class="innerbox2">
-                <div class="innerbox3">
-                <div class="innerbox4">
-                <div class="innerbox5">
-                <div class="innerbox6">
-                <div class="innerbox7">
-                <div class="innerbox8">
-                <div class="innerbox9">
-					Who's Online                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-                </div>
-            </div>
- 
-            
- 
-<div class="box">
-	<div class="box_inner1">
-	<div class="background-top-4">
-	<div class="background-top-left-4">
-	<div class="background-top-right-4">
-	<div class="background-bottom-left-4">
-	<div class="background-bottom-right-4">
-	<div class="background-bottom-right-44">
-	
-    
-    
-    	
-            
-            <div class="box-indent">
-            <div class="box1_body">
-                <div id="whosonlineContent" class="sideBoxContent centeredContent">There currently are&nbsp;2&nbsp;guests&nbsp;online.</div>            </div> 
-            
-            
-        
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</div>
- 
-</div>
- 
- 
-<!--// eof: whosonline //-->
- 
-                </div>
-    
-            </td>
- 
-                    
-            
-            
-                    </tr>
-                </table>
-                
-                
-                
-            </td>
-            
- 
-        
-    </tr>
-</table>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-  </div>
-  <div class="footer_t"><img src="/images/pixel_trans.gif" alt="" width="1" height="18" /><br />
-  
-  
-						<div>								<span><a href="/default.aspx">Home</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#products_new">New Products</a>
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#specials">Specials</a>
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#products_all">All Products</a>
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#reviews">Reviews</a>
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#contact_us">Contact Us</a>
-&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#gv_faq">FAQ</a>
-</span><br />
-                            
-       <img src="/images/pixel_trans.gif" alt="" width="1" height="6" /><br />
-                               
-                                
-		
-							                            
-                            
-      
-								  </div>
-  
-    <img src="/images/pixel_trans.gif" alt="" width="1" height="10" /><br />
-    
-    </div>
-</div>
-
     </form>
 </body>
 </html>

@@ -13,3 +13,8 @@ C:\Users\Jed\GFCK\GFCK\bin\GFCK.pdb
 C:\Users\Jed\GFCK\GFCK\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Jed\GFCK\GFCK\obj\Debug\GFCK.dll
 C:\Users\Jed\GFCK\GFCK\obj\Debug\GFCK.pdb
+\\jedlaptop\users\Jed\GFCK\GFCK\bin\GFCK.dll
+\\jedlaptop\users\Jed\GFCK\GFCK\bin\GFCK.pdb
+\\jedlaptop\users\Jed\GFCK\GFCK\obj\Debug\ResolveAssemblyReference.cache
+\\jedlaptop\users\Jed\GFCK\GFCK\obj\Debug\GFCK.dll
+\\jedlaptop\users\Jed\GFCK\GFCK\obj\Debug\GFCK.pdb
