@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="GFCK.UserControls.Header" %>
 <div class="col1">
-    <img src="/images/pixel_trans.gif" alt="" width="1" height="26" /><br />
+    <img src="/images/pixel_trans.gif" alt="" width="1" height="16" /><br />
     <a href="/default.aspx">
         <img src="/images/logo.jpg" alt="" height="64" /></a><br />
 </div>

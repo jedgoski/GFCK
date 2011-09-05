@@ -315,11 +315,11 @@ input.cart_quantity{width:51px; height:18px; color:#978276; font-size:11px;}
 
 
 
-.product_box_name{color:#2b2b2b; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; line-height:16px;}
+.product_box_name{color:#424589; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; line-height:16px;}
 .product_box_name .indent{padding:0 20px 2px 0;}
 .product_box_name .indent2{padding:0 10px 15px 0;}
 
-.product_box_name a{color:#2b2b2b; text-decoration:underline; padding-left:0;}
+.product_box_name a{color:#424589; text-decoration:underline; padding-left:0;}
 .product_box_name a:hover{text-decoration:none;}
 
 

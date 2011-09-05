@@ -15,8 +15,8 @@
                             <img src="/images/pixel_trans.gif" alt="" width="1" height="1" /><br />
                             <div>
                                 <a href="#">
-                                    <img src="/images/banner1.jpg" alt="free shipping" title=" free shipping " width="447"
-                                        height="183" /></a></div>
+                                    <img src="/images/banner1.jpg" alt="free shipping" title=" free shipping "
+                                        /></a></div>
                             <img src="/images/pixel_trans.gif" alt="" width="1" height="12" /><br />
                             <!-- eof BANNERS GROUPSET 1 -->
                         </td>

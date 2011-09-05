@@ -218,6 +218,15 @@
     <Content Include="images\buttons\english\b_search.gif" />
     <Content Include="images\buttons\english\search2.gif" />
     <Content Include="images\buttons\english\small_edit.gif" />
+    <Content Include="images\clear_head_bg1.gif" />
+    <Content Include="images\clear_head_bg1a.gif" />
+    <Content Include="images\clear_head_bg2.gif" />
+    <Content Include="images\clear_head_bg3.gif" />
+    <Content Include="images\clear_head_bg4.gif" />
+    <Content Include="images\clear_head_bg5.gif" />
+    <Content Include="images\clear_head_bg6.gif" />
+    <Content Include="images\clear_head_bg7.gif" />
+    <Content Include="images\clear_head_bg8.gif" />
     <Content Include="images\fat_line.gif" />
     <Content Include="images\flag.gif" />
     <Content Include="images\footer_bg2.jpg" />
@@ -278,9 +287,11 @@
     <Content Include="images\maintep_bg2.gif" />
     <Content Include="images\menu_bg1.gif" />
     <Content Include="images\PayPal.gif" />
+    <Content Include="images\pixel_trans.gif" />
     <Content Include="images\productListing-heading_bg_th.gif" />
     <Content Include="images\right_bg.gif" />
     <Content Include="images\row2_back1.gif" />
+    <Content Include="images\scissors.jpg" />
     <Content Include="images\screenshot.jpg" />
     <Content Include="images\spacer.gif" />
     <Content Include="images\stars_1.gif" />

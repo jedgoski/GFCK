@@ -53,24 +53,25 @@
                             </div>
                             <!--// eof: specials //-->
                         </div>
-                        <td>
-                            <img src="/images/pixel_trans.gif" alt="" width="10" height="1" />
-                        </td>
-                        <td style="width: 100%;">
-                            <table style="width: 100%;">
-                                <tr>
-                                    <td id="column_center" valign="top" style="width: 100%;">
-                                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-                                    </td>
-                                    <td>
-                                        <img src="/images/pixel_trans.gif" alt="" width="9" height="1" />
-                                    </td>
-                                    <td id="column_right" style="width: 202px">
-                                        <uc:RightCallout id="RightCallout" runat="server" />
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
+                    </td>
+                    <td>
+                        <img src="/images/pixel_trans.gif" alt="" width="10" height="1" />
+                    </td>
+                    <td style="width: 100%;">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td id="column_center" valign="top" style="width: 100%;">
+                                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                                </td>
+                                <td>
+                                    <img src="/images/pixel_trans.gif" alt="" width="9" height="1" />
+                                </td>
+                                <td id="column_right" style="width: 202px">
+                                    <uc:RightCallout id="RightCallout" runat="server" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
             </table>
         </div>

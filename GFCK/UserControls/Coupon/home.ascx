@@ -9,7 +9,7 @@
                                 <div class="innerbox6">
                                     <div class="innerbox7">
                                         <div class="innerbox8">
-                                            <div class="innerbox9">
+                                            <div class="innerbox9"><img src="../../images/scissors.jpg" height="14px" />
                                             </div>
                                         </div>
                                     </div>

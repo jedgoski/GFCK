@@ -9,7 +9,7 @@
                             <div class="innerbox7">
                                 <div class="innerbox8">
                                     <div class="innerbox9">
-                                        <a href="#">Specials</a>
+                                        Specials
                                     </div>
                                 </div>
                             </div>
@@ -31,16 +31,10 @@
                                 <div class="box-indent">
                                     <div class="box1_body">
                                         <div class="sideBoxContent centeredContent">
-                                            <div class="img_box1">
-                                                <a href="#">
-                                                    <img src="/images/123456790.gif" alt="Product #012" title=" Product #012 " width="95" /></a>
-                                            </div>
-                                            <div class="clear">
-                                            </div>
-                                            <div style="padding-left: 0; padding-top: 15px; padding-bottom: 10px;">
-                                                <b><a href="#">Check Mix</a></b></div>
-                                            <div style="padding-top: 5px; padding-left: 0;">
-                                                <span class="productSpecialPrice">$0.75 off</span></div>
+                                            <div>
+                                <a href="#">
+                                    <img src="/images/banner2.jpg" alt="free shipping" title=" free shipping " width="90%"
+                                        /></a></div>
                                         </div>
                                     </div>
                                 </div>
