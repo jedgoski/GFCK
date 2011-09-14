@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Configuration;
+using Engine.DAO.Domain;
 
 namespace Engine.DAO.Object
 {
@@ -17,13 +18,33 @@ namespace Engine.DAO.Object
 
         public FactoryDAO()
         {
-            _connectionString = ConfigurationManager.ConnectionStrings["GFC"].ConnectionString;
+            _connectionString = ConfigurationManager.ConnectionStrings["GFCK"].ConnectionString;
         }
 
-        //public ISSODAO GetSSODAO()
-        //{
-        //    return new SSODAO(_connectionString);
-        //}
+        public IMerchantDAO GetMerchantDAO()
+        {
+            return new MerchantDAO(_connectionString);
+        }
+
+        public ICategoryDAO GetCategoryDAO()
+        {
+            return new CategoryDAO(_connectionString);
+        }
+
+        public IBarcodeDAO GetBarcodeDAO()
+        {
+            return new BarcodeDAO(_connectionString);
+        }
+
+        public ICouponDAO GetCouponDAO()
+        {
+            return new CouponDAO(_connectionString);
+        }
+
+        public ITemplateDAO GetTemplateDAO()
+        {
+            return new TemplateDAO(_connectionString);
+        }
 
         public static FactoryDAO GetInstance()
         {

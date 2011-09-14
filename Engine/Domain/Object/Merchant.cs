@@ -10,6 +10,7 @@ namespace Engine.Domain.Object
         public Int64 ID { get; set; }
         public String FirstName { get; set; }
         public String LastName { get; set; }
+        public String MerchantName { get; set; }
         public String Description { get; set; }
         public String Email { get; set; }
         public String PhoneNumber { get; set; }

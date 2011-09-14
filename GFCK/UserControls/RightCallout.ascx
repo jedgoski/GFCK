@@ -146,13 +146,8 @@
                                         <div class="box-indent">
                                             <div class="box1_body">
                                                 <div id="manufacturersContent" class="sideBoxContent centeredContent">
-                                                    <input type="hidden" name="main_page" value="index" /><select name="manufacturers_id"
-                                                        onchange="this.form.submit();" size="1" style="width: 90%; margin: auto;">
-                                                        <option value="" selected="selected">Please Select</option>
-                                                        <option value="1">Example 1</option>
-                                                        <option value="2">Example 2</option>
-                                                        <option value="3">Example 3</option>
-                                                    </select>
+                                                    <asp:DropDownList ID="ddlManufacturers" runat="server">
+                                                    </asp:DropDownList>
                                                 </div>
                                             </div>
                                         </div>

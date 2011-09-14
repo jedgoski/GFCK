@@ -18,3 +18,6 @@ C:\Users\Jed\GFCK\GFCK\obj\Debug\GFCK.pdb
 \\jedlaptop\users\Jed\GFCK\GFCK\obj\Debug\ResolveAssemblyReference.cache
 \\jedlaptop\users\Jed\GFCK\GFCK\obj\Debug\GFCK.dll
 \\jedlaptop\users\Jed\GFCK\GFCK\obj\Debug\GFCK.pdb
+C:\Users\Josh\GFC\GFCK\GFCK\bin\Engine.dll
+C:\Users\Josh\GFC\GFCK\GFCK\bin\log4net.dll
+C:\Users\Josh\GFC\GFCK\GFCK\bin\Engine.pdb

@@ -5,9 +5,11 @@ using System.Text;
 
 namespace Engine.Domain.Object
 {
-    public class Category
+    public class CouponPrint
     {
         public Int64 ID { get; set; }
-        public String Name { get; set; }
+        public Int64 CouponID { get; set; }
+        public DateTime PrintedDate { get; set; }
+        public String IPAddress { get; set; }
     }
 }
