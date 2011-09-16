@@ -1,2 +1,4 @@
-*/obj/
+*/obj/*
 *.suo
+*.cache
+*/bin/*
