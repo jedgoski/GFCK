@@ -22,8 +22,8 @@
                 <td><label id="lblManufacturerName" runat="server" /></td>
                 <td><label id="lblEmail" runat="server" /></td>
                 <td>
-                    <a id="A1" href="/Admin/ManufacturerAction.aspx?Mode=Edit&ManufacturerID={0}" runat="server">Edit</a> | 
-                    <a id="A2" href="/Admin/ManufacturerAction.aspx?Mode=View&ManufacturerID={0}" runat="server">View</a> | 
+                    <a id="lnkEdit" href="/Admin/ManufacturerAction.aspx?Mode=Edit&ManufacturerID={0}" runat="server">Edit</a> | 
+                    <a id="lnkView" href="/Admin/ManufacturerAction.aspx?Mode=View&ManufacturerID={0}" runat="server">View</a> | 
                     <asp:LinkButton id="lnkDelete" CommandName="Delete" Text="Delete" runat="server" />
                 </td>
             </tr>
@@ -34,8 +34,8 @@
                 <td><label id="lblManufacturerName" runat="server" /></td>
                 <td><label id="lblEmail" runat="server" /></td>
                 <td>
-                    <a id="A1" href="/Admin/ManufacturerAction.aspx?Mode=Edit&ManufacturerID={0}" runat="server">Edit</a> | 
-                    <a id="A2" href="/Admin/ManufacturerAction.aspx?Mode=View&ManufacturerID={0}" runat="server">View</a> | 
+                    <a id="lnkEdit" href="/Admin/ManufacturerAction.aspx?Mode=Edit&ManufacturerID={0}" runat="server">Edit</a> | 
+                    <a id="lnkView" href="/Admin/ManufacturerAction.aspx?Mode=View&ManufacturerID={0}" runat="server">View</a> | 
                     <asp:LinkButton id="lnkDelete" CommandName="Delete" Text="Delete" runat="server" />
                 </td>
             </tr>
