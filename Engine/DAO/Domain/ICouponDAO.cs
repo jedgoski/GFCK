@@ -12,6 +12,8 @@ namespace Engine.DAO.Domain
         bool AddCouponPrint(CouponPrint couponPrint);
         bool UpdateCoupon(Coupon coupon);
         List<Coupon> GetAllCouponsForMerchantID(Int64 ID);
+        Coupon GetCoupon(Int64 ID);
+        bool AddCoupon(Coupon coupon);
 
     }
 }

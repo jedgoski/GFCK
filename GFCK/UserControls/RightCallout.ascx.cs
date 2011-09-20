@@ -7,11 +7,13 @@ using System.Web.UI.WebControls;
 using Engine.DAO.Object;
 using Engine.DAO.Domain;
 using Engine.Domain.Object;
+using log4net;
 
 namespace GFCK.UserControls
 {
     public partial class RightCallout : System.Web.UI.UserControl
     {
+        public static readonly ILog _log = LogManager.GetLogger(typeof(RightCallout));
         FactoryDAO _factoryDAO = FactoryDAO.GetInstance();
         protected override void OnInit(EventArgs e)
         {

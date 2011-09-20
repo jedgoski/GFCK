@@ -62,7 +62,7 @@
     <Compile Include="Domain\Object\Coupon.cs" />
     <Compile Include="Domain\Object\Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Util\Global.cs" />
+    <Compile Include="Util\Globals.cs" />
     <Compile Include="Util\SqlDataHelper.cs" />
   </ItemGroup>
   <ItemGroup />
