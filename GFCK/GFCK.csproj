@@ -56,6 +56,12 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Admin\default.aspx" />
+<<<<<<< HEAD
+=======
+    <Content Include="Admin\ManufacturerAdmin.aspx" />
+    <Content Include="Admin\ManufacturerAction.aspx" />
+    <Content Include="contact-us.aspx" />
+>>>>>>> 0f2f6634e624608d4c66ca22cefa4f3132adc8a5
     <Content Include="css\CSS_read_me.txt" />
     <Content Include="css\print_stylesheet.css" />
     <Content Include="css\stylesheet.css" />
@@ -315,6 +321,8 @@
     <Content Include="images\user_menu_bg.gif" />
     <Content Include="images\user_menu_bg2.gif" />
     <Content Include="images\user_menu_box_bg.gif" />
+    <Content Include="Manufacturer\Coupons.aspx" />
+    <Content Include="Manufacturer\CouponAction.aspx" />
     <Content Include="Manufacturer\default.aspx" />
     <Content Include="Member\default.aspx" />
     <Content Include="Default.aspx" />
@@ -330,7 +338,9 @@
     <Content Include="UserControls\RightCallout.ascx" />
     <Content Include="UserControls\Search.ascx" />
     <Content Include="UserControls\TopCategories.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -381,6 +391,30 @@
     <Compile Include="Admin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="Admin\ManufacturerAdmin.aspx.cs">
+      <DependentUpon>ManufacturerAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManufacturerAdmin.aspx.designer.cs">
+      <DependentUpon>ManufacturerAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManufacturerAction.aspx.cs">
+      <DependentUpon>ManufacturerAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManufacturerAction.aspx.designer.cs">
+      <DependentUpon>ManufacturerAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact-us.aspx.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact-us.aspx.designer.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+    </Compile>
+>>>>>>> 0f2f6634e624608d4c66ca22cefa4f3132adc8a5
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -390,6 +424,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\Coupons.aspx.cs">
+      <DependentUpon>Coupons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manufacturer\Coupons.aspx.designer.cs">
+      <DependentUpon>Coupons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manufacturer\CouponAction.aspx.cs">
+      <DependentUpon>CouponAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manufacturer\CouponAction.aspx.designer.cs">
+      <DependentUpon>CouponAction.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manufacturer\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>

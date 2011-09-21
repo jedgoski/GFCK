@@ -53,6 +53,11 @@
     <Compile Include="Domain\Object\Coupon.cs" />
     <Compile Include="Domain\Object\Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Util\Globals.cs" />
+    <Compile Include="Util\SqlDataHelper.cs" />
+>>>>>>> 0f2f6634e624608d4c66ca22cefa4f3132adc8a5
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Util\" />
