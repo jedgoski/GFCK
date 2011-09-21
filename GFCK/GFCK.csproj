@@ -338,9 +338,7 @@
     <Content Include="UserControls\RightCallout.ascx" />
     <Content Include="UserControls\Search.ascx" />
     <Content Include="UserControls\TopCategories.ascx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
