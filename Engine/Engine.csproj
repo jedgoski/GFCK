@@ -44,24 +44,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\Domain\IBarcodeDAO.cs" />
+    <Compile Include="DAO\Domain\ICategoryDAO.cs" />
+    <Compile Include="DAO\Domain\ICouponDAO.cs" />
     <Compile Include="DAO\Domain\IMerchantDAO.cs" />
+    <Compile Include="DAO\Domain\ITemplateDAO.cs" />
+    <Compile Include="DAO\Object\BarcodeDAO.cs" />
+    <Compile Include="DAO\Object\CategoryDAO.cs" />
+    <Compile Include="DAO\Object\CouponDAO.cs" />
     <Compile Include="DAO\Object\FactoryDAO.cs" />
     <Compile Include="DAO\Object\MerchantDAO.cs" />
+    <Compile Include="DAO\Object\TemplateDAO.cs" />
     <Compile Include="Domain\Object\BarcodeType.cs" />
     <Compile Include="Domain\Object\Category.cs" />
+    <Compile Include="Domain\Object\CouponPrint.cs" />
     <Compile Include="Domain\Object\Merchant.cs" />
     <Compile Include="Domain\Object\Coupon.cs" />
     <Compile Include="Domain\Object\Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Util\Globals.cs" />
     <Compile Include="Util\SqlDataHelper.cs" />
->>>>>>> 0f2f6634e624608d4c66ca22cefa4f3132adc8a5
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Util\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Components\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -56,12 +59,9 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Admin\default.aspx" />
-<<<<<<< HEAD
-=======
     <Content Include="Admin\ManufacturerAdmin.aspx" />
     <Content Include="Admin\ManufacturerAction.aspx" />
     <Content Include="contact-us.aspx" />
->>>>>>> 0f2f6634e624608d4c66ca22cefa4f3132adc8a5
     <Content Include="css\CSS_read_me.txt" />
     <Content Include="css\print_stylesheet.css" />
     <Content Include="css\stylesheet.css" />
@@ -391,8 +391,6 @@
     <Compile Include="Admin\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-=======
     <Compile Include="Admin\ManufacturerAdmin.aspx.cs">
       <DependentUpon>ManufacturerAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -414,7 +412,6 @@
     <Compile Include="contact-us.aspx.designer.cs">
       <DependentUpon>contact-us.aspx</DependentUpon>
     </Compile>
->>>>>>> 0f2f6634e624608d4c66ca22cefa4f3132adc8a5
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -524,6 +521,12 @@
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine\Engine.csproj">
+      <Project>{4B549A78-22C0-44E1-93E6-08E3C28EF584}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
