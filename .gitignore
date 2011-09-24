@@ -5,3 +5,5 @@
 /Engine/obj
 /Engine/bin
 /Engine/obj/Debug/ResolveAssemblyReference.cache
+/Engine/bin
+/Engine/obj
