@@ -8,6 +8,8 @@ namespace Engine.Domain.Object
     public class Merchant
     {
         public Int64 ID { get; set; }
+        public Guid UserID { get; set; }
+        public String UserName { get; set; }
         public String FirstName { get; set; }
         public String LastName { get; set; }
         public String MerchantName { get; set; }
@@ -17,6 +19,6 @@ namespace Engine.Domain.Object
         public String Address { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
-        public bool Enabled { get; set; }
+        public bool Deleted { get; set; }
     }
 }
