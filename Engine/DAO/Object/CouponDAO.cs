@@ -79,6 +79,65 @@ namespace Engine.DAO.Object
             return coupons;
         }
 
+        public List<Coupon> GetAllCouponsByCategory(int categoryID)
+        {
+            List<Coupon> coupons = null;
+            _log.DebugFormat(@"dbo.GetAllCouponsByCategory: categoryID={0}", categoryID);
+            try
+            {
+
+                coupons = new List<Coupon>();
+                AddSQLParameter("@categoryID", SqlDbType.Int, categoryID);
+                DataSet ds = GetDatasetByCommand("dbo.GetAllCouponsByCategoryID");
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    Coupon coupon = new Coupon();
+                    coupon.ID = Convert.ToInt64(row["ID"]);
+                    coupon.MerchantID = Convert.ToInt64(row["MerchantID"]);
+                    coupon.TemplateID = Convert.ToInt64(row["TemplateID"]);
+                    coupon.CategoryID = Convert.ToInt64(row["CategoryID"]);
+                    coupon.CategoryName = Convert.ToString(row["CategoryName"]);
+                    coupon.Image = Convert.ToByte(row["Image"]);
+                    coupon.Value = Convert.ToString(row["Value"]);
+                    coupon.Discount = Convert.ToString(row["Discount"]);
+                    coupon.Details = Convert.ToString(row["Details"]);
+                    coupon.Terms = Convert.ToString(row["Terms"]);
+                    coupon.StartDate = row["StartDate"] != DBNull.Value ? Convert.ToDateTime(row["StartDate"]) : DateTime.MinValue;
+                    coupon.ExpirationDate = Convert.ToDateTime(row["ExpirationDate"]);
+                    coupon.GlutenFreeFacility = Convert.ToBoolean(row["GlutenFreeFacility"]);
+                    coupon.ContainGluten20PPM = Convert.ToBoolean(row["ContainGluten20PPM"]);
+                    coupon.LessThan5PPM = Convert.ToBoolean(row["LessThan5PPM"]);
+                    coupon.CaseinFree = Convert.ToBoolean(row["CaseinFree"]);
+                    coupon.SoyFree = Convert.ToBoolean(row["SoyFree"]);
+                    coupon.NutFree = Convert.ToBoolean(row["NutFree"]);
+                    coupon.EggFree = Convert.ToBoolean(row["EggFree"]);
+                    coupon.CornFree = Convert.ToBoolean(row["CornFree"]);
+                    coupon.YeastFree = Convert.ToBoolean(row["YeastFree"]);
+                    coupon.Barcode1Enabled = Convert.ToBoolean(row["Barcode1Enabled"]);
+                    coupon.Barcode1TypeID = Convert.ToInt64(row["Barcode1TypeID"]);
+                    coupon.Barcode1TypeName = Convert.ToString(row["Barcode1TypeName"]);
+                    coupon.Barcode1Value = Convert.ToString(row["Barcode1Value"]);
+                    coupon.Barcode2Enabled = Convert.ToBoolean(row["Barcode2Enabled"]);
+                    coupon.Barcode2TypeID = Convert.ToInt64(row["Barcode2TypeID"]);
+                    coupon.Barcode2TypeName = Convert.ToString(row["Barcode2TypeName"]);
+                    coupon.Barcode2Value = Convert.ToString(row["Barcode2Value"]);
+                    coupon.NumberOfCoupons = Convert.ToInt32(row["NumberOfCoupons"]);
+                    coupon.BottomAdvertisement = Convert.ToString(row["BottomAdvertisement"]);
+                    coupon.CreatedDate = row["CreatedDate"] != DBNull.Value ? Convert.ToDateTime(row["CreatedDate"]) : DateTime.MinValue;
+                    coupon.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
+                    coupon.Enabled = Convert.ToBoolean(row["Enabled"]);
+                    coupons.Add(coupon);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _log.ErrorFormat("Exception Occured: Exception={0}", ex);
+            }
+
+            return coupons;
+        }
+
         public Coupon GetCoupon(Int64 ID)
         {
             Coupon coupon = null;
