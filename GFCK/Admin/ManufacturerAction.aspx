@@ -2,6 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+
+<asp:CreateUserWizard ID="createUser" runat="server" />
+
+
+
 <div id="divAddManufacturer" runat="server">
 <h1>Add Manufacturer</h1>
 </div>

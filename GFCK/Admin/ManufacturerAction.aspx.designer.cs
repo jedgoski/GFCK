@@ -13,6 +13,15 @@ namespace GFCK.Admin {
     public partial class ManufacturerActionAction {
         
         /// <summary>
+        /// createUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CreateUserWizard createUser;
+        
+        /// <summary>
         /// divAddManufacturer control.
         /// </summary>
         /// <remarks>
