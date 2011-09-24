@@ -1,4 +1,6 @@
-*/obj/*
+Engine/obj/*
+Engine/bin/*
 *.suo
 *.cache
-*/bin/*
+GFCK/bin/*
+GFCK/obj/*
