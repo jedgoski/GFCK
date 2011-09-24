@@ -30,6 +30,8 @@ namespace GFCK.Manufacturer
             {
                 _log.ErrorFormat("Exception Occurred: Exception={0}", ex.Message);
                 lblError.Visible = true;
+                lblDeleteError.Visible = false;
+                lblDeleteSuccessfull.Visible = false;
             }
         }
 
@@ -47,15 +49,19 @@ namespace GFCK.Manufacturer
                 {
                     ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
                     Coupon coupon = couponDAO.GetCoupon(Convert.ToInt64(e.CommandArgument));
-                    coupon.Enabled = false;
+                    coupon.Deleted = true;
                     if (couponDAO.UpdateCoupon(coupon))
                     {
                         // Delete was successfull
                         lblDeleteSuccessfull.Visible = true;
+                        lblError.Visible = false;
+                        lblDeleteError.Visible = false;
                     }
                     else
                     {
                         lblDeleteError.Visible = true;
+                        lblError.Visible = false;
+                        lblDeleteSuccessfull.Visible = false;
                     }
                 }
             }
@@ -90,6 +96,7 @@ namespace GFCK.Manufacturer
         protected void LoadData()
         {
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
+            // TODO: Again we need to get the merchant ID somehow.
             List<Coupon> coupons = couponDAO.GetAllCouponsForMerchantID(_merchantID);
             rptCoupons.DataSource = coupons;
             rptCoupons.DataBind();
