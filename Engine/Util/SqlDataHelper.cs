@@ -35,6 +35,7 @@ namespace Engine.Util
                 mobj_SqlCommand = new SqlCommand();
                 mobj_SqlCommand.CommandTimeout = mint_CommandTimeout;
                 mobj_SqlCommand.Connection = mobj_SqlConnection;
+                
             }
             catch (Exception ex)
             {
@@ -73,6 +74,7 @@ namespace Engine.Util
 
         public void CloseConnection()
         {
+            mobj_SqlCommand.Parameters.Clear();
             if (mobj_SqlConnection.State != ConnectionState.Closed) mobj_SqlConnection.Close();
         }
         public int GetExecuteScalarByCommand(string Command)
