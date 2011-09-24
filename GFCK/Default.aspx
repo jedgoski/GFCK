@@ -70,12 +70,12 @@
                                                             <div class="inn2">
  
 -->
-            <uc:CouponDisplay id="CouponDisplay" runat="server" />
-            <uc:CouponDisplay id="CouponDisplay1" runat="server" />
-            <uc:CouponDisplay id="CouponDisplay2" runat="server" />
-            <uc:CouponDisplay id="CouponDisplay3" runat="server" />
-            <uc:CouponDisplay id="CouponDisplay4" runat="server" />
-            <uc:CouponDisplay id="CouponDisplay5" runat="server" />
+<asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" >
+<ItemTemplate>
+    <uc:CouponDisplay id="CouponDisplay" runat="server" />
+</ItemTemplate>
+</asp:Repeater>
+            
             <!--
                                                         </div>
                                                     </div></div>

@@ -58,6 +58,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Admin\CouponPrint.aspx" />
     <Content Include="Admin\default.aspx" />
     <Content Include="Admin\ManufacturerAdmin.aspx" />
     <Content Include="Admin\ManufacturerAction.aspx" />
@@ -381,6 +382,13 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CouponPrint.aspx.cs">
+      <DependentUpon>CouponPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CouponPrint.aspx.designer.cs">
+      <DependentUpon>CouponPrint.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>

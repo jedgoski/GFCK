@@ -13,57 +13,12 @@ namespace GFCK {
     public partial class _Default {
         
         /// <summary>
-        /// CouponDisplay control.
+        /// rptCoupons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GFCK.UserControls.Coupon.home CouponDisplay;
-        
-        /// <summary>
-        /// CouponDisplay1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::GFCK.UserControls.Coupon.home CouponDisplay1;
-        
-        /// <summary>
-        /// CouponDisplay2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::GFCK.UserControls.Coupon.home CouponDisplay2;
-        
-        /// <summary>
-        /// CouponDisplay3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::GFCK.UserControls.Coupon.home CouponDisplay3;
-        
-        /// <summary>
-        /// CouponDisplay4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::GFCK.UserControls.Coupon.home CouponDisplay4;
-        
-        /// <summary>
-        /// CouponDisplay5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::GFCK.UserControls.Coupon.home CouponDisplay5;
+        protected global::System.Web.UI.WebControls.Repeater rptCoupons;
     }
 }
