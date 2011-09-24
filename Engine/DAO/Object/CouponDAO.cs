@@ -27,18 +27,19 @@ namespace Engine.DAO.Object
             try
             {
 
-                Coupon coupon = new Coupon();
+                
                 coupons = new List<Coupon>();
                 AddSQLParameter("@MerchantID", SqlDbType.BigInt, 6, ID);
                 DataSet ds = GetDatasetByCommand("dbo.GetAllCouponsForMerchantID");
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
+                    Coupon coupon = new Coupon();
                     coupon.ID = Convert.ToInt64(row["ID"]);
                     coupon.MerchantID = Convert.ToInt64(row["MerchantID"]);
                     coupon.TemplateID = Convert.ToInt64(row["TemplateID"]);
                     coupon.CategoryID = Convert.ToInt64(row["CategoryID"]);
                     coupon.CategoryName = Convert.ToString(row["CategoryName"]);
-                    coupon.Image = Convert.ToByte(row["Image"]);
+                    coupon.Image = (Byte[])row["Image"];
                     coupon.Value = Convert.ToString(row["Value"]);
                     coupon.Discount = Convert.ToString(row["Discount"]);
                     coupon.Details = Convert.ToString(row["Details"]);
@@ -66,7 +67,7 @@ namespace Engine.DAO.Object
                     coupon.BottomAdvertisement = Convert.ToString(row["BottomAdvertisement"]);
                     coupon.CreatedDate = row["CreatedDate"] != DBNull.Value ? Convert.ToDateTime(row["CreatedDate"]) : DateTime.MinValue;
                     coupon.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
-                    coupon.Enabled = Convert.ToBoolean(row["Enabled"]);
+                    coupon.Deleted = Convert.ToBoolean(row["Deleted"]);
                     coupons.Add(coupon);
                 }
 
@@ -156,7 +157,7 @@ namespace Engine.DAO.Object
                 coupon.TemplateID = Convert.ToInt64(row["TemplateID"]);
                 coupon.CategoryID = Convert.ToInt64(row["CategoryID"]);
                 coupon.CategoryName = Convert.ToString(row["CategoryName"]);
-                coupon.Image = Convert.ToByte(row["Image"]);
+                coupon.Image = (Byte[])row["Image"];
                 coupon.Value = Convert.ToString(row["Value"]);
                 coupon.Discount = Convert.ToString(row["Discount"]);
                 coupon.Details = Convert.ToString(row["Details"]);
@@ -184,7 +185,7 @@ namespace Engine.DAO.Object
                 coupon.BottomAdvertisement = Convert.ToString(row["BottomAdvertisement"]);
                 coupon.CreatedDate = row["CreatedDate"] != DBNull.Value ? Convert.ToDateTime(row["CreatedDate"]) : DateTime.MinValue;
                 coupon.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
-                coupon.Enabled = Convert.ToBoolean(row["Enabled"]);
+                coupon.Deleted = Convert.ToBoolean(row["Deleted"]);
 
             }
             catch (Exception ex)
@@ -228,7 +229,7 @@ namespace Engine.DAO.Object
                                 BottomAdvertisement={26},
                                 CreatedDate={27},
                                 UpdatedDate={28},
-                                Enabled={29}", 
+                                Deleted={29}", 
                                 coupon.ID,
                                 coupon.MerchantID,
                                 coupon.TemplateID,
@@ -258,7 +259,7 @@ namespace Engine.DAO.Object
                                 coupon.BottomAdvertisement,
                                 coupon.CreatedDate,
                                 coupon.UpdatedDate,
-                                coupon.Enabled
+                                coupon.Deleted
                                 );
             try
             {
@@ -290,7 +291,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@Barcode2Value", SqlDbType.VarChar, 50, coupon.Barcode2Value);
                 AddSQLParameter("@NumberOfCoupons", SqlDbType.Int, 2, coupon.NumberOfCoupons);
                 AddSQLParameter("@BottomAdvertisement", SqlDbType.VarChar, 255, coupon.BottomAdvertisement);
-                AddSQLParameter("@Enabled", SqlDbType.Bit, 2, coupon.Enabled);
+                AddSQLParameter("@Deleted", SqlDbType.Bit, 2, coupon.Deleted);
                 GetExecuteNonQueryByCommand("dbo.UpdateCoupon");
 
                 success = true;
@@ -336,7 +337,7 @@ namespace Engine.DAO.Object
                                 BottomAdvertisement={26},
                                 CreatedDate={27},
                                 UpdatedDate={28},
-                                Enabled={29}",
+                                Deleted={29}",
                                 coupon.ID,
                                 coupon.MerchantID,
                                 coupon.TemplateID,
@@ -366,7 +367,7 @@ namespace Engine.DAO.Object
                                 coupon.BottomAdvertisement,
                                 coupon.CreatedDate,
                                 coupon.UpdatedDate,
-                                coupon.Enabled
+                                coupon.Deleted
                                 );
             try
             {
@@ -399,9 +400,9 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@Barcode2Value", SqlDbType.VarChar, 50, coupon.Barcode2Value);
                 AddSQLParameter("@NumberOfCoupons", SqlDbType.Int, 2, coupon.NumberOfCoupons);
                 AddSQLParameter("@BottomAdvertisement", SqlDbType.VarChar, 255, coupon.BottomAdvertisement);
-                AddSQLParameter("@Enabled", SqlDbType.Bit, 2, coupon.Enabled);
+                AddSQLParameter("@Deleted", SqlDbType.Bit, 2, coupon.Deleted);
                 GetExecuteNonQueryByCommand("dbo.AddCoupon");
-
+                success = true;
 
             }
             catch (Exception ex)
@@ -431,6 +432,8 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@IPAddress", SqlDbType.VarChar, 50, couponPrint.IPAddress);
                 
                 GetExecuteNonQueryByCommand("dbo.AddCouponPrint");
+
+                success = true;
 
             }
             catch (Exception ex)

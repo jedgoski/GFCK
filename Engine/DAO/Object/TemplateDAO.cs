@@ -27,15 +27,16 @@ namespace Engine.DAO.Object
             try
             {
 
-                Template template = new Template();
+                
                 templates = new List<Template>();
                 DataSet ds = GetDatasetByCommand("dbo.GetAllActiveTemplates");
                 DataRowCollection rows = ds.Tables[0].Rows;
                 foreach (DataRow row in rows)
                 {
+                    Template template = new Template();
                     template.ID = Convert.ToInt64(row["ID"]);
                     template.Name = Convert.ToString(row["Name"]);
-                    template.Enabled = Convert.ToBoolean(row["Enabled"]);
+                    template.Deleted = Convert.ToBoolean(row["Deleted"]);
                     templates.Add(template);
                 }
 

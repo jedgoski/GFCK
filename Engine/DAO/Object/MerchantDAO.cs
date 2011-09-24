@@ -33,6 +33,8 @@ namespace Engine.DAO.Object
                 foreach (DataRow row in rows)
                 {
                     merchant.ID = Convert.ToInt64(row["ID"]);
+                    merchant.UserID = (Guid)row["UserID"];
+                    merchant.UserName = Convert.ToString(row["UserName"]);
                     merchant.FirstName = Convert.ToString(row["FirstName"]);
                     merchant.LastName = Convert.ToString(row["LastName"]);
                     merchant.MerchantName = Convert.ToString(row["MerchantName"]);
@@ -42,7 +44,7 @@ namespace Engine.DAO.Object
                     merchant.Address = Convert.ToString(row["Address"]);
                     merchant.CreatedDate = Convert.ToDateTime(row["CreatedDate"]);
                     merchant.UpdatedDate = Convert.ToDateTime(row["UpdatedDate"]);
-                    merchant.Enabled = Convert.ToBoolean(row["Enabled"]);
+                    merchant.Deleted = Convert.ToBoolean(row["Deleted"]);
                 }
 
             }
@@ -61,13 +63,15 @@ namespace Engine.DAO.Object
             try
             {   
                 
-                Merchant merchant = new Merchant();
+                
                 merchants = new List<Merchant>();
                 DataSet ds = GetDatasetByCommand("dbo.GetAllActiveMerchants");
                 DataRowCollection rows = ds.Tables[0].Rows;
                 foreach (DataRow row in rows)
                 {
+                    Merchant merchant = new Merchant();
                     merchant.ID = Convert.ToInt64(row["ID"]);
+                    merchant.UserID = (Guid)row["UserID"];
                     merchant.FirstName = Convert.ToString(row["FirstName"]);
                     merchant.LastName = Convert.ToString(row["LastName"]);
                     merchant.MerchantName = Convert.ToString(row["MerchantName"]);
@@ -77,7 +81,7 @@ namespace Engine.DAO.Object
                     merchant.Address = Convert.ToString(row["Address"]);
                     merchant.CreatedDate = row["CreatedDate"] != DBNull.Value ? Convert.ToDateTime(row["CreatedDate"]) : DateTime.MinValue;
                     merchant.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
-                    merchant.Enabled = Convert.ToBoolean(row["Enabled"]);
+                    merchant.Deleted = Convert.ToBoolean(row["Deleted"]);
                     merchants.Add(merchant);
                 }
 
@@ -103,7 +107,7 @@ namespace Engine.DAO.Object
                             Address={6},
                             CreatedDate={7},
                             UpdatedDate={8},
-                            Enabled={9}",
+                            Deleted={9}",
                              merchant.ID,
                              merchant.FirstName,
                              merchant.LastName,
@@ -113,13 +117,12 @@ namespace Engine.DAO.Object
                              merchant.Address,
                              merchant.CreatedDate,
                              merchant.UpdatedDate,
-                             merchant.Enabled,
+                             merchant.Deleted,
                              merchant.MerchantName
 
                              );
             try
             {
-                merchant = new Merchant();
                 AddSQLParameter("@MerchantID", SqlDbType.BigInt, 6, merchant.ID);
                 AddSQLParameter("@FirstName", SqlDbType.VarChar, 50, merchant.FirstName);
                 AddSQLParameter("@LastName", SqlDbType.VarChar, 50, merchant.LastName);
@@ -128,7 +131,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@Email", SqlDbType.VarChar, 50, merchant.Email);
                 AddSQLParameter("@PhoneNumber", SqlDbType.VarChar, 50, merchant.PhoneNumber);
                 AddSQLParameter("@Address", SqlDbType.VarChar, 255, merchant.Address);
-                AddSQLParameter("@Enabled", SqlDbType.Bit, 2, merchant.Enabled);
+                AddSQLParameter("@Deleted", SqlDbType.Bit, 2, merchant.Deleted);
                 GetExecuteNonQueryByCommand("dbo.UpdateMerchant");
                 success = true;
             }
@@ -144,17 +147,19 @@ namespace Engine.DAO.Object
         {
             bool success = false;
             _log.DebugFormat(@"dbo.AddMerchant: ID={0},
-                            FirstName{1},
-                            LastName{2},
-                            MerchantName={10}
-                            Description={3},
-                            Email={4},
-                            PhoneNumber={5},
-                            Address={6},
-                            CreatedDate={7},
-                            UpdatedDate={8},
-                            Enabled={9}",
+                            UserID={1},
+                            FirstName{2},
+                            LastName{3},
+                            MerchantName={4}
+                            Description={5},
+                            Email={6},
+                            PhoneNumber={7},
+                            Address={8},
+                            CreatedDate={9},
+                            UpdatedDate={10},
+                            Deleted={11}",
                              merchant.ID,
+                             merchant.UserID,
                              merchant.FirstName,
                              merchant.LastName,
                              merchant.Description,
@@ -163,12 +168,12 @@ namespace Engine.DAO.Object
                              merchant.Address,
                              merchant.CreatedDate,
                              merchant.UpdatedDate,
-                             merchant.Enabled,
+                             merchant.Deleted,
                              merchant.MerchantName
                              );
             try
             {
-                merchant = new Merchant();
+                AddSQLParameter("@UserID", SqlDbType.UniqueIdentifier,  merchant.UserID);
                 AddSQLParameter("@FirstName", SqlDbType.VarChar, 50, merchant.FirstName);
                 AddSQLParameter("@LastName", SqlDbType.VarChar, 50, merchant.LastName);
                 AddSQLParameter("@MerchantName", SqlDbType.VarChar, 50, merchant.MerchantName);
@@ -176,7 +181,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@Email", SqlDbType.VarChar, 50, merchant.Email);
                 AddSQLParameter("@PhoneNumber", SqlDbType.VarChar, 50, merchant.PhoneNumber);
                 AddSQLParameter("@Address", SqlDbType.VarChar, 255, merchant.Address);
-                AddSQLParameter("@Enabled", SqlDbType.Bit, 2, merchant.Enabled);
+                AddSQLParameter("@Deleted", SqlDbType.Bit, 2, merchant.Deleted);
                 GetExecuteNonQueryByCommand("dbo.AddMerchant");
                 success = true;
             }
