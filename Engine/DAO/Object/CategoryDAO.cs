@@ -26,12 +26,13 @@ namespace Engine.DAO.Object
             try
             {
 
-                Category category = new Category();
+                
                 categories = new List<Category>();
                 DataSet ds = GetDatasetByCommand("dbo.GetAllActiveCategories");
                 DataRowCollection rows = ds.Tables[0].Rows;
                 foreach (DataRow row in rows)
                 {
+                    Category category = new Category();
                     category.ID = Convert.ToInt64(row["ID"]);
                     category.Name = Convert.ToString(row["Name"]);
                     categories.Add(category);

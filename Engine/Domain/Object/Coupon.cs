@@ -12,7 +12,7 @@ namespace Engine.Domain.Object
         public Int64 TemplateID { get; set; }
         public Int64 CategoryID { get; set; }
         public String CategoryName { get; set; }
-        public Byte Image { get; set; }
+        public Byte[] Image { get; set; }
         public String Value { get; set; }
         public String Discount { get; set; }
         public String Details { get; set; }
@@ -40,6 +40,6 @@ namespace Engine.Domain.Object
         public String BottomAdvertisement { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
-        public bool Enabled { get; set; }
+        public bool Deleted { get; set; }
     }
 }

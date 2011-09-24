@@ -9,6 +9,6 @@ namespace Engine.Domain.Object
     {
        public Int64 ID { get; set; }
        public String Name { get; set; }
-       public bool Enabled { get; set; }
+       public bool Deleted { get; set; }
     }
 }

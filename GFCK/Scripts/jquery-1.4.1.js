@@ -3033,7 +3033,7 @@ var Expr = Sizzle.selectors = {
 		}
 	},
 	filters: {
-		enabled: function(elem){
+		Enabled: function(elem){
 			return elem.disabled === false && elem.type !== "hidden";
 		},
 		disabled: function(elem){

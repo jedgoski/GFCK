@@ -14,38 +14,41 @@
 </div>
 
 <div>
-    <asp:Label ID="lblAddSuccessfull" runat="server" Text="Added manufacturer successfully." Visible="false" />
-    <asp:Label ID="lblEditSuccessfull" runat="server" Text="Updated manufacturer successfully." Visible="false" />
-    <asp:Label ID="lblError" runat="server" Text="An error has occured." Visible="false" />
+    <asp:Label ID="lblAddSuccessfull" runat="server" CssClass="messageStackError" Text="Added manufacturer successfully." Visible="false" />
+    <asp:Label ID="lblEditSuccessfull" runat="server" CssClass="messageStackError" Text="Updated manufacturer successfully." Visible="false" />
+    <asp:Label ID="lblError" runat="server" CssClass="messageStackError" Text="An error has occured." Visible="false" />
 </div>
 
-Template: <asp:DropDownList ID="ddlTemplate" runat="server"></asp:DropDownList>
-Category: <asp:DropDownList ID="ddlCategory" runat="server"></asp:DropDownList>
-Image: 
-Value:<asp:TextBox ID="txtValue" runat="server"></asp:TextBox>
-Discount:<asp:TextBox ID="txtDiscount" runat="server"></asp:TextBox>
-Details:<asp:TextBox ID="txtDetails" runat="server"></asp:TextBox>
-Terms:<asp:TextBox ID="txtTerms" runat="server"></asp:TextBox>
-Start Date:<asp:TextBox ID="txtStartDate" runat="server"></asp:TextBox>
-Expiration Date: <asp:TextBox ID="txtExpirationDate" runat="server"></asp:TextBox>
-Gluten Free Faclility: <asp:CheckBox ID="chkGlutenFreeFacility" runat="server" />
-Contain Gluten 20PPM: <asp:CheckBox ID="chkContainGluten20PPM" runat="server" />
-Less Than 5PPM: <asp:CheckBox ID="chkLessThan5PPM" runat="server" />
-Casein Free: <asp:CheckBox ID="chkCaseinFree" runat="server" />
-Soy Free: <asp:CheckBox ID="chkSoyFree" runat="server" />
-Nut Free: <asp:CheckBox ID="chkNutFree" runat="server" />
-Egg Free: <asp:CheckBox ID="chkEggFree" runat="server" />
-Corn Free: <asp:CheckBox ID="chkCornFree" runat="server" />
-Yeast Free: <asp:CheckBox ID="chkYeastFree" runat="server" />
-Barcode 1 Enabled: <asp:CheckBox ID="chkBarcode1Enabled" runat="server" />
-Barcode 1 Type: <asp:DropDownList ID="ddlBarcode1TypeID" runat="server"></asp:DropDownList>
-Barcode 1 Value: <asp:TextBox ID="txtBarcode1Value" runat="server"></asp:TextBox>
-Barcode 2 Enabled: <asp:CheckBox ID="chkBarcode2Enabled" runat="server" />
-Barcode 2 Type: <asp:DropDownList ID="ddlBarcode2TypeID" runat="server"></asp:DropDownList>
-Barcode 2 Value: <asp:TextBox ID="txtBarcode2Value" runat="server"></asp:TextBox>
-Number of Coupons <asp:TextBox ID="txtNumberOfCoupons" runat="server"></asp:TextBox>
-Bottom Advertisement <asp:TextBox ID="txtBottomAdvertisement" runat="server"></asp:TextBox>
+<table>
+<tr><td>Template:</td><td><asp:DropDownList ID="ddlTemplate" runat="server"></asp:DropDownList></td></tr>
+<tr><td>Category:</td><td><asp:DropDownList ID="ddlCategory" runat="server"></asp:DropDownList></td></tr>
+<tr><td>Image:</td><td><asp:FileUpload ID="imgUpload" runat="server" /></td></tr>
+<tr><td>Value:</td><td><asp:TextBox ID="txtValue" runat="server"></asp:TextBox></td></tr>
+<tr><td>Discount:</td><td><asp:TextBox ID="txtDiscount" runat="server"></asp:TextBox></td></tr>
+<tr><td>Details:</td><td><asp:TextBox ID="txtDetails" runat="server"></asp:TextBox></td></tr>
+<tr><td>Terms:</td><td><asp:TextBox ID="txtTerms" runat="server"></asp:TextBox></td></tr>
+<tr><td>Start Date:</td><td><asp:TextBox ID="txtStartDate" runat="server"></asp:TextBox></td></tr>
+<tr><td>Expiration Date:</td><td><asp:TextBox ID="txtExpirationDate" runat="server"></asp:TextBox></td></tr>
+<tr><td>Gluten Free Faclility:</td><td><asp:CheckBox ID="chkGlutenFreeFacility" runat="server" /></td></tr>
+<tr><td>Contain Gluten 20PPM:</td><td><asp:CheckBox ID="chkContainGluten20PPM" runat="server" /></td></tr>
+<tr><td>Less Than 5PPM:</td><td><asp:CheckBox ID="chkLessThan5PPM" runat="server" /></td></tr>
+<tr><td>Casein Free:</td><td><asp:CheckBox ID="chkCaseinFree" runat="server" /></td></tr>
+<tr><td>Soy Free:</td><td><asp:CheckBox ID="chkSoyFree" runat="server" /></td></tr>
+<tr><td>Nut Free:</td><td><asp:CheckBox ID="chkNutFree" runat="server" /></td></tr>
+<tr><td>Egg Free:</td><td><asp:CheckBox ID="chkEggFree" runat="server" /></td></tr>
+<tr><td>Corn Free:</td><td><asp:CheckBox ID="chkCornFree" runat="server" /></td></tr>
+<tr><td>Yeast Free:</td><td><asp:CheckBox ID="chkYeastFree" runat="server" /></td></tr>
+<tr><td>Barcode 1 Enabled:</td><td><asp:CheckBox ID="chkBarcode1Enabled" runat="server" /></td></tr>
+<tr><td>Barcode 1 Type:</td><td><asp:DropDownList ID="ddlBarcode1TypeID" runat="server"></asp:DropDownList></td></tr>
+<tr><td>Barcode 1 Value:</td><td><asp:TextBox ID="txtBarcode1Value" runat="server"></asp:TextBox></td></tr>
+<tr><td>Barcode 2 Enabled:</td><td><asp:CheckBox ID="chkBarcode2Enabled" runat="server" /></td></tr>
+<tr><td>Barcode 2 Type:</td><td><asp:DropDownList ID="ddlBarcode2TypeID" runat="server"></asp:DropDownList></td></tr>
+<tr><td>Barcode 2 Value:</td><td><asp:TextBox ID="txtBarcode2Value" runat="server"></asp:TextBox></td></tr>
+<tr><td>Number of Coupons</td><td><asp:TextBox ID="txtNumberOfCoupons" runat="server"></asp:TextBox></td></tr>
+<tr><td>Bottom Advertisement</td><td><asp:TextBox ID="txtBottomAdvertisement" runat="server"></asp:TextBox></td></tr>
+</table>
 
-<asp:Button ID="btnSave" runat="server" /><asp:Button ID="btnCancel" runat="server" Text="Cancel" PostBackUrl="/Admin/ManufacturerAdmin.aspx" />
+
+<asp:Button ID="btnSave" runat="server" Text="save" /><asp:Button ID="btnCancel" runat="server" Text="Cancel" PostBackUrl="/Admin/ManufacturerAdmin.aspx" />
 
 </asp:Content>

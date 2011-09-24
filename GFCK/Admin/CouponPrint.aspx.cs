@@ -4,17 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Engine.DAO.Domain;
+using System.Web.UI.HtmlControls;
+using Engine.Domain.Object;
 using log4net;
 using Engine.DAO.Object;
-using Engine.DAO.Domain;
-using Engine.Domain.Object;
-using System.Web.UI.HtmlControls;
 
-namespace GFCK.Manufacturer
+namespace GFCK.Admin
 {
-    public partial class Coupons : System.Web.UI.Page
+    public partial class CouponPrint : System.Web.UI.Page
     {
-        public static readonly ILog _log = LogManager.GetLogger(typeof(Coupons));
+        public static readonly ILog _log = LogManager.GetLogger(typeof(CouponPrint));
         FactoryDAO _factoryDAO = FactoryDAO.GetInstance();
         Int64 _merchantID = 0;
 
@@ -77,8 +77,8 @@ namespace GFCK.Manufacturer
                 Label lblDiscount = (Label)e.Item.FindControl("lblDiscount");
                 Label lblStartDate = (Label)e.Item.FindControl("lblStartDate");
                 Label lblExpirationDate = (Label)e.Item.FindControl("lblExpirationDate");
-                
-                
+
+
                 HtmlAnchor lnkEdit = (HtmlAnchor)e.Item.FindControl("lnkEdit");
                 HtmlAnchor lnkView = (HtmlAnchor)e.Item.FindControl("lnkView");
                 LinkButton lnkDelete = (LinkButton)e.Item.FindControl("lnkDelete");
@@ -96,7 +96,6 @@ namespace GFCK.Manufacturer
         protected void LoadData()
         {
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
-            // TODO: Again we need to get the merchant ID somehow.
             List<Coupon> coupons = couponDAO.GetAllCouponsForMerchantID(_merchantID);
             rptCoupons.DataSource = coupons;
             rptCoupons.DataBind();

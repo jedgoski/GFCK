@@ -29,6 +29,8 @@ namespace GFCK.Manufacturer
             {
                 _log.ErrorFormat("Exception Occurred: Exception={0}", ex.Message);
                 lblError.Visible = true;
+                lblAddSuccessfull.Visible = false;
+                lblEditSuccessfull.Visible = false;
             }
         }
 
@@ -47,7 +49,22 @@ namespace GFCK.Manufacturer
                 Coupon coupon = new Coupon();
                 coupon.TemplateID = Convert.ToInt64(ddlTemplate.SelectedValue);
                 coupon.CategoryID = Convert.ToInt64(ddlCategory.SelectedValue);
-                // Need to save image
+                // TODO: Hardcoded 1 for testing purposes.. this needs to be updated.
+                coupon.MerchantID = 1;
+                
+                FileUpload img = (FileUpload)imgUpload;
+                Byte[] imgByte = null;
+                if (img.HasFile && img.PostedFile != null)
+                {
+                    //To create a PostedFile
+                    HttpPostedFile File = imgUpload.PostedFile;
+                    //Create byte Array with file len
+                    imgByte = new Byte[File.ContentLength];
+                    //force the control to load data in array
+                    File.InputStream.Read(imgByte, 0, File.ContentLength);
+                }
+                coupon.Image = imgByte;
+                
                 coupon.Value = txtValue.Text;
                 coupon.Discount = txtDiscount.Text;
                 coupon.Details = txtDetails.Text;
@@ -71,6 +88,7 @@ namespace GFCK.Manufacturer
                 coupon.Barcode2Value = txtBarcode2Value.Text;
                 coupon.NumberOfCoupons = Convert.ToInt32(txtNumberOfCoupons.Text);
                 coupon.BottomAdvertisement = txtBottomAdvertisement.Text;
+                coupon.Deleted = false;
 
                 if (_couponID == 0)
                 {
@@ -79,10 +97,14 @@ namespace GFCK.Manufacturer
                     {
                         // The add was successfull
                         lblAddSuccessfull.Visible = true;
+                        lblEditSuccessfull.Visible = false;
+                        lblError.Visible = false;
                     }
                     else
                     {
                         lblError.Visible = true;
+                        lblAddSuccessfull.Visible = false;
+                        lblEditSuccessfull.Visible = false;
                         _log.Debug("Unable to Add a Coupon.");
                     }
                 }
@@ -93,10 +115,14 @@ namespace GFCK.Manufacturer
                     {
                         // Update was successfull
                         lblEditSuccessfull.Visible = true;
+                        lblError.Visible = false;
+                        lblAddSuccessfull.Visible = false;
                     }
                     else
                     {
                         lblError.Visible = true;
+                        lblAddSuccessfull.Visible = false;
+                        lblEditSuccessfull.Visible = false;
                         _log.Debug("Unable to Update the Coupon.");
                     }
                 }
@@ -106,6 +132,8 @@ namespace GFCK.Manufacturer
             {
                 _log.ErrorFormat("Exception Occurred: Exception={0}", ex.Message);
                 lblError.Visible = true;
+                lblAddSuccessfull.Visible = false;
+                lblEditSuccessfull.Visible = false;
             }
         }
 
@@ -148,6 +176,7 @@ namespace GFCK.Manufacturer
             divAddCoupon.Visible = true;
             divEditCoupon.Visible = false;
             divViewCoupon.Visible = false;
+            LoadDDL();
         }
         protected void LoadView()
         {
@@ -165,8 +194,40 @@ namespace GFCK.Manufacturer
             LoadData();
         }
 
+        protected void LoadDDL()
+        {
+            ICategoryDAO categoryDAO = _factoryDAO.GetCategoryDAO();
+            ITemplateDAO templateDAO = _factoryDAO.GetTemplateDAO();
+            IBarcodeDAO barcodeDAO = _factoryDAO.GetBarcodeDAO();
+            
+            List<Category> categories = categoryDAO.GetAllActiveCategories();
+            ddlCategory.DataSource = categories;
+            ddlCategory.DataTextField = "Name";
+            ddlCategory.DataValueField = "ID";
+            ddlCategory.DataBind();
+
+            List<Template> templates = templateDAO.GetAllActiveTemplates();
+            ddlTemplate.DataSource = templates;
+            ddlTemplate.DataTextField = "Name";
+            ddlTemplate.DataValueField = "ID";
+            ddlTemplate.DataBind();
+
+            List<BarcodeType> barcodeTypes = barcodeDAO.GetAllActiveBarcodeTypes();
+            ddlBarcode1TypeID.DataSource = barcodeTypes;
+            ddlBarcode1TypeID.DataTextField = "Name";
+            ddlBarcode1TypeID.DataValueField = "ID";
+            ddlBarcode1TypeID.DataBind();
+
+            ddlBarcode2TypeID.DataSource = barcodeTypes;
+            ddlBarcode2TypeID.DataTextField = "Name";
+            ddlBarcode2TypeID.DataValueField = "ID";
+            ddlBarcode2TypeID.DataBind();
+
+        }
+
         protected void LoadData()
         {
+            LoadDDL();
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
             Coupon coupon = couponDAO.GetCoupon(_couponID);
             ddlTemplate.SelectedValue = Convert.ToString(coupon.TemplateID);

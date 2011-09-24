@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Coupons.aspx.cs" Inherits="GFCK.Manufacturer.Coupons" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CouponPrint.aspx.cs" Inherits="GFCK.Admin.CouponPrint" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -10,8 +9,10 @@
     <asp:Label ID="lblDeleteError" runat="server" CssClass="messageStackError" Text="Cannot delete manufacturer at this time." Visible="false" />
     <asp:Label ID="lblError" runat="server" CssClass="messageStackError" Text="An error has occured." Visible="false" />
 </div>
+
+
 <div>
-    <a href="/Manufacturer/CouponAction.aspx?Mode=Add">Add Coupon</a>
+Manufacturer:<asp:DropDownList ID="ddlManufacturer" runat="server" AutoPostBack="true"></asp:DropDownList> 
 </div>
 <table>
     
@@ -22,7 +23,6 @@
             <thead><b>Discount</b></thead>
             <thead><b>Start Date</b></thead>
             <thead><b>Expiration Date</b></thead>
-            <thead><b>Action</b></thead>
         </tr>
         </HeaderTemplate>
 

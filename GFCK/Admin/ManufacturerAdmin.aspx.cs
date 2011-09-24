@@ -29,6 +29,8 @@ namespace GFCK.Admin
             {
                 _log.ErrorFormat("Exception Occurred: Exception={0}", ex.Message);
                 lblError.Visible = true;
+                lblDeleteError.Visible = false;
+                lblDeleteSuccessfull.Visible = false;
             }
         }
 
@@ -46,18 +48,23 @@ namespace GFCK.Admin
                 {
                     IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
                     Merchant merchant = merchantDAO.GetMerchant(Convert.ToInt64(e.CommandArgument));
-                    merchant.Enabled = false;
+                    merchant.Deleted = true;
                     if (merchantDAO.UpdateMerchant(merchant))
                     {
                         // Delete was successfull
                         lblDeleteSuccessfull.Visible = true;
+                        lblError.Visible = false;
+                        lblDeleteError.Visible = false;
                     }
                     else
                     {
                         lblDeleteError.Visible = true;
+                        lblError.Visible = false;
+                        lblDeleteSuccessfull.Visible = false;
                     }
                 }
             }
+            LoadData();
         }
 
         void rptManufacuturers_ItemDataBound(object sender, RepeaterItemEventArgs e)

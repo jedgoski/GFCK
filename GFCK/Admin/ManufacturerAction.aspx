@@ -13,21 +13,30 @@
 </div>
 
 <div>
-    <asp:Label ID="lblAddSuccessfull" runat="server" Text="Added manufacturer successfully." Visible="false" />
-    <asp:Label ID="lblEditSuccessfull" runat="server" Text="Updated manufacturer successfully." Visible="false" />
-    <asp:Label ID="lblError" runat="server" Text="An error has occured." Visible="false" />
+    <asp:Label ID="lblAddSuccessfull" runat="server" CssClass="messageStackError" Text="Added manufacturer successfully." Visible="false" />
+    <asp:Label ID="lblEditSuccessfull" runat="server" CssClass="messageStackError" Text="Updated manufacturer successfully." Visible="false" />
+    <asp:Label ID="lblError" runat="server" CssClass="messageStackError" Text="An error has occured." Visible="false" />
 </div>
 
+<table id="tblAccountinfo" runat="server">
+<tr colspan="2"><td><b>Account Information</b></td></tr>
+<tr><td>User Name:</td><td><asp:TextBox ID="txtUserName" runat="server"></asp:TextBox></td></tr>
+<tr><td>Password</td><td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox></td></tr>
+<tr><td>Confirm Password</td><td><asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox></td></tr>
+</table>
 
-Manufacturer Name:<asp:TextBox ID="txtManufacturerName" runat="server"></asp:TextBox>
-First Name:<asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
-LastName:<asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
-Email:<asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
-Phone Number:<asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox>
-Address:<asp:TextBox ID="txtAddress" runat="server"></asp:TextBox>
-Description<asp:TextBox ID="txtDescription" textMode="MultiLine" runat="server"></asp:TextBox>
+<table>
+<tr colspan="2"><td><b>Profile Information</b></td></tr>
+<tr><td>Manufacturer Name:</td><td><asp:TextBox ID="txtManufacturerName" runat="server"></asp:TextBox></td></tr>
+<tr><td>First Name:</td><td><asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox></td></tr>
+<tr><td>LastName:</td><td><asp:TextBox ID="txtLastName" runat="server"></asp:TextBox></td></tr>
+<tr><td>Email:</td><td><asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td></tr>
+<tr><td>Phone Number:</td><td><asp:TextBox ID="txtPhoneNumber" runat="server"></asp:TextBox></td></tr>
+<tr><td>Address:</td><td><asp:TextBox ID="txtAddress" runat="server"></asp:TextBox></td></tr>
+<tr><td>Description:</td><td><asp:TextBox ID="txtDescription" textMode="MultiLine" runat="server"></asp:TextBox></td></tr>
+</table>
 
 
-<asp:Button ID="btnSave" runat="server" /><asp:Button ID="btnCancel" runat="server" Text="Cancel" PostBackUrl="/Admin/ManufacturerAdmin.aspx" />
+<asp:Button ID="btnSave" runat="server" Text="Save" /><asp:Button ID="btnCancel" runat="server" Text="Cancel" PostBackUrl="/Admin/ManufacturerAdmin.aspx" />
 
 </asp:Content>
