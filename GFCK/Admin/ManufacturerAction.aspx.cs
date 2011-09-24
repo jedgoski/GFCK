@@ -8,6 +8,7 @@ using Engine.DAO.Object;
 using log4net;
 using Engine.DAO.Domain;
 using Engine.Domain.Object;
+using System.Web.Security;
 
 namespace GFCK.Admin
 {
@@ -29,6 +30,8 @@ namespace GFCK.Admin
             {
                 _log.ErrorFormat("Exception Occurred: Exception={0}", ex.Message);
                 lblError.Visible = true;
+                lblAddSuccessfull.Visible = false;
+                lblEditSuccessfull.Visible = false;
             }
         }
 
@@ -52,19 +55,23 @@ namespace GFCK.Admin
                 merchant.PhoneNumber = txtPhoneNumber.Text;
                 merchant.Address = txtAddress.Text;
                 merchant.Description = txtDescription.Text;
+                merchant.Deleted = false;
                 
                 if (_manufacturerID == 0)
-                {
-                    // Need to add a record
-                    if (merchantDAO.AddMerchant(merchant))
+                {   
+                    // CReate a new user.
+                    MembershipCreateStatus createStatus; 
+                    MembershipUser newUser = Membership.CreateUser(txtUserName.Text, txtPassword.Text, txtEmail.Text,null, null, true, out createStatus);
+                    
+                    switch (createStatus)
                     {
-                        // The add was successfull
-                        lblAddSuccessfull.Visible = true;
-                    }
-                    else
-                    {
-                        lblError.Visible = true;
-                        _log.Debug("Unable to Add a Manufacturer.");
+                        case MembershipCreateStatus.Success:
+                            Roles.AddUserToRole(newUser.UserName, "Manufacturer");
+                            merchant.UserID = (Guid)newUser.ProviderUserKey;
+                            AddManufacturerProfile(merchantDAO, merchant);
+                            break;
+
+                            // TODO: ceate additional status checks
                     }
                 }
                 else
@@ -74,11 +81,15 @@ namespace GFCK.Admin
                     {
                         // Update was successfull
                         lblEditSuccessfull.Visible = true;
+                        lblError.Visible = false;
+                        lblAddSuccessfull.Visible = false;
                     }
                     else
                     {
                         lblError.Visible = true;
-                        _log.Debug("Unable to Update a Manufacturer.");
+                        lblAddSuccessfull.Visible = false;
+                        lblEditSuccessfull.Visible = false;
+                        _log.Debug("Unable to Update the Manufacturer.");
                     }
                 }
 
@@ -87,6 +98,30 @@ namespace GFCK.Admin
             {
                 _log.ErrorFormat("Exception Occurred: Exception={0}", ex.Message);
                 lblError.Visible = true;
+                lblAddSuccessfull.Visible = false;
+                lblEditSuccessfull.Visible = false;
+            }
+        }
+
+
+
+        protected void AddManufacturerProfile(IMerchantDAO merchantDAO, Merchant merchant)
+        {
+            // Need to add a record and create a new user
+            if (merchantDAO.AddMerchant(merchant))
+            {
+
+                // The add was successfull
+                lblAddSuccessfull.Visible = true;
+                lblError.Visible = false;
+                lblEditSuccessfull.Visible = false;
+            }
+            else
+            {
+                lblError.Visible = true;
+                lblAddSuccessfull.Visible = false;
+                lblEditSuccessfull.Visible = false;
+                _log.Debug("Unable to Add a Manufacturer.");
             }
         }
 
@@ -135,6 +170,9 @@ namespace GFCK.Admin
             divAddManufacturer.Visible = false;
             divEditManufacturer.Visible = false;
             divViewManufacturer.Visible = true;
+            txtUserName.Enabled = false;
+            txtPassword.Enabled = false;
+            txtConfirmPassword.Enabled = false;
             btnSave.Visible = false;
             LoadData();
         }
@@ -143,6 +181,9 @@ namespace GFCK.Admin
             divAddManufacturer.Visible = false;
             divEditManufacturer.Visible = true;
             divViewManufacturer.Visible = false;
+            txtUserName.Enabled = false;
+            txtPassword.Enabled = false;
+            txtConfirmPassword.Enabled = false;
             LoadData();
         }
 
@@ -150,6 +191,7 @@ namespace GFCK.Admin
         {
             IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
             Merchant merchant = merchantDAO.GetMerchant(_manufacturerID);
+            txtUserName.Text = merchant.UserName;
             txtManufacturerName.Text = merchant.MerchantName;
             txtFirstName.Text = merchant.FirstName;
             txtLastName.Text = merchant.LastName;

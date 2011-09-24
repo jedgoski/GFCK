@@ -5,22 +5,28 @@
 
 <h1>Manufacturer Admin</h1>
 <div>
-    <asp:Label ID="lblDeleteSuccessfull" runat="server" Text="Deleted manufacturer successfully." Visible="false" />
-    <asp:Label ID="lblDeleteError" runat="server" Text="Cannot delete manufacturer at this time." Visible="false" />
-    <asp:Label ID="lblError" runat="server" Text="An error has occured." Visible="false" />
+    <asp:Label ID="lblDeleteSuccessfull" runat="server" CssClass="messageStackError" Text="Deleted manufacturer successfully." Visible="false" />
+    <asp:Label ID="lblDeleteError" runat="server" CssClass="messageStackError"  Text="Cannot delete manufacturer at this time." Visible="false" />
+    <asp:Label ID="lblError" runat="server" CssClass="messageStackError" Text="An error has occured." Visible="false" />
+</div>
+<div>
+<a href="/Admin/ManufacturerAction.aspx?Mode=Add">Add Manufacturer</a>
 </div>
 <table>
-    <tr><td><a href="/Admin/ManufacturerAction.aspx?Mode=Add">Add Manufacturer</a></td></tr>
     <asp:Repeater ID="rptManufacuturers" runat="server">
         <HeaderTemplate>
-            <thead>Manufacturer Name</thead>
-            <thead>Email</thead>
+        <tr>
+            <thead><b>Manufacturer Name</b></thead>
+            <thead><b>Email</b></thead>
+            <thead><b>Action</b></thead>
+        </tr>
+            
         </HeaderTemplate>
 
         <ItemTemplate>
             <tr>
-                <td><label id="lblManufacturerName" runat="server" /></td>
-                <td><label id="lblEmail" runat="server" /></td>
+                <td><asp:label id="lblManufacturerName" runat="server" /></td>
+                <td><asp:label id="lblEmail" runat="server" /></td>
                 <td>
                     <a id="lnkEdit" href="/Admin/ManufacturerAction.aspx?Mode=Edit&ManufacturerID={0}" runat="server">Edit</a> | 
                     <a id="lnkView" href="/Admin/ManufacturerAction.aspx?Mode=View&ManufacturerID={0}" runat="server">View</a> | 
@@ -31,8 +37,8 @@
 
         <AlternatingItemTemplate>
             <tr>
-                <td><label id="lblManufacturerName" runat="server" /></td>
-                <td><label id="lblEmail" runat="server" /></td>
+                <td><asp:label id="lblManufacturerName" runat="server" /></td>
+                <td><asp:label id="lblEmail" runat="server" /></td>
                 <td>
                     <a id="lnkEdit" href="/Admin/ManufacturerAction.aspx?Mode=Edit&ManufacturerID={0}" runat="server">Edit</a> | 
                     <a id="lnkView" href="/Admin/ManufacturerAction.aspx?Mode=View&ManufacturerID={0}" runat="server">View</a> | 
