@@ -13,13 +13,18 @@ namespace GFCK.UserControls.Coupon
         public string Picture { get; set; }
         public string Description { get; set; }
         public string Amount { get; set; }
-        public string ID { get; set; }
+        public string CouponID { get; set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.PreRender += new EventHandler(home_PreRender);
+        }
+
+        void home_PreRender(object sender, EventArgs e)
+        {
             lblName.Text = Name;
-            linkImage.HRef = string.Format("/detail.aspx?id={0}", ID);
-            linkName.HRef = string.Format("/detail.aspx?id={0}", ID);
+            linkImage.HRef = string.Format("/detail.aspx?id={0}", CouponID);
+            linkName.HRef = string.Format("/detail.aspx?id={0}", CouponID);
             imgProduct.Src = Picture;
             litPrice.Text = Amount;
             litDesc.Text = Description;

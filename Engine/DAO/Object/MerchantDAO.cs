@@ -56,6 +56,42 @@ namespace Engine.DAO.Object
             return merchant;
         }
 
+        public Merchant GetMerchantByUserID(Guid userID)
+        {
+            Merchant merchant = null;
+            _log.DebugFormat("dbo.GetMerchantByUserID: userID={0}", userID);
+            try
+            {
+                merchant = new Merchant();
+                AddSQLParameter("@UserID", SqlDbType.UniqueIdentifier, userID);
+                DataSet ds = GetDatasetByCommand("dbo.GetMerchantByUserID");
+                DataRowCollection rows = ds.Tables[0].Rows;
+                foreach (DataRow row in rows)
+                {
+                    merchant.ID = Convert.ToInt64(row["ID"]);
+                    merchant.UserID = (Guid)row["UserID"];
+                    merchant.UserName = Convert.ToString(row["UserName"]);
+                    merchant.FirstName = (row["FirstName"] == DBNull.Value) ? "" : Convert.ToString(row["FirstName"]);
+                    merchant.LastName = (row["LastName"] == DBNull.Value) ? "" : Convert.ToString(row["LastName"]);
+                    merchant.MerchantName = (row["MerchantName"] == DBNull.Value) ? "" : Convert.ToString(row["MerchantName"]);
+                    merchant.Description = (row["Description"] == DBNull.Value) ? "" : Convert.ToString(row["Description"]);
+                    merchant.Email = (row["Email"] == DBNull.Value) ? "" : Convert.ToString(row["Email"]);
+                    merchant.PhoneNumber = (row["PhoneNumber"] == DBNull.Value) ? "" : Convert.ToString(row["PhoneNumber"]);
+                    merchant.Address = (row["Address"] == DBNull.Value) ? "" : Convert.ToString(row["Address"]);
+                    merchant.CreatedDate = (row["CreatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["CreatedDate"]);
+                    merchant.UpdatedDate = (row["UpdatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["UpdatedDate"]);
+                    merchant.Deleted = Convert.ToBoolean(row["Deleted"]);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _log.ErrorFormat("Exception Occured: Exception={0}", ex);
+            }
+
+            return merchant;
+        }
+
         public List<Merchant> GetAllActiveMerchants()
         {
             List<Merchant> merchants = null;
@@ -123,7 +159,7 @@ namespace Engine.DAO.Object
                              );
             try
             {
-                AddSQLParameter("@MerchantID", SqlDbType.BigInt, 6, merchant.ID);
+                AddSQLParameter("@ID", SqlDbType.BigInt, 6, merchant.ID);
                 AddSQLParameter("@FirstName", SqlDbType.VarChar, 50, merchant.FirstName);
                 AddSQLParameter("@LastName", SqlDbType.VarChar, 50, merchant.LastName);
                 AddSQLParameter("@MerchantName", SqlDbType.VarChar, 50, merchant.MerchantName);

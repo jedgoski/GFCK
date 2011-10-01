@@ -35,7 +35,7 @@ namespace Engine.DAO.Object
                     BarcodeType barcodeType = new BarcodeType();
                     barcodeType.ID = Convert.ToInt64(row["ID"]);
                     barcodeType.Name = Convert.ToString(row["Name"]);
-                    barcodeType.Enabled = Convert.ToBoolean(row["Enabled"]);
+                    barcodeType.Deleted = Convert.ToBoolean(row["Deleted"]);
                     barcodeTypes.Add(barcodeType);
                 }
 

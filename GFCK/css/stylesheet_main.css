@@ -52,6 +52,7 @@ ol li{line-height:21px;}
 
 
 #column_center input, #column_center #sorter  select{margin:-2px 0px; position:relative;}
+#column_center input.tblarge{width:36%; margin:0 0 3px; vertical-align:middle;}
 
 #advSearchDefault .back{float:none;}
 #advSearchDefault .forward{float:none; padding-bottom:7px;}
@@ -85,8 +86,8 @@ ol li{line-height:21px;}
 #indexDefault, #specialsListing, #newProductsDefault, #allProductsDefault, #loginDefault, #productGeneral, #shoppingCartDefault {margin:0;}
 #productGeneral ul{margin-left:15px;}
 
-input#login-email-address, input#login-password, input#company, input#firstname, input#lastname, input#suburb, input#street-address, input#city, input#state, select#country, input#telephone, input#fax, input#email-address, input#contactname {width:36%; margin:0 0 3px; vertical-align:middle;}
-input#dob, input#postcode {width:70px; margin:0 0 3px; vertical-align:middle;}
+input#login-email-address, input#login-password, input#company, input#firstname, input#lastname, input#suburb, input#street-address, input#city, input#state, select#country, input#telephone, input#fax, input#email-address, input#contactname, input.tblarge {width:36%; margin:0 0 3px; vertical-align:middle;}
+input#dob, input#postcode, input.tbsmall {width:70px; margin:0 0 3px; vertical-align:middle;}
 
 input#password-new, input#password-confirm {width:36%; margin:0 0 3px; vertical-align:middle;}
 

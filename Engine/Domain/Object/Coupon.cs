@@ -10,7 +10,8 @@ namespace Engine.Domain.Object
         public Int64 ID { get; set; }
         public Int64 MerchantID { get; set; }
         public Int64 TemplateID { get; set; }
-        public Int64 CategoryID { get; set; }
+        public int CategoryID { get; set; }
+        public String Name { get; set; }
         public String CategoryName { get; set; }
         public Byte[] Image { get; set; }
         public String Value { get; set; }
@@ -29,17 +30,15 @@ namespace Engine.Domain.Object
         public bool CornFree { get; set; }
         public bool YeastFree { get; set; }
         public bool Barcode1Enabled { get; set; }
-        public Int64 Barcode1TypeID { get; set; }
-        public String Barcode1TypeName { get; set; }
+        public String Barcode1Type { get; set; }
         public String Barcode1Value { get; set; }
-        public bool Barcode2Enabled { get; set; }
-        public Int64 Barcode2TypeID { get; set; }
-        public String Barcode2TypeName { get; set; }
+        public String Barcode2Type { get; set; }
         public String Barcode2Value { get; set; }
         public Int32 NumberOfCoupons { get; set; }
+        public int Clicks { get; set; }
         public String BottomAdvertisement { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
-        public bool Deleted { get; set; }
+        public bool Enabled { get; set; }
     }
 }

@@ -49,7 +49,7 @@ namespace GFCK.Manufacturer
                 {
                     ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
                     Coupon coupon = couponDAO.GetCoupon(Convert.ToInt64(e.CommandArgument));
-                    coupon.Deleted = true;
+                    coupon.Enabled = true;
                     if (couponDAO.UpdateCoupon(coupon))
                     {
                         // Delete was successfull

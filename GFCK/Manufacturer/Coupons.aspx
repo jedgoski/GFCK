@@ -11,7 +11,7 @@
     <asp:Label ID="lblError" runat="server" CssClass="messageStackError" Text="An error has occured." Visible="false" />
 </div>
 <div>
-    <a href="/Manufacturer/CouponAction.aspx?Mode=Add">Add Coupon</a>
+    <a href="/Manufacturer/Action.aspx?Mode=Add">Add Coupon</a>
 </div>
 <table>
     
@@ -33,8 +33,8 @@
                 <td><asp:label id="lblStartDate" runat="server" /></td>
                 <td><asp:label id="lblExpirationDate" runat="server" /></td>
                 <td>
-                    <a id="lnkEdit" href="/Manufacturer/CouponAction.aspx?Mode=Edit&CouponID={0}" runat="server">Edit</a> | 
-                    <a id="lnkView" href="/Manufacturer/CouponAction.aspx?Mode=View&CouponID={0}" runat="server">View</a> | 
+                    <a id="lnkEdit" href="/Manufacturer/Action.aspx?Mode=Edit&CouponID={0}" runat="server">Edit</a> | 
+                    <a id="lnkView" href="/Manufacturer/Action.aspx?Mode=View&CouponID={0}" runat="server">View</a> | 
                     <asp:LinkButton id="lnkDelete" CommandName="Delete" Text="Delete" runat="server" />
                 </td>
             </tr>

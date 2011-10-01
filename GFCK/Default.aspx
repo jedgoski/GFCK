@@ -1,6 +1,5 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
-    CodeBehind="Default.aspx.cs" Inherits="GFCK._Default" %>
-<%@ Register Src="~/UserControls/Coupon/home.ascx" TagPrefix="uc" TagName="CouponDisplay" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" CodeBehind="Default.aspx.cs" Inherits="GFCK._Default" %>
+<%@ Register Src="/UserControls/Coupon/home.ascx" TagPrefix="uc1" TagName="CouponDisplay" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
 </asp:Content>
@@ -69,12 +68,12 @@
                                                         <div class="inn1">
                                                             <div class="inn2">
  
--->
-<asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" >
-<ItemTemplate>
-    <uc:CouponDisplay id="CouponDisplay" runat="server" />
-</ItemTemplate>
-</asp:Repeater>
+            -->
+                    <asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" >
+                    <ItemTemplate>
+                        <uc1:CouponDisplay ID="cd" runat="server" />
+                    </ItemTemplate>
+                    </asp:Repeater>
             
             <!--
                                                         </div>

@@ -37,15 +37,16 @@ namespace Engine.DAO.Object
                     coupon.ID = Convert.ToInt64(row["ID"]);
                     coupon.MerchantID = Convert.ToInt64(row["MerchantID"]);
                     coupon.TemplateID = Convert.ToInt64(row["TemplateID"]);
-                    coupon.CategoryID = Convert.ToInt64(row["CategoryID"]);
-                    coupon.CategoryName = Convert.ToString(row["CategoryName"]);
-                    coupon.Image = (Byte[])row["Image"];
+                    coupon.CategoryID = Convert.ToInt32(row["CategoryID"]);
+                    coupon.Name = Convert.ToString(row["Name"]);
+                    coupon.CategoryName = (row["CategoryName"] == DBNull.Value) ? "" : Convert.ToString(row["CategoryName"]);
+                    coupon.Image = (row["Image"] == DBNull.Value) ? new byte[0] : (Byte[])row["Image"];
                     coupon.Value = Convert.ToString(row["Value"]);
-                    coupon.Discount = Convert.ToString(row["Discount"]);
-                    coupon.Details = Convert.ToString(row["Details"]);
-                    coupon.Terms = Convert.ToString(row["Terms"]);
+                    coupon.Discount = (row["Discount"] == DBNull.Value) ? "" : Convert.ToString(row["Discount"]);
+                    coupon.Details = (row["Details"] == DBNull.Value) ? "" : Convert.ToString(row["Details"]);
+                    coupon.Terms = (row["Terms"] == DBNull.Value) ? "" : Convert.ToString(row["Terms"]);
                     coupon.StartDate = row["StartDate"] != DBNull.Value ? Convert.ToDateTime(row["StartDate"]) : DateTime.MinValue;
-                    coupon.ExpirationDate = Convert.ToDateTime(row["ExpirationDate"]);
+                    coupon.ExpirationDate = (row["ExpirationDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["ExpirationDate"]);
                     coupon.GlutenFreeFacility = Convert.ToBoolean(row["GlutenFreeFacility"]);
                     coupon.ContainGluten20PPM = Convert.ToBoolean(row["ContainGluten20PPM"]);
                     coupon.LessThan5PPM = Convert.ToBoolean(row["LessThan5PPM"]);
@@ -55,19 +56,16 @@ namespace Engine.DAO.Object
                     coupon.EggFree = Convert.ToBoolean(row["EggFree"]);
                     coupon.CornFree = Convert.ToBoolean(row["CornFree"]);
                     coupon.YeastFree = Convert.ToBoolean(row["YeastFree"]);
-                    coupon.Barcode1Enabled = Convert.ToBoolean(row["Barcode1Enabled"]);
-                    coupon.Barcode1TypeID = Convert.ToInt64(row["Barcode1TypeID"]);
-                    coupon.Barcode1TypeName = Convert.ToString(row["Barcode1TypeName"]);
-                    coupon.Barcode1Value = Convert.ToString(row["Barcode1Value"]);
-                    coupon.Barcode2Enabled = Convert.ToBoolean(row["Barcode2Enabled"]);
-                    coupon.Barcode2TypeID = Convert.ToInt64(row["Barcode2TypeID"]);
-                    coupon.Barcode2TypeName = Convert.ToString(row["Barcode2TypeName"]);
-                    coupon.Barcode2Value = Convert.ToString(row["Barcode2Value"]);
-                    coupon.NumberOfCoupons = Convert.ToInt32(row["NumberOfCoupons"]);
-                    coupon.BottomAdvertisement = Convert.ToString(row["BottomAdvertisement"]);
+                    coupon.Barcode1Type = (row["Barcode1Type"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode1Type"]);
+                    coupon.Barcode1Value = (row["Barcode1Value"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode1Value"]);
+                    coupon.Barcode2Type = (row["Barcode2Type"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode2Type"]);
+                    coupon.Barcode2Value = (row["Barcode2Value"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode2Value"]);
+                    coupon.NumberOfCoupons = (row["NumberOfCoupons"] == DBNull.Value) ? 0 : Convert.ToInt32(row["NumberOfCoupons"]);
+                    coupon.BottomAdvertisement = (row["BottomAdvertisement"] == DBNull.Value) ? "" : Convert.ToString(row["BottomAdvertisement"]);
                     coupon.CreatedDate = row["CreatedDate"] != DBNull.Value ? Convert.ToDateTime(row["CreatedDate"]) : DateTime.MinValue;
                     coupon.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
-                    coupon.Deleted = Convert.ToBoolean(row["Deleted"]);
+                    coupon.Enabled = Convert.ToBoolean(row["Enabled"]);
+                    coupon.Clicks = (row["total"] == DBNull.Value) ? 0 : Convert.ToInt32(row["total"]);
                     coupons.Add(coupon);
                 }
 
@@ -96,15 +94,16 @@ namespace Engine.DAO.Object
                     coupon.ID = Convert.ToInt64(row["ID"]);
                     coupon.MerchantID = Convert.ToInt64(row["MerchantID"]);
                     coupon.TemplateID = Convert.ToInt64(row["TemplateID"]);
-                    coupon.CategoryID = Convert.ToInt64(row["CategoryID"]);
-                    coupon.CategoryName = Convert.ToString(row["CategoryName"]);
-                    coupon.Image = Convert.ToByte(row["Image"]);
+                    coupon.CategoryID = Convert.ToInt32(row["CategoryID"]);
+                    coupon.CategoryName = (row["CategoryName"] == DBNull.Value) ? "" : Convert.ToString(row["CategoryName"]);
+                    coupon.Name = Convert.ToString(row["Name"]);
+                    coupon.Image = (row["Image"] == DBNull.Value) ? new byte[0] : (Byte[])row["Image"];
                     coupon.Value = Convert.ToString(row["Value"]);
-                    coupon.Discount = Convert.ToString(row["Discount"]);
-                    coupon.Details = Convert.ToString(row["Details"]);
-                    coupon.Terms = Convert.ToString(row["Terms"]);
+                    coupon.Discount = (row["Discount"] == DBNull.Value) ? "" : Convert.ToString(row["Discount"]);
+                    coupon.Details = (row["Details"] == DBNull.Value) ? "" : Convert.ToString(row["Details"]);
+                    coupon.Terms = (row["Terms"] == DBNull.Value) ? "" : Convert.ToString(row["Terms"]);
                     coupon.StartDate = row["StartDate"] != DBNull.Value ? Convert.ToDateTime(row["StartDate"]) : DateTime.MinValue;
-                    coupon.ExpirationDate = Convert.ToDateTime(row["ExpirationDate"]);
+                    coupon.ExpirationDate = (row["ExpirationDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["ExpirationDate"]);
                     coupon.GlutenFreeFacility = Convert.ToBoolean(row["GlutenFreeFacility"]);
                     coupon.ContainGluten20PPM = Convert.ToBoolean(row["ContainGluten20PPM"]);
                     coupon.LessThan5PPM = Convert.ToBoolean(row["LessThan5PPM"]);
@@ -114,16 +113,12 @@ namespace Engine.DAO.Object
                     coupon.EggFree = Convert.ToBoolean(row["EggFree"]);
                     coupon.CornFree = Convert.ToBoolean(row["CornFree"]);
                     coupon.YeastFree = Convert.ToBoolean(row["YeastFree"]);
-                    coupon.Barcode1Enabled = Convert.ToBoolean(row["Barcode1Enabled"]);
-                    coupon.Barcode1TypeID = Convert.ToInt64(row["Barcode1TypeID"]);
-                    coupon.Barcode1TypeName = Convert.ToString(row["Barcode1TypeName"]);
-                    coupon.Barcode1Value = Convert.ToString(row["Barcode1Value"]);
-                    coupon.Barcode2Enabled = Convert.ToBoolean(row["Barcode2Enabled"]);
-                    coupon.Barcode2TypeID = Convert.ToInt64(row["Barcode2TypeID"]);
-                    coupon.Barcode2TypeName = Convert.ToString(row["Barcode2TypeName"]);
-                    coupon.Barcode2Value = Convert.ToString(row["Barcode2Value"]);
-                    coupon.NumberOfCoupons = Convert.ToInt32(row["NumberOfCoupons"]);
-                    coupon.BottomAdvertisement = Convert.ToString(row["BottomAdvertisement"]);
+                    coupon.Barcode1Type = (row["Barcode1Type"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode1Type"]);
+                    coupon.Barcode1Value = (row["Barcode1Value"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode1Value"]);
+                    coupon.Barcode2Type = (row["Barcode2Type"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode2Type"]);
+                    coupon.Barcode2Value = (row["Barcode2Value"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode2Value"]);
+                    coupon.NumberOfCoupons = (row["NumberOfCoupons"] == DBNull.Value) ? 0 : Convert.ToInt32(row["NumberOfCoupons"]);
+                    coupon.BottomAdvertisement = (row["BottomAdvertisement"] == DBNull.Value) ? "" : Convert.ToString(row["BottomAdvertisement"]);
                     coupon.CreatedDate = row["CreatedDate"] != DBNull.Value ? Convert.ToDateTime(row["CreatedDate"]) : DateTime.MinValue;
                     coupon.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
                     coupon.Enabled = Convert.ToBoolean(row["Enabled"]);
@@ -155,15 +150,16 @@ namespace Engine.DAO.Object
                 coupon.ID = Convert.ToInt64(row["ID"]);
                 coupon.MerchantID = Convert.ToInt64(row["MerchantID"]);
                 coupon.TemplateID = Convert.ToInt64(row["TemplateID"]);
-                coupon.CategoryID = Convert.ToInt64(row["CategoryID"]);
-                coupon.CategoryName = Convert.ToString(row["CategoryName"]);
-                coupon.Image = (Byte[])row["Image"];
+                coupon.CategoryID = Convert.ToInt32(row["CategoryID"]);
+                coupon.CategoryName = (row["CategoryName"] == DBNull.Value) ? "" : Convert.ToString(row["CategoryName"]);
+                coupon.Name = Convert.ToString(row["Name"]);
+                coupon.Image = (row["Image"] == DBNull.Value) ? new byte[0] : (Byte[])row["Image"];
                 coupon.Value = Convert.ToString(row["Value"]);
-                coupon.Discount = Convert.ToString(row["Discount"]);
-                coupon.Details = Convert.ToString(row["Details"]);
-                coupon.Terms = Convert.ToString(row["Terms"]);
+                coupon.Discount = (row["Discount"] == DBNull.Value) ? "" : Convert.ToString(row["Discount"]);
+                coupon.Details = (row["Details"] == DBNull.Value) ? "" : Convert.ToString(row["Details"]);
+                coupon.Terms = (row["Terms"] == DBNull.Value) ? "" : Convert.ToString(row["Terms"]);
                 coupon.StartDate = row["StartDate"] != DBNull.Value ? Convert.ToDateTime(row["StartDate"]) : DateTime.MinValue;
-                coupon.ExpirationDate = Convert.ToDateTime(row["ExpirationDate"]);
+                coupon.ExpirationDate = (row["ExpirationDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["ExpirationDate"]);
                 coupon.GlutenFreeFacility = Convert.ToBoolean(row["GlutenFreeFacility"]);
                 coupon.ContainGluten20PPM = Convert.ToBoolean(row["ContainGluten20PPM"]);
                 coupon.LessThan5PPM = Convert.ToBoolean(row["LessThan5PPM"]);
@@ -173,19 +169,15 @@ namespace Engine.DAO.Object
                 coupon.EggFree = Convert.ToBoolean(row["EggFree"]);
                 coupon.CornFree = Convert.ToBoolean(row["CornFree"]);
                 coupon.YeastFree = Convert.ToBoolean(row["YeastFree"]);
-                coupon.Barcode1Enabled = Convert.ToBoolean(row["Barcode1Enabled"]);
-                coupon.Barcode1TypeID = Convert.ToInt64(row["Barcode1TypeID"]);
-                coupon.Barcode1TypeName = Convert.ToString(row["Barcode1TypeName"]);
-                coupon.Barcode1Value = Convert.ToString(row["Barcode1Value"]);
-                coupon.Barcode2Enabled = Convert.ToBoolean(row["Barcode2Enabled"]);
-                coupon.Barcode2TypeID = Convert.ToInt64(row["Barcode2TypeID"]);
-                coupon.Barcode2TypeName = Convert.ToString(row["Barcode2TypeName"]);
-                coupon.Barcode2Value = Convert.ToString(row["Barcode2Value"]);
-                coupon.NumberOfCoupons = Convert.ToInt32(row["NumberOfCoupons"]);
-                coupon.BottomAdvertisement = Convert.ToString(row["BottomAdvertisement"]);
+                coupon.Barcode1Type = (row["Barcode1Type"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode1Type"]);
+                coupon.Barcode1Value = (row["Barcode1Value"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode1Value"]);
+                coupon.Barcode2Type = (row["Barcode2Type"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode2Type"]);
+                coupon.Barcode2Value = (row["Barcode2Value"] == DBNull.Value) ? "" : Convert.ToString(row["Barcode2Value"]);
+                coupon.NumberOfCoupons = (row["NumberOfCoupons"] == DBNull.Value) ? 0 : Convert.ToInt32(row["NumberOfCoupons"]);
+                coupon.BottomAdvertisement = (row["BottomAdvertisement"] == DBNull.Value) ? "" : Convert.ToString(row["BottomAdvertisement"]);
                 coupon.CreatedDate = row["CreatedDate"] != DBNull.Value ? Convert.ToDateTime(row["CreatedDate"]) : DateTime.MinValue;
                 coupon.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
-                coupon.Deleted = Convert.ToBoolean(row["Deleted"]);
+                coupon.Enabled = Convert.ToBoolean(row["Enabled"]);
 
             }
             catch (Exception ex)
@@ -219,17 +211,15 @@ namespace Engine.DAO.Object
                                 EggFree={16},
                                 CornFree={17},
                                 YeastFree={18},
-                                Barcode1Enabled={19},
-                                Barcode1TypeID={20},
-                                Barcode1Value={21},
-                                Barcode2Enabled={22},
-                                Barcode2TypeID={23},
-                                Barcode2Value={24},
-                                NumberOfCoupons={25},
-                                BottomAdvertisement={26},
-                                CreatedDate={27},
-                                UpdatedDate={28},
-                                Deleted={29}", 
+                                Barcode1Type={19},
+                                Barcode1Value={20},
+                                Barcode2Type={21},
+                                Barcode2Value={22},
+                                NumberOfCoupons={23},
+                                BottomAdvertisement={24},
+                                CreatedDate={25},
+                                UpdatedDate={26},
+                                Enabled={27}", 
                                 coupon.ID,
                                 coupon.MerchantID,
                                 coupon.TemplateID,
@@ -249,29 +239,27 @@ namespace Engine.DAO.Object
                                 coupon.EggFree,
                                 coupon.CornFree,
                                 coupon.YeastFree,
-                                coupon.Barcode1Enabled,
-                                coupon.Barcode1TypeID,
+                                coupon.Barcode1Type,
                                 coupon.Barcode1Value,
-                                coupon.Barcode2Enabled,
-                                coupon.Barcode2TypeID,
+                                coupon.Barcode2Type,
                                 coupon.Barcode2Value,
                                 coupon.NumberOfCoupons,
                                 coupon.BottomAdvertisement,
                                 coupon.CreatedDate,
                                 coupon.UpdatedDate,
-                                coupon.Deleted
+                                coupon.Enabled
                                 );
             try
             {
-                AddSQLParameter("@CouponID", SqlDbType.BigInt, 6, coupon.ID);
-                AddSQLParameter("@MerchantID", SqlDbType.BigInt, 6, coupon.MerchantID);
-                AddSQLParameter("@TemplateID", SqlDbType.BigInt, 6, coupon.TemplateID);
-                AddSQLParameter("@CategoryID", SqlDbType.BigInt, 6, coupon.CategoryID);
-                AddSQLParameter("@Image", SqlDbType.Image, 8000, coupon.Image);
-                AddSQLParameter("@Value", SqlDbType.VarChar, 50, coupon.Value);
-                AddSQLParameter("@Discount", SqlDbType.VarChar, 255, coupon.Discount);
-                AddSQLParameter("@Details", SqlDbType.VarChar, 255, coupon.Details);
-                AddSQLParameter("@Terms", SqlDbType.VarChar, 255, coupon.Terms);
+                AddSQLParameter("@CouponID", SqlDbType.BigInt, coupon.ID);
+                AddSQLParameter("@MerchantID", SqlDbType.BigInt, coupon.MerchantID);
+                AddSQLParameter("@TemplateID", SqlDbType.BigInt, coupon.TemplateID);
+                AddSQLParameter("@CategoryID", SqlDbType.Int, coupon.CategoryID);
+                AddSQLParameter("@Image", SqlDbType.Image, coupon.Image);
+                AddSQLParameter("@Value", SqlDbType.NVarChar, 50, coupon.Value);
+                AddSQLParameter("@Discount", SqlDbType.NVarChar, 50, coupon.Discount);
+                AddSQLParameter("@Details", SqlDbType.NText, coupon.Details);
+                AddSQLParameter("@Terms", SqlDbType.NText, coupon.Terms);
                 AddSQLParameter("@StartDate", SqlDbType.DateTime, 12, coupon.StartDate);
                 AddSQLParameter("@ExpirationDate", SqlDbType.DateTime, 12, coupon.ExpirationDate);
                 AddSQLParameter("@GlutenFreeFacility", SqlDbType.Bit, 2, coupon.GlutenFreeFacility);
@@ -283,15 +271,14 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@EggFree", SqlDbType.Bit, 2, coupon.EggFree);
                 AddSQLParameter("@CornFree", SqlDbType.Bit, 2, coupon.CornFree);
                 AddSQLParameter("@YeastFree", SqlDbType.Bit, 2, coupon.YeastFree);
-                AddSQLParameter("@Barcode1Enabled", SqlDbType.Bit, 2, coupon.Barcode1Enabled);
-                AddSQLParameter("@Barcode1TypeID", SqlDbType.BigInt, 6, coupon.Barcode1TypeID);
-                AddSQLParameter("@Barcode1Value", SqlDbType.VarChar, 50, coupon.Barcode1Value);
-                AddSQLParameter("@Barcode2Enabled", SqlDbType.Bit, 2, coupon.Barcode2Enabled);
-                AddSQLParameter("@Barcode2TypeID", SqlDbType.BigInt, 6, coupon.Barcode2TypeID);
-                AddSQLParameter("@Barcode2Value", SqlDbType.VarChar, 50, coupon.Barcode2Value);
+                AddSQLParameter("@Barcode1Type", SqlDbType.NVarChar, 50, coupon.Barcode1Type);
+                AddSQLParameter("@Barcode1Value", SqlDbType.NVarChar, 50, coupon.Barcode1Value);
+                AddSQLParameter("@Barcode2Type", SqlDbType.NVarChar, 50, coupon.Barcode2Type);
+                AddSQLParameter("@Barcode2Value", SqlDbType.NVarChar, 50, coupon.Barcode2Value);
                 AddSQLParameter("@NumberOfCoupons", SqlDbType.Int, 2, coupon.NumberOfCoupons);
-                AddSQLParameter("@BottomAdvertisement", SqlDbType.VarChar, 255, coupon.BottomAdvertisement);
-                AddSQLParameter("@Deleted", SqlDbType.Bit, 2, coupon.Deleted);
+                AddSQLParameter("@BottomAdvertisement", SqlDbType.NVarChar, 255, coupon.BottomAdvertisement);
+                AddSQLParameter("@Enabled", SqlDbType.Bit, 2, coupon.Enabled);
+                AddSQLParameter("@Name", SqlDbType.NVarChar, 100, coupon.Name);
                 GetExecuteNonQueryByCommand("dbo.UpdateCoupon");
 
                 success = true;
@@ -327,17 +314,16 @@ namespace Engine.DAO.Object
                                 EggFree={16},
                                 CornFree={17},
                                 YeastFree={18},
-                                Barcode1Enabled={19},
-                                Barcode1TypeID={20},
+                                Barcode1Type={20},
                                 Barcode1Value={21},
-                                Barcode2Enabled={22},
-                                Barcode2TypeID={23},
+                                Barcode2Type={23},
                                 Barcode2Value={24},
                                 NumberOfCoupons={25},
                                 BottomAdvertisement={26},
                                 CreatedDate={27},
                                 UpdatedDate={28},
-                                Deleted={29}",
+                                Deleted={29},
+                                Name={30}",
                                 coupon.ID,
                                 coupon.MerchantID,
                                 coupon.TemplateID,
@@ -357,30 +343,29 @@ namespace Engine.DAO.Object
                                 coupon.EggFree,
                                 coupon.CornFree,
                                 coupon.YeastFree,
-                                coupon.Barcode1Enabled,
-                                coupon.Barcode1TypeID,
+                                coupon.Barcode1Type,
                                 coupon.Barcode1Value,
-                                coupon.Barcode2Enabled,
-                                coupon.Barcode2TypeID,
+                                coupon.Barcode2Type,
                                 coupon.Barcode2Value,
                                 coupon.NumberOfCoupons,
                                 coupon.BottomAdvertisement,
                                 coupon.CreatedDate,
                                 coupon.UpdatedDate,
-                                coupon.Deleted
+                                coupon.Enabled,
+                                coupon.Name
                                 );
             try
             {
 
 
-                AddSQLParameter("@MerchantID", SqlDbType.BigInt, 6, coupon.MerchantID);
-                AddSQLParameter("@TemplateID", SqlDbType.BigInt, 6, coupon.TemplateID);
-                AddSQLParameter("@CategoryID", SqlDbType.BigInt, 6, coupon.CategoryID);
-                AddSQLParameter("@Image", SqlDbType.Image, 8000, coupon.Image);
-                AddSQLParameter("@Value", SqlDbType.VarChar, 50, coupon.Value);
-                AddSQLParameter("@Discount", SqlDbType.VarChar, 255, coupon.Discount);
-                AddSQLParameter("@Details", SqlDbType.VarChar, 255, coupon.Details);
-                AddSQLParameter("@Terms", SqlDbType.VarChar, 255, coupon.Terms);
+                AddSQLParameter("@MerchantID", SqlDbType.BigInt, coupon.MerchantID);
+                AddSQLParameter("@TemplateID", SqlDbType.BigInt, coupon.TemplateID);
+                AddSQLParameter("@CategoryID", SqlDbType.Int, coupon.CategoryID);
+                AddSQLParameter("@Image", SqlDbType.Image, coupon.Image);
+                AddSQLParameter("@Value", SqlDbType.NVarChar, 50, coupon.Value);
+                AddSQLParameter("@Discount", SqlDbType.NVarChar, 50, coupon.Discount);
+                AddSQLParameter("@Details", SqlDbType.NText, coupon.Details);
+                AddSQLParameter("@Terms", SqlDbType.NText, coupon.Terms);
                 AddSQLParameter("@StartDate", SqlDbType.DateTime, 12, coupon.StartDate);
                 AddSQLParameter("@ExpirationDate", SqlDbType.DateTime, 12, coupon.ExpirationDate);
                 AddSQLParameter("@GlutenFreeFacility", SqlDbType.Bit, 2, coupon.GlutenFreeFacility);
@@ -392,15 +377,14 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@EggFree", SqlDbType.Bit, 2, coupon.EggFree);
                 AddSQLParameter("@CornFree", SqlDbType.Bit, 2, coupon.CornFree);
                 AddSQLParameter("@YeastFree", SqlDbType.Bit, 2, coupon.YeastFree);
-                AddSQLParameter("@Barcode1Enabled", SqlDbType.Bit, 2, coupon.Barcode1Enabled);
-                AddSQLParameter("@Barcode1TypeID", SqlDbType.BigInt, 6, coupon.Barcode1TypeID);
-                AddSQLParameter("@Barcode1Value", SqlDbType.VarChar, 50, coupon.Barcode1Value);
-                AddSQLParameter("@Barcode2Enabled", SqlDbType.Bit, 2, coupon.Barcode2Enabled);
-                AddSQLParameter("@Barcode2TypeID", SqlDbType.BigInt, 6, coupon.Barcode2TypeID);
-                AddSQLParameter("@Barcode2Value", SqlDbType.VarChar, 50, coupon.Barcode2Value);
+                AddSQLParameter("@Barcode1Type", SqlDbType.NVarChar, 50, coupon.Barcode1Type);
+                AddSQLParameter("@Barcode1Value", SqlDbType.NVarChar, 50, coupon.Barcode1Value);
+                AddSQLParameter("@Barcode2Type", SqlDbType.NVarChar, 50, coupon.Barcode2Type);
+                AddSQLParameter("@Barcode2Value", SqlDbType.NVarChar, 50, coupon.Barcode2Value);
                 AddSQLParameter("@NumberOfCoupons", SqlDbType.Int, 2, coupon.NumberOfCoupons);
-                AddSQLParameter("@BottomAdvertisement", SqlDbType.VarChar, 255, coupon.BottomAdvertisement);
-                AddSQLParameter("@Deleted", SqlDbType.Bit, 2, coupon.Deleted);
+                AddSQLParameter("@BottomAdvertisement", SqlDbType.NVarChar, 255, coupon.BottomAdvertisement);
+                AddSQLParameter("@Enabled", SqlDbType.Bit, 2, coupon.Enabled);
+                AddSQLParameter("@Name", SqlDbType.NVarChar, 100, coupon.Name);
                 GetExecuteNonQueryByCommand("dbo.AddCoupon");
                 success = true;
 

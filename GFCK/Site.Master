@@ -42,16 +42,9 @@
                 <tr>
                     <td id="column_left" style="width: 202px;">
                         <div style="width: 202px;">
-                            <!--// bof: categories //-->
-                            <div id="categories" style="width: 202px;">
-                                <uc:LeftCategories id="LeftCategories" runat="server" />
-                            </div>
-                            <!--// eof: categories //-->
-                            <!--// bof: specials //-->
-                            <div id="specials" style="width: 202px;">
-                                <uc:LeftCallout id="LeftCallout" runat="server" />
-                            </div>
-                            <!--// eof: specials //-->
+                            <uc:LeftCategories id="LeftCategories" runat="server" />
+
+                            <uc:LeftCallout id="LeftCallout1" runat="server" />
                         </div>
                     </td>
                     <td>

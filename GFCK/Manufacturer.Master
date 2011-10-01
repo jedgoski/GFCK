@@ -1,0 +1,66 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Manufacturer.Master.cs" Inherits="GFCK.ManufacturerMaster" %>
+<%@ Register Src="~/UserControls/Header.ascx" TagPrefix="uc" TagName="Header" %>
+<%@ Register Src="~/UserControls/TopCategories.ascx" TagPrefix="uc" TagName="TopCategories" %>
+<%@ Register Src="~/UserControls/Search.ascx" TagPrefix="uc" TagName="Search" %>
+<%@ Register Src="~/UserControls/LeftCategories.ascx" TagPrefix="uc" TagName="LeftCategories" %>
+<%@ Register Src="~/UserControls/LeftCallout.ascx" TagPrefix="uc" TagName="LeftCallout" %>
+<%@ Register Src="~/UserControls/Footer.ascx" TagPrefix="uc" TagName="Footer" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head runat="server">
+    <title>Gluten Free Coupon King</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet_boxes.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet_css_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet_main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet_tm.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print_stylesheet.css" />
+    <script type="text/javascript" src="/scripts/jquery-1.6.4.min.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="indexBody">
+    <form runat="server">
+    <!--bof-header logo and navigation display-->
+    <div class="main_t">
+        <div class="header_t">
+            <div class="row1">
+                <uc:Header id="Header" runat="server" />
+            </div>
+            <div class="row3">
+                <uc:Search id="Search" runat="server" />
+            </div>
+        </div>
+        <img src="/images/pixel_trans.gif" alt="" width="1" height="14" /><br />
+        <div class="content_t">
+            <table border="0" cellspacing="0" cellpadding="0" id="contentMainWrapper" style="width: 100%;">
+                <tr>
+                    <td id="column_left" style="width: 202px;">
+                        <div style="width: 202px;">
+                            <uc:LeftCategories id="LeftCategories1" runat="server" Manufacturer="True" />
+                        </div>
+                    </td>
+                    <td>
+                        <img src="/images/pixel_trans.gif" alt="" width="10" height="1" />
+                    </td>
+                    <td style="width: 100%;">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td id="column_center" valign="top" style="width: 100%;">
+                                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer_t">
+            <uc:Footer id="Footer" runat="server" />
+        </div>
+    </div>
+    </form>
+</body>
+</html>
