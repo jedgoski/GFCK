@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AWSSDK, Version=1.3.13.1, Culture=neutral, PublicKeyToken=cd2d24cd2bace800, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\AWSSDK.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\Components\log4net.dll</HintPath>
     </Reference>

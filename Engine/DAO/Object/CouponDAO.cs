@@ -40,7 +40,7 @@ namespace Engine.DAO.Object
                     coupon.CategoryID = Convert.ToInt32(row["CategoryID"]);
                     coupon.Name = Convert.ToString(row["Name"]);
                     coupon.CategoryName = (row["CategoryName"] == DBNull.Value) ? "" : Convert.ToString(row["CategoryName"]);
-                    coupon.Image = (row["Image"] == DBNull.Value) ? new byte[0] : (Byte[])row["Image"];
+                    coupon.Image = (row["Image"] == DBNull.Value) ? "" : row["Image"].ToString();
                     coupon.Value = Convert.ToString(row["Value"]);
                     coupon.Discount = (row["Discount"] == DBNull.Value) ? "" : Convert.ToString(row["Discount"]);
                     coupon.Details = (row["Details"] == DBNull.Value) ? "" : Convert.ToString(row["Details"]);
@@ -97,7 +97,7 @@ namespace Engine.DAO.Object
                     coupon.CategoryID = Convert.ToInt32(row["CategoryID"]);
                     coupon.CategoryName = (row["CategoryName"] == DBNull.Value) ? "" : Convert.ToString(row["CategoryName"]);
                     coupon.Name = Convert.ToString(row["Name"]);
-                    coupon.Image = (row["Image"] == DBNull.Value) ? new byte[0] : (Byte[])row["Image"];
+                    coupon.Image = (row["Image"] == DBNull.Value) ? "" : row["Image"].ToString();
                     coupon.Value = Convert.ToString(row["Value"]);
                     coupon.Discount = (row["Discount"] == DBNull.Value) ? "" : Convert.ToString(row["Discount"]);
                     coupon.Details = (row["Details"] == DBNull.Value) ? "" : Convert.ToString(row["Details"]);
@@ -153,7 +153,7 @@ namespace Engine.DAO.Object
                 coupon.CategoryID = Convert.ToInt32(row["CategoryID"]);
                 coupon.CategoryName = (row["CategoryName"] == DBNull.Value) ? "" : Convert.ToString(row["CategoryName"]);
                 coupon.Name = Convert.ToString(row["Name"]);
-                coupon.Image = (row["Image"] == DBNull.Value) ? new byte[0] : (Byte[])row["Image"];
+                coupon.Image = (row["Image"] == DBNull.Value) ? "" : row["Image"].ToString();
                 coupon.Value = Convert.ToString(row["Value"]);
                 coupon.Discount = (row["Discount"] == DBNull.Value) ? "" : Convert.ToString(row["Discount"]);
                 coupon.Details = (row["Details"] == DBNull.Value) ? "" : Convert.ToString(row["Details"]);
@@ -255,7 +255,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@MerchantID", SqlDbType.BigInt, coupon.MerchantID);
                 AddSQLParameter("@TemplateID", SqlDbType.BigInt, coupon.TemplateID);
                 AddSQLParameter("@CategoryID", SqlDbType.Int, coupon.CategoryID);
-                AddSQLParameter("@Image", SqlDbType.Image, coupon.Image);
+                AddSQLParameter("@Image", SqlDbType.NVarChar, 100, coupon.Image);
                 AddSQLParameter("@Value", SqlDbType.NVarChar, 50, coupon.Value);
                 AddSQLParameter("@Discount", SqlDbType.NVarChar, 50, coupon.Discount);
                 AddSQLParameter("@Details", SqlDbType.NText, coupon.Details);
@@ -291,9 +291,10 @@ namespace Engine.DAO.Object
             return success;
         }
 
-        public bool AddCoupon(Coupon coupon)
+        public int AddCoupon(Coupon coupon)
         {
             bool success = false;
+            int id = 0;
             _log.DebugFormat(@"dbo.AddCoupon: 
                                  ID={0} 
                                 MerchantID={1},
@@ -361,7 +362,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@MerchantID", SqlDbType.BigInt, coupon.MerchantID);
                 AddSQLParameter("@TemplateID", SqlDbType.BigInt, coupon.TemplateID);
                 AddSQLParameter("@CategoryID", SqlDbType.Int, coupon.CategoryID);
-                AddSQLParameter("@Image", SqlDbType.Image, coupon.Image);
+                AddSQLParameter("@Image", SqlDbType.NVarChar, 100, coupon.Image);
                 AddSQLParameter("@Value", SqlDbType.NVarChar, 50, coupon.Value);
                 AddSQLParameter("@Discount", SqlDbType.NVarChar, 50, coupon.Discount);
                 AddSQLParameter("@Details", SqlDbType.NText, coupon.Details);
@@ -385,7 +386,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@BottomAdvertisement", SqlDbType.NVarChar, 255, coupon.BottomAdvertisement);
                 AddSQLParameter("@Enabled", SqlDbType.Bit, 2, coupon.Enabled);
                 AddSQLParameter("@Name", SqlDbType.NVarChar, 100, coupon.Name);
-                GetExecuteNonQueryByCommand("dbo.AddCoupon");
+                id = GetExecuteScalarByCommand("dbo.AddCoupon");
                 success = true;
 
             }
@@ -394,7 +395,7 @@ namespace Engine.DAO.Object
                 _log.ErrorFormat("Exception Occured: Exception={0}", ex);
             }
 
-            return success;
+            return id;
         }
 
 

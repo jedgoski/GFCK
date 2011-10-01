@@ -69,8 +69,8 @@ namespace GFCK.Manufacturer
             }
 
             //does this really work?  If not, will need to make a page handler and link to that page.
-            string strPicture = Convert.ToBase64String(c.Image);
-            if (c.Image.Length > 0) img.Src = string.Format("data:image/gif;base64,{0}", strPicture);
+            string strPicture = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", c.Image);
+            if (c.Image != "") img.Src = strPicture;
             litCouponName.Text = c.Name; 
             litCategory.Text = c.CategoryName; 
             litValue.Text = c.Value;

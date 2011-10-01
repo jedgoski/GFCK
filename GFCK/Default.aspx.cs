@@ -46,7 +46,7 @@ namespace GFCK
 
                         Merchant m = merchantDAO.GetMerchant(coupon.MerchantID);
                         CouponDisplay.Name = m.MerchantName;
-                        CouponDisplay.Picture = "";// coupon.Image.ToString();
+                        CouponDisplay.Picture = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", coupon.Image); //"https://s3.amazonaws.com/gfck/coupon/Carvel/3.gif";// coupon.Image.ToString();
                         CouponDisplay.Description = coupon.Details;
                         CouponDisplay.Amount = coupon.Value;
                         CouponDisplay.CouponID = coupon.ID.ToString();

@@ -13,7 +13,7 @@ namespace Engine.Domain.Object
         public int CategoryID { get; set; }
         public String Name { get; set; }
         public String CategoryName { get; set; }
-        public Byte[] Image { get; set; }
+        public string Image { get; set; }
         public String Value { get; set; }
         public String Discount { get; set; }
         public String Details { get; set; }

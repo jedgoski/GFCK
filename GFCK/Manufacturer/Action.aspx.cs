@@ -4,11 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Configuration;
 using log4net;
 using Engine.DAO.Object;
 using Engine.DAO.Domain;
 using Engine.Domain.Object;
 using System.Web.Security;
+using Amazon.S3;
+using Amazon.S3.Model;
 
 namespace GFCK.Manufacturer
 {
@@ -18,6 +21,10 @@ namespace GFCK.Manufacturer
         FactoryDAO _factoryDAO = FactoryDAO.GetInstance();
         long _couponID = 0;
         long _manufacturerID = 0;
+        string _merchantname = "";
+        static string bucketName;
+        static string keyName;
+        static AmazonS3 client;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,14 +33,16 @@ namespace GFCK.Manufacturer
                 _couponID = Convert.ToInt64(Request.QueryString["CouponID"]);
             }
 
+            MembershipUser user = Membership.GetUser();
+            IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
+            Merchant m = merchantDAO.GetMerchantByUserID((Guid)user.ProviderUserKey);
+            _manufacturerID = m.ID;
+            _merchantname = m.MerchantName;
+
             if (!IsPostBack)
             {
                 try
                 {
-                    MembershipUser user = Membership.GetUser();
-                    IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
-                    Merchant m = merchantDAO.GetMerchantByUserID((Guid)user.ProviderUserKey);
-                    _manufacturerID = m.ID;
                     GetMode();
                 }
                 catch (Exception ex)
@@ -48,6 +57,10 @@ namespace GFCK.Manufacturer
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            string accessKeyID = WebConfigurationManager.AppSettings["AWSAccessKey"];
+            string secretAccessKeyID = WebConfigurationManager.AppSettings["AWSSecretKey"];
+
+            client = Amazon.AWSClientFactory.CreateAmazonS3Client(accessKeyID, secretAccessKeyID);
             try
             {
                 ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
@@ -56,18 +69,7 @@ namespace GFCK.Manufacturer
                 coupon.CategoryID = Convert.ToInt32(ddlCategory.SelectedValue);
                 coupon.MerchantID = _manufacturerID;
                 
-                FileUpload img = (FileUpload)imgUpload;
-                Byte[] imgByte = new byte[0];
-                if (img.HasFile && img.PostedFile != null)
-                {
-                    //To create a PostedFile
-                    HttpPostedFile File = imgUpload.PostedFile;
-                    //Create byte Array with file len
-                    imgByte = new Byte[File.ContentLength];
-                    //force the control to load data in array
-                    File.InputStream.Read(imgByte, 0, File.ContentLength);
-                }
-                coupon.Image = imgByte;
+                //coupon.Image = imgByte;
                 coupon.Name = txtName.Text;
                 coupon.Value = txtValue.Text;
                 coupon.Discount = txtDiscount.Text;
@@ -94,9 +96,47 @@ namespace GFCK.Manufacturer
 
                 if (_couponID == 0)
                 {
+                   // _couponID = couponDAO.AddCoupon(coupon);
+                    _couponID = 7;
                     // Need to add a record
-                    if (couponDAO.AddCoupon(coupon))
+                    if (_couponID > 0)
                     {
+                        try
+                        {
+                            FileUpload img = (FileUpload)imgUpload;
+                            Byte[] imgByte = new byte[0];
+                            if (img.HasFile && img.PostedFile != null)
+                            {
+                                //To create a PostedFile
+                                HttpPostedFile File = imgUpload.PostedFile;
+                                //Create byte Array with file len
+                                imgByte = new Byte[File.ContentLength];
+                                //force the control to load data in array
+                                File.InputStream.Read(imgByte, 0, File.ContentLength);
+
+                                PutObjectRequest request = new PutObjectRequest();
+                                string keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0,File.FileName.IndexOf(".")),_couponID.ToString()));
+                                request.WithBucketName("gfck").WithContentType(File.ContentType).WithCannedACL(S3CannedACL.PublicRead).WithKey(string.Format("coupon/{0}",keyname)).WithInputStream(File.InputStream);
+                                S3Response response = client.PutObject(request);
+                                response.Dispose();
+
+                                coupon.Image = keyname;
+                                couponDAO.UpdateCoupon(coupon);
+                            }
+                        }
+                        catch (AmazonS3Exception amazonS3Exception)
+                        {
+                            if (amazonS3Exception.ErrorCode != null &&
+                                (amazonS3Exception.ErrorCode.Equals("InvalidAccessKeyId") ||
+                                amazonS3Exception.ErrorCode.Equals("InvalidSecurity")))
+                            {
+                                _log.Error("Please check the provided AWS Credentials.");
+                            }
+                            else
+                            {
+                                _log.Error(string.Format("An error occurred with the message '{0}' when writing an object", amazonS3Exception.Message));
+                            }
+                        }
                         // The add was successfull
                         lblAddSuccessfull.Visible = true;
                         lblEditSuccessfull.Visible = false;

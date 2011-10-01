@@ -14,7 +14,7 @@ namespace Engine.DAO.Domain
         List<Coupon> GetAllCouponsForMerchantID(Int64 ID);
         List<Coupon> GetAllCouponsByCategory(int categoryID);
         Coupon GetCoupon(Int64 ID);
-        bool AddCoupon(Coupon coupon);
+        int AddCoupon(Coupon coupon);
 
     }
 }
