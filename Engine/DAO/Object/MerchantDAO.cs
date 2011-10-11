@@ -92,13 +92,53 @@ namespace Engine.DAO.Object
             return merchant;
         }
 
+
+        public List<Merchant> GetMerchantsByFilter(int deleted)
+        {
+            List<Merchant> merchants = null;
+            _log.DebugFormat("dbo.GetMerchantsByFilter: status={0}", deleted);
+            try
+            {
+
+                AddSQLParameter("@Deleted", SqlDbType.Int, 4, deleted);
+                merchants = new List<Merchant>();
+                DataSet ds = GetDatasetByCommand("dbo.GetMerchantsByFilter");
+                DataRowCollection rows = ds.Tables[0].Rows;
+                foreach (DataRow row in rows)
+                {
+                    Merchant merchant = new Merchant();
+                    merchant.ID = Convert.ToInt64(row["ID"]);
+                    merchant.UserID = (Guid)row["UserID"];
+                    merchant.FirstName = Convert.ToString(row["FirstName"]);
+                    merchant.LastName = Convert.ToString(row["LastName"]);
+                    merchant.MerchantName = Convert.ToString(row["MerchantName"]);
+                    merchant.Description = Convert.ToString(row["Description"]);
+                    merchant.Email = Convert.ToString(row["Email"]);
+                    merchant.PhoneNumber = Convert.ToString(row["PhoneNumber"]);
+                    merchant.Address = Convert.ToString(row["Address"]);
+                    merchant.CreatedDate = row["CreatedDate"] != DBNull.Value ? Convert.ToDateTime(row["CreatedDate"]) : DateTime.MinValue;
+                    merchant.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
+                    merchant.Deleted = Convert.ToBoolean(row["Deleted"]);
+                    merchants.Add(merchant);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _log.ErrorFormat("Exception Occured: Exception={0}", ex);
+            }
+
+            return merchants;
+        }
+
+
         public List<Merchant> GetAllActiveMerchants()
         {
             List<Merchant> merchants = null;
             _log.DebugFormat("dbo.GetAllActiveMerchants");
             try
-            {   
-                
+            {
+
                 
                 merchants = new List<Merchant>();
                 DataSet ds = GetDatasetByCommand("dbo.GetAllActiveMerchants");

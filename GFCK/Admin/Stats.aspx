@@ -2,6 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    
+    <script type="text/javascript">
+        $(function () {
+
+            // Datepicker
+            $('.datepicker').datepicker({
+                inline: true
+            });
+
+            //hover states on the static widgets
+            $('#dialog_link, ul#icons li').hover(
+					function () { $(this).addClass('ui-state-hover'); },
+					function () { $(this).removeClass('ui-state-hover'); }
+				);
+
+        });
+		</script>
 
     <div class="column-center-background">
     <div class="centerColumn" id="advSearchResultsDefault">
@@ -17,14 +34,39 @@
             </div>
         </div>
 
-        Filter: <asp:DropDownList ID="ddlFilter1" runat="server">
-            <asp:ListItem Value="" Text="All" />
-            <asp:ListItem Value="current" Text="This Month" />
-            <asp:ListItem Value="last" Text="Last Month" />
-        </asp:DropDownList>
+        <a href="/Admin/default.aspx" >Back</a>
+        <br />
+        <br />
+        <table>
+        <tr>
+            <td>
+            Filter: <asp:DropDownList ID="ddlFilter1" runat="server" AutoPostBack="true">
+                <asp:ListItem Value="all" Text="All" />
+                <asp:ListItem Value="current" Text="This Month" />
+                <asp:ListItem Value="last" Text="Last Month" />
+            </asp:DropDownList>
+
+            </td>
+            <td width="100px"></td>
+
+            <td>
+                Start Date:
+                <asp:TextBox ID="txtStartDate" runat="server" CssClass="datepicker tbsmall" />
+
+
+                End Date:
+                <asp:TextBox ID="txtEndDate" runat="server" CssClass="datepicker tbsmall" />
+            </td>
+            <td width="10px"></td>
+            <td>
+                    <asp:ImageButton ID="btnGo" runat="server" AlternateText="Go" ImageUrl="/images/buttons/english/button_submit.gif" />
+            </td>
+            </tr>
+        </table>
 
         <br class="clearBoth"/>
         <div id="productListing"><br /><br />
+        <asp:Literal ID="litNoDataFound" runat="server" visible="false"><b>No Data Found</b></asp:Literal>
             <asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" >
                 <ItemTemplate>
 

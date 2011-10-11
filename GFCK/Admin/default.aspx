@@ -2,9 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-<asp:Repeater ID="rptManufacturers" runat="server" OnItemDataBound="rptManufacturers_ItemDataBound" >
-    <HeaderTemplate>
-        <div class="column-center-background">
+ <div class="column-center-background">
         <div class="centerColumn" id="advSearchResultsDefault">
             <div class="title_box">
 	            <div class="row1">
@@ -17,14 +15,19 @@
                 </div>
             </div>
 
-            Filter: <asp:DropDownList ID="ddlFilter1" runat="server">
-                <asp:ListItem Value="" Text="All" />
-                <asp:ListItem Value="current" Text="This Month" />
-                <asp:ListItem Value="last" Text="Last Month" />
+            Filter: <asp:DropDownList ID="ddlFilter1" runat="server" AutoPostBack="true">
+                <asp:ListItem Value="-1" Text="All" />
+                <asp:ListItem Value="0" Text="Active" />
+                <asp:ListItem Value="1" Text="Inactive" />
             </asp:DropDownList>
 
             <br class="clearBoth"/>
             <div id="productListing"><br /><br />
+
+
+<asp:Repeater ID="rptManufacturers" runat="server" OnItemDataBound="rptManufacturers_ItemDataBound" >
+    <HeaderTemplate>
+       
     </HeaderTemplate>
     <ItemTemplate>
 
@@ -35,7 +38,7 @@
                         </div>
                         <div id="productsListingListingTopLinks" class="navSplitPagesLinks forward">
                              <a href="#" id="linkEdit" runat="server">Edit</a> | 
-                             <a href="#" id="linkDelete" runat="server">Delete</a> | 
+                             <a href="#" id="linkDelete" runat="server">Delete</a> <a href="#" id="linkActivate" runat="server" visible="false">Activate</a> | 
                              <a href="#" id="linkStats" runat="server">View Statistics</a>
                         </div>
                         <div class="clear"></div>
@@ -43,9 +46,10 @@
                 </div>
     </ItemTemplate>
     <FooterTemplate>
-            </div>
-        </div>
-    </div><br /><br />
+           
     </FooterTemplate>
 </asp:Repeater>
+ </div>
+        </div>
+    </div><br /><br />
 </asp:Content>

@@ -140,6 +140,7 @@ namespace GFCK.Admin
                 case "View": LoadView(); break;
                 case "Edit": LoadEdit(); break;
                 case "Delete": DeleteManufacturer(); break;
+                case "Activate": ActivateManufacturer(); break;
             }
         }
 
@@ -182,12 +183,18 @@ namespace GFCK.Admin
             accountInformation.Visible = false;
             profileInformation.Visible = false;
             btnSave.Visible = false;
-
+            
             IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
             Merchant merchant = merchantDAO.GetMerchant(_manufacturerID);
+            MembershipUser user =  Membership.GetUser((Guid)merchant.UserID);
+            
             merchant.Deleted = true;
+            user.IsApproved = false;
             if (merchantDAO.UpdateMerchant(merchant))
             {
+                // Lock out the user
+                Membership.UpdateUser(user);
+
                 // Delete was successfull
                 lblDeleteSuccessfull.Visible = true;
                 lblError.Visible = false;
@@ -196,6 +203,35 @@ namespace GFCK.Admin
             {
                 lblError.Visible = true;
                 lblDeleteSuccessfull.Visible = false;
+            }
+        }
+
+        protected void ActivateManufacturer()
+        {
+            divAddManufacturer.Visible = false;
+            divEditManufacturer.Visible = true;
+            divViewManufacturer.Visible = false;
+            accountInformation.Visible = false;
+            profileInformation.Visible = false;
+            btnSave.Visible = false;
+
+            IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
+            Merchant merchant = merchantDAO.GetMerchant(_manufacturerID);
+            MembershipUser user = Membership.GetUser((Guid)merchant.UserID);
+            merchant.Deleted = false;
+            user.IsApproved = true;
+            if (merchantDAO.UpdateMerchant(merchant))
+            {
+                // Activate the user
+                Membership.UpdateUser(user);
+                // Activation was successfull
+                lblActivateSuccessfull.Visible = true;
+                lblError.Visible = false;
+            }
+            else
+            {
+                lblError.Visible = true;
+                lblActivateSuccessfull.Visible = false;
             }
         }
 

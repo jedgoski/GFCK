@@ -22,8 +22,30 @@
                     $("#bcTarget2").barcode($("#MainContent_txtBarcode2Value").val(), $("#MainContent_ddlBarcode2Type").val());
                 }
             });
+
         });
+
     </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            // Datepicker
+            $('.datepicker').datepicker({
+                inline: true
+            });
+
+            //hover states on the static widgets
+            $('#dialog_link, ul#icons li').hover(
+					function () { $(this).addClass('ui-state-hover'); },
+					function () { $(this).removeClass('ui-state-hover'); }
+				);
+
+        });
+		</script>
+
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="column-center-background">
@@ -82,7 +104,7 @@
  <td width="100px"></td>
  <td>
 <label class="inputLabel">Start Date:</label>
-<asp:TextBox ID="txtStartDate" runat="server" CssClass="tbsmall" /><span class="alert">*</span><br class="clearBoth" />
+<asp:TextBox ID="txtStartDate" runat="server" CssClass="datepicker tbsmall" /><span class="alert">*</span><br class="clearBoth" />
 </td> </tr></table>
  <table>
  <tr><td>
@@ -92,7 +114,7 @@
  <td width="100px"></td>
  <td>
 <label class="inputLabel">Expiration Date:</label>
-<asp:TextBox ID="txtExpirationDate" runat="server" CssClass="tbsmall" /><span class="alert">*</span><br class="clearBoth" />
+<asp:TextBox ID="txtExpirationDate" runat="server" CssClass="datepicker tbsmall" /><span class="alert">*</span><br class="clearBoth" />
  </td> </tr></table>
  <br />
 <label class="inputLabel">Number of Coupons:</label>
@@ -184,7 +206,7 @@
 <asp:TextBox ID="txtBottomAdvertisement" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  -->
 </fieldset>
- 
+<div class="buttonRow forward"><asp:ImageButton ID="btnCancel" runat="server" AlternateText="Cancel" ImageUrl="/images/buttons/english/button_cancel.gif" PostBackUrl="/Manufacturer/default.aspx" /></div>
 <div class="buttonRow forward"><asp:ImageButton ID="btnSave" runat="server" AlternateText="Submit" OnClick="btnSave_Click" ImageUrl="/images/buttons/english/button_submit.gif" /></div>
 
     </div></div><br /><br /><br /><br />

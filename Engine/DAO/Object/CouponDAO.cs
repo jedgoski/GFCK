@@ -436,17 +436,52 @@ namespace Engine.DAO.Object
             try
             {
 
-                CouponPrint couponPrint = new CouponPrint();
+                
                 couponPrints = new List<CouponPrint>();
                 AddSQLParameter("@CouponID", SqlDbType.BigInt, 6, couponID);
+
                 DataSet ds = GetDatasetByCommand("dbo.GetCouponPrintsForCouponID");
+
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
+                    CouponPrint couponPrint = new CouponPrint();
                     couponPrint.ID = Convert.ToInt64(row["ID"]);
+                    couponPrint.Name = Convert.ToString(row["Name"]);
                     couponPrint.CouponID = Convert.ToInt64(row["CouponID"]);
                     couponPrint.PrintedDate = Convert.ToDateTime(row["PrintedDate"]);
                     couponPrint.IPAddress = Convert.ToString(row["IPAddress"]);
                     
+                    couponPrints.Add(couponPrint);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _log.ErrorFormat("Exception Occured: Exception={0}", ex);
+            }
+
+            return couponPrints;
+        }
+
+        public List<CouponPrint> GetCouponPrintsByMerchantID(Int64 merchantID, DateTime startDate, DateTime endDate)
+        {
+            List<CouponPrint> couponPrints = null;
+            _log.DebugFormat(@"dbo.GetCouponPrintsByMerchantID: MerchantID={0}", merchantID);
+            try
+            {
+                
+                couponPrints = new List<CouponPrint>();
+                AddSQLParameter("@MerchantID", SqlDbType.BigInt, 6, merchantID);
+                AddSQLParameter("@StartDate", SqlDbType.Date, 12, startDate);
+                AddSQLParameter("@EndDate", SqlDbType.Date, 12, endDate);
+                DataSet ds = GetDatasetByCommand("dbo.GetCouponPrintsByMerchantID");
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    CouponPrint couponPrint = new CouponPrint();
+                    couponPrint.Name = Convert.ToString(row["Name"]);
+                    couponPrint.CouponID = Convert.ToInt64(row["CouponID"]);
+                    couponPrint.TotalPrints = Convert.ToInt32(row["Total"]);
+
                     couponPrints.Add(couponPrint);
                 }
 

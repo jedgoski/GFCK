@@ -67,6 +67,15 @@ namespace GFCK.Admin {
         protected global::System.Web.UI.WebControls.Label lblDeleteSuccessfull;
         
         /// <summary>
+        /// lblActivateSuccessfull control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblActivateSuccessfull;
+        
+        /// <summary>
         /// lblError control.
         /// </summary>
         /// <remarks>
@@ -191,6 +200,15 @@ namespace GFCK.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescription;
+        
+        /// <summary>
+        /// btnCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnCancel;
         
         /// <summary>
         /// btnSave control.

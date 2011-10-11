@@ -47,6 +47,7 @@
     <asp:Label ID="lblAddSuccessfull" runat="server" CssClass="messageStackError" Text="Added manufacturer successfully." Visible="false" />
     <asp:Label ID="lblEditSuccessfull" runat="server" CssClass="messageStackError" Text="Updated manufacturer successfully." Visible="false" />
     <asp:Label ID="lblDeleteSuccessfull" runat="server" CssClass="messageStackError" Text="Deleted manufacturer successfully." Visible="false" />
+    <asp:Label ID="lblActivateSuccessfull" runat="server" CssClass="messageStackError" Text="Activated manufacturer successfully." Visible="false" />
     <asp:Label ID="lblError" runat="server" CssClass="messageStackError" Text="An error has occured." Visible="false" />
 </div>
 
@@ -93,7 +94,9 @@
 <asp:TextBox ID="txtDescription" textMode="MultiLine" runat="server" Rows="5" />
 </fieldset>
  
+<div class="buttonRow forward"><asp:ImageButton ID="btnCancel" runat="server" AlternateText="Cancel" ImageUrl="/images/buttons/english/button_cancel.gif" PostBackUrl="/Admin/default.aspx" /></div>
 <div class="buttonRow forward"><asp:ImageButton ID="btnSave" runat="server" AlternateText="Submit" OnClick="btnSave_Click" ImageUrl="/images/buttons/english/button_submit.gif" /></div>
+
 
     </div></div><br /><br /><br /><br />
 </asp:Content>

@@ -24,23 +24,83 @@ namespace GFCK.Admin
             {
                 _manufacturerID = Convert.ToInt64(Request.QueryString["ManufacturerID"]);
             }
-
+            
+            BindEvents();
+            
             if (!IsPostBack)
             {
-                GetStats();
+                GetStats(DateTime.MinValue, DateTime.MaxValue);
             }
         }
 
-        protected void GetStats()
+        protected void BindEvents()
+        {
+            ddlFilter1.SelectedIndexChanged += new EventHandler(ddlFilter1_SelectedIndexChanged);
+            btnGo.Click += new ImageClickEventHandler(btnGo_Click);
+        }
+
+        void btnGo_Click(object sender, ImageClickEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtStartDate.Text) && !string.IsNullOrEmpty(txtEndDate.Text))
+            {
+                DateTime startDate = Convert.ToDateTime(txtStartDate.Text);
+                DateTime endDate = Convert.ToDateTime(txtEndDate.Text);
+                GetStats(startDate, endDate);
+            }
+
+        }
+
+        void ddlFilter1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DateTime startDate = new DateTime();
+            DateTime endDate = new DateTime();
+            DateTime thisMonthsStartDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            DateTime thisMonthsEndDate = thisMonthsStartDate.AddMonths(1).AddDays(-1);
+            DateTime LastMonthsDate = thisMonthsStartDate.AddMonths(-1);
+            DateTime LastMonthsEndDate = thisMonthsStartDate.AddDays(-1);
+
+            
+                switch (ddlFilter1.SelectedValue)
+                {
+                    case "all": startDate = DateTime.MinValue;
+                        endDate = DateTime.MaxValue;
+                        break;
+
+                    case "current": startDate = thisMonthsStartDate;
+                        endDate = thisMonthsEndDate;
+                        break;
+
+                    case "last": startDate = LastMonthsDate;
+                        endDate = LastMonthsEndDate;
+                        break;
+
+                    default: startDate = DateTime.MinValue;
+                        endDate = DateTime.MaxValue;
+                        break;
+                }
+                GetStats(startDate, endDate);
+        }
+
+        protected void GetStats(DateTime startDate, DateTime endDate)
         {
             IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
             Merchant merchant = merchantDAO.GetMerchant(_manufacturerID);
-            List<Coupon> coupons = couponDAO.GetAllCouponsForMerchantID(_manufacturerID);
-
+           
+            List<CouponPrint> couponPrints = couponDAO.GetCouponPrintsByMerchantID(_manufacturerID, startDate, endDate);
+            
             litName.Text = merchant.MerchantName;
 
-            rptCoupons.DataSource = coupons;
+            if (couponPrints.Count == 0)
+            {
+                litNoDataFound.Visible = true;
+            }
+            else
+            {
+                litNoDataFound.Visible = false;
+            }
+
+            rptCoupons.DataSource = couponPrints;
             rptCoupons.DataBind();
         }
 
@@ -51,9 +111,9 @@ namespace GFCK.Admin
                 return;
             }
 
-            Coupon c = (Coupon)e.Item.DataItem;
+            CouponPrint cp = (CouponPrint)e.Item.DataItem;
 
-            if (c == null)
+            if (cp == null)
             {
                 return;
             }
@@ -66,8 +126,8 @@ namespace GFCK.Admin
                 return;
             }
 
-            litCoupon.Text = c.Name;
-            litStats.Text = c.Clicks.ToString();
+            litCoupon.Text = cp.Name;
+            litStats.Text = cp.TotalPrints.ToString();
         }
 
     }
