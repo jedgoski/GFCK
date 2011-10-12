@@ -18,16 +18,33 @@
         <br class="clearBoth"/>
         <div id="productListing"><br /><br />
             <asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" >
+            <HeaderTemplate>
+                    <div class="navigation_style_up">
+                        <div class="navigation_style_up_header">
+                            <div id="productsListingTopNumber" class="navSplitPagesResult back"><table><tr>
+                                <td width="22px">&nbsp;</td>
+                                <td width="250px">Name and Category</td>
+                                <td width="50px">Value</td>
+                                <td width="90px">Prints used</td>
+                                <td width="40px">Expires</td></tr></table>
+                            </div>
+                            <div id="productsListingListingTopLinks" class="navSplitPagesLinks forward">
+                                    &nbsp;
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+            </HeaderTemplate>
                 <ItemTemplate>
                     <div class="navigation_style_up">
                         <div class="navigation_style_up_inner22">
-                            <div id="productsListingTopNumber" class="navSplitPagesResult back">
-                                <img id="img" runat="server" height="20" width="20" src="/images/coupon.jpg" />
-                                <a href="#" id="linkEdit" runat="server"><b><asp:Literal ID="litCouponName" runat="server" /></b>
-                                (<asp:Literal ID="litCategory" runat="server" />)</a>
-                                <b>$<asp:Literal ID="litValue" runat="server" /></b>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clicks:<b><asp:Literal ID="litClicks" runat="server" /></b>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expires:<b><asp:Literal ID="litExpires" runat="server" /></b>
+                            <div id="productsListingTopNumber" class="navSplitPagesResult back"><table><tr>
+                                <td width="22px"><img id="img" runat="server" height="20" width="20" src="/images/coupon.jpg" /></td>
+                                <td width="250px"><a href="#" id="linkEdit" runat="server"><b><asp:Literal ID="litCouponName" runat="server" /></b>
+                                (<asp:Literal ID="litCategory" runat="server" />)</a></td>
+                                <td width="50px"><b>$<asp:Literal ID="litValue" runat="server" /></b></td>
+                                <td width="90px"><b><asp:Literal ID="litClicks" runat="server" /></b></td>
+                                <td width="40px"><b><asp:Literal ID="litExpires" runat="server" /></b></td></tr></table>
                             </div>
                             <div id="productsListingListingTopLinks" class="navSplitPagesLinks forward">
                                     <a href="#" id="linkDelete" runat="server">Inactivate</a>

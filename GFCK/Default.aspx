@@ -48,7 +48,7 @@
                                         <div class="title_inner6">
                                             <div class="title_inner7">
                                                 <h2 class="centerBoxHeading">
-                                                    Available Coupons</h2>
+                                                    Printable Coupons</h2>
                                             </div>
                                         </div>
                                     </div>

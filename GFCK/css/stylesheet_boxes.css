@@ -8,8 +8,8 @@
 #lahguages #languagesContent{text-align:center;}
 
 .box1_body{color:#333333; font-size:11px;}
-.box1_body a{color:#333333; font-size:11px; font-weight:normal; text-decoration:underline;}
-.box1_body a:hover{text-decoration:none;}
+.box1_body a{color:#333333; font-size:11px; font-weight:normal; text-decoration:none;}
+.box1_body a:hover{text-decoration:underline;}
 
 .box1_body b a{color:#474747; font-size:12px; font-weight:bold; text-decoration:underline; text-transform:none; font-family:Arial, Helvetica, sans-serif}
 .box1_body b a:hover{text-decoration:none;}

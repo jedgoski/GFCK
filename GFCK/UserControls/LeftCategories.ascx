@@ -10,7 +10,7 @@
                             <div class="innerbox7">
                                 <div class="innerbox8">
                                     <div class="innerbox9">
-                                        Categories
+                                        Filters:
                                     </div>
                                 </div>
                             </div>
@@ -31,29 +31,13 @@
                             <div class="background-bottom-right-44">
                                 <div class="box-indent">
                                     <div class="box1_body">
-                                        <div id="categoriesContent" class="sideBoxContent">
-                                            <ul>
-                                                <li class="category-top_un">
-                                                    <span class="top-span">
-                                                        <a class="category-top_un" href="#">gluten free</a>
-                                                    </span>
-                                                </li>
-                                                <li class="category-top">
-                                                    <span class="top-span">
-                                                        <a class="category-top" href="#">gluten free & casein/dairy free</a>
-                                                    </span>
-                                                </li>
-                                               <li class="category-top">
-                                                    <span class="top-span">
-                                                        <a class="category-top" href="#">gluten free & soy free</a>
-                                                    </span>
-                                                </li>
-                                                <li class="category-top">
-                                                    <span class="top-span">
-                                                        <a class="category-top" href="#">gluten free & casein/dairy free & soy free</a>
-                                                    </span>
-                                                </li>
-                                            </ul>
+                                        <div id="categoriesContent" class="sideBoxContent" style="vertical-align:top;">
+                                            <asp:CheckBox ID="chkGF" runat="server" />&nbsp;&nbsp;Gluten Free<br />
+                                            <asp:CheckBox ID="chkCF" runat="server" />&nbsp;&nbsp;Casein Free<br />
+                                            <asp:CheckBox ID="chkDF" runat="server" />&nbsp;&nbsp;Dairy Free<br />
+                                            <asp:CheckBox ID="chkEF" runat="server" />&nbsp;&nbsp;Egg Free<br />
+                                            <asp:CheckBox ID="chkNF" runat="server" />&nbsp;&nbsp;Nut Free<br />
+                                            <asp:Button ID="btnFilter" runat="server" Text="Apply Filters" />
                                         </div>
                                     </div>
                                 </div>
