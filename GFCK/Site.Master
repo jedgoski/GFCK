@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" href="/css/stylesheet_main.css" />
     <link rel="stylesheet" type="text/css" href="/css/stylesheet_tm.css" />
     <link rel="stylesheet" type="text/css" media="print" href="/css/print_stylesheet.css" />
+    <script type="text/javascript" src="/scripts/jquery-1.6.4.min.js"></script>
+		<link type="text/css" href="/css/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="/scripts/jquery-ui-1.8.16.custom.min.js"></script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -60,7 +63,17 @@
                                     <img src="/images/pixel_trans.gif" alt="" width="9" height="1" />
                                 </td>
                                 <td id="column_right" style="width: 202px">
-                                    <uc:RightCallout id="RightCallout" runat="server" />
+                                    <script type="text/javascript"><!--
+                                    google_ad_client = "ca-pub-2781745982249374";
+                                    /* GFCK */
+                                    google_ad_slot = "6309960687";
+                                    google_ad_width = 200;
+                                    google_ad_height = 200;
+                                    //-->
+                                    </script>
+                                    <script type="text/javascript"
+                                    src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+                                    </script>
                                 </td>
                             </tr>
                         </table>

@@ -13,7 +13,8 @@
                         <tr>
                             <td>
                                 <div class="img_box1">
-                                    <a href="#" id="linkImage" runat="server">
+		
+                                    <a href="/detail.aspx" id="linkImage" runat="server" class="dialog_link">
                                         <img id="imgProduct" src="" runat="server" width="95" alt="GFCK" /></a><br />
                                 </div>
                                 <div style="height: 5px;"></div>
@@ -26,7 +27,7 @@
                                     <div class="product_box_addition">
                                         <div class="product_box_name">
                                             <div class="indent">
-                                                <a href="#" id="linkName" runat="server"><asp:Label ID="lblName" runat="server" /></a><br />
+                                                <a href="/detail.aspx" id="linkName" runat="server" class="dialog_link"><asp:Label ID="lblName" runat="server" /></a><br />
                                             </div>
                                         </div>
                                         <div class="text" style="width: 97%;">
@@ -37,7 +38,7 @@
                                                 <strong><asp:Literal ID="litPrice" runat='server' /></strong><br />
                                             </div>
                                         </div>
-                                        <a href="#" id="linkSubmit" runat="server">
+                                        <a href="/detail.aspx" id="linkSubmit" runat="server" class="dialog_link">
                                             <img src="/images/buttons/english/button_goto_prod_details.gif" alt="Go To This Product's Detailed Information"
                                                 title=" Go To This Product's Detailed Information " width="55" height="19" /></a><br />
                                         

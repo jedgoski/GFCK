@@ -1,7 +1,10 @@
 #upcomingProductsTable td{padding:5px;}
 #upcomingProductsTable th{padding:5px;}
 
-
+.printthis
+{
+	display:none;
+}
 
 CODE {
         font-family:tahoma; font-size:11px; line-height:normal; color:#707070;

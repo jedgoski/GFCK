@@ -14,6 +14,10 @@ body {background-color: #ffffff;}
 #navSupp, .banners, #navBreadCrumb, .buttonRow { display: none;}
 
 
+.printthis
+{
+	display:block;
+}
 /* Other relevant properties for paged media:
 - page-break-before
 - page-break-after

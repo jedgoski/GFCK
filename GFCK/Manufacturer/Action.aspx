@@ -4,13 +4,24 @@
     <script type="text/javascript" src="/scripts/jquery-barcode-2.0.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+            $("#img1").hide();
             $("#MainContent_txtBarcode1Value").blur(function () {
                 if ($("#MainContent_txtBarcode1Value").val() == "") {
                     $("#bcTarget1").hide();
+                    $("#img1").hide();
                 }
                 else {
                     $("#bcTarget1").show();
-                    $("#bcTarget1").barcode($("#MainContent_txtBarcode1Value").val(), $("#MainContent_ddlBarcode1Type").val());
+                    if ($("#MainContent_ddlBarcode1Type").val() == "QR code") {
+                        $("#bcTarget1").html("");
+                        $("#img1").show();
+                        $("#img1").attr("src", "http://chart.apis.google.com/chart?cht=qr&chs=100x100&chl=" + $("#MainContent_txtBarcode1Value").val());
+                    }
+                    else {
+                        $("#bcTarget1").barcode($("#MainContent_txtBarcode1Value").val(), $("#MainContent_ddlBarcode1Type").val());
+                        $("#img1").hide();
+                        $("#bcTarget1").show();
+                    }
                 }
             });
             $("#MainContent_txtBarcode2Value").blur(function () {
@@ -178,11 +189,12 @@
 <option value="code93">code93</option>
 <option value="code128">code128</option>
 <option value="codabar">codabar</option>
+<option value="QR code">QRcode</option>
 <option value="msi">msi</option>
 <option value="datamatrix">datamatrix</option>
 </select>
 <asp:TextBox ID="txtBarcode1Value" runat="server" CssClass="tbsmall" />
-<div style="padding-right:50px;float:right;height:65px;"><div id="bcTarget1"></div></div><br class="clearBoth" />
+<div style="padding-right:50px;float:right;height:65px;"><div id="bcTarget1"><img id="img1" /></div></div><br class="clearBoth" />
  
 <label class="inputLabel">Barcode 2:</label>
 <select id="ddlBarcode2Type" runat="server">

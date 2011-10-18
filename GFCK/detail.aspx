@@ -1,41 +1,29 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="detail.aspx.cs" Inherits="GFCK.detail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LightBox.Master" AutoEventWireup="true" CodeBehind="detail.aspx.cs" Inherits="GFCK.detail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+<script type="text/javascript">
+    function printpage() {
+        var $dialog1 = $('<div></div>')
+			        .load("/printcoupon.aspx")
+			        .dialog({
+			            autoOpen: true,
+			            width: 780,
+			            height: 430,
+			            modal: true,
+			            stack: true,
+			            resizable: false,
+			            title: 'Coupon Print'
+			        });
+			        $dialog1.dialog('open');
+    }
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="column-center-background">
+    <div id="dialog" title="test" class="column-center-background" style="width:750px;">
         <!--content_center-->
-        <!--bof Category Icon -->
-        <div class="title_box">
-            <div class="row1">
-                <div class="title_inner1">
-                    <div class="title_inner2">
-                        <div class="title_inner3">
-                            <img src="/images/pixel_trans.gif" alt="" width="1"
-                                height="1" /></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row2">
-                <div class="title_inner1">
-                    <div class="title_inner2">
-                        <div class="title_inner3">
-                            <div class="title_inner4">
-                                <div class="title_inner5">
-                                    <div class="title_inner6">
-                                        <div class="title_inner7">
-                                            <span class="printHeading" style="float:right;"><a href="#"><img src="images/icons/print.gif" height="20px" style="margin-top:-3px" /></a></span><span  class="printHeading" style="float:right;"><a href="#">print</a></span>
-                                            <h2 id="reviewsDefaultHeading" >
-                                                <span>Product Description</span></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="divPrint" runat="server">
+            <span class="printHeading" style="float:right;"><a href="#" onclick="printpage(); return false;"><img src="images/icons/print.gif" height="20px" style="margin-top:-3px" /></a></span>&nbsp;&nbsp;<span  class="printHeading" style="float:right;"><a href="#" onclick="printpage(); return false;">print coupon</a></span>
         </div>
-        <!--eof Category Icon -->
+        <br />
         <div class="centerColumn" id="productGeneral" style="padding: 0;">
             <!--bof Main Product Image -->
             <div id="productMainImage" class="centeredContent back">

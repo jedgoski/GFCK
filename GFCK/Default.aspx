@@ -2,6 +2,28 @@
 <%@ Register Src="/UserControls/Coupon/home.ascx" TagPrefix="uc1" TagName="CouponDisplay" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
+		<script type="text/javascript">
+		    $(document).ready(function () {
+		        $('.dialog_link').each(function () {
+		            var $link = $(this);
+
+		            $link.click(function () {
+		                var $dialog = $('<div></div>')
+			            .load($link.attr('href'))
+			            .dialog({
+			                autoOpen: false,
+			                width: 800,
+			                height: 550,
+			                modal: true,
+			                resizable: false,
+			                title: 'Product Description'
+			            });                     
+                        $dialog.dialog('open');
+		                return false;
+		            });
+		        });
+		    });
+		</script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <table class="banner_block">
@@ -69,7 +91,7 @@
                                                             <div class="inn2">
  
             -->
-                    <asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" >
+                    <asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" > 
                     <ItemTemplate>
                         <uc1:CouponDisplay ID="cd" runat="server" />
                     </ItemTemplate>

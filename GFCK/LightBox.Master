@@ -1,0 +1,43 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LightBox.Master.cs" Inherits="GFCK.LightBox" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head runat="server">
+    <title>Gluten Free Coupon King</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet_boxes.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet_css_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet_main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheet_tm.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print_stylesheet.css" />
+    <script type="text/javascript" src="/scripts/jquery-1.6.4.min.js"></script>
+	<link type="text/css" href="/css/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
+	<script type="text/javascript" src="/scripts/jquery-ui-1.8.16.custom.min.js"></script>
+	<script type="text/javascript" src="/scripts/jqprint.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="indexBody">
+    <form runat="server">
+    <!--bof-header logo and navigation display-->
+    <div class="main_t" style="width:750px;">
+        <div class="content_t">
+            <table border="0" cellspacing="0" cellpadding="0" id="contentMainWrapper" style="width: 100%;">
+                <tr>
+                    <td style="width: 100%;">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td id="column_center" valign="top" style="width: 100%;">
+                                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

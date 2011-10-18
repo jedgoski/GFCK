@@ -36,6 +36,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Components\AWSSDK.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\Components\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\Components\log4net.dll</HintPath>
     </Reference>
@@ -66,6 +69,7 @@
     <Content Include="Admin\default.aspx" />
     <Content Include="Admin\Action.aspx" />
     <Content Include="contact-us.aspx" />
+    <Content Include="printcoupon.aspx" />
     <Content Include="css\CSS_read_me.txt" />
     <Content Include="css\datepicker.css" />
     <Content Include="css\print_stylesheet.css" />
@@ -74,6 +78,23 @@
     <Content Include="css\stylesheet_css_buttons.css" />
     <Content Include="css\stylesheet_main.css" />
     <Content Include="css\stylesheet_tm.css" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\ui-lightness\jquery-ui-1.8.16.custom.css" />
+    <Content Include="detail.aspx" />
+    <Content Include="handlers\barcode_page.aspx" />
     <Content Include="images\back.gif" />
     <Content Include="images\background-side-heading_l_bg.gif" />
     <Content Include="images\background-side-heading_r_bg.gif" />
@@ -346,9 +367,11 @@
     <Content Include="Member\default.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\jqprint.js" />
     <Content Include="Scripts\jquery-1.6.4.min.js" />
     <Content Include="Scripts\jquery-barcode-2.0.2.min.js" />
     <Content Include="Scripts\jquery-datepicker.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.custom.min.js" />
     <Content Include="UserControls\Coupon\home.ascx" />
     <Content Include="UserControls\Footer.ascx" />
     <Content Include="UserControls\Header.ascx" />
@@ -435,6 +458,37 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="printcoupon.aspx.cs">
+      <DependentUpon>printcoupon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="printcoupon.aspx.designer.cs">
+      <DependentUpon>printcoupon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LightBox.Master.cs">
+      <DependentUpon>LightBox.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LightBox.Master.designer.cs">
+      <DependentUpon>LightBox.Master</DependentUpon>
+    </Compile>
+    <Compile Include="detail.aspx.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detail.aspx.designer.cs">
+      <DependentUpon>detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\barcode.ashx.cs">
+      <DependentUpon>barcode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handlers\barcode_page.aspx.cs">
+      <DependentUpon>barcode_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="handlers\barcode_page.aspx.designer.cs">
+      <DependentUpon>barcode_page.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manufacturer.Master.cs">
       <DependentUpon>Manufacturer.Master</DependentUpon>
@@ -564,6 +618,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Manufacturer.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handlers\barcode.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LightBox.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -2,7 +2,7 @@
 <div class="col1">
     <img src="/images/pixel_trans.gif" alt="" width="1" height="16" /><br />
     <a href="/default.aspx">
-        <img src="/images/logo.jpg" alt="" height="64"  /></a><br />
+        <img src="/images/logo_long.png" alt="" height="64"  /></a><br />
 </div>
 <div class="col2 user_menu">
     <img src="/images/pixel_trans.gif" alt="" width="1" height="48" /><br />

@@ -398,7 +398,6 @@ namespace Engine.DAO.Object
             return id;
         }
 
-
         public bool AddCouponPrint(CouponPrint couponPrint)
         {
             bool success = false;
@@ -446,7 +445,7 @@ namespace Engine.DAO.Object
                 {
                     CouponPrint couponPrint = new CouponPrint();
                     couponPrint.ID = Convert.ToInt64(row["ID"]);
-                    couponPrint.Name = Convert.ToString(row["Name"]);
+                    //couponPrint.Name = Convert.ToString(row["Name"]);
                     couponPrint.CouponID = Convert.ToInt64(row["CouponID"]);
                     couponPrint.PrintedDate = Convert.ToDateTime(row["PrintedDate"]);
                     couponPrint.IPAddress = Convert.ToString(row["IPAddress"]);

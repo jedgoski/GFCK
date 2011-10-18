@@ -357,7 +357,7 @@
 
 
 #coupons .box_head{font-family:Arial, Helvetica, sans-serif;color:#383838; font-size:11px; text-transform:uppercase; font-weight:bold; width:100%;}
-#coupons .box_head .innerbox1{ background:url(../images/clear_head_bg7.gif) repeat-y left top #ffb80c; width:100%;}
+#coupons .box_head .innerbox1{ background:url(../images/clear_head_bg7.gif) repeat-y left top #ffffff; width:100%;}
 #coupons .box_head .innerbox2{ background:url(../images/clear_head_bg5.gif) repeat-x left bottom; width:100%;}
 #coupons .box_head .innerbox3{ background:url(../images/clear_head_bg2.gif) repeat-x left top; width:100%;}
 #coupons .box_head .innerbox4{ background:url(../images/clear_head_bg8.gif) repeat-y right top; width:100%;}
