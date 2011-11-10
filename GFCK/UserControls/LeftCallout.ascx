@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LeftCallout.ascx.cs" Inherits="GFCK.UserControls.LeftCallout" %>
-<div id="specials" style="width: 202px;" runat="server" class="specials">
+<div id="specials" style="width: 192px;" runat="server" class="specials">
     <div class="box_head">
         <div class="innerbox1">
             <div class="innerbox2">

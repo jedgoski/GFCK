@@ -3,13 +3,13 @@
     <div class="inner2">
         <div class="inner3 user_menu2">
             <ul>
-                <li><span><a href="#">Groceries</a></span></li>
-                <li><span><a href="#">Personal Care Products</a></span></li>
-                <li><span><a href="#">OTC Medicines</a></span></li>
-                <li><span><a href="#">Vitamins & Supplements</a></span></li>
-                <li><span><a href="#">Restaurants</a></span></li>
-                <li><span><a href="#">Shop Online</a></span></li>
-                <li class="last"><span><a href="#">Other</a></span></li>
+                <li id="liItem1" runat="server"><span><a href="/default.aspx?c=1">Groceries</a></span></li>
+                <li id="liItem2" runat="server"><span><a href="/default.aspx?c=2">Personal Care Products</a></span></li>
+                <li id="liItem3" runat="server"><span><a href="/default.aspx?c=3">OTC Medicines</a></span></li>
+                <li id="liItem4" runat="server"><span><a href="/default.aspx?c=4">Vitamins & Supplements</a></span></li>
+                <li id="liItem5" runat="server"><span><a href="/default.aspx?c=5">Restaurants</a></span></li>
+                <li id="liItem6" runat="server"><span><a href="/default.aspx?c=6">Shop Online</a></span></li>
+                <li id="liItem7" runat="server" class="last"><span><a href="/default.aspx?c=7">Other</a></span></li>
             </ul>
             <div class="clear">
             </div>

@@ -30,28 +30,27 @@
                 <div class="img_box1" style="float: left; overflow: hidden; margin-right: 0;">
                         <a href="#"
                             target="_blank">
-                            <img src="images/123456790.gif" alt="Product #04" title=" Product #04 "  /></a><br />
+                            <img id="imgProduct" runat="server" /></a><br />
                 </div>
             </div>
             <!--eof Main Product Image-->
             <!--bof Product description -->
             <div id="productDescription" class="productGeneral biggerText" style="margin-top: 15px;">
-                Quisque sed leo. Vivamus arcu purus, adipiscing et, consequat id, tincidunt sed,
-                ligula. Proin bibendum dignissim sem. Nam tempus. Vestibulum sagittis suscipit urna.
-                Vestibulum malesuada commodo odio. Nam fermentum neque sit amet massa. Nunc blandit
-                lacus in quam. Aliquam fringilla, massa vel malesuada feugiat, enim mi molestie
-                turpis, in rhoncus dui tellus vitae turpis. Donec urna enim, congue ut, hendrerit
-                nec, imperdiet sed, libero. Nulla ante eros, sagittis et, laoreet in, congue nec,
-                odio. In lectus nisi, scelerisque quis, condimentum a, sollicitudin vitae, ligula.
-                Maecenas blandit. Duis sodales euismod lectus. Sed vel est et orci laoreet ultricies.
-                Mauris consequat placerat diam. Etiam ut libero. Pellentesque aliquet fermentum
-                velit. Nullam risus metus, dignissim interdum, dapibus sed, posuere ac, mi. Mauris
-                condimentum, neque vel tristique faucibus, mauris tortor tincidunt nunc, at pretium
-                turpis dui id elit. Donec sit amet est. Mauris quis erat ac diam tincidunt hendrerit.
-                Fusce malesuada tortor ut leo. Nulla facilisi. Aenean placerat, eros quis ultrices
-                vehicula, enim lacus interdum turpis, non iaculis metus odio sit amet tellus. Pellentesque
-                cursus tempor metus. In aliquam pulvinar nibh.</div>
+                <asp:Literal ID="litDescription" runat="server" />
+            </div>
             <br class="clearBoth" />
+            <div class="checkboxes">
+            <asp:Repeater ID="rptFree" runat="server" OnItemDataBound="rptFree_ItemDataBound">
+                <HeaderTemplate><ul></HeaderTemplate>
+                <ItemTemplate><li id="liItem" runat="server"></li></ItemTemplate>
+                <FooterTemplate></ul></FooterTemplate>
+            </asp:Repeater>
+            </div>
+            <br class="clearBoth" />
+            <div>
+                <asp:Literal ID="litTerms" runat="server" />
+            </div>
+            <div><p>Distribution of this coupon in PDF or other portable document format is not permitted. Void if copied, altered, reproduced, sold, transferred or exchanged. Any misuse constitutes fraud and is prosecutable under federal wire and other statutes. Civil and criminal penalties exceeding $2,000,000 and/or imprisonment may apply.</p></div>
             <!--eof Product description -->
         </div>
         <!--eof content_center-->

@@ -15,6 +15,7 @@ namespace Engine.DAO.Object
     {
         public static readonly ILog _log = LogManager.GetLogger(typeof(MerchantDAO));
         public string _connectionString;
+
         public MerchantDAO(string connectionString): base(connectionString)
         {   
               _connectionString = connectionString;
@@ -91,18 +92,18 @@ namespace Engine.DAO.Object
 
             return merchant;
         }
-
-
+        
         public List<Merchant> GetMerchantsByFilter(int deleted)
         {
             List<Merchant> merchants = null;
-            _log.DebugFormat("dbo.GetMerchantsByFilter: status={0}", deleted);
+            _log.DebugFormat("dbo.GetAllMerchants: deleted={0}", deleted);
             try
             {
-
-                AddSQLParameter("@Deleted", SqlDbType.Int, 4, deleted);
+                int? bitDeleted = null;
+                if (deleted > -1) bitDeleted = deleted;
+                AddSQLParameter("@Deleted", SqlDbType.Bit, bitDeleted);
                 merchants = new List<Merchant>();
-                DataSet ds = GetDatasetByCommand("dbo.GetMerchantsByFilter");
+                DataSet ds = GetDatasetByCommand("dbo.GetAllMerchants");
                 DataRowCollection rows = ds.Tables[0].Rows;
                 foreach (DataRow row in rows)
                 {
@@ -130,8 +131,7 @@ namespace Engine.DAO.Object
 
             return merchants;
         }
-
-
+        
         public List<Merchant> GetAllActiveMerchants()
         {
             List<Merchant> merchants = null;
@@ -269,8 +269,28 @@ namespace Engine.DAO.Object
             return success;
         }
 
-       
+        public bool AddUserToMerchant(Guid userID, long merchantID)
+        {
+            bool success = false;
+            _log.DebugFormat(@"dbo.AddUserToMerchant: UserID={1},
+                            merchantID{2}",
+                             userID,
+                             merchantID
+                             );
+            try
+            {
+                AddSQLParameter("@UserID", SqlDbType.UniqueIdentifier, userID);
+                AddSQLParameter("@MerchantID", SqlDbType.BigInt, merchantID);
+                GetExecuteNonQueryByCommand("dbo.AddUserToMerchant");
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                _log.ErrorFormat("Exception Occured: Exception={0}", ex);
+            }
 
-        
+            return success;
+        }
+
     }
 }

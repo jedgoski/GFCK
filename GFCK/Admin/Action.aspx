@@ -45,6 +45,7 @@
 
 <div>
     <asp:Label ID="lblAddSuccessfull" runat="server" CssClass="messageStackError" Text="Added manufacturer successfully." Visible="false" />
+    <asp:Label ID="lblAddUserSuccess" runat="server" CssClass="messageStackError" Text="User added successfully." Visible="false" />
     <asp:Label ID="lblEditSuccessfull" runat="server" CssClass="messageStackError" Text="Updated manufacturer successfully." Visible="false" />
     <asp:Label ID="lblDeleteSuccessfull" runat="server" CssClass="messageStackError" Text="Deleted manufacturer successfully." Visible="false" />
     <asp:Label ID="lblActivateSuccessfull" runat="server" CssClass="messageStackError" Text="Activated manufacturer successfully." Visible="false" />
@@ -65,6 +66,25 @@
 <label class="inputLabel">Confirm Password:</label>
 <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  </div>
+</fieldset>
+ 
+<fieldset id="addUser" runat="server" visible="false">
+<legend>Add another account</legend>
+<div class="alert forward">* Required information</div>
+<br class="clearBoth" /> 
+ 
+<label class="inputLabel">Login Name:</label>
+<asp:TextBox ID="txtNewUserName" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+
+<label class="inputLabel">Password:</label>
+<asp:TextBox ID="txtNewPassword" runat="server" TextMode="Password" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+ 
+<label class="inputLabel">Confirm Password:</label>
+<asp:TextBox ID="txtNewConfirmPassword" runat="server" TextMode="Password" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+
+<label class="inputLabel">Email:</label>
+<asp:TextBox ID="txtNewEmail" runat="server" CssClass="tblarge" /><span class="alert">*</span>
+ <div class="buttonRow forward"><asp:ImageButton ID="btnAddUser" runat="server" AlternateText="Submit" OnClick="btnAddUser_Click" ImageUrl="/images/buttons/english/button_add.gif" /></div>
 </fieldset>
  
 <fieldset id="profileInformation" runat="server">

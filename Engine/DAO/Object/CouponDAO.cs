@@ -78,15 +78,33 @@ namespace Engine.DAO.Object
             return coupons;
         }
 
-        public List<Coupon> GetAllCouponsByCategory(int categoryID)
+        public List<Coupon> GetAllCouponsByCategory(int categoryID, string filter)
         {
             List<Coupon> coupons = null;
-            _log.DebugFormat(@"dbo.GetAllCouponsByCategory: categoryID={0}", categoryID);
+            _log.DebugFormat(@"dbo.GetAllCouponsByCategory: categoryID={0}, filter={1}", categoryID, filter);
             try
             {
 
                 coupons = new List<Coupon>();
-                AddSQLParameter("@categoryID", SqlDbType.Int, categoryID);
+                if(categoryID > 0) AddSQLParameter("@categoryID", SqlDbType.Int, categoryID);
+                else AddSQLParameter("@categoryID", SqlDbType.Int, null);
+                if (filter != "")
+                {
+                    if(filter[0] == '1') AddSQLParameter("@glutenFree", SqlDbType.Bit, true);
+                    else AddSQLParameter("@glutenFree", SqlDbType.Bit, null);
+                    if (filter[1] == '1') AddSQLParameter("@caseinFree", SqlDbType.Bit, true);
+                    else AddSQLParameter("@caseinFree", SqlDbType.Bit, null);
+                    if (filter[2] == '1') AddSQLParameter("@soyFree", SqlDbType.Bit, true);
+                    else AddSQLParameter("@soyFree", SqlDbType.Bit, null);
+                    if (filter[3] == '1') AddSQLParameter("@cornFree", SqlDbType.Bit, true);
+                    else AddSQLParameter("@cornFree", SqlDbType.Bit, null);
+                    if (filter[4] == '1') AddSQLParameter("@eggFree", SqlDbType.Bit, true);
+                    else AddSQLParameter("@eggFree", SqlDbType.Bit, null);
+                    if (filter[5] == '1') AddSQLParameter("@nutFree", SqlDbType.Bit, true);
+                    else AddSQLParameter("@nutFree", SqlDbType.Bit, null);
+                    if (filter[6] == '1') AddSQLParameter("@yeastFree", SqlDbType.Bit, true);
+                    else AddSQLParameter("@yeastFree", SqlDbType.Bit, null);
+                }
                 DataSet ds = GetDatasetByCommand("dbo.GetAllCouponsByCategoryID");
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
@@ -122,6 +140,7 @@ namespace Engine.DAO.Object
                     coupon.CreatedDate = row["CreatedDate"] != DBNull.Value ? Convert.ToDateTime(row["CreatedDate"]) : DateTime.MinValue;
                     coupon.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
                     coupon.Enabled = Convert.ToBoolean(row["Enabled"]);
+                    coupon.Clicks = (row["prints"] == DBNull.Value) ? 0 : Convert.ToInt32(row["prints"]);
                     coupons.Add(coupon);
                 }
 
@@ -255,7 +274,14 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@MerchantID", SqlDbType.BigInt, coupon.MerchantID);
                 AddSQLParameter("@TemplateID", SqlDbType.BigInt, coupon.TemplateID);
                 AddSQLParameter("@CategoryID", SqlDbType.Int, coupon.CategoryID);
-                AddSQLParameter("@Image", SqlDbType.NVarChar, 100, coupon.Image);
+                if (coupon.Image == "keep")
+                {
+                    AddSQLParameter("@Image", SqlDbType.NVarChar, 100, null);
+                }
+                else
+                {
+                    AddSQLParameter("@Image", SqlDbType.NVarChar, 100, coupon.Image);
+                }
                 AddSQLParameter("@Value", SqlDbType.NVarChar, 50, coupon.Value);
                 AddSQLParameter("@Discount", SqlDbType.NVarChar, 50, coupon.Discount);
                 AddSQLParameter("@Details", SqlDbType.NText, coupon.Details);

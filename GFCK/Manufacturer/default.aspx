@@ -21,7 +21,7 @@
             <HeaderTemplate>
                     <div class="navigation_style_up">
                         <div class="navigation_style_up_header">
-                            <div id="productsListingTopNumber" class="navSplitPagesResult back"><table><tr>
+                            <div id="productsListingTopNumber" class="navSplitPagesResulthead back"><table><tr>
                                 <td width="22px">&nbsp;</td>
                                 <td width="250px">Name and Category</td>
                                 <td width="50px">Value</td>

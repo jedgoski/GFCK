@@ -31,6 +31,24 @@ namespace GFCK.UserControls {
         protected global::System.Web.UI.WebControls.CheckBox chkGF;
         
         /// <summary>
+        /// chkCDF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkCDF;
+        
+        /// <summary>
+        /// chkSF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkSF;
+        
+        /// <summary>
         /// chkCF control.
         /// </summary>
         /// <remarks>
@@ -38,15 +56,6 @@ namespace GFCK.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkCF;
-        
-        /// <summary>
-        /// chkDF control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkDF;
         
         /// <summary>
         /// chkEF control.
@@ -65,6 +74,15 @@ namespace GFCK.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkNF;
+        
+        /// <summary>
+        /// chkYF control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkYF;
         
         /// <summary>
         /// btnFilter control.

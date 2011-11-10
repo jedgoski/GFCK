@@ -12,6 +12,8 @@ using Engine.Domain.Object;
 using System.Web.Security;
 using Amazon.S3;
 using Amazon.S3.Model;
+//using IDAutomation;
+///using IDAutomation.DatabarServerControl;
 
 namespace GFCK.Manufacturer
 {
@@ -28,6 +30,13 @@ namespace GFCK.Manufacturer
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //IDAutomation.DatabarServerControl.DatabarBarcode MyBarCode = new IDAutomation.DatabarServerControl.DatabarBarcode();
+            ////MyBarCode.SymbologyID = IDAutomation.DatabarServerControl.DatabarBarcode.Symbologies.DatabarStacked;
+            //MyBarCode.DataToEncode = "123456789858758769698012";
+            //MyBarCode.SymbologyID = DatabarBarcode.Symbologies.DatabarStackedOmnidirectional;
+            //MyBarCode.XtoYRatio = 5;
+            //MyBarCode.SaveImageAs(@"C:\Users\Jed\GFCK\GFCK\Manufacturer\barcodes\Test39.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+
             if (!string.IsNullOrEmpty(Request.QueryString["CouponID"]))
             {
                 _couponID = Convert.ToInt64(Request.QueryString["CouponID"]);
@@ -57,10 +66,6 @@ namespace GFCK.Manufacturer
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            string accessKeyID = WebConfigurationManager.AppSettings["AWSAccessKey"];
-            string secretAccessKeyID = WebConfigurationManager.AppSettings["AWSSecretKey"];
-
-            client = Amazon.AWSClientFactory.CreateAmazonS3Client(accessKeyID, secretAccessKeyID);
             try
             {
                 ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
@@ -68,7 +73,7 @@ namespace GFCK.Manufacturer
                 coupon.TemplateID = 1; // Convert.ToInt64(ddlTemplate.SelectedValue);
                 coupon.CategoryID = Convert.ToInt32(ddlCategory.SelectedValue);
                 coupon.MerchantID = _manufacturerID;
-                
+
                 //coupon.Image = imgByte;
                 coupon.Name = txtName.Text;
                 coupon.Value = txtValue.Text;
@@ -88,7 +93,7 @@ namespace GFCK.Manufacturer
                 coupon.YeastFree = chkYeastFree.Checked;
                 coupon.Barcode1Type = ddlBarcode1Type.Value;
                 coupon.Barcode1Value = txtBarcode1Value.Text;
-                coupon.Barcode2Type = ddlBarcode2Type.Value;
+                coupon.Barcode2Type = Request.Form["ddlBarcode2Type"].ToString();
                 coupon.Barcode2Value = txtBarcode2Value.Text;
                 coupon.NumberOfCoupons = Convert.ToInt32(txtNumberOfCoupons.Text);
                 coupon.BottomAdvertisement = txtBottomAdvertisement.Text;
@@ -96,32 +101,38 @@ namespace GFCK.Manufacturer
 
                 if (_couponID == 0)
                 {
-                   // _couponID = couponDAO.AddCoupon(coupon);
-                    _couponID = 7;
+                    _couponID = couponDAO.AddCoupon(coupon);
+                    //_couponID = 7;
                     // Need to add a record
                     if (_couponID > 0)
                     {
                         try
                         {
+                            string accessKeyID = WebConfigurationManager.AppSettings["AWSAccessKey"];
+                            string secretAccessKeyID = WebConfigurationManager.AppSettings["AWSSecretKey"];
+
+                            client = Amazon.AWSClientFactory.CreateAmazonS3Client(accessKeyID, secretAccessKeyID);
+
                             FileUpload img = (FileUpload)imgUpload;
-                            Byte[] imgByte = new byte[0];
                             if (img.HasFile && img.PostedFile != null)
                             {
-                                //To create a PostedFile
-                                HttpPostedFile File = imgUpload.PostedFile;
-                                //Create byte Array with file len
-                                imgByte = new Byte[File.ContentLength];
-                                //force the control to load data in array
-                                File.InputStream.Read(imgByte, 0, File.ContentLength);
+                                AddImageToAmazon(coupon);
+                                //Byte[] imgByte = new byte[0];
+                                ////To create a PostedFile
+                                //HttpPostedFile File = imgUpload.PostedFile;
+                                ////Create byte Array with file len
+                                //imgByte = new Byte[File.ContentLength];
+                                ////force the control to load data in array
+                                //File.InputStream.Read(imgByte, 0, File.ContentLength);
 
-                                PutObjectRequest request = new PutObjectRequest();
-                                string keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0,File.FileName.IndexOf(".")),_couponID.ToString()));
-                                request.WithBucketName("gfck").WithContentType(File.ContentType).WithCannedACL(S3CannedACL.PublicRead).WithKey(string.Format("coupon/{0}",keyname)).WithInputStream(File.InputStream);
-                                S3Response response = client.PutObject(request);
-                                response.Dispose();
+                                //PutObjectRequest request = new PutObjectRequest();
+                                //string keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0,File.FileName.IndexOf(".")),_couponID.ToString()));
+                                //request.WithBucketName("gfck").WithContentType(File.ContentType).WithCannedACL(S3CannedACL.PublicRead).WithKey(string.Format("coupon/{0}",keyname)).WithInputStream(File.InputStream);
+                                //S3Response response = client.PutObject(request);
+                                //response.Dispose();
 
-                                coupon.Image = keyname;
-                                couponDAO.UpdateCoupon(coupon);
+                                //coupon.Image = keyname;
+                                //couponDAO.UpdateCoupon(coupon);
                             }
                         }
                         catch (AmazonS3Exception amazonS3Exception)
@@ -152,8 +163,21 @@ namespace GFCK.Manufacturer
                 }
                 else
                 {
+                    coupon.ID = _couponID;
+                    bool success = false;
+                    ///TODO: Need to set Image on update
+                    FileUpload img = (FileUpload)imgUpload;
+                    if (img.HasFile && img.PostedFile != null)
+                    {
+                        success = AddImageToAmazon(coupon);
+                    }
+                    else
+                    {
+                        coupon.Image = "keep";
+                        success = couponDAO.UpdateCoupon(coupon);
+                    }
                     // Need to update the record
-                    if (couponDAO.UpdateCoupon(coupon))
+                    if (success)
                     {
                         // Update was successfull
                         lblEditSuccessfull.Visible = true;
@@ -177,6 +201,27 @@ namespace GFCK.Manufacturer
                 lblAddSuccessfull.Visible = false;
                 lblEditSuccessfull.Visible = false;
             }
+        }
+
+        private bool AddImageToAmazon(Coupon coupon)
+        {
+            ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
+            Byte[] imgByte = new byte[0];
+            //To create a PostedFile
+            HttpPostedFile File = imgUpload.PostedFile;
+            //Create byte Array with file len
+            imgByte = new Byte[File.ContentLength];
+            //force the control to load data in array
+            File.InputStream.Read(imgByte, 0, File.ContentLength);
+
+            PutObjectRequest request = new PutObjectRequest();
+            string keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0, File.FileName.IndexOf(".")), _couponID.ToString()));
+            request.WithBucketName("gfck").WithContentType(File.ContentType).WithCannedACL(S3CannedACL.PublicRead).WithKey(string.Format("coupon/{0}", keyname)).WithInputStream(File.InputStream);
+            S3Response response = client.PutObject(request);
+            response.Dispose();
+
+            coupon.Image = keyname;
+            return couponDAO.UpdateCoupon(coupon);
         }
 
         protected void GetMode()
@@ -219,13 +264,19 @@ namespace GFCK.Manufacturer
             divAddCoupon.Visible = true;
             divEditCoupon.Visible = false;
             LoadDDL();
+            lblCurrent.Visible = false;
+            imgCurrent.Visible = false;
         }
+        
         protected void LoadEdit()
         {
             divAddCoupon.Visible = false;
             divEditCoupon.Visible = true;
             LoadData();
+            lblCurrent.Visible = true;
+            imgCurrent.Visible = true;
         }
+        
         protected void Activate(bool active)
         {
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
@@ -250,31 +301,12 @@ namespace GFCK.Manufacturer
         protected void LoadDDL()
         {
             ICategoryDAO categoryDAO = _factoryDAO.GetCategoryDAO();
-            //ITemplateDAO templateDAO = _factoryDAO.GetTemplateDAO();
-            //IBarcodeDAO barcodeDAO = _factoryDAO.GetBarcodeDAO();
             
             List<Category> categories = categoryDAO.GetAllActiveCategories();
             ddlCategory.DataSource = categories;
             ddlCategory.DataTextField = "Name";
             ddlCategory.DataValueField = "ID";
             ddlCategory.DataBind();
-
-            //List<Template> templates = templateDAO.GetAllActiveTemplates();
-            //ddlTemplate.DataSource = templates;
-            //ddlTemplate.DataTextField = "Name";
-            //ddlTemplate.DataValueField = "ID";
-            //ddlTemplate.DataBind();
-
-            //List<BarcodeType> barcodeTypes = barcodeDAO.GetAllActiveBarcodeTypes();
-            //ddlBarcode1TypeID.DataSource = barcodeTypes;
-            //ddlBarcode1TypeID.DataTextField = "Name";
-            //ddlBarcode1TypeID.DataValueField = "ID";
-            //ddlBarcode1TypeID.DataBind();
-
-            //ddlBarcode2TypeID.DataSource = barcodeTypes;
-            //ddlBarcode2TypeID.DataTextField = "Name";
-            //ddlBarcode2TypeID.DataValueField = "ID";
-            //ddlBarcode2TypeID.DataBind();
 
         }
 
@@ -283,10 +315,10 @@ namespace GFCK.Manufacturer
             LoadDDL();
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
             Coupon coupon = couponDAO.GetCoupon(_couponID);
-            //ddlTemplate.SelectedValue = Convert.ToString(coupon.TemplateID);
-            ddlCategory.SelectedValue = Convert.ToString(coupon.CategoryID);
-            // Need to save image
 
+            ddlCategory.SelectedValue = Convert.ToString(coupon.CategoryID);
+            txtName.Text = coupon.Name;
+            imgCurrent.Src = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", coupon.Image);
             txtValue.Text = coupon.Value;
             txtDiscount.Text = coupon.Discount;
             txtDetails.Text = coupon.Details;
@@ -304,7 +336,7 @@ namespace GFCK.Manufacturer
             chkYeastFree.Checked = coupon.YeastFree;
             ddlBarcode1Type.Value = coupon.Barcode1Type;
             txtBarcode1Value.Text = coupon.Barcode1Value;
-            ddlBarcode2Type.Value = coupon.Barcode2Type;
+            //ddlBarcode2Type.Value = coupon.Barcode2Type;
             txtBarcode2Value.Text = coupon.Barcode2Value;
             txtNumberOfCoupons.Text = coupon.NumberOfCoupons.ToString();
             txtBottomAdvertisement.Text = coupon.BottomAdvertisement;

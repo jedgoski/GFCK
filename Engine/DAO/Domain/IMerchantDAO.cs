@@ -13,6 +13,7 @@ namespace Engine.DAO.Domain
        List<Merchant> GetAllActiveMerchants();
        bool UpdateMerchant(Merchant merchant);
        bool AddMerchant(Merchant merchant);
+       bool AddUserToMerchant(Guid userID, long merchantID);
        List<Merchant> GetMerchantsByFilter(int deleted);
     }
 }

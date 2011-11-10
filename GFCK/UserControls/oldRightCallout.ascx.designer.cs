@@ -10,7 +10,7 @@
 namespace GFCK.UserControls {
     
     
-    public partial class RightCallout {
+    public partial class oldRightCallout {
         
         /// <summary>
         /// information control.
@@ -20,5 +20,14 @@ namespace GFCK.UserControls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl information;
+        
+        /// <summary>
+        /// manufacturers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl manufacturers;
     }
 }

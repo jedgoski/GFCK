@@ -13,19 +13,24 @@ namespace GFCK
     public partial class _Default : System.Web.UI.Page
     {
         FactoryDAO _factoryDAO = FactoryDAO.GetInstance();
-        int _categoryID = 1;
+        int _categoryID = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["cat"] != null)
-                _categoryID = Convert.ToInt32(Request.QueryString["cat"]);
+            if (Request.QueryString["c"] != null)
+                _categoryID = Convert.ToInt32(Request.QueryString["c"]);
 
-            LoadData();
+            if (!IsPostBack)
+            {
+                LoadData();
+            }
         }
 
         protected void LoadData()
         {
+            string filter = (Session["filter"] == null) ? "" : Session["filter"].ToString();
+
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
-            List<Coupon> coupons = couponDAO.GetAllCouponsByCategory(_categoryID);
+            List<Coupon> coupons = couponDAO.GetAllCouponsByCategory(_categoryID, filter);
 
             rptCoupons.DataSource = coupons;
             rptCoupons.DataBind();
@@ -37,11 +42,21 @@ namespace GFCK
             {
                 if (e.Item != null && e.Item.DataItem != null)
                 {
+                    e.Item.Visible = false;
+
                     Coupon coupon = new Coupon();
                     coupon = (Coupon)e.Item.DataItem;
                     GFCK.UserControls.Coupon.home CouponDisplay = (GFCK.UserControls.Coupon.home)e.Item.FindControl("cd");
                     if (coupon != null && CouponDisplay != null)
                     {
+                        //if the number of coupons set up by the manufacturer has already been reached, don't display.
+                        if (coupon.Clicks >= coupon.NumberOfCoupons)
+                        {
+                            return;
+                        }
+
+                        //if the coupon has expired, don't display - already built into the SP
+
                         IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
 
                         Merchant m = merchantDAO.GetMerchant(coupon.MerchantID);

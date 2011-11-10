@@ -43,15 +43,15 @@
         <div class="content_t">
             <table border="0" cellspacing="0" cellpadding="0" id="contentMainWrapper" style="width: 100%;">
                 <tr>
-                    <td id="column_left" style="width: 202px;">
-                        <div style="width: 202px;">
+                    <td id="column_left" style="width: 192px;">
+                        <div style="width: 192px;">
                             <uc:LeftCategories id="LeftCategories" runat="server" />
 
                             <uc:LeftCallout id="LeftCallout1" runat="server" />
                         </div>
                     </td>
                     <td>
-                        <img src="/images/pixel_trans.gif" alt="" width="10" height="1" />
+                        <img src="/images/pixel_trans.gif" alt="" width="5" height="1" />
                     </td>
                     <td style="width: 100%;">
                         <table style="width: 100%;">
@@ -60,9 +60,9 @@
                                     <asp:ContentPlaceHolder ID="MainContent" runat="server" />
                                 </td>
                                 <td>
-                                    <img src="/images/pixel_trans.gif" alt="" width="9" height="1" />
+                                    <img src="/images/pixel_trans.gif" alt="" width="5" height="1" />
                                 </td>
-                                <td id="column_right" style="width: 202px">
+                                <td id="column_right" style="width: 192px">
                                     <script type="text/javascript"><!--
                                     google_ad_client = "ca-pub-2781745982249374";
                                     /* GFCK */
@@ -74,6 +74,7 @@
                                     <script type="text/javascript"
                                     src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                                     </script>
+                                    <uc:RightCallout id="RightCallout" runat="server" />
                                 </td>
                             </tr>
                         </table>
@@ -83,6 +84,9 @@
         </div>
         <div class="footer_t">
             <uc:Footer id="Footer" runat="server" />
+            <img src="/images/0901_GreenHosting_RGB_Shadow.png" height="65px" />
+            <br />
+            <br />
         </div>
     </div>
     </form>

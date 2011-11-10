@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <a href="/Admin/default.aspx" >Back</a>
+        <asp:ImageButton ID="btnBack" runat="server" AlternateText="Back" ImageUrl="/images/buttons/english/button_back.gif" />
         <br />
         <br />
         <table>
@@ -68,16 +68,27 @@
         <div id="productListing"><br /><br />
         <asp:Literal ID="litNoDataFound" runat="server" visible="false"><b>No Data Found</b></asp:Literal>
             <asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" >
+            <HeaderTemplate>
+                    <div class="navigation_style_up">
+                        <div class="navigation_style_up_header">
+                            <div id="productsListingTopNumber" class="navSplitPagesResulthead back"><table width="550px"><tr><td width="85%">
+                                <span>Coupon Name</span></td>
+                                    <td><span>Total Prints</span></td></tr></table>
+                            </div>
+                            <div id="productsListingListingTopLinks" class="navSplitPagesLinks forward">&nbsp;</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+            </HeaderTemplate>
                 <ItemTemplate>
 
                             <div class="navigation_style_up">
                                 <div class="navigation_style_up_inner22">
-                                    <div id="productsListingTopNumber" class="navSplitPagesResult back">
-                                        <asp:Literal ID="litCoupon" runat="server" />
+                                    <div id="productsListingTopNumber" class="navSplitPagesResult back"><table width="550px"><tr><td width="85%">
+                                        <asp:Literal ID="litCoupon" runat="server" /></td>
+                                    <td><asp:Literal ID="litStats" runat="server" /></td></tr></table>
                                     </div>
-                                    <div id="productsListingListingTopLinks" class="navSplitPagesLinks forward">
-                                         <asp:Literal ID="litStats" runat="server" />
-                                    </div>
+                                    <div id="productsListingListingTopLinks" class="navSplitPagesLinks forward">&nbsp;</div>
                                     <div class="clear"></div>
                                 </div>
                             </div>

@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="LeftCategories.ascx.cs" Inherits="GFCK.UserControls.LeftCategories" %>
-<div id="categories" style="width: 202px;" runat="server" class="categories">
+﻿<%@ Control Language="C#" CodeBehind="LeftCategories.ascx.cs" Inherits="GFCK.UserControls.LeftCategories" %>
+<div id="categories" style="width: 192px;" runat="server" class="categories">
 <div class="box_head">
     <div class="innerbox1">
         <div class="innerbox2">
@@ -10,7 +10,7 @@
                             <div class="innerbox7">
                                 <div class="innerbox8">
                                     <div class="innerbox9">
-                                        Filters:
+                                        Search by:
                                     </div>
                                 </div>
                             </div>
@@ -33,11 +33,14 @@
                                     <div class="box1_body">
                                         <div id="categoriesContent" class="sideBoxContent" style="vertical-align:top;">
                                             <asp:CheckBox ID="chkGF" runat="server" />&nbsp;&nbsp;Gluten Free<br />
-                                            <asp:CheckBox ID="chkCF" runat="server" />&nbsp;&nbsp;Casein Free<br />
-                                            <asp:CheckBox ID="chkDF" runat="server" />&nbsp;&nbsp;Dairy Free<br />
+                                            <asp:CheckBox ID="chkCDF" runat="server" />&nbsp;&nbsp;Casein/Dairy Free<br />
+                                            <asp:CheckBox ID="chkSF" runat="server" />&nbsp;&nbsp;Soy Free<br />
+                                            <asp:CheckBox ID="chkCF" runat="server" />&nbsp;&nbsp;Corn Free<br />
                                             <asp:CheckBox ID="chkEF" runat="server" />&nbsp;&nbsp;Egg Free<br />
                                             <asp:CheckBox ID="chkNF" runat="server" />&nbsp;&nbsp;Nut Free<br />
-                                            <asp:Button ID="btnFilter" runat="server" Text="Apply Filters" />
+                                            <asp:CheckBox ID="chkYF" runat="server" />&nbsp;&nbsp;Yeast Free<br />
+                                            <asp:Button ID="btnFilter" runat="server" Text="Search" 
+                                                onclick="btnFilter_Click" />
                                         </div>
                                     </div>
                                 </div>
@@ -50,7 +53,7 @@
     </div>
 </div>
 </div>
-<div id="manufacturerCategories" style="width: 202px;" runat="server" class="manufacturers">
+<div id="manufacturerCategories" style="width: 192px;" runat="server" class="manufacturers">
     <div class="box_head">
         <div class="innerbox1"><div class="innerbox2"><div class="innerbox3"><div class="innerbox4"><div class="innerbox5"><div class="innerbox6"><div class="innerbox7"><div class="innerbox8"><div class="innerbox9">
             <label>Functions</label>
@@ -67,7 +70,7 @@
         </div></div></div></div></div></div></div></div></div>
     </div>
 </div>
-<div id="adminCategories" style="width: 202px;" runat="server" class="manufacturers">
+<div id="adminCategories" style="width: 192px;" runat="server" class="manufacturers">
     <div class="box_head">
         <div class="innerbox1"><div class="innerbox2"><div class="innerbox3"><div class="innerbox4"><div class="innerbox5"><div class="innerbox6"><div class="innerbox7"><div class="innerbox8"><div class="innerbox9">
             <label>Admin Functions</label>

@@ -24,9 +24,9 @@ namespace GFCK.Admin
             {
                 _manufacturerID = Convert.ToInt64(Request.QueryString["ManufacturerID"]);
             }
-            
+
             BindEvents();
-            
+
             if (!IsPostBack)
             {
                 GetStats(DateTime.MinValue, DateTime.MaxValue);
@@ -37,6 +37,7 @@ namespace GFCK.Admin
         {
             ddlFilter1.SelectedIndexChanged += new EventHandler(ddlFilter1_SelectedIndexChanged);
             btnGo.Click += new ImageClickEventHandler(btnGo_Click);
+            btnBack.Click +=new ImageClickEventHandler(btnBack_Click);
         }
 
         void btnGo_Click(object sender, ImageClickEventArgs e)
@@ -50,6 +51,11 @@ namespace GFCK.Admin
 
         }
 
+        void btnBack_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("/admin/default.aspx");
+        }
+
         void ddlFilter1_SelectedIndexChanged(object sender, EventArgs e)
         {
             DateTime startDate = new DateTime();
@@ -59,26 +65,26 @@ namespace GFCK.Admin
             DateTime LastMonthsDate = thisMonthsStartDate.AddMonths(-1);
             DateTime LastMonthsEndDate = thisMonthsStartDate.AddDays(-1);
 
-            
-                switch (ddlFilter1.SelectedValue)
-                {
-                    case "all": startDate = DateTime.MinValue;
-                        endDate = DateTime.MaxValue;
-                        break;
 
-                    case "current": startDate = thisMonthsStartDate;
-                        endDate = thisMonthsEndDate;
-                        break;
+            switch (ddlFilter1.SelectedValue)
+            {
+                case "all": startDate = DateTime.MinValue;
+                    endDate = DateTime.MaxValue;
+                    break;
 
-                    case "last": startDate = LastMonthsDate;
-                        endDate = LastMonthsEndDate;
-                        break;
+                case "current": startDate = thisMonthsStartDate;
+                    endDate = thisMonthsEndDate;
+                    break;
 
-                    default: startDate = DateTime.MinValue;
-                        endDate = DateTime.MaxValue;
-                        break;
-                }
-                GetStats(startDate, endDate);
+                case "last": startDate = LastMonthsDate;
+                    endDate = LastMonthsEndDate;
+                    break;
+
+                default: startDate = DateTime.MinValue;
+                    endDate = DateTime.MaxValue;
+                    break;
+            }
+            GetStats(startDate, endDate);
         }
 
         protected void GetStats(DateTime startDate, DateTime endDate)
@@ -86,9 +92,9 @@ namespace GFCK.Admin
             IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
             Merchant merchant = merchantDAO.GetMerchant(_manufacturerID);
-           
+
             List<CouponPrint> couponPrints = couponDAO.GetCouponPrintsByMerchantID(_manufacturerID, startDate, endDate);
-            
+
             litName.Text = merchant.MerchantName;
 
             if (couponPrints.Count == 0)
@@ -98,10 +104,10 @@ namespace GFCK.Admin
             else
             {
                 litNoDataFound.Visible = false;
+                rptCoupons.DataSource = couponPrints;
+                rptCoupons.DataBind();
             }
 
-            rptCoupons.DataSource = couponPrints;
-            rptCoupons.DataBind();
         }
 
         protected void rptCoupons_ItemDataBound(object source, RepeaterItemEventArgs e)
@@ -110,25 +116,30 @@ namespace GFCK.Admin
             {
                 return;
             }
-
-            CouponPrint cp = (CouponPrint)e.Item.DataItem;
-
-            if (cp == null)
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
-                return;
+                e.Item.Visible = false;
+
+                CouponPrint cp = (CouponPrint)e.Item.DataItem;
+
+                if (cp == null)
+                {
+                    return;
+                }
+
+                Literal litCoupon = (Literal)e.Item.FindControl("litCoupon");
+                Literal litStats = (Literal)e.Item.FindControl("litStats");
+
+                if (litCoupon == null || litStats == null)
+                {
+                    return;
+                }
+
+                litCoupon.Text = cp.Name;
+                litStats.Text = cp.TotalPrints.ToString();
+
+                e.Item.Visible = true;
             }
-
-            Literal litCoupon = (Literal)e.Item.FindControl("litCoupon");
-            Literal litStats = (Literal)e.Item.FindControl("litStats");
-
-            if (litCoupon == null || litStats == null)
-            {
-                return;
-            }
-
-            litCoupon.Text = cp.Name;
-            litStats.Text = cp.TotalPrints.ToString();
         }
-
     }
 }

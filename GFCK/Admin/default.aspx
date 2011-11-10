@@ -37,9 +37,9 @@
                             <asp:Literal ID="litName" runat="server" />
                         </div>
                         <div id="productsListingListingTopLinks" class="navSplitPagesLinks forward">
-                             <a href="#" id="linkEdit" runat="server">Edit</a> | 
-                             <a href="#" id="linkDelete" runat="server">Delete</a> <a href="#" id="linkActivate" runat="server" visible="false">Activate</a> | 
-                             <a href="#" id="linkStats" runat="server">View Statistics</a>
+                             <a id="linkEdit" runat="server">Edit</a> | 
+                             <a id="linkDelete" runat="server">Delete</a> <a href="#" id="linkActivate" runat="server" visible="false">Activate</a> | 
+                             <a id="linkStats" runat="server">View Statistics</a>
                         </div>
                         <div class="clear"></div>
                     </div>

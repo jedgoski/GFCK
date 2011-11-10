@@ -171,6 +171,8 @@ ul{list-style-type:circle; list-style-position:inside;}
 
 /*navigation*/
 #sorter {margin:0 10px 0 29px;}
+.navSplitPagesResulthead {margin-top:0; margin-bottom:12px; padding-left:12px; margin-right:12px; font-size:11px; color:#707070 }
+.navSplitPagesResulthead td, .navSplitPagesResulthead span {margin-top:10;color:#ffffff }
 .navSplitPagesResult {margin-top:0; margin-bottom:12px; padding-left:12px; margin-right:12px; font-size:11px; color:#707070 }
 .navSplitPagesResult a {color:#e87005;font-weight:normal;}
 .navSplitPagesLinks {margin-top:0; margin-bottom:0; margin-left:12px; margin-right:12px; font-size:11px; color:#707070}
@@ -581,3 +583,18 @@ position:absolute;
 
 
 
+.checkboxes ul
+{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+.checkboxes ul li
+{
+	background-image:url(/images/checked.jpg);
+	background-repeat:no-repeat;
+	background-position:0em;
+	padding-left: 2.8em;
+	padding-top: 1em;
+	height:25px;
+}

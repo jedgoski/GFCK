@@ -61,6 +61,9 @@
         </div>
         <div class="footer_t">
             <uc:Footer id="Footer" runat="server" />
+            <img src="/images/0901_GreenHosting_RGB_Shadow.png" height="65px" />
+            <br />
+            <br />
         </div>
     </div>
     </form>

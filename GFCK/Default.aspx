@@ -26,26 +26,6 @@
 		</script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
-    <table class="banner_block">
-        <tr>
-            <td class="td_banner_block">
-                <table style="width: 100%;">
-                    <tr>
-                        <td>
-                            <!-- bof BANNERS GROUPSET 1 -->
-                            <img src="/images/pixel_trans.gif" alt="" width="1" height="1" /><br />
-                            <div>
-                                <a href="#">
-                                    <img src="/images/banner1.jpg" alt="free shipping" title=" free shipping "
-                                        /></a></div>
-                            <img src="/images/pixel_trans.gif" alt="" width="1" height="12" /><br />
-                            <!-- eof BANNERS GROUPSET 1 -->
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
     <!--content_center-->
     <div class="centerColumn" id="indexDefault">
         <div id="indexDefaultMainContent" class="content">
@@ -112,6 +92,21 @@
         <br />
     </div>
     <!--eof content_center-->
+    <table class="banner_block">
+        <tr>
+            <td class="td_banner_block">
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <!-- bof BANNERS GROUPSET 1 -->
+                            <iframe src="http://rcm.amazon.com/e/cm?t=glufrecoukin-20&o=1&p=13&l=ez&f=ifr&f=ifr" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" border="0" frameborder="0" style="border:none;"></iframe>
+                            <!-- eof BANNERS GROUPSET 1 -->
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
     <div class="clear">
     </div>
 </asp:Content>

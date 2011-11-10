@@ -94,6 +94,24 @@ namespace GFCK.Manufacturer {
         protected global::System.Web.UI.WebControls.FileUpload imgUpload;
         
         /// <summary>
+        /// lblCurrent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCurrent;
+        
+        /// <summary>
+        /// imgCurrent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgCurrent;
+        
+        /// <summary>
         /// txtValue control.
         /// </summary>
         /// <remarks>
@@ -254,15 +272,6 @@ namespace GFCK.Manufacturer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBarcode1Value;
-        
-        /// <summary>
-        /// ddlBarcode2Type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlBarcode2Type;
         
         /// <summary>
         /// txtBarcode2Value control.
