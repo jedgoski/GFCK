@@ -65,6 +65,8 @@ namespace GFCK
                         CouponDisplay.Description = coupon.Details;
                         CouponDisplay.Amount = coupon.Value;
                         CouponDisplay.CouponID = coupon.ID.ToString();
+
+                        e.Item.Visible = true;
                     }
                 }
             }

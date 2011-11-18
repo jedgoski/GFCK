@@ -9,36 +9,36 @@
             <div class="box_inner1"><div class="background-top-4"><div class="background-top-left-4"><div class="background-top-right-4"><div class="background-bottom-left-4"><div class="background-bottom-right-4"><div class="background-bottom-right-44"><div class="box-indent"><div class="box1_body">
             <div class="centerBoxContentsFeatured centeredContent back" style="width: 49%; zoom: 1;">
                 <div style="margin-left: 0px; width: auto;">
-                    <table style="width: 200px;" >
+                    <table style="width: 220px;" >
                         <tr>
                             <td>
-                                <div class="img_box1">
+                                <div class="img_box1" style="height:125px;overflow:hidden;">
 		
                                     <a href="/detail.aspx" id="linkImage" runat="server" class="dialog_link">
-                                        <img id="imgProduct" src="" runat="server" width="95" alt="GFCK" /></a><br />
+                                        <img id="imgProduct" src="" runat="server" width="95" alt="GFCK"/></a><br />
                                 </div>
                                 <div style="height: 5px;"></div>
                             </td>
                             <td>
                                 <div style="width: 5px;"></div>
                             </td>
-                            <td style="width: 100%; padding-top: 11px;">
+                            <td style="width: 100%;">
                                 <div class="product_box" style="width: auto;">
                                     <div class="product_box_addition">
                                         <div class="product_box_name">
                                             <div class="indent">
-                                                <a href="/detail.aspx" id="linkName" runat="server" class="dialog_link"><asp:Label ID="lblName" runat="server" /></a><br />
+                                                <asp:Label ID="lblName" runat="server" /><br />
                                             </div>
-                                        </div>
-                                        <div class="text" style="width: 97%;">
-                                            <asp:Literal ID="litDesc" runat="server" />
                                         </div>
                                         <div class="product_box_price">
                                             <div class="indent">
-                                                <strong><asp:Literal ID="litPrice" runat='server' /></strong><br />
+                                                <strong>Save <asp:Literal ID="litPrice" runat='server' /></strong><br />
                                             </div>
                                         </div>
-                                        <a href="/detail.aspx" id="linkSubmit" runat="server" class="dialog_link">
+                                        <div class="text" style="width: 97%;">
+                                            <asp:Literal ID="litDesc" runat="server" /><br />
+                                        </div>
+                                        <a id="linkSubmit" runat="server" class="dialog_link">
                                             <img src="/images/buttons/english/button_goto_prod_details.gif" alt="Go To This Product's Detailed Information"
                                                 title=" Go To This Product's Detailed Information " width="55" height="19" /></a><br />
                                         

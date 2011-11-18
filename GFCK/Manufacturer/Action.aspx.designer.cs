@@ -130,15 +130,6 @@ namespace GFCK.Manufacturer {
         protected global::System.Web.UI.WebControls.TextBox txtStartDate;
         
         /// <summary>
-        /// txtDiscount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiscount;
-        
-        /// <summary>
         /// txtExpirationDate control.
         /// </summary>
         /// <remarks>
@@ -254,15 +245,6 @@ namespace GFCK.Manufacturer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkYeastFree;
-        
-        /// <summary>
-        /// ddlBarcode1Type control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlBarcode1Type;
         
         /// <summary>
         /// txtBarcode1Value control.

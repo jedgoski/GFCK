@@ -35,7 +35,7 @@ namespace GFCK
             }
             Coupon c = _couponDAO.GetCoupon(couponID);
             imgProduct.Src = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", c.Image);
-            litDescription.Text = c.Details;
+            litDescription.Text = String.Format("Save {0:C} {1}", Convert.ToDecimal(c.Value), c.Details);
             litTerms.Text = c.Terms;
 
             List<string> listItems = new List<string>();

@@ -27,25 +27,23 @@
         <div class="centerColumn" id="productGeneral" style="padding: 0;">
             <!--bof Main Product Image -->
             <div id="productMainImage" class="centeredContent back">
-                <div class="img_box1" style="float: left; overflow: hidden; margin-right: 0;">
-                        <a href="#"
-                            target="_blank">
-                            <img id="imgProduct" runat="server" /></a><br />
+                <div class="img_box1" style="float: left; overflow: hidden; margin-right: 0;height:300px;">
+                    <img id="imgProduct" runat="server" /><br />
                 </div>
             </div>
             <!--eof Main Product Image-->
             <!--bof Product description -->
-            <div id="productDescription" class="productGeneral biggerText" style="margin-top: 15px;">
-                <asp:Literal ID="litDescription" runat="server" />
+            <div id="productDescription" class="productGeneral biggerText" style="margin-top: 15px;float:left;">
+                <asp:Literal ID="litDescription" runat="server" /><br /><br />
+                <div class="checkboxes">
+                <asp:Repeater ID="rptFree" runat="server" OnItemDataBound="rptFree_ItemDataBound">
+                    <HeaderTemplate><ul></HeaderTemplate>
+                    <ItemTemplate><li id="liItem" runat="server"></li></ItemTemplate>
+                    <FooterTemplate></ul></FooterTemplate>
+                </asp:Repeater>
+                </div>
             </div>
-            <br class="clearBoth" />
-            <div class="checkboxes">
-            <asp:Repeater ID="rptFree" runat="server" OnItemDataBound="rptFree_ItemDataBound">
-                <HeaderTemplate><ul></HeaderTemplate>
-                <ItemTemplate><li id="liItem" runat="server"></li></ItemTemplate>
-                <FooterTemplate></ul></FooterTemplate>
-            </asp:Repeater>
-            </div>
+
             <br class="clearBoth" />
             <div>
                 <asp:Literal ID="litTerms" runat="server" />

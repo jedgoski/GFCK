@@ -80,6 +80,12 @@ LABEL.inputLabel {
 		padding-bottom:3px;
 		float:left;		
         }
+LABEL.inputLabellong {
+        width: 15em;
+		padding-right:10px;
+		padding-bottom:3px;
+		float:left;		
+        }
 #indexProductList LABEL.inputLabel{display:block; width:90%;}
 
 LABEL.inputLabelPayment {
@@ -581,7 +587,10 @@ position:absolute;
 #tellAFriendDefault textarea{margin:2px 0 2px 0 !important;}
 #tellAFriendDefault label{margin:2px 0 2px 0 !important;}
 
-
+.checkboxes
+{
+	float:left;
+}
 
 .checkboxes ul
 {
@@ -596,5 +605,56 @@ position:absolute;
 	background-position:0em;
 	padding-left: 2.8em;
 	padding-top: 1em;
-	height:25px;
+	height:15px;
+}
+
+.coupon
+{
+	margin:5px 5px;
+	height:310px;
+	width:710px;
+	border-style:dashed;
+	border-color:Black;
+	border-width:1px;
+}
+
+.couponheading
+{
+	padding-top:4px;
+	height:20px;
+	font-size:12pt;
+	font-weight:bolder;
+	border-bottom: 1px solid black;
+	color:Black;
+	margin:2px 0px 2px 0px;
+}
+
+.couponbody
+{
+	overflow:hidden;
+	padding:7px;
+	height:160px;
+	font-size:6pt;
+}
+
+.couponbold
+{
+	font-size:16pt;
+	font-weight:bold;
+}
+
+.dotscan
+{
+	float:right;
+	font-size:10pt;
+}
+
+.couponbarcode
+{
+	height:100px;
+}
+
+.error
+{
+	border:solid 1px #FF0000;
 }

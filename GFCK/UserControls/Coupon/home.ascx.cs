@@ -23,10 +23,10 @@ namespace GFCK.UserControls.Coupon
         void home_PreRender(object sender, EventArgs e)
         {
             lblName.Text = Name;
-            linkImage.HRef = string.Format("/detail.aspx?id={0}", CouponID);
-            linkName.HRef = string.Format("/detail.aspx?id={0}", CouponID);
+            linkImage.HRef = linkSubmit.HRef = string.Format("/detail.aspx?id={0}", CouponID);
+            //linkName.HRef = string.Format("/detail.aspx?id={0}", CouponID);
             imgProduct.Src = Picture;
-            litPrice.Text = Amount;
+            litPrice.Text = String.Format("{0:C}", Convert.ToDecimal(Amount));
             litDesc.Text = Description;
         }
     }

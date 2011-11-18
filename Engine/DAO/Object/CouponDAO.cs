@@ -388,7 +388,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@MerchantID", SqlDbType.BigInt, coupon.MerchantID);
                 AddSQLParameter("@TemplateID", SqlDbType.BigInt, coupon.TemplateID);
                 AddSQLParameter("@CategoryID", SqlDbType.Int, coupon.CategoryID);
-                AddSQLParameter("@Image", SqlDbType.NVarChar, 100, coupon.Image);
+                AddSQLParameter("@Image", SqlDbType.NVarChar, 100, null);
                 AddSQLParameter("@Value", SqlDbType.NVarChar, 50, coupon.Value);
                 AddSQLParameter("@Discount", SqlDbType.NVarChar, 50, coupon.Discount);
                 AddSQLParameter("@Details", SqlDbType.NText, coupon.Details);

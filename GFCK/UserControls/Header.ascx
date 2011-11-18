@@ -9,7 +9,7 @@
     <ul>
         <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
             <AnonymousTemplate>
-                <li class="last"><a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a></li>
+                &nbsp;
             </AnonymousTemplate>
             <LoggedInTemplate>
                 <li class="last">Welcome <span class="bold">

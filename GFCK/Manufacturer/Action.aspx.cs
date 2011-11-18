@@ -77,7 +77,7 @@ namespace GFCK.Manufacturer
                 //coupon.Image = imgByte;
                 coupon.Name = txtName.Text;
                 coupon.Value = txtValue.Text;
-                coupon.Discount = txtDiscount.Text;
+                coupon.Discount = "";// txtDiscount.Text;
                 coupon.Details = txtDetails.Text;
                 coupon.Terms = txtTerms.Text;
                 coupon.StartDate = Convert.ToDateTime(txtStartDate.Text);
@@ -91,9 +91,9 @@ namespace GFCK.Manufacturer
                 coupon.EggFree = chkEggFree.Checked;
                 coupon.CornFree = chkCornFree.Checked;
                 coupon.YeastFree = chkYeastFree.Checked;
-                coupon.Barcode1Type = ddlBarcode1Type.Value;
+                coupon.Barcode1Type = "UPCACCA";
                 coupon.Barcode1Value = txtBarcode1Value.Text;
-                coupon.Barcode2Type = Request.Form["ddlBarcode2Type"].ToString();
+                coupon.Barcode2Type = "RSSExpandedStacked";
                 coupon.Barcode2Value = txtBarcode2Value.Text;
                 coupon.NumberOfCoupons = Convert.ToInt32(txtNumberOfCoupons.Text);
                 coupon.BottomAdvertisement = txtBottomAdvertisement.Text;
@@ -106,6 +106,7 @@ namespace GFCK.Manufacturer
                     // Need to add a record
                     if (_couponID > 0)
                     {
+                        coupon.ID = _couponID;
                         try
                         {
                             string accessKeyID = WebConfigurationManager.AppSettings["AWSAccessKey"];
@@ -320,7 +321,7 @@ namespace GFCK.Manufacturer
             txtName.Text = coupon.Name;
             imgCurrent.Src = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", coupon.Image);
             txtValue.Text = coupon.Value;
-            txtDiscount.Text = coupon.Discount;
+            //txtDiscount.Text = coupon.Discount;
             txtDetails.Text = coupon.Details;
             txtTerms.Text = coupon.Terms;
             txtStartDate.Text = Convert.ToDateTime(coupon.StartDate).ToShortDateString();
@@ -334,7 +335,7 @@ namespace GFCK.Manufacturer
             chkEggFree.Checked = coupon.EggFree;
             chkCornFree.Checked = coupon.CornFree;
             chkYeastFree.Checked = coupon.YeastFree;
-            ddlBarcode1Type.Value = coupon.Barcode1Type;
+            //ddlBarcode1Type.Value = coupon.Barcode1Type;
             txtBarcode1Value.Text = coupon.Barcode1Value;
             //ddlBarcode2Type.Value = coupon.Barcode2Type;
             txtBarcode2Value.Text = coupon.Barcode2Value;

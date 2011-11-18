@@ -31,15 +31,6 @@ namespace GFCK.UserControls.Coupon {
         protected global::System.Web.UI.HtmlControls.HtmlImage imgProduct;
         
         /// <summary>
-        /// linkName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor linkName;
-        
-        /// <summary>
         /// lblName control.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace GFCK.UserControls.Coupon {
         protected global::System.Web.UI.WebControls.Label lblName;
         
         /// <summary>
-        /// litDesc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litDesc;
-        
-        /// <summary>
         /// litPrice control.
         /// </summary>
         /// <remarks>
@@ -65,6 +47,15 @@ namespace GFCK.UserControls.Coupon {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal litPrice;
+        
+        /// <summary>
+        /// litDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litDesc;
         
         /// <summary>
         /// linkSubmit control.
