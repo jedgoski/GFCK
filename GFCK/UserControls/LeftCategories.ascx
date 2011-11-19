@@ -10,7 +10,7 @@
                             <div class="innerbox7">
                                 <div class="innerbox8">
                                     <div class="innerbox9">
-                                        Search by:
+                                        Search gluten free products by:
                                     </div>
                                 </div>
                             </div>
@@ -32,7 +32,6 @@
                                 <div class="box-indent">
                                     <div class="box1_body">
                                         <div id="categoriesContent" class="sideBoxContent" style="vertical-align:top;">
-                                            <asp:CheckBox ID="chkGF" runat="server" />&nbsp;&nbsp;Gluten Free<br />
                                             <asp:CheckBox ID="chkCDF" runat="server" />&nbsp;&nbsp;Casein/Dairy Free<br />
                                             <asp:CheckBox ID="chkSF" runat="server" />&nbsp;&nbsp;Soy Free<br />
                                             <asp:CheckBox ID="chkCF" runat="server" />&nbsp;&nbsp;Corn Free<br />

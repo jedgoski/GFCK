@@ -20,7 +20,7 @@ namespace GFCK.UserControls
                 if (filter != "")
                 {
                     char[] filterValues = filter.ToCharArray();
-                    chkGF.Checked = (filterValues[0] == '1') ? true : false;
+                    //chkGF.Checked = (filterValues[0] == '1') ? true : false;
                     chkCDF.Checked = (filterValues[1] == '1') ? true : false;
                     chkSF.Checked = (filterValues[2] == '1') ? true : false;
                     chkCF.Checked = (filterValues[3] == '1') ? true : false;
@@ -60,7 +60,7 @@ namespace GFCK.UserControls
         protected void btnFilter_Click(object sender, EventArgs e)
         {
             string filter = "0000000";
-            filter = ApplyFilter(filter, chkGF.Checked, 0);
+            filter = ApplyFilter(filter, true, 0);
             filter = ApplyFilter(filter, chkCDF.Checked, 1);
             filter = ApplyFilter(filter, chkSF.Checked, 2);
             filter = ApplyFilter(filter, chkCF.Checked, 3);

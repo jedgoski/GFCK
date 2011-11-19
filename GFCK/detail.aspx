@@ -6,12 +6,12 @@
 			        .load("/printcoupon.aspx")
 			        .dialog({
 			            autoOpen: true,
-			            width: 780,
-			            height: 430,
+			            width: 1180,
+			            height: 830,
 			            modal: true,
 			            stack: true,
 			            resizable: false,
-			            title: 'Coupon Print'
+			            title: 'Printing Coupon...'
 			        });
 			        $dialog1.dialog('open');
     }

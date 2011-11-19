@@ -50,6 +50,10 @@ namespace GFCK.Admin
                 merchant.Email = txtEmail.Text;
                 merchant.PhoneNumber = txtPhoneNumber.Text;
                 merchant.Address = txtAddress.Text;
+                merchant.Address2 = txtAddress2.Text;
+                merchant.City = txtCity.Text;
+                merchant.State = txtState.Text;
+                merchant.Zip = txtZip.Text;
                 merchant.Description = txtDescription.Text;
                 merchant.Deleted = false;
                 
@@ -76,6 +80,7 @@ namespace GFCK.Admin
                 }
                 else
                 {
+                    merchant.ID = _manufacturerID;
                     // Need to update the record
                     if(merchantDAO.UpdateMerchant(merchant))
                     {
@@ -306,6 +311,10 @@ namespace GFCK.Admin
             txtEmail.Text = merchant.Email;
             txtPhoneNumber.Text = merchant.PhoneNumber;
             txtAddress.Text = merchant.Address;
+            txtAddress2.Text = merchant.Address2;
+            txtCity.Text = merchant.City;
+            txtState.Text = merchant.State;
+            txtZip.Text = merchant.Zip;
             txtDescription.Text = merchant.Description;
         }
     }

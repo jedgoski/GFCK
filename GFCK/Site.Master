@@ -11,6 +11,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
 <head runat="server">
     <title>Gluten Free Coupon King</title>
+    <meta name="keywords" content="Gluten, Gluten free, free, Coupon, coupons, Search, green" />
+    <meta name="description" content="Coupons for gluten free products" />
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" type="text/css" href="/css/stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="/css/stylesheet_boxes.css" />
@@ -25,7 +27,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body id="indexBody">
-    <form runat="server">
+    <form runat="server"><!-- google_ad_section_start -->
     <!--bof-header logo and navigation display-->
     <div class="main_t">
         <div class="header_t">
@@ -39,7 +41,7 @@
                 <uc:Search id="Search" runat="server" />
             </div>
         </div>
-        <img src="/images/pixel_trans.gif" alt="" width="1" height="14" /><br />
+        <img src="/images/pixel_trans.gif" alt="pixel" width="1" height="14" /><br />
         <div class="content_t">
             <table border="0" cellspacing="0" cellpadding="0" id="contentMainWrapper" style="width: 100%;">
                 <tr>
@@ -51,7 +53,7 @@
                         </div>
                     </td>
                     <td>
-                        <img src="/images/pixel_trans.gif" alt="" width="5" height="1" />
+                        <img src="/images/pixel_trans.gif" alt="pixel" width="5" height="1" />
                     </td>
                     <td style="width: 100%;">
                         <table style="width: 100%;">
@@ -60,7 +62,7 @@
                                     <asp:ContentPlaceHolder ID="MainContent" runat="server" />
                                 </td>
                                 <td>
-                                    <img src="/images/pixel_trans.gif" alt="" width="5" height="1" />
+                                    <img src="/images/pixel_trans.gif" alt="pixel" width="5" height="1" />
                                 </td>
                                 <td id="column_right" style="width: 192px">
                                     <script type="text/javascript"><!--
@@ -96,6 +98,7 @@
             <br />
         </div>
     </div>
+<!-- google_ad_section_end -->
     </form>
 </body>
 </html>

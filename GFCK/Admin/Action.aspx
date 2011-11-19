@@ -110,6 +110,18 @@
 <label class="inputLabel">Address:</label>
 <asp:TextBox ID="txtAddress" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  
+<label class="inputLabel">&nbsp;</label>
+<asp:TextBox ID="txtAddress2" runat="server" CssClass="tblarge" /><br class="clearBoth" />
+ 
+<label class="inputLabel">City:</label>
+<asp:TextBox ID="txtCity" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+ 
+<label class="inputLabel">State:</label>
+<asp:TextBox ID="txtState" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+ 
+<label class="inputLabel">Zip:</label>
+<asp:TextBox ID="txtZip" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+ 
 <label class="inputLabel">Description:</label>
 <asp:TextBox ID="txtDescription" textMode="MultiLine" runat="server" Rows="5" />
 </fieldset>

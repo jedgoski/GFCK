@@ -90,8 +90,8 @@ namespace Engine.DAO.Object
                 else AddSQLParameter("@categoryID", SqlDbType.Int, null);
                 if (filter != "")
                 {
-                    if(filter[0] == '1') AddSQLParameter("@glutenFree", SqlDbType.Bit, true);
-                    else AddSQLParameter("@glutenFree", SqlDbType.Bit, null);
+                    //if(filter[0] == '1') AddSQLParameter("@glutenFree", SqlDbType.Bit, true);
+                    //else AddSQLParameter("@glutenFree", SqlDbType.Bit, null);
                     if (filter[1] == '1') AddSQLParameter("@caseinFree", SqlDbType.Bit, true);
                     else AddSQLParameter("@caseinFree", SqlDbType.Bit, null);
                     if (filter[2] == '1') AddSQLParameter("@soyFree", SqlDbType.Bit, true);

@@ -22,15 +22,6 @@ namespace GFCK.UserControls {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl categories;
         
         /// <summary>
-        /// chkGF control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkGF;
-        
-        /// <summary>
         /// chkCDF control.
         /// </summary>
         /// <remarks>

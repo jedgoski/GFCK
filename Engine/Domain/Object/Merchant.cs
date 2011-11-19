@@ -17,6 +17,10 @@ namespace Engine.Domain.Object
         public String Email { get; set; }
         public String PhoneNumber { get; set; }
         public String Address { get; set; }
+        public String Address2 { get; set; }
+        public String City { get; set; }
+        public String State { get; set; }
+        public String Zip { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public bool Deleted { get; set; }
