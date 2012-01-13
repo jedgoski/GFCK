@@ -9,6 +9,7 @@ namespace Engine.Domain.Object
     {
         public Int64 ID { get; set; }
         public String Name { get; set; }
+        public String Category { get; set; }
         public Int64 CouponID { get; set; }
         public DateTime PrintedDate { get; set; }
         public String IPAddress { get; set; }

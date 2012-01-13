@@ -78,15 +78,15 @@ namespace Engine.DAO.Object
             return coupons;
         }
 
-        public List<Coupon> GetAllCouponsByCategory(int categoryID, string filter)
+        public List<Coupon> GetAllCouponsByCategory(int categoryID, string filter, string searchTerm)
         {
             List<Coupon> coupons = null;
-            _log.DebugFormat(@"dbo.GetAllCouponsByCategory: categoryID={0}, filter={1}", categoryID, filter);
+            _log.DebugFormat(@"dbo.GetAllCouponsByCategory: categoryID={0}, filter={1}, searchTerm={2}", categoryID, filter, searchTerm);
             try
             {
 
                 coupons = new List<Coupon>();
-                if(categoryID > 0) AddSQLParameter("@categoryID", SqlDbType.Int, categoryID);
+                if (categoryID > 0) AddSQLParameter("@categoryID", SqlDbType.Int, categoryID);
                 else AddSQLParameter("@categoryID", SqlDbType.Int, null);
                 if (filter != "")
                 {
@@ -105,6 +105,24 @@ namespace Engine.DAO.Object
                     if (filter[6] == '1') AddSQLParameter("@yeastFree", SqlDbType.Bit, true);
                     else AddSQLParameter("@yeastFree", SqlDbType.Bit, null);
                 }
+                else
+                {
+                    AddSQLParameter("@caseinFree", SqlDbType.Bit, null);
+                    AddSQLParameter("@soyFree", SqlDbType.Bit, null);
+                    AddSQLParameter("@cornFree", SqlDbType.Bit, null);
+                    AddSQLParameter("@eggFree", SqlDbType.Bit, null);
+                    AddSQLParameter("@nutFree", SqlDbType.Bit, null);
+                    AddSQLParameter("@yeastFree", SqlDbType.Bit, null);
+                }
+                if (!String.IsNullOrEmpty(searchTerm))
+                {
+                    AddSQLParameter("@searchTerm", SqlDbType.NVarChar, searchTerm);
+                }
+                else
+                {
+                    AddSQLParameter("@searchTerm", SqlDbType.NVarChar,"");
+                }
+ 
                 DataSet ds = GetDatasetByCommand("dbo.GetAllCouponsByCategoryID");
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
@@ -151,6 +169,11 @@ namespace Engine.DAO.Object
             }
 
             return coupons;
+        }
+
+        public List<Coupon> GetAllCouponsByCategory(int categoryID, string filter)
+        {
+            return GetAllCouponsByCategory(categoryID, filter, null);
         }
 
         public Coupon GetCoupon(Int64 ID)
@@ -504,6 +527,7 @@ namespace Engine.DAO.Object
                 {
                     CouponPrint couponPrint = new CouponPrint();
                     couponPrint.Name = Convert.ToString(row["Name"]);
+                    couponPrint.Category = Convert.ToString(row["Category"]);
                     couponPrint.CouponID = Convert.ToInt64(row["CouponID"]);
                     couponPrint.TotalPrints = Convert.ToInt32(row["Total"]);
 

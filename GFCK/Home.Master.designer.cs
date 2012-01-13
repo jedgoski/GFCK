@@ -10,7 +10,7 @@
 namespace GFCK {
     
     
-    public partial class SiteMaster {
+    public partial class HomeMaster {
         
         /// <summary>
         /// HeadContent control.
@@ -31,6 +31,15 @@ namespace GFCK {
         protected global::GFCK.UserControls.Header Header;
         
         /// <summary>
+        /// TopCategories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::GFCK.UserControls.TopCategories TopCategories;
+        
+        /// <summary>
         /// Search control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace GFCK {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::GFCK.UserControls.Search Search;
+        
+        /// <summary>
+        /// LeftCategories control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::GFCK.UserControls.LeftCategories LeftCategories;
         
         /// <summary>
         /// LeftCallout1 control.

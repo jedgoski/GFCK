@@ -35,12 +35,13 @@ namespace GFCK
                 litExpDate.Text = Convert.ToDateTime(c.ExpirationDate).ToString("MM/dd/yyyy");
                 img.Src = String.Format("https://s3.amazonaws.com/gfck/coupon/{0}", c.Image);
                 string strDotScan = GenerateDotScan(c.MerchantID, c.ID, numPrints);
-                dotscan.Src = String.Format("BarcodeHandler.ashx?code=PDF417&modulewidth=.3&unit=mm&Data={0}", strDotScan);
+                //dotscan.Src = String.Format("BarcodeHandler.ashx?code=PDF417&modulewidth=.3&unit=mm&Data={0}", strDotScan);
+                dotscan.Src = String.Format("http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=PDF417&modulewidth=.3&unit=mm&Data={0}", strDotScan);
                 litDotScan.Text = strDotScan;
                 litValue.Text = String.Format("{0:C}", Convert.ToDecimal(c.Value));
                 litDesc.Text = c.Details;
-                imgBarcode1.Src = String.Format("/BarcodeHandler.ashx?code=UPCA&modulewidth=.4&unit=mm&Data={0}", c.Barcode1Value);
-                imgBarcode2.Src = String.Format("/BarcodeHandler.ashx?code=RSSExpandedStacked&modulewidth=0.35&unit=mm&Data={0}", c.Barcode2Value);
+                imgBarcode1.Src = String.Format("http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=UPCA&modulewidth=.4&unit=mm&Data={0}", c.Barcode1Value);
+                imgBarcode2.Src = String.Format("http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=RSSExpandedStacked&modulewidth=0.35&unit=mm&Data={0}", c.Barcode2Value);
                 imgBanner.Src = "/images/banner2.jpg";
                 imgBanner.Visible = true;
 

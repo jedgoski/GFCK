@@ -20,6 +20,14 @@ namespace GFCK.Admin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //hide all previous errors
+            lblError.Visible = false;
+            lblActivateSuccessfull.Visible = false;
+            lblAddSuccessfull.Visible = false;
+            lblAddUserSuccess.Visible = false;
+            lblDeleteSuccessfull.Visible = false;
+            lblEditSuccessfull.Visible = false;
+            
             _manufacturerID = (string.IsNullOrEmpty(Request.QueryString["ManufacturerID"])) ? 0 : Convert.ToInt64(Request.QueryString["ManufacturerID"]);
             
             if (!IsPostBack)

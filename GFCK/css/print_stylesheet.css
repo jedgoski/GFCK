@@ -11,8 +11,8 @@ body {background-color: #ffffff;}
 #contentMainWrapper {background-color: #ffffff;}
 .messageStackWarning, #navMainWrapper, .navMainSearch, #navCatTabsWrapper, #navEZPagesTop, 
 #navColumnOne.columnLeft, #navColumnTwo.columnRight, 
-#navSupp, .banners, #navBreadCrumb, .buttonRow { display: none;}
-
+#navSupp, .banners, #navBreadCrumb, .buttonRow, .ui-dialog-titlebar, .ui-dialog-title, #dialog { display: none;}
+.ui-widget-content{border:none;}
 
 .printthis
 {

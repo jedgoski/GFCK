@@ -277,10 +277,10 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@Email", SqlDbType.NVarChar, merchant.Email);
                 AddSQLParameter("@PhoneNumber", SqlDbType.NVarChar, merchant.PhoneNumber);
                 AddSQLParameter("@Address", SqlDbType.NVarChar, merchant.Address);
-                AddSQLParameter("@Address2", SqlDbType.NVarChar, merchant.Address);
-                AddSQLParameter("@City", SqlDbType.NVarChar, merchant.Address);
-                AddSQLParameter("@State", SqlDbType.NVarChar, merchant.Address);
-                AddSQLParameter("@Zip", SqlDbType.NVarChar, merchant.Address);
+                AddSQLParameter("@Address2", SqlDbType.NVarChar, merchant.Address2);
+                AddSQLParameter("@City", SqlDbType.NVarChar, merchant.City);
+                AddSQLParameter("@State", SqlDbType.NVarChar, merchant.State);
+                AddSQLParameter("@Zip", SqlDbType.NVarChar, merchant.Zip);
                 AddSQLParameter("@Deleted", SqlDbType.Bit, merchant.Deleted);
                 GetExecuteNonQueryByCommand("dbo.AddMerchant");
                 success = true;

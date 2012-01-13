@@ -68,19 +68,23 @@ namespace GFCK.Admin
 
             switch (ddlFilter1.SelectedValue)
             {
-                case "all": startDate = DateTime.MinValue;
+                case "all": 
+                    startDate = DateTime.MinValue;
                     endDate = DateTime.MaxValue;
                     break;
 
-                case "current": startDate = thisMonthsStartDate;
+                case "current": 
+                    startDate = thisMonthsStartDate;
                     endDate = thisMonthsEndDate;
                     break;
 
-                case "last": startDate = LastMonthsDate;
+                case "last": 
+                    startDate = LastMonthsDate;
                     endDate = LastMonthsEndDate;
                     break;
 
-                default: startDate = DateTime.MinValue;
+                default: 
+                    startDate = DateTime.MinValue;
                     endDate = DateTime.MaxValue;
                     break;
             }
@@ -100,10 +104,12 @@ namespace GFCK.Admin
             if (couponPrints.Count == 0)
             {
                 litNoDataFound.Visible = true;
+                rptCoupons.Visible = false;
             }
             else
             {
                 litNoDataFound.Visible = false;
+                rptCoupons.Visible = true;
                 rptCoupons.DataSource = couponPrints;
                 rptCoupons.DataBind();
             }
@@ -135,7 +141,7 @@ namespace GFCK.Admin
                     return;
                 }
 
-                litCoupon.Text = cp.Name;
+                litCoupon.Text = String.Format("{0} ({1})", cp.Name, cp.Category);
                 litStats.Text = cp.TotalPrints.ToString();
 
                 e.Item.Visible = true;

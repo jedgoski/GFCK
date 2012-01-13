@@ -14,10 +14,14 @@ namespace GFCK
     {
         FactoryDAO _factoryDAO = FactoryDAO.GetInstance();
         int _categoryID = 0;
+        string _searchTerm = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["c"] != null)
                 _categoryID = Convert.ToInt32(Request.QueryString["c"]);
+
+            if (Request.QueryString["search"] != null)
+                _searchTerm = Request.QueryString["search"];
 
             if (!IsPostBack)
             {
@@ -30,7 +34,7 @@ namespace GFCK
             string filter = (Session["filter"] == null) ? "" : Session["filter"].ToString();
 
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
-            List<Coupon> coupons = couponDAO.GetAllCouponsByCategory(_categoryID, filter);
+            List<Coupon> coupons = couponDAO.GetAllCouponsByCategory(_categoryID, filter, _searchTerm);
 
             rptCoupons.DataSource = coupons;
             rptCoupons.DataBind();

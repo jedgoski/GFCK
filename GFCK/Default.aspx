@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" CodeBehind="Default.aspx.cs" Inherits="GFCK._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Home.master" CodeBehind="Default.aspx.cs" Inherits="GFCK._Default" %>
 <%@ Register Src="/UserControls/Coupon/home.ascx" TagPrefix="uc1" TagName="CouponDisplay" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
@@ -8,8 +8,14 @@
 		            var $link = $(this);
 
 		            $link.click(function () {
+		                var d = new Date();
+		                var min = d.getMinutes();
+		                var s = d.getSeconds();
+		                var m = d.getMilliseconds();
+		                var time = min + s + m;
+
 		                var $dialog = $('<div></div>')
-			            .load($link.attr('href'))
+			            .load($link.attr('href') + "&time=" + time)
 			            .dialog({
 			                autoOpen: false,
 			                width: 800,
@@ -17,8 +23,8 @@
 			                modal: true,
 			                resizable: false,
 			                title: 'Product Description'
-			            });                     
-                        $dialog.dialog('open');
+			            });
+		                $dialog.dialog('open');
 		                return false;
 		            });
 		        });

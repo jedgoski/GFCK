@@ -35,7 +35,7 @@
                                                 <strong>Save <asp:Literal ID="litPrice" runat='server' /></strong><br />
                                             </div>
                                         </div>
-                                        <div class="text" style="width: 97%;">
+                                        <div class="text" style="width: 97%;height:45px;overflow:hidden;">
                                             <asp:Literal ID="litDesc" runat="server" /><br />
                                         </div>
                                         <a id="linkSubmit" runat="server" class="dialog_link">

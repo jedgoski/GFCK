@@ -81,7 +81,7 @@ LABEL.inputLabel {
 		float:left;		
         }
 LABEL.inputLabellong {
-        width: 15em;
+        width: 16em;
 		padding-right:10px;
 		padding-bottom:3px;
 		float:left;		
@@ -590,6 +590,7 @@ position:absolute;
 .checkboxes
 {
 	float:left;
+	width: 450px;
 }
 
 .checkboxes ul
@@ -647,6 +648,7 @@ position:absolute;
 {
 	float:right;
 	font-size:10pt;
+	margin-top: -15px;
 }
 
 .couponbarcode
@@ -657,4 +659,9 @@ position:absolute;
 .error
 {
 	border:solid 1px #FF0000;
+}
+
+.mainDivPadding
+{
+    padding:10px;
 }

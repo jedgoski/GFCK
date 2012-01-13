@@ -14,6 +14,7 @@
     <AssemblyName>GFCK</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,9 +47,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -71,6 +72,8 @@
     <Content Include="Admin\default.aspx" />
     <Content Include="Admin\Action.aspx" />
     <Content Include="contact-us.aspx" />
+    <Content Include="Terms.aspx" />
+    <Content Include="Privacy-Policy.aspx" />
     <Content Include="OnlineBarcodeDemo.aspx" />
     <Content Include="printcoupon.aspx" />
     <Content Include="css\CSS_read_me.txt" />
@@ -466,6 +469,14 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="IDAutomation.cs" />
     <Compile Include="OnlineBarcodeDemo.aspx.cs">
       <DependentUpon>OnlineBarcodeDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -623,6 +634,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="OnlineBarcodes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
@@ -648,6 +660,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BarcodeHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Home.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

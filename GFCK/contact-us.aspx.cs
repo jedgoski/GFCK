@@ -14,20 +14,26 @@ namespace GFCK
     {
         public static readonly ILog _log = LogManager.GetLogger(typeof(contact_us));
 
-        protected override void OnInit(EventArgs e)
+        
+        protected void Page_Load(object sender, EventArgs e)
         {
-            base.OnInit(e);
+
+        }
+
+        protected void btnSend_Click(object sender, EventArgs e)
+        {
             try
             {
-                string emailFrom = txtEmail.Text;
+                string emailFrom = Server.HtmlEncode(txtEmail.Text);
                 string emailTo = ConfigurationManager.AppSettings["ContactFormEmailTo"];
                 string emailSubject = ConfigurationManager.AppSettings["ContactFormEmailSubject"];
                 string emailHost = ConfigurationManager.AppSettings["MailHost"];
+
                 StringBuilder body = new StringBuilder();
-                body.AppendFormat("First Name: {0}", txtFirstName.Text);
-                body.AppendFormat("Last Name: {1}", txtLastName.Text);
-                body.AppendFormat("Phone number: {2}", txtPhoneNumber.Text);
-                body.AppendFormat("Comments: {3}", txtComments.Text);
+                body.AppendFormat("First Name: {0}<br />", Server.HtmlEncode(txtFirstName.Text));
+                body.AppendFormat("Last Name: {0}<br />", Server.HtmlEncode(txtLastName.Text));
+                body.AppendFormat("Phone number: {0}<br />", Server.HtmlEncode(txtPhoneNumber.Text));
+                body.AppendFormat("Comments: {0}", Server.HtmlEncode(txtComments.Text));
                 if (Globals.SendMail(emailFrom, emailTo, emailSubject, body.ToString(), emailHost))
                 {
                     // Success
@@ -36,6 +42,7 @@ namespace GFCK
                 }
                 else
                 {
+                    _log.ErrorFormat("Could not send email");
                     lblError.Visible = true;
                 }
             }

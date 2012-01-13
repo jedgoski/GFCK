@@ -13,6 +13,7 @@ using System.Web.Security;
 using Amazon.S3;
 using Amazon.S3.Model;
 //using IDAutomation;
+using IDAutomation_FontEncoder;
 ///using IDAutomation.DatabarServerControl;
 
 namespace GFCK.Manufacturer
@@ -36,6 +37,10 @@ namespace GFCK.Manufacturer
             //MyBarCode.SymbologyID = DatabarBarcode.Symbologies.DatabarStackedOmnidirectional;
             //MyBarCode.XtoYRatio = 5;
             //MyBarCode.SaveImageAs(@"C:\Users\Jed\GFCK\GFCK\Manufacturer\barcodes\Test39.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            
+            //clsBarCode barcodeObject = new clsBarCode();
+            //barcodeObject.UPCA("0123456789012");
+            //barcodeObject = null;
 
             if (!string.IsNullOrEmpty(Request.QueryString["CouponID"]))
             {
@@ -97,7 +102,7 @@ namespace GFCK.Manufacturer
                 coupon.Barcode2Value = txtBarcode2Value.Text;
                 coupon.NumberOfCoupons = Convert.ToInt32(txtNumberOfCoupons.Text);
                 coupon.BottomAdvertisement = txtBottomAdvertisement.Text;
-                coupon.Enabled = false;
+                coupon.Enabled = Convert.ToBoolean(txtEnabled.Value);
 
                 if (_couponID == 0)
                 {
@@ -273,9 +278,9 @@ namespace GFCK.Manufacturer
         {
             divAddCoupon.Visible = false;
             divEditCoupon.Visible = true;
-            LoadData();
             lblCurrent.Visible = true;
             imgCurrent.Visible = true;
+            LoadData();
         }
         
         protected void Activate(bool active)
@@ -319,7 +324,15 @@ namespace GFCK.Manufacturer
 
             ddlCategory.SelectedValue = Convert.ToString(coupon.CategoryID);
             txtName.Text = coupon.Name;
-            imgCurrent.Src = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", coupon.Image);
+            if (!String.IsNullOrEmpty(coupon.Image))
+            {
+                imgCurrent.Src = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", coupon.Image);
+            }
+            else
+            {
+                lblCurrent.Visible = false;
+                imgCurrent.Visible = false;
+            }
             txtValue.Text = coupon.Value;
             //txtDiscount.Text = coupon.Discount;
             txtDetails.Text = coupon.Details;
@@ -341,6 +354,7 @@ namespace GFCK.Manufacturer
             txtBarcode2Value.Text = coupon.Barcode2Value;
             txtNumberOfCoupons.Text = coupon.NumberOfCoupons.ToString();
             txtBottomAdvertisement.Text = coupon.BottomAdvertisement;
+            txtEnabled.Value = coupon.Enabled.ToString();
         }
     }
 }

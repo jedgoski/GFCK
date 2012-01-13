@@ -31,13 +31,13 @@ namespace GFCK {
         protected global::System.Web.UI.HtmlControls.HtmlImage imgProduct;
         
         /// <summary>
-        /// litDescription control.
+        /// litValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litDescription;
+        protected global::System.Web.UI.WebControls.Literal litValue;
         
         /// <summary>
         /// rptFree control.
@@ -47,6 +47,15 @@ namespace GFCK {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptFree;
+        
+        /// <summary>
+        /// litDescription control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litDescription;
         
         /// <summary>
         /// litTerms control.

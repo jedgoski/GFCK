@@ -1,37 +1,47 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Manufacturer.Master" CodeBehind="Action.aspx.cs" Inherits="GFCK.Manufacturer.Action" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <script type="text/javascript" src="/scripts/jquery-barcode-2.0.2.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#img1").hide();
             $("#img2").hide();
+            ShowBarcode1();
+            ShowBarcode2();
             $(document.getElementById('<%=txtBarcode1Value.ClientID%>')).blur(function () {
-                if ($(document.getElementById('<%=txtBarcode1Value.ClientID%>')).val() == "") {
-                    $("#img1").hide();
-                }
-                else {
-                    $("#img1").show();
-                    $("#img1").attr("src", "/BarcodeHandler.ashx?code=UPCACCA&modulewidth=1&unit=px&Data=" + $(document.getElementById('<%=txtBarcode2Value.ClientID%>')).val());
-                }
+                ShowBarcode1();
             });
             $(document.getElementById('<%=txtBarcode2Value.ClientID %>')).blur(function () {
-                if ($(document.getElementById('<%=txtBarcode2Value.ClientID %>')).val() == "") {
-                    $("#img2").hide();
-                }
-                else {
-                    $("#img2").show();
-                    $("#img2").attr("src", "/BarcodeHandler.ashx?code=RSSExpandedStacked&modulewidth=1&unit=px&Data=" + $(document.getElementById('<%=txtBarcode2Value.ClientID%>')).val());
-                }
+                ShowBarcode2();
             });
 
         });
+
+        function ShowBarcode1() {
+            if ($(document.getElementById('<%=txtBarcode1Value.ClientID%>')).val() == "") {
+                $("#img1").hide();
+            }
+            else {
+                $("#img1").show();
+                $("#img1").attr("src", "http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=UPCA&modulewidth=1&unit=px&Data=" + $(document.getElementById('<%=txtBarcode1Value.ClientID%>')).val());
+            }
+        }
+
+        function ShowBarcode2() {
+            if ($(document.getElementById('<%=txtBarcode2Value.ClientID %>')).val() == "") {
+                $("#img2").hide();
+            }
+            else {
+                $("#img2").show();
+                $("#img2").attr("src", "http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=RSSExpandedStacked&modulewidth=1&unit=px&Data=" + $(document.getElementById('<%=txtBarcode2Value.ClientID%>')).val());
+            }
+        }
+
 
         var v = true;
         function validate() {
 
             AddRemoveError(document.getElementById('<%=txtName.ClientID %>'));
-            AddRemoveError(document.getElementById('<%=imgUpload.ClientID %>'));
+            AddRemoveErrorImage(document.getElementById('<%=imgUpload.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtValue.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtStartDate.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtExpirationDate.ClientID %>'));
@@ -53,6 +63,15 @@
                 $(item).removeClass("error");
             }
 
+        }
+        function AddRemoveErrorImage(item) {
+            if ($(item).val() == "" && document.getElementById('<%=imgCurrent.ClientID %>').src == "") {
+                $(item).addClass("error");
+                v = false;
+            }
+            else {
+                $(item).removeClass("error");
+            }
         }
     </script>
 
@@ -119,47 +138,48 @@
 <div class="alert forward">* Required information</div>
 <br class="clearBoth" /> 
  
-<label class="inputLabel">Name this coupon:</label>
-<asp:TextBox ID="txtName" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+<label class="inputLabel">Name this coupon:<span class="alert">*</span></label>
+<asp:TextBox ID="txtName" runat="server" CssClass="tblarge" /><br class="clearBoth" />
 <br />
-<label class="inputLabel">Category:</label>
-<asp:DropDownList ID="ddlCategory" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+<label class="inputLabel">Category:<span class="alert">*</span></label>
+<asp:DropDownList ID="ddlCategory" runat="server" CssClass="tblarge" /><br class="clearBoth" />
 <br />
-<label class="inputLabel">Image:</label>
-<asp:FileUpload ID="imgUpload" runat="server" CssClass="tblarge" Width="400px" /><span class="alert">*</span><br class="clearBoth" />
+<label class="inputLabel">Image:<span class="alert">*</span></label>
+<asp:FileUpload ID="imgUpload" runat="server" CssClass="tblarge" Width="400px" /><br class="clearBoth" />
  <br />
 <label class="inputLabel" id="lblCurrent" runat="server">Current Image:</label>
-<img id="imgCurrent" runat="server" />
+<img id="imgCurrent" runat="server" style="max-height:250px;" />
  <br />
  <table>
  <tr><td>
-<label class="inputLabel">Value:</label>
-<asp:TextBox ID="txtValue" runat="server" CssClass="tbsmall" /><span class="alert">*</span><br class="clearBoth" />
+<label class="inputLabel">Value:<span class="alert">*</span></label>
+<asp:TextBox ID="txtValue" runat="server" CssClass="tbsmall" /><br class="clearBoth" />
  </td>
  <td width="100px"></td>
  <td>
-<label class="inputLabel">Start Date:</label>
-<asp:TextBox ID="txtStartDate" runat="server" CssClass="datepicker tbsmall" /><span class="alert">*</span><br class="clearBoth" />
-</td> </tr></table> <br />
- <table>
+<label class="inputLabel">Start Date:<span class="alert">*</span></label>
+<asp:TextBox ID="txtStartDate" runat="server" CssClass="datepicker tbsmall" /><br class="clearBoth" />
+</td> </tr>
+<tr><td colspan="3">&nbsp;</td></tr>
  <tr><td width="219px">&nbsp;
 
 
  </td>
  <td width="100px"></td>
  <td>
-<label class="inputLabel">Expiration Date:</label>
-<asp:TextBox ID="txtExpirationDate" runat="server" CssClass="datepicker tbsmall" /><span class="alert">*</span><br class="clearBoth" />
+<label class="inputLabel">Expiration Date:<span class="alert">*</span></label>
+<asp:TextBox ID="txtExpirationDate" runat="server" CssClass="datepicker tbsmall" /><br class="clearBoth" />
  </td> </tr></table>
  <br />
-<label class="inputLabel">Number of Coupons:</label>
-<asp:TextBox ID="txtNumberOfCoupons" runat="server" CssClass="tbsmall" /><span class="alert">*</span><br class="clearBoth" />
+<label class="inputLabel">Number of Coupons:<span class="alert">*</span></label>
+<asp:TextBox ID="txtNumberOfCoupons" runat="server" CssClass="tbsmall" /><br class="clearBoth" />
  <br />
-<label class="inputLabel">Details:</label>
-<asp:TextBox ID="txtDetails" runat="server" CssClass="tblarge" TextMode="MultiLine" /><span class="alert">*</span><br class="clearBoth" />
+<label class="inputLabel">Details:<span class="alert">*</span></label>
+<asp:TextBox ID="txtDetails" runat="server" CssClass="tblarge" TextMode="MultiLine" /><br class="clearBoth" />
  <br />
-<label class="inputLabel">Terms:</label>
-<asp:TextBox ID="txtTerms" runat="server" CssClass="tblarge" TextMode="MultiLine" /><span class="alert">*</span><br class="clearBoth" />
+<label class="inputLabel">Terms:<span class="alert">*</span></label>
+<asp:TextBox ID="txtTerms" runat="server" CssClass="tblarge" TextMode="MultiLine" /><br class="clearBoth" />
+<input type="hidden" id="txtEnabled" runat="server" />
  <br />
  <hr />
  <h2>Please check all that apply:</h2><br />
@@ -207,16 +227,16 @@
  <hr />
  <h2>Barcodes:</h2><br />
 <div style="width:310px;float:left;">
-<label class="inputLabellong">UPC-A Composite Symbology:</label>
+<label class="inputLabellong">UPC-A Composite Symbology:<span class="alert">*</span></label>
 <br /><br />
-<asp:TextBox ID="txtBarcode1Value" runat="server" CssClass="tblarge" /><span class="alert">*</span>
+<asp:TextBox ID="txtBarcode1Value" runat="server" CssClass="tblarge" />
 <br />
 <div style="padding-right:50px;float:left;height:95px;"><div id="bcTarget1"><img id="img1" /></div></div>
  </div>
 <div style="width:310px;float:left;">
-<label class="inputLabellong">GS1-DataBar Expanded Stacked:</label>
+<label class="inputLabellong">GS1-DataBar Expanded Stacked:<span class="alert">*</span></label>
 <br /><br />
-<asp:TextBox ID="txtBarcode2Value" runat="server" CssClass="tblarge" /><span class="alert">*</span>
+<asp:TextBox ID="txtBarcode2Value" runat="server" CssClass="tblarge" />
 <br />
 <div style="padding-right:50px;float:left;height:95px;"><div id="bcTarget2"><img id="img2" /></div></div>
  </div>

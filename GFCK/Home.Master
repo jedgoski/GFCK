@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GFCK.SiteMaster" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.Master.cs" Inherits="GFCK.HomeMaster" %>
 <%@ Register Src="~/UserControls/Header.ascx" TagPrefix="uc" TagName="Header" %>
 <%@ Register Src="~/UserControls/TopCategories.ascx" TagPrefix="uc" TagName="TopCategories" %>
 <%@ Register Src="~/UserControls/Search.ascx" TagPrefix="uc" TagName="Search" %>
@@ -34,6 +34,9 @@
             <div class="row1">
                 <uc:Header id="Header" runat="server" />
             </div>
+            <div class="row2">
+                <uc:TopCategories id="TopCategories" runat="server" />
+            </div>
             <div class="row3">
                 <uc:Search id="Search" runat="server" />
             </div>
@@ -44,6 +47,7 @@
                 <tr>
                     <td id="column_left" style="width: 192px;">
                         <div style="width: 192px;">
+                            <uc:LeftCategories id="LeftCategories" runat="server" />
 
                             <uc:LeftCallout id="LeftCallout1" runat="server" />
                         </div>
