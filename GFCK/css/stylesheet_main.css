@@ -77,7 +77,10 @@ ol li{line-height:21px;}
 
 
 
-.centerColumn {}
+.centerColumn 
+{
+    text-align:left;
+}
 .centerColumn table {}
 
 

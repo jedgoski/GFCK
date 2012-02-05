@@ -11,7 +11,9 @@ body {background-color: #ffffff;}
 #contentMainWrapper {background-color: #ffffff;}
 .messageStackWarning, #navMainWrapper, .navMainSearch, #navCatTabsWrapper, #navEZPagesTop, 
 #navColumnOne.columnLeft, #navColumnTwo.columnRight, 
-#navSupp, .banners, #navBreadCrumb, .buttonRow, .ui-dialog-titlebar, .ui-dialog-title, #dialog { display: none;}
+#navSupp, .banners, #navBreadCrumb, .buttonRow, .ui-dialog-titlebar, .ui-dialog-title, 
+#dialog, .header_t, .footer_t, #column_left, .banner_block, .title_box, .page_navigation, .content
+.first_link, .previous_link, .page_link, .next_link, .last_link, .main_t, .ui-widget-overlay { display: none;}
 .ui-widget-content{border:none;}
 
 .printthis

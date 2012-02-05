@@ -20,7 +20,8 @@ namespace GFCK
         {
             string ip = Request.UserHostAddress;
             long couponID = 0;
-
+            if(!String.IsNullOrEmpty(Request.QueryString["test"]) && Request.QueryString["test"] == "true")
+                Session["id"] = 3;
             if (Session["id"] != null)
             {
                 couponID = Convert.ToInt64(Session["id"]);
@@ -36,13 +37,14 @@ namespace GFCK
                 img.Src = String.Format("https://s3.amazonaws.com/gfck/coupon/{0}", c.Image);
                 string strDotScan = GenerateDotScan(c.MerchantID, c.ID, numPrints);
                 //dotscan.Src = String.Format("BarcodeHandler.ashx?code=PDF417&modulewidth=.3&unit=mm&Data={0}", strDotScan);
-                dotscan.Src = String.Format("http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=PDF417&modulewidth=.3&unit=mm&Data={0}", strDotScan);
+                dotscan.Src = String.Format("http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=PDF417&modulewidth=min&Data={0}", strDotScan);
                 litDotScan.Text = strDotScan;
-                litValue.Text = String.Format("{0:C}", Convert.ToDecimal(c.Value));
-                litDesc.Text = c.Details;
-                imgBarcode1.Src = String.Format("http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=UPCA&modulewidth=.4&unit=mm&Data={0}", c.Barcode1Value);
-                imgBarcode2.Src = String.Format("http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=RSSExpandedStacked&modulewidth=0.35&unit=mm&Data={0}", c.Barcode2Value);
-                imgBanner.Src = "/images/banner2.jpg";
+                litValue.Text = c.Value;// String.Format("{0:C}", Convert.ToDecimal(c.Value));
+                litName.Text = (c.Name.ToLower().IndexOf("on ") == 0) ? c.Name : String.Format("on {0}", c.Name);
+                litTerms.Text = c.Terms.Replace("Retailer:", "<b>Retailer:</b>").Replace("Consumer:", "<b>Consumer:</b>");
+                imgBarcode1.Src = String.Format("http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=UPCA&modulewidth=min&dpi=76&Data={0}", c.Barcode1Value);
+                imgBarcode2.Src = String.Format("http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=RSSExpandedStacked&modulewidth=min&Data={0}", c.Barcode2Value);
+                imgBanner.Src = String.Format("https://s3.amazonaws.com/gfck/coupon/{0}", c.BottomAdvertisement); // "/images/banner2.jpg";
                 imgBanner.Visible = true;
 
                 //mark the coupon as printed

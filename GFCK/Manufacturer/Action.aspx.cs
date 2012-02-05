@@ -82,13 +82,14 @@ namespace GFCK.Manufacturer
                 //coupon.Image = imgByte;
                 coupon.Name = txtName.Text;
                 coupon.Value = txtValue.Text;
-                coupon.Discount = "";// txtDiscount.Text;
+                coupon.Discount = txtDiscount.Text;
                 coupon.Details = txtDetails.Text;
                 coupon.Terms = txtTerms.Text;
                 coupon.StartDate = Convert.ToDateTime(txtStartDate.Text);
                 coupon.ExpirationDate = Convert.ToDateTime(txtExpirationDate.Text);
                 coupon.GlutenFreeFacility = chkGlutenFreeFacility.Checked;
                 coupon.ContainGluten20PPM = chkContainGluten20PPM.Checked;
+                coupon.LessThan10PPM = chkLessThan10PPM.Checked;
                 coupon.LessThan5PPM = chkLessThan5PPM.Checked;
                 coupon.CaseinFree = chkCaseinFree.Checked;
                 coupon.SoyFree = chkSoyFree.Checked;
@@ -101,81 +102,37 @@ namespace GFCK.Manufacturer
                 coupon.Barcode2Type = "RSSExpandedStacked";
                 coupon.Barcode2Value = txtBarcode2Value.Text;
                 coupon.NumberOfCoupons = Convert.ToInt32(txtNumberOfCoupons.Text);
-                coupon.BottomAdvertisement = txtBottomAdvertisement.Text;
+                coupon.BottomAdvertisement = "keep";
                 coupon.Enabled = Convert.ToBoolean(txtEnabled.Value);
 
                 if (_couponID == 0)
                 {
-                    _couponID = couponDAO.AddCoupon(coupon);
-                    //_couponID = 7;
                     // Need to add a record
-                    if (_couponID > 0)
-                    {
-                        coupon.ID = _couponID;
-                        try
-                        {
-                            string accessKeyID = WebConfigurationManager.AppSettings["AWSAccessKey"];
-                            string secretAccessKeyID = WebConfigurationManager.AppSettings["AWSSecretKey"];
-
-                            client = Amazon.AWSClientFactory.CreateAmazonS3Client(accessKeyID, secretAccessKeyID);
-
-                            FileUpload img = (FileUpload)imgUpload;
-                            if (img.HasFile && img.PostedFile != null)
-                            {
-                                AddImageToAmazon(coupon);
-                                //Byte[] imgByte = new byte[0];
-                                ////To create a PostedFile
-                                //HttpPostedFile File = imgUpload.PostedFile;
-                                ////Create byte Array with file len
-                                //imgByte = new Byte[File.ContentLength];
-                                ////force the control to load data in array
-                                //File.InputStream.Read(imgByte, 0, File.ContentLength);
-
-                                //PutObjectRequest request = new PutObjectRequest();
-                                //string keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0,File.FileName.IndexOf(".")),_couponID.ToString()));
-                                //request.WithBucketName("gfck").WithContentType(File.ContentType).WithCannedACL(S3CannedACL.PublicRead).WithKey(string.Format("coupon/{0}",keyname)).WithInputStream(File.InputStream);
-                                //S3Response response = client.PutObject(request);
-                                //response.Dispose();
-
-                                //coupon.Image = keyname;
-                                //couponDAO.UpdateCoupon(coupon);
-                            }
-                        }
-                        catch (AmazonS3Exception amazonS3Exception)
-                        {
-                            if (amazonS3Exception.ErrorCode != null &&
-                                (amazonS3Exception.ErrorCode.Equals("InvalidAccessKeyId") ||
-                                amazonS3Exception.ErrorCode.Equals("InvalidSecurity")))
-                            {
-                                _log.Error("Please check the provided AWS Credentials.");
-                            }
-                            else
-                            {
-                                _log.Error(string.Format("An error occurred with the message '{0}' when writing an object", amazonS3Exception.Message));
-                            }
-                        }
-                        // The add was successfull
-                        lblAddSuccessfull.Visible = true;
-                        lblEditSuccessfull.Visible = false;
-                        lblError.Visible = false;
-                    }
-                    else
-                    {
-                        lblError.Visible = true;
-                        lblAddSuccessfull.Visible = false;
-                        lblEditSuccessfull.Visible = false;
-                        _log.Debug("Unable to Add a Coupon.");
-                    }
+                    _couponID = couponDAO.AddCoupon(coupon);
                 }
-                else
+                if (_couponID > 0)
                 {
                     coupon.ID = _couponID;
+                }
+
+                try
+                {
                     bool success = false;
-                    ///TODO: Need to set Image on update
+                    string err = "";
                     FileUpload img = (FileUpload)imgUpload;
-                    if (img.HasFile && img.PostedFile != null)
+                    if (!CheckFileType(img.PostedFile.FileName))
                     {
-                        success = AddImageToAmazon(coupon);
+                        err = "Sorry, Please only upload images for coupon.";
+                    }
+                    if (img.HasFile && img.PostedFile != null && img.PostedFile.ContentLength > 5242880)
+                    {
+                        err = "Sorry, File size is too large. Coupon image needs to be under 5MB.";
+                    }
+                    else if (img.HasFile && img.PostedFile != null)
+                    {
+                        //To create a PostedFile
+                        HttpPostedFile File = imgUpload.PostedFile;
+                        success = AddImageToAmazon(coupon, File, "");
                     }
                     else
                     {
@@ -192,13 +149,93 @@ namespace GFCK.Manufacturer
                     }
                     else
                     {
+                        if (err != "") lblError.Text = err;
                         lblError.Visible = true;
                         lblAddSuccessfull.Visible = false;
                         lblEditSuccessfull.Visible = false;
-                        _log.Debug("Unable to Update the Coupon.");
+                        _log.DebugFormat("Unable to Update the Coupon. {0}", err);
                     }
                 }
+                catch (AmazonS3Exception amazonS3Exception)
+                {
+                    if (amazonS3Exception.ErrorCode != null &&
+                        (amazonS3Exception.ErrorCode.Equals("InvalidAccessKeyId") ||
+                        amazonS3Exception.ErrorCode.Equals("InvalidSecurity")))
+                    {
+                        _log.Error("Please check the provided AWS Credentials.");
+                    }
+                    else
+                    {
+                        _log.Error(string.Format("An error occurred with the message '{0}' when writing an object", amazonS3Exception.Message));
+                    }
+                    lblError.Visible = true;
+                    lblAddSuccessfull.Visible = false;
+                    lblEditSuccessfull.Visible = false;
+                    _log.Debug("Unable to Add a Coupon.");
+                }
 
+                //upload marketing image now only if no errors
+                if (!lblError.Visible)
+                {
+                    try
+                    {
+                        bool success = false;
+                        string err = "";
+                        FileUpload img = (FileUpload)imgUploadMarketing;
+                        if (!CheckFileType(img.PostedFile.FileName))
+                        {
+                            err = "Sorry, Please only upload images for advertisement.";
+                        }
+                        if (img.HasFile && img.PostedFile != null && img.PostedFile.ContentLength > 10485760)
+                        {
+                            err = "Sorry, File size is too large. Advertisement image needs to be under 10MB.";
+                        }
+                        else if (img.HasFile && img.PostedFile != null)
+                        {
+                            //To create a PostedFile
+                            HttpPostedFile File = imgUploadMarketing.PostedFile;
+                            success = AddImageToAmazon(coupon, File, "_marketing");
+                        }
+                        else
+                        {
+                            coupon.BottomAdvertisement = "keep";
+                            success = couponDAO.UpdateCoupon(coupon);
+                        }
+                        // Need to update the record
+                        if (success)
+                        {
+                            // Update was successfull
+                            lblEditSuccessfull.Visible = true;
+                            lblError.Visible = false;
+                            lblAddSuccessfull.Visible = false;
+                        }
+                        else
+                        {
+                            if (err != "") lblError.Text = err;
+                            lblError.Visible = true;
+                            lblAddSuccessfull.Visible = false;
+                            lblEditSuccessfull.Visible = false;
+                            _log.DebugFormat("Unable to Update the Coupon. {0}", err);
+                        }
+                    }
+                    catch (AmazonS3Exception amazonS3Exception)
+                    {
+                        if (amazonS3Exception.ErrorCode != null &&
+                            (amazonS3Exception.ErrorCode.Equals("InvalidAccessKeyId") ||
+                            amazonS3Exception.ErrorCode.Equals("InvalidSecurity")))
+                        {
+                            _log.Error("Please check the provided AWS Credentials.");
+                        }
+                        else
+                        {
+                            _log.Error(string.Format("An error occurred with the message '{0}' when writing an object", amazonS3Exception.Message));
+                        }
+                        lblError.Visible = true;
+                        lblAddSuccessfull.Visible = false;
+                        lblEditSuccessfull.Visible = false;
+                        _log.Debug("Unable to Add a Coupon.");
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -208,25 +245,60 @@ namespace GFCK.Manufacturer
                 lblEditSuccessfull.Visible = false;
             }
         }
-
-        private bool AddImageToAmazon(Coupon coupon)
+        private bool CheckFileType(string fileName){
+            string ext = System.IO.Path.GetExtension(fileName);
+            switch (ext.ToLower()){
+                case ".gif":
+                    return true;
+                case ".png":
+                    return true;
+                case ".jpg":
+                    return true;
+                case ".jpeg":
+                    return true;
+                default:
+                    return false;
+            }
+        }
+        private bool AddImageToAmazon(Coupon coupon, HttpPostedFile File, string ext)
         {
+            string accessKeyID = WebConfigurationManager.AppSettings["AWSAccessKey"];
+            string secretAccessKeyID = WebConfigurationManager.AppSettings["AWSSecretKey"];
+
+            client = Amazon.AWSClientFactory.CreateAmazonS3Client(accessKeyID, secretAccessKeyID);
+
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
             Byte[] imgByte = new byte[0];
-            //To create a PostedFile
-            HttpPostedFile File = imgUpload.PostedFile;
             //Create byte Array with file len
             imgByte = new Byte[File.ContentLength];
             //force the control to load data in array
             File.InputStream.Read(imgByte, 0, File.ContentLength);
+            string keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0, File.FileName.IndexOf(".")), string.Format("{0}{1}", _couponID.ToString(), ext)));
+            /*try
+            {
+                //first try deleting old item if applicable
+                DeleteObjectRequest delete_request = new DeleteObjectRequest();
+                delete_request.WithBucketName("gfck").WithKey(string.Format("coupon/{0}", keyname));
+                S3Response delete_response = client.DeleteObject(delete_request);
+                delete_response.Dispose();
+            }
+            catch (Exception ex)
+            {
+                _log.ErrorFormat("Error trying to delete object from bucket: {0} with exception {1}", keyname, ex.Message);
+            }*/
 
             PutObjectRequest request = new PutObjectRequest();
-            string keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0, File.FileName.IndexOf(".")), _couponID.ToString()));
             request.WithBucketName("gfck").WithContentType(File.ContentType).WithCannedACL(S3CannedACL.PublicRead).WithKey(string.Format("coupon/{0}", keyname)).WithInputStream(File.InputStream);
             S3Response response = client.PutObject(request);
             response.Dispose();
-
-            coupon.Image = keyname;
+            if (ext == "")
+            {
+                coupon.Image = keyname;
+            }
+            else
+            {
+                coupon.BottomAdvertisement = keyname;
+            }
             return couponDAO.UpdateCoupon(coupon);
         }
 
@@ -334,13 +406,14 @@ namespace GFCK.Manufacturer
                 imgCurrent.Visible = false;
             }
             txtValue.Text = coupon.Value;
-            //txtDiscount.Text = coupon.Discount;
+            txtDiscount.Text = coupon.Discount;
             txtDetails.Text = coupon.Details;
             txtTerms.Text = coupon.Terms;
             txtStartDate.Text = Convert.ToDateTime(coupon.StartDate).ToShortDateString();
             txtExpirationDate.Text = Convert.ToDateTime(coupon.ExpirationDate).ToShortDateString();
             chkGlutenFreeFacility.Checked = coupon.GlutenFreeFacility;
             chkContainGluten20PPM.Checked = coupon.ContainGluten20PPM;
+            chkLessThan10PPM.Checked = coupon.LessThan10PPM;
             chkLessThan5PPM.Checked = coupon.LessThan5PPM;
             chkCaseinFree.Checked = coupon.CaseinFree;
             chkSoyFree.Checked = coupon.SoyFree;
@@ -353,7 +426,15 @@ namespace GFCK.Manufacturer
             //ddlBarcode2Type.Value = coupon.Barcode2Type;
             txtBarcode2Value.Text = coupon.Barcode2Value;
             txtNumberOfCoupons.Text = coupon.NumberOfCoupons.ToString();
-            txtBottomAdvertisement.Text = coupon.BottomAdvertisement;
+            if (!String.IsNullOrEmpty(coupon.BottomAdvertisement))
+            {
+                litImageMarketing.Text = string.Format("<a target='_blank' href='https://s3.amazonaws.com/gfck/coupon/{0}'>current image</a>", coupon.BottomAdvertisement);
+            }
+            else
+            {
+                lblCurrentMarketing.Visible = false;
+                litImageMarketing.Visible = false;
+            }
             txtEnabled.Value = coupon.Enabled.ToString();
         }
     }

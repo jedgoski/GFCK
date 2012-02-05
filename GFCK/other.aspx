@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.master" CodeBehind="Default.aspx.cs" Inherits="GFCK._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Home.master" CodeBehind="other.aspx.cs" Inherits="GFCK.other" %>
 <%@ Register Src="/UserControls/Coupon/home.ascx" TagPrefix="uc1" TagName="CouponDisplay" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
@@ -28,7 +28,6 @@
 		                return false;
 		            });
 		        });
-		        $('#featuredProducts').pajinate();
 		    });
 		</script>
 </asp:Content>
@@ -56,8 +55,7 @@
                                     <div class="title_inner5">
                                         <div class="title_inner6">
                                             <div class="title_inner7">
-                                                <h2 class="centerBoxHeading">
-                                                    Printable Coupons</h2>
+                                                <h2 class="centerBoxHeading">&nbsp;</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -78,13 +76,10 @@
                                                             <div class="inn2">
  
             -->
-            
                     <asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" > 
-                    <HeaderTemplate><div class="content"></HeaderTemplate>
                     <ItemTemplate>
                         <uc1:CouponDisplay ID="cd" runat="server" />
                     </ItemTemplate>
-                    <FooterTemplate></div><br /><div class="page_navigation"></div></FooterTemplate>
                     </asp:Repeater>
             
             <!--

@@ -57,6 +57,9 @@
 <div class="alert forward">* Required information</div>
 <br class="clearBoth" /> 
  
+<label class="inputLabel">Manufacturer Name:</label>
+<asp:TextBox ID="txtManufacturerName" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" /><br />
+ 
 <label class="inputLabel">Login Name:</label>
 <asp:TextBox ID="txtUserName" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  <div id="divPassword" runat="server">
@@ -65,6 +68,7 @@
  
 <label class="inputLabel">Confirm Password:</label>
 <asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+
  </div>
 </fieldset>
  
@@ -87,13 +91,10 @@
  <div class="buttonRow forward"><asp:ImageButton ID="btnAddUser" runat="server" AlternateText="Submit" OnClick="btnAddUser_Click" ImageUrl="/images/buttons/english/button_add.gif" /></div>
 </fieldset>
  
-<fieldset id="profileInformation" runat="server">
-<legend>Profile Information</legend>
+<fieldset id="marketingInformation" runat="server">
+<legend>Marketing Contact</legend>
 <div class="alert forward">* Required information</div>
 <br class="clearBoth" /> 
- 
-<label class="inputLabel">Manufacturer Name:</label>
-<asp:TextBox ID="txtManufacturerName" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  
 <label class="inputLabel">First Name:</label>
 <asp:TextBox ID="txtFirstName" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
@@ -107,23 +108,44 @@
 <label class="inputLabel">Phone Number:</label>
 <asp:TextBox ID="txtPhoneNumber" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  
+<label class="inputLabel">Notes:</label>
+<asp:TextBox ID="txtDescription" textMode="MultiLine" runat="server" Rows="5" Columns="45" />
+</fieldset>
+ 
+<fieldset id="billingInformation" runat="server">
+<legend>Billing Contact</legend>
+<div class="alert forward">* Required information</div>
+<br class="clearBoth" /> 
+ 
+<label class="inputLabel">First Name:</label>
+<asp:TextBox ID="txtFirstNameBilling" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+ 
+<label class="inputLabel">Last Name:</label>
+<asp:TextBox ID="txtLastNameBilling" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+ 
+<label class="inputLabel">Email:</label>
+<asp:TextBox ID="txtEmailBilling" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+ 
+<label class="inputLabel">Phone Number:</label>
+<asp:TextBox ID="txtPhoneBilling" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+ 
 <label class="inputLabel">Address:</label>
-<asp:TextBox ID="txtAddress" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+<asp:TextBox ID="txtAddressBilling" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  
 <label class="inputLabel">&nbsp;</label>
-<asp:TextBox ID="txtAddress2" runat="server" CssClass="tblarge" /><br class="clearBoth" />
+<asp:TextBox ID="txtAddress2Billing" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  
 <label class="inputLabel">City:</label>
-<asp:TextBox ID="txtCity" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+<asp:TextBox ID="txtCityBilling" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  
 <label class="inputLabel">State:</label>
-<asp:TextBox ID="txtState" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+<asp:TextBox ID="txtStateBilling" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  
 <label class="inputLabel">Zip:</label>
-<asp:TextBox ID="txtZip" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
+<asp:TextBox ID="txtZipBilling" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
  
-<label class="inputLabel">Description:</label>
-<asp:TextBox ID="txtDescription" textMode="MultiLine" runat="server" Rows="5" />
+<label class="inputLabel">Notes:</label>
+<asp:TextBox ID="txtNotesBilling" textMode="MultiLine" runat="server" Rows="5" Columns="45" />
 </fieldset>
  
 <div class="buttonRow forward"><asp:ImageButton ID="btnCancel" runat="server" AlternateText="Cancel" ImageUrl="/images/buttons/english/button_cancel.gif" PostBackUrl="/Admin/default.aspx" /></div>

@@ -53,16 +53,26 @@ namespace GFCK.Admin
                 IMerchantDAO merchantDAO = _factoryDAO.GetMerchantDAO();
                 Merchant merchant = new Merchant();
                 merchant.MerchantName = txtManufacturerName.Text;
+
+                //marketing
                 merchant.FirstName = txtFirstName.Text;
                 merchant.LastName = txtLastName.Text;
                 merchant.Email = txtEmail.Text;
                 merchant.PhoneNumber = txtPhoneNumber.Text;
-                merchant.Address = txtAddress.Text;
-                merchant.Address2 = txtAddress2.Text;
-                merchant.City = txtCity.Text;
-                merchant.State = txtState.Text;
-                merchant.Zip = txtZip.Text;
                 merchant.Description = txtDescription.Text;
+
+                //billing
+                merchant.FirstNameBilling = txtFirstNameBilling.Text;
+                merchant.LastNameBilling = txtLastNameBilling.Text;
+                merchant.EmailBilling = txtEmailBilling.Text;
+                merchant.PhoneNumberBilling = txtPhoneBilling.Text;
+                merchant.Address = txtAddressBilling.Text;
+                merchant.Address2 = txtAddress2Billing.Text;
+                merchant.City = txtCityBilling.Text;
+                merchant.State = txtStateBilling.Text;
+                merchant.Zip = txtZipBilling.Text;
+                merchant.DescriptionBilling = txtNotesBilling.Text;
+
                 merchant.Deleted = false;
                 
                 if (_manufacturerID == 0)
@@ -314,16 +324,24 @@ namespace GFCK.Admin
             Merchant merchant = merchantDAO.GetMerchant(_manufacturerID);
             txtUserName.Text = merchant.UserName;
             txtManufacturerName.Text = merchant.MerchantName;
+
             txtFirstName.Text = merchant.FirstName;
             txtLastName.Text = merchant.LastName;
             txtEmail.Text = merchant.Email;
             txtPhoneNumber.Text = merchant.PhoneNumber;
-            txtAddress.Text = merchant.Address;
-            txtAddress2.Text = merchant.Address2;
-            txtCity.Text = merchant.City;
-            txtState.Text = merchant.State;
-            txtZip.Text = merchant.Zip;
             txtDescription.Text = merchant.Description;
+
+            txtFirstNameBilling.Text = merchant.FirstNameBilling;
+            txtLastNameBilling.Text = merchant.LastNameBilling;
+            txtEmailBilling.Text = merchant.EmailBilling;
+            txtPhoneBilling.Text = merchant.PhoneNumberBilling;
+            txtNotesBilling.Text = merchant.DescriptionBilling;
+
+            txtAddressBilling.Text = merchant.Address;
+            txtAddress2Billing.Text = merchant.Address2;
+            txtCityBilling.Text = merchant.City;
+            txtStateBilling.Text = merchant.State;
+            txtZipBilling.Text = merchant.Zip;
         }
     }
 }

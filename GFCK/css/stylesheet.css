@@ -15,7 +15,7 @@ FORM, SELECT, INPUT {
         }
 FORM	{margin:0px; padding:0px;}
 
-TEXTAREA {
+.contactus TEXTAREA {
         width:380px;        }
 
 input:focus, select:focus, textarea:focus {
@@ -612,8 +612,8 @@ position:absolute;
 .coupon
 {
 	margin:5px 5px;
-	height:310px;
-	width:710px;
+	height:3in;
+	width:8in;
 	border-style:dashed;
 	border-color:Black;
 	border-width:1px;
@@ -621,39 +621,62 @@ position:absolute;
 
 .couponheading
 {
-	padding-top:4px;
-	height:20px;
+	height:.25in;
 	font-size:12pt;
 	font-weight:bolder;
 	border-bottom: 1px solid black;
 	color:Black;
-	margin:2px 0px 2px 0px;
+	line-height:.25in;
 }
 
 .couponbody
 {
 	overflow:hidden;
-	padding:7px;
-	height:160px;
-	font-size:6pt;
+	padding:0in .05in 0in .05in;
+	height:1.7in;
+	font-size:7pt;
+	text-align:left;
 }
 
+.couponfontbold
+{
+	font-size:12pt;
+	font-weight:bold;
+	padding:10px 0px;
+    line-height:12pt;
+}
+
+.couponContent
+{
+    float:right;
+    padding: .08in 0in 0in .15in;
+    width:80%;
+    line-height:8px;
+    color:Black;
+}
 .couponbold
 {
-	font-size:16pt;
+	font-size:30pt;
 	font-weight:bold;
+	font-family: 'Fredericka the Great', cursive;
+	line-height:30pt;
 }
 
 .dotscan
 {
 	float:right;
-	font-size:10pt;
-	margin-top: -15px;
+	font-size:8pt;
+	width:1.5in;
+    line-height:10px;
+}
+.dotscan img
+{
+    padding-bottom:2px;
 }
 
 .couponbarcode
 {
-	height:100px;
+	height:1.05in;
 }
 
 .error
@@ -664,4 +687,21 @@ position:absolute;
 .mainDivPadding
 {
     padding:10px;
+}
+
+
+
+.page_navigation , .alt_page_navigation{
+	padding-bottom: 10px;
+}
+
+.page_navigation a, .alt_page_navigation a{
+	padding:3px 5px;
+	margin:2px;
+	color:white;
+	text-decoration:none;
+	float: left;
+	font-family: Tahoma;
+	font-size: 12px;
+	background-color:Green;
 }

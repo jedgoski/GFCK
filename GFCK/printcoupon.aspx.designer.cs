@@ -58,13 +58,22 @@ namespace GFCK {
         protected global::System.Web.UI.WebControls.Literal litValue;
         
         /// <summary>
-        /// litDesc control.
+        /// litName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litDesc;
+        protected global::System.Web.UI.WebControls.Literal litName;
+        
+        /// <summary>
+        /// litTerms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litTerms;
         
         /// <summary>
         /// imgBarcode2 control.

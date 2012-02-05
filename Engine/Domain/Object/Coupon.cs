@@ -22,6 +22,7 @@ namespace Engine.Domain.Object
         public DateTime? ExpirationDate { get; set; }
         public bool GlutenFreeFacility { get; set; }
         public bool ContainGluten20PPM { get; set; }
+        public bool LessThan10PPM { get; set; }
         public bool LessThan5PPM { get; set; }
         public bool CaseinFree { get; set; }
         public bool SoyFree { get; set; }

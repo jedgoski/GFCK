@@ -71,7 +71,7 @@ namespace GFCK.Manufacturer
             //does this really work?  If not, will need to make a page handler and link to that page.
             string strPicture = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", c.Image);
             if (c.Image != "") img.Src = strPicture;
-            litCouponName.Text = c.Name; 
+            litCouponName.Text = (c.Name.Length > 32) ? String.Format("{0}...", c.Name.Substring(0,30)) : c.Name; 
             litCategory.Text = c.CategoryName; 
             litValue.Text = c.Value;
             litClicks.Text = string.Format("{0} of {1}", c.Clicks, c.NumberOfCoupons);

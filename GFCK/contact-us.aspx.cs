@@ -25,16 +25,35 @@ namespace GFCK
             try
             {
                 string emailFrom = Server.HtmlEncode(txtEmail.Text);
-                string emailTo = ConfigurationManager.AppSettings["ContactFormEmailTo"];
+                //string emailTo = ConfigurationManager.AppSettings["ContactFormEmailTo"];
                 string emailSubject = ConfigurationManager.AppSettings["ContactFormEmailSubject"];
                 string emailHost = ConfigurationManager.AppSettings["MailHost"];
+                string reasonEmail = "admin@glutenfreecouponking.com";
+                switch (ddlReason.SelectedValue)
+                {
+                    case "advertise":
+                        reasonEmail = "advertise@glutenfreecouponking.com";
+                        break;
+                    case "affiliate":
+                        reasonEmail = "affiliate@glutenfreecouponking.com";
+                        break;
+                    case "feedback":
+                        reasonEmail = "feedback@glutenfreecouponking.com";
+                        break;
+                    case "support":
+                        reasonEmail = "support@glutenfreecouponking.com";
+                        break;
+                    case "paypal":
+                        reasonEmail = "paypal@glutenfreecouponking.com";
+                        break;
+                }
 
                 StringBuilder body = new StringBuilder();
                 body.AppendFormat("First Name: {0}<br />", Server.HtmlEncode(txtFirstName.Text));
                 body.AppendFormat("Last Name: {0}<br />", Server.HtmlEncode(txtLastName.Text));
                 body.AppendFormat("Phone number: {0}<br />", Server.HtmlEncode(txtPhoneNumber.Text));
                 body.AppendFormat("Comments: {0}", Server.HtmlEncode(txtComments.Text));
-                if (Globals.SendMail(emailFrom, emailTo, emailSubject, body.ToString(), emailHost))
+                if (Globals.SendMail(emailFrom, reasonEmail, emailSubject, body.ToString(), emailHost))
                 {
                     // Success
                     divForm.Visible = false;

@@ -35,18 +35,26 @@ namespace Engine.DAO.Object
                 {
                     merchant.ID = Convert.ToInt64(row["ID"]);
                     merchant.UserID = (Guid)row["UserID"];
+                    merchant.MerchantName = (row["MerchantName"] == DBNull.Value) ? "" : Convert.ToString(row["MerchantName"]);
                     merchant.UserName = Convert.ToString(row["UserName"]);
+
                     merchant.FirstName = (row["FirstName"] == DBNull.Value) ? "" : Convert.ToString(row["FirstName"]);
                     merchant.LastName = (row["LastName"] == DBNull.Value) ? "" : Convert.ToString(row["LastName"]);
-                    merchant.MerchantName = (row["MerchantName"] == DBNull.Value) ? "" : Convert.ToString(row["MerchantName"]);
-                    merchant.Description = (row["Description"] == DBNull.Value) ? "" : Convert.ToString(row["Description"]);
                     merchant.Email = (row["Email"] == DBNull.Value) ? "" : Convert.ToString(row["Email"]);
                     merchant.PhoneNumber = (row["PhoneNumber"] == DBNull.Value) ? "" : Convert.ToString(row["PhoneNumber"]);
+                    merchant.Description = (row["Description"] == DBNull.Value) ? "" : Convert.ToString(row["Description"]);
+
+                    merchant.FirstNameBilling = (row["FirstNameBilling"] == DBNull.Value) ? "" : Convert.ToString(row["FirstNameBilling"]);
+                    merchant.LastNameBilling = (row["LastNameBilling"] == DBNull.Value) ? "" : Convert.ToString(row["LastNameBilling"]);
+                    merchant.EmailBilling = (row["EmailBilling"] == DBNull.Value) ? "" : Convert.ToString(row["EmailBilling"]);
+                    merchant.PhoneNumberBilling = (row["PhoneNumberBilling"] == DBNull.Value) ? "" : Convert.ToString(row["PhoneNumberBilling"]);
+                    merchant.DescriptionBilling = (row["DescriptionBilling"] == DBNull.Value) ? "" : Convert.ToString(row["DescriptionBilling"]);
                     merchant.Address = (row["Address"] == DBNull.Value) ? "" : Convert.ToString(row["Address"]);
                     merchant.Address2 = (row["Address2"] == DBNull.Value) ? "" : Convert.ToString(row["Address2"]);
                     merchant.City = (row["City"] == DBNull.Value) ? "" : Convert.ToString(row["City"]);
                     merchant.State = (row["State"] == DBNull.Value) ? "" : Convert.ToString(row["State"]);
                     merchant.Zip = (row["Zip"] == DBNull.Value) ? "" : Convert.ToString(row["Zip"]);
+
                     merchant.CreatedDate = (row["CreatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["CreatedDate"]);
                     merchant.UpdatedDate = (row["UpdatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["UpdatedDate"]);
                     merchant.Deleted = Convert.ToBoolean(row["Deleted"]);
@@ -75,18 +83,26 @@ namespace Engine.DAO.Object
                 {
                     merchant.ID = Convert.ToInt64(row["ID"]);
                     merchant.UserID = (Guid)row["UserID"];
+                    merchant.MerchantName = (row["MerchantName"] == DBNull.Value) ? "" : Convert.ToString(row["MerchantName"]);
                     merchant.UserName = Convert.ToString(row["UserName"]);
+
                     merchant.FirstName = (row["FirstName"] == DBNull.Value) ? "" : Convert.ToString(row["FirstName"]);
                     merchant.LastName = (row["LastName"] == DBNull.Value) ? "" : Convert.ToString(row["LastName"]);
-                    merchant.MerchantName = (row["MerchantName"] == DBNull.Value) ? "" : Convert.ToString(row["MerchantName"]);
-                    merchant.Description = (row["Description"] == DBNull.Value) ? "" : Convert.ToString(row["Description"]);
                     merchant.Email = (row["Email"] == DBNull.Value) ? "" : Convert.ToString(row["Email"]);
                     merchant.PhoneNumber = (row["PhoneNumber"] == DBNull.Value) ? "" : Convert.ToString(row["PhoneNumber"]);
+                    merchant.Description = (row["Description"] == DBNull.Value) ? "" : Convert.ToString(row["Description"]);
+
+                    merchant.FirstNameBilling = (row["FirstNameBilling"] == DBNull.Value) ? "" : Convert.ToString(row["FirstNameBilling"]);
+                    merchant.LastNameBilling = (row["LastNameBilling"] == DBNull.Value) ? "" : Convert.ToString(row["LastNameBilling"]);
+                    merchant.EmailBilling = (row["EmailBilling"] == DBNull.Value) ? "" : Convert.ToString(row["EmailBilling"]);
+                    merchant.PhoneNumberBilling = (row["PhoneNumberBilling"] == DBNull.Value) ? "" : Convert.ToString(row["PhoneNumberBilling"]);
+                    merchant.DescriptionBilling = (row["DescriptionBilling"] == DBNull.Value) ? "" : Convert.ToString(row["DescriptionBilling"]);
                     merchant.Address = (row["Address"] == DBNull.Value) ? "" : Convert.ToString(row["Address"]);
                     merchant.Address2 = (row["Address2"] == DBNull.Value) ? "" : Convert.ToString(row["Address2"]);
                     merchant.City = (row["City"] == DBNull.Value) ? "" : Convert.ToString(row["City"]);
                     merchant.State = (row["State"] == DBNull.Value) ? "" : Convert.ToString(row["State"]);
                     merchant.Zip = (row["Zip"] == DBNull.Value) ? "" : Convert.ToString(row["Zip"]);
+
                     merchant.CreatedDate = (row["CreatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["CreatedDate"]);
                     merchant.UpdatedDate = (row["UpdatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["UpdatedDate"]);
                     merchant.Deleted = Convert.ToBoolean(row["Deleted"]);
@@ -118,17 +134,25 @@ namespace Engine.DAO.Object
                     Merchant merchant = new Merchant();
                     merchant.ID = Convert.ToInt64(row["ID"]);
                     merchant.UserID = (Guid)row["UserID"];
+                    merchant.MerchantName = (row["MerchantName"] == DBNull.Value) ? "" : Convert.ToString(row["MerchantName"]);
+
                     merchant.FirstName = (row["FirstName"] == DBNull.Value) ? "" : Convert.ToString(row["FirstName"]);
                     merchant.LastName = (row["LastName"] == DBNull.Value) ? "" : Convert.ToString(row["LastName"]);
-                    merchant.MerchantName = (row["MerchantName"] == DBNull.Value) ? "" : Convert.ToString(row["MerchantName"]);
-                    merchant.Description = (row["Description"] == DBNull.Value) ? "" : Convert.ToString(row["Description"]);
                     merchant.Email = (row["Email"] == DBNull.Value) ? "" : Convert.ToString(row["Email"]);
                     merchant.PhoneNumber = (row["PhoneNumber"] == DBNull.Value) ? "" : Convert.ToString(row["PhoneNumber"]);
+                    merchant.Description = (row["Description"] == DBNull.Value) ? "" : Convert.ToString(row["Description"]);
+
+                    merchant.FirstNameBilling = (row["FirstNameBilling"] == DBNull.Value) ? "" : Convert.ToString(row["FirstNameBilling"]);
+                    merchant.LastNameBilling = (row["LastNameBilling"] == DBNull.Value) ? "" : Convert.ToString(row["LastNameBilling"]);
+                    merchant.EmailBilling = (row["EmailBilling"] == DBNull.Value) ? "" : Convert.ToString(row["EmailBilling"]);
+                    merchant.PhoneNumberBilling = (row["PhoneNumberBilling"] == DBNull.Value) ? "" : Convert.ToString(row["PhoneNumberBilling"]);
+                    merchant.DescriptionBilling = (row["DescriptionBilling"] == DBNull.Value) ? "" : Convert.ToString(row["DescriptionBilling"]);
                     merchant.Address = (row["Address"] == DBNull.Value) ? "" : Convert.ToString(row["Address"]);
                     merchant.Address2 = (row["Address2"] == DBNull.Value) ? "" : Convert.ToString(row["Address2"]);
                     merchant.City = (row["City"] == DBNull.Value) ? "" : Convert.ToString(row["City"]);
                     merchant.State = (row["State"] == DBNull.Value) ? "" : Convert.ToString(row["State"]);
                     merchant.Zip = (row["Zip"] == DBNull.Value) ? "" : Convert.ToString(row["Zip"]);
+
                     merchant.CreatedDate = (row["CreatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["CreatedDate"]);
                     merchant.UpdatedDate = (row["UpdatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["UpdatedDate"]);
                     merchant.Deleted = Convert.ToBoolean(row["Deleted"]);
@@ -160,17 +184,25 @@ namespace Engine.DAO.Object
                     Merchant merchant = new Merchant();
                     merchant.ID = Convert.ToInt64(row["ID"]);
                     merchant.UserID = (Guid)row["UserID"];
+                    merchant.MerchantName = (row["MerchantName"] == DBNull.Value) ? "" : Convert.ToString(row["MerchantName"]);
+
                     merchant.FirstName = (row["FirstName"] == DBNull.Value) ? "" : Convert.ToString(row["FirstName"]);
                     merchant.LastName = (row["LastName"] == DBNull.Value) ? "" : Convert.ToString(row["LastName"]);
-                    merchant.MerchantName = (row["MerchantName"] == DBNull.Value) ? "" : Convert.ToString(row["MerchantName"]);
-                    merchant.Description = (row["Description"] == DBNull.Value) ? "" : Convert.ToString(row["Description"]);
                     merchant.Email = (row["Email"] == DBNull.Value) ? "" : Convert.ToString(row["Email"]);
                     merchant.PhoneNumber = (row["PhoneNumber"] == DBNull.Value) ? "" : Convert.ToString(row["PhoneNumber"]);
+                    merchant.Description = (row["Description"] == DBNull.Value) ? "" : Convert.ToString(row["Description"]);
+
+                    merchant.FirstNameBilling = (row["FirstNameBilling"] == DBNull.Value) ? "" : Convert.ToString(row["FirstNameBilling"]);
+                    merchant.LastNameBilling = (row["LastNameBilling"] == DBNull.Value) ? "" : Convert.ToString(row["LastNameBilling"]);
+                    merchant.EmailBilling = (row["EmailBilling"] == DBNull.Value) ? "" : Convert.ToString(row["EmailBilling"]);
+                    merchant.PhoneNumberBilling = (row["PhoneNumberBilling"] == DBNull.Value) ? "" : Convert.ToString(row["PhoneNumberBilling"]);
+                    merchant.DescriptionBilling = (row["DescriptionBilling"] == DBNull.Value) ? "" : Convert.ToString(row["DescriptionBilling"]);
                     merchant.Address = (row["Address"] == DBNull.Value) ? "" : Convert.ToString(row["Address"]);
                     merchant.Address2 = (row["Address2"] == DBNull.Value) ? "" : Convert.ToString(row["Address2"]);
                     merchant.City = (row["City"] == DBNull.Value) ? "" : Convert.ToString(row["City"]);
                     merchant.State = (row["State"] == DBNull.Value) ? "" : Convert.ToString(row["State"]);
                     merchant.Zip = (row["Zip"] == DBNull.Value) ? "" : Convert.ToString(row["Zip"]);
+
                     merchant.CreatedDate = (row["CreatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["CreatedDate"]);
                     merchant.UpdatedDate = (row["UpdatedDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["UpdatedDate"]);
                     merchant.Deleted = Convert.ToBoolean(row["Deleted"]);
@@ -216,17 +248,25 @@ namespace Engine.DAO.Object
             try
             {
                 AddSQLParameter("@ID", SqlDbType.BigInt, merchant.ID);
+                AddSQLParameter("@MerchantName", SqlDbType.NVarChar, merchant.MerchantName);
+
                 AddSQLParameter("@FirstName", SqlDbType.NVarChar, merchant.FirstName);
                 AddSQLParameter("@LastName", SqlDbType.NVarChar, merchant.LastName);
-                AddSQLParameter("@MerchantName", SqlDbType.NVarChar, merchant.MerchantName);
-                AddSQLParameter("@Description", SqlDbType.NVarChar, merchant.Description);
                 AddSQLParameter("@Email", SqlDbType.NVarChar, merchant.Email);
                 AddSQLParameter("@PhoneNumber", SqlDbType.NVarChar, merchant.PhoneNumber);
+                AddSQLParameter("@Description", SqlDbType.NVarChar, merchant.Description);
+
+                AddSQLParameter("@FirstNameBilling", SqlDbType.NVarChar, merchant.FirstNameBilling);
+                AddSQLParameter("@LastNameBilling", SqlDbType.NVarChar, merchant.LastNameBilling);
+                AddSQLParameter("@EmailBilling", SqlDbType.NVarChar, merchant.EmailBilling);
+                AddSQLParameter("@PhoneNumberBilling", SqlDbType.NVarChar, merchant.PhoneNumberBilling);
+                AddSQLParameter("@DescriptionBilling", SqlDbType.NVarChar, merchant.DescriptionBilling);
                 AddSQLParameter("@Address", SqlDbType.NVarChar, merchant.Address);
                 AddSQLParameter("@Address2", SqlDbType.NVarChar, merchant.Address2);
                 AddSQLParameter("@City", SqlDbType.NVarChar, merchant.City);
                 AddSQLParameter("@State", SqlDbType.NVarChar, merchant.State);
                 AddSQLParameter("@Zip", SqlDbType.NVarChar, merchant.Zip);
+
                 AddSQLParameter("@Deleted", SqlDbType.Bit, merchant.Deleted);
                 GetExecuteNonQueryByCommand("dbo.UpdateMerchant");
                 success = true;
@@ -270,17 +310,25 @@ namespace Engine.DAO.Object
             try
             {
                 AddSQLParameter("@UserID", SqlDbType.UniqueIdentifier, merchant.UserID);
+                AddSQLParameter("@MerchantName", SqlDbType.NVarChar, merchant.MerchantName);
+
                 AddSQLParameter("@FirstName", SqlDbType.NVarChar, merchant.FirstName);
                 AddSQLParameter("@LastName", SqlDbType.NVarChar, merchant.LastName);
-                AddSQLParameter("@MerchantName", SqlDbType.NVarChar, merchant.MerchantName);
-                AddSQLParameter("@Description", SqlDbType.NVarChar, merchant.Description);
                 AddSQLParameter("@Email", SqlDbType.NVarChar, merchant.Email);
                 AddSQLParameter("@PhoneNumber", SqlDbType.NVarChar, merchant.PhoneNumber);
+                AddSQLParameter("@Description", SqlDbType.NVarChar, merchant.Description);
+
+                AddSQLParameter("@FirstNameBilling", SqlDbType.NVarChar, merchant.FirstNameBilling);
+                AddSQLParameter("@LastNameBilling", SqlDbType.NVarChar, merchant.LastNameBilling);
+                AddSQLParameter("@EmailBilling", SqlDbType.NVarChar, merchant.EmailBilling);
+                AddSQLParameter("@PhoneNumberBilling", SqlDbType.NVarChar, merchant.PhoneNumberBilling);
+                AddSQLParameter("@DescriptionBilling", SqlDbType.NVarChar, merchant.DescriptionBilling);
                 AddSQLParameter("@Address", SqlDbType.NVarChar, merchant.Address);
                 AddSQLParameter("@Address2", SqlDbType.NVarChar, merchant.Address2);
                 AddSQLParameter("@City", SqlDbType.NVarChar, merchant.City);
                 AddSQLParameter("@State", SqlDbType.NVarChar, merchant.State);
                 AddSQLParameter("@Zip", SqlDbType.NVarChar, merchant.Zip);
+
                 AddSQLParameter("@Deleted", SqlDbType.Bit, merchant.Deleted);
                 GetExecuteNonQueryByCommand("dbo.AddMerchant");
                 success = true;

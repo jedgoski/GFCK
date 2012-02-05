@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LightBox.Master" AutoEventWireup="true" CodeBehind="printcoupon.aspx.cs" Inherits="GFCK.printcoupon" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-
+<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great' rel='stylesheet' type='text/css'>
 	<script type="text/javascript">
 	    $(document).ready(function () {
 	        //$("#dialog1").jqprint();
@@ -9,7 +9,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="dialog1" title="test" class="column-center-background" style="width:730px; height:360px;">
+    <div id="dialog1" title="test" class="column-center-background" style="width:8.5in; height:11in; overflow:hidden;">
         <!--content_center-->
         <div class="coupon">
             <div class="couponheading">
@@ -17,14 +17,13 @@
                 <div style="float:right; padding-right:20px;width:200px;text-align:right;">Expires <asp:Literal ID="litExpDate" runat="server" /></div>
             </div>
             <div class="couponbody">
-                <div style="float:left;"><img id="img" runat="server" height="150" /></div>
-                <div style="float:left;padding: 10px 0px 0px 15px;width:520px;line-height:8px;color:Black;">
-                    <div class="dotscan"><img id="dotscan" runat="server" /><br />
+                <div style="float:left;"><img id="img" runat="server" style="height:100%" /></div>
+                <div class="couponContent">
+                    <div class="dotscan"><img id="dotscan" runat="server" />
                     &nbsp;<asp:Literal ID="litDotScan" runat="server" /></div>
-                    <div class="couponbold">Save <asp:Literal ID="litValue" runat="server" /></div><br /><br />
-                    <p><asp:Literal ID="litDesc" runat="server" /></p>
-                    <p><b>Retailer:</b> Udi's, Inc. or a subsidiary, will reimburse the face value of this coupon plus handling if submitted in compliance with its Coupon Redemption Policy, previously provided to you and available upon request. Cash value 1/100c. Coupon can only be distributed by Udi's Inc. or its agent.  Mail to: Udi's Inc., P.O. Box 12345, San Francisco, CA 29348-2837.  Offer expires on date listed above.</p>
-                    <p><b>Consumer:</b> Distribution of this coupon in PDF or other portable document format is not permitted. Void if copied, altered, reproduced, sold, transferred or exchanged. Any misuse constitutes fraud and is prosecutable under federal wire and other statutes. Civil and criminal penalties exceeding $2,000,000 and/or imprisonment may apply.</p>
+                    <div class="couponbold"><asp:Literal ID="litValue" runat="server" /></div>
+                    <p class="couponfontbold"><asp:Literal ID="litName" runat="server" /></p>
+                    <p><asp:Literal ID="litTerms" runat="server" /></p>
                 </div>
             </div>
             <div class="couponbarcode">

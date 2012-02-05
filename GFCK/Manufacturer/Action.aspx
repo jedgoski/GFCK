@@ -22,7 +22,7 @@
             }
             else {
                 $("#img1").show();
-                $("#img1").attr("src", "http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=UPCA&modulewidth=1&unit=px&Data=" + $(document.getElementById('<%=txtBarcode1Value.ClientID%>')).val());
+                $("#img1").attr("src", "http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=UPCA&modulewidth=min&Data=" + $(document.getElementById('<%=txtBarcode1Value.ClientID%>')).val());
             }
         }
 
@@ -32,7 +32,7 @@
             }
             else {
                 $("#img2").show();
-                $("#img2").attr("src", "http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=RSSExpandedStacked&modulewidth=1&unit=px&Data=" + $(document.getElementById('<%=txtBarcode2Value.ClientID%>')).val());
+                $("#img2").attr("src", "http://www.tec-it.com/aspx/service/tbarcode/barcode.ashx?accesskey=demo&code=RSSExpandedStacked&modulewidth=min&Data=" + $(document.getElementById('<%=txtBarcode2Value.ClientID%>')).val());
             }
         }
 
@@ -40,9 +40,10 @@
         var v = true;
         function validate() {
 
+            AddRemoveError(document.getElementById('<%=txtValue.ClientID %>'));
+            AddRemoveError(document.getElementById('<%=txtDiscount.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtName.ClientID %>'));
             AddRemoveErrorImage(document.getElementById('<%=imgUpload.ClientID %>'));
-            AddRemoveError(document.getElementById('<%=txtValue.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtStartDate.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtExpirationDate.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtNumberOfCoupons.ClientID %>'));
@@ -69,11 +70,44 @@
                 $(item).addClass("error");
                 v = false;
             }
+            else if (!checkFile()) {
+                $(item).addClass("error");
+                v = false;
+            }
             else {
                 $(item).removeClass("error");
+                v = true;
+            }
+            return v;
+        }
+        function checkFile() {
+            var fileElement = document.getElementById('<%= imgUpload.ClientID %>');
+
+            //if they aren't uploading and image, but already have one, return true.
+            if ($(fileElement).val() == "" && document.getElementById('<%=imgCurrent.ClientID %>').src != "") {
+                return true;
+            }
+
+            //otherwise, make sure the new image is of type image.
+            var fileExtension = "";
+            if (fileElement.value.lastIndexOf(".") > 0) {
+                fileExtension = fileElement.value.substring(fileElement.value.lastIndexOf(".") + 1, fileElement.value.length);
+            }
+            if (fileExtension == "gif" || fileExtension == "jpg" || fileExtension == "jpeg" || fileExtension == "png") {
+                return true;
+            }
+            else {
+                alert("You must select an image file for upload");
+                return false;
             }
         }
-    </script>
+
+        function RestrictSize(x, len) {
+            if (x.value.length > len) {
+                x.value = x.value.subString(0, len);
+            }
+        }
+</script> 
 
     <script type="text/javascript">
         $(function () {
@@ -138,34 +172,31 @@
 <div class="alert forward">* Required information</div>
 <br class="clearBoth" /> 
  
-<label class="inputLabel">Name this coupon:<span class="alert">*</span></label>
-<asp:TextBox ID="txtName" runat="server" CssClass="tblarge" /><br class="clearBoth" />
-<br />
+<label class="inputLabel">Value on coupon:<span class="alert">*</span></label>
+<asp:TextBox ID="txtValue" runat="server" CssClass="tbsmall" Width="250px" onkeyup="RestrictSize(this, 50);" /><span class="alert">(50 characters max)</span><br class="clearBoth" /><br />
+<label class="inputLabel">Value on site:<span class="alert">*</span></label>
+<asp:TextBox ID="txtDiscount" runat="server" CssClass="tbsmall" Width="250px" onkeyup="RestrictSize(this, 50);" /><span class="alert">(50 characters max)</span><br class="clearBoth" /><br />
+<label class="inputLabel">Product Description:<span class="alert">*</span></label>
+<asp:TextBox ID="txtName" runat="server" CssClass="tblarge" MaxLength="100" onkeyup="RestrictSize(this, 100);" Width="350px" /><span class="alert">(100 characters max)</span><br class="clearBoth" /><br />
 <label class="inputLabel">Category:<span class="alert">*</span></label>
 <asp:DropDownList ID="ddlCategory" runat="server" CssClass="tblarge" /><br class="clearBoth" />
 <br />
 <label class="inputLabel">Image:<span class="alert">*</span></label>
 <asp:FileUpload ID="imgUpload" runat="server" CssClass="tblarge" Width="400px" /><br class="clearBoth" />
- <br />
+<label class="inputLabel" style="width:400px"><span class="alert">Recommended file dimmensions are 250px high by 190px wide.</span><br /><span class="alert">Maximum file size is 5MB.</span></label>
+<br class="clearBoth" />
 <label class="inputLabel" id="lblCurrent" runat="server">Current Image:</label>
 <img id="imgCurrent" runat="server" style="max-height:250px;" />
  <br />
  <table>
- <tr><td>
-<label class="inputLabel">Value:<span class="alert">*</span></label>
-<asp:TextBox ID="txtValue" runat="server" CssClass="tbsmall" /><br class="clearBoth" />
- </td>
- <td width="100px"></td>
- <td>
+<tr><td colspan="3">&nbsp;</td></tr>
+ <tr><td width="219px">
 <label class="inputLabel">Start Date:<span class="alert">*</span></label>
 <asp:TextBox ID="txtStartDate" runat="server" CssClass="datepicker tbsmall" /><br class="clearBoth" />
-</td> </tr>
-<tr><td colspan="3">&nbsp;</td></tr>
- <tr><td width="219px">&nbsp;
 
 
  </td>
- <td width="100px"></td>
+ <td width="100px">&nbsp;</td>
  <td>
 <label class="inputLabel">Expiration Date:<span class="alert">*</span></label>
 <asp:TextBox ID="txtExpirationDate" runat="server" CssClass="datepicker tbsmall" /><br class="clearBoth" />
@@ -175,53 +206,69 @@
 <asp:TextBox ID="txtNumberOfCoupons" runat="server" CssClass="tbsmall" /><br class="clearBoth" />
  <br />
 <label class="inputLabel">Details:<span class="alert">*</span></label>
-<asp:TextBox ID="txtDetails" runat="server" CssClass="tblarge" TextMode="MultiLine" /><br class="clearBoth" />
+<asp:TextBox ID="txtDetails" runat="server" CssClass="tblarge" TextMode="MultiLine" Rows="4" Columns="50" /><br class="clearBoth" />
  <br />
-<label class="inputLabel">Terms:<span class="alert">*</span></label>
-<asp:TextBox ID="txtTerms" runat="server" CssClass="tblarge" TextMode="MultiLine" /><br class="clearBoth" />
+<label class="inputLabel">Terms and Redemption:<span class="alert">*</span></label>
+<asp:TextBox ID="txtTerms" runat="server" CssClass="tblarge" TextMode="MultiLine" Rows="4" Columns="50" /><br class="clearBoth" />
 <input type="hidden" id="txtEnabled" runat="server" />
+ <br />
+<label class="inputLabel">Marketing Image:</label>
+<asp:FileUpload ID="imgUploadMarketing" runat="server" CssClass="tblarge" Width="400px" /><br class="clearBoth" />
+<label class="inputLabel" style="width:400px"><span class="alert">Recommended file dimmensions are 7" tall by 7" wide or smaller.</span><br /><span class="alert">Maximum file size is 10MB.</span></label>
+<br class="clearBoth" />
+<label class="inputLabel" id="lblCurrentMarketing" runat="server">Current Marketing Image:</label>
+<asp:Literal ID="litImageMarketing" runat="server" /><br class="clearBoth" />
  <br />
  <hr />
  <h2>Please check all that apply:</h2><br />
  <table width="600px">
- <tr><td width="28%">
-<label class="inputLabel">Gluten Free Faclility:</label>
+ <tr><td width="45%">
+<label class="inputLabel" style="width:185px">Gluten Free Faclility:</label>
 <asp:CheckBox ID="chkGlutenFreeFacility" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
- <td width="36%" nowrap>
-<label class="inputLabel" style="width:165px">Gluten tested at less than 20PPM:</label>
-<asp:CheckBox ID="chkContainGluten20PPM" runat="server" CssClass="tblarge" /><br class="clearBoth" />
- </td>
- <td width="36%" nowrap>
-<label class="inputLabel" style="width:165px">Gluten tested at less Than 5PPM:</label>
-<asp:CheckBox ID="chkLessThan5PPM" runat="server" CssClass="tblarge" /><br class="clearBoth" />
- </td>
- </tr>
- <tr><td>
+ <td width="35%" nowrap>
 <label class="inputLabel">Casein/Dairy Free:</label>
 <asp:CheckBox ID="chkCaseinFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
+ <td width="20%" nowrap>
+<label class="inputLabel">Egg Free:</label>
+<asp:CheckBox ID="chkEggFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
+ </td>
+ </tr>
+ <tr><td>
+<label class="inputLabel" style="width:185px">Gluten tested at less than 20PPM:</label>
+<asp:CheckBox ID="chkContainGluten20PPM" runat="server" CssClass="tblarge" /><br class="clearBoth" />
+ </td>
  <td>
-<label class="inputLabel" style="width:165px">Soy Free:</label>
+<label class="inputLabel">Soy Free:</label>
 <asp:CheckBox ID="chkSoyFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td>
-<label class="inputLabel" style="width:165px">Nut Free:</label>
+<label class="inputLabel">Nut Free:</label>
 <asp:CheckBox ID="chkNutFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  </tr>
  <tr>
  <td>
-<label class="inputLabel">Egg Free:</label>
-<asp:CheckBox ID="chkEggFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
+<label class="inputLabel" style="width:185px">Gluten tested at less than 10PPM:</label>
+<asp:CheckBox ID="chkLessThan10PPM" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td>
-<label class="inputLabel" style="width:165px">Corn Free:</label>
+<label class="inputLabel">Corn Free:</label>
 <asp:CheckBox ID="chkCornFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td>
-<label class="inputLabel" style="width:165px">Yeast Free:</label>
+<label class="inputLabel">Yeast Free:</label>
 <asp:CheckBox ID="chkYeastFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
+ </td> </tr>
+ <tr>
+ <td>
+<label class="inputLabel" style="width:185px">Gluten tested at less than 5PPM:</label>
+<asp:CheckBox ID="chkLessThan5PPM" runat="server" CssClass="tblarge" /><br class="clearBoth" />
+ </td>
+ <td>&nbsp;
+ </td>
+ <td>&nbsp;
  </td> </tr></table>
  <br />
  <hr />
@@ -240,10 +287,6 @@
 <br />
 <div style="padding-right:50px;float:left;height:95px;"><div id="bcTarget2"><img id="img2" /></div></div>
  </div>
- <!---
-<label class="inputLabel">Bottom Advertisement:</label>
-<asp:TextBox ID="txtBottomAdvertisement" runat="server" CssClass="tblarge" /><span class="alert">*</span><br class="clearBoth" />
- -->
 </fieldset>
 <div class="buttonRow forward"><asp:ImageButton ID="btnCancel" runat="server" AlternateText="Cancel" ImageUrl="/images/buttons/english/button_cancel.gif" PostBackUrl="/Manufacturer/default.aspx" /></div>
 <div class="buttonRow forward"><asp:ImageButton ID="btnSave" runat="server" AlternateText="Submit" OnClientClick="return validate();" OnClick="btnSave_Click" ImageUrl="/images/buttons/english/button_submit.gif" /></div>

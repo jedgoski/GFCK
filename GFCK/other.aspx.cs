@@ -10,13 +10,11 @@ using Engine.Domain.Object;
 
 namespace GFCK
 {
-    public partial class _Default : System.Web.UI.Page
+    public partial class other : System.Web.UI.Page
     {
         FactoryDAO _factoryDAO = FactoryDAO.GetInstance();
         int _categoryID = 0;
         string _searchTerm = "";
-        List<Coupon> _coupons = new List<Coupon>();
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString["c"] != null)
@@ -36,22 +34,15 @@ namespace GFCK
             string filter = (Session["filter"] == null) ? "" : Session["filter"].ToString();
 
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
-            _coupons = couponDAO.GetAllCouponsByCategory(_categoryID, filter, _searchTerm);
+            List<Coupon> coupons = couponDAO.GetAllCouponsByCategory(_categoryID, filter, _searchTerm);
 
-            rptCoupons.DataSource = _coupons;
+            rptCoupons.DataSource = coupons;
             rptCoupons.DataBind();
         }
 
         protected void rptCoupons_ItemDataBound(Object Sender, RepeaterItemEventArgs e)
         {
-            if (e.Item.ItemType == ListItemType.Header || e.Item.ItemType == ListItemType.Footer)
-            {
-                e.Item.Visible = false;
-                if (_coupons.Count <= 0)
-                    return;
-                e.Item.Visible = true;
-            }
-            else if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 if (e.Item != null && e.Item.DataItem != null)
                 {
@@ -75,8 +66,8 @@ namespace GFCK
                         Merchant m = merchantDAO.GetMerchant(coupon.MerchantID);
                         CouponDisplay.Name = m.MerchantName;
                         CouponDisplay.Picture = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", coupon.Image); //"https://s3.amazonaws.com/gfck/coupon/Carvel/3.gif";// coupon.Image.ToString();
-                        CouponDisplay.Description = coupon.Name;
-                        CouponDisplay.Amount = coupon.Discount;
+                        CouponDisplay.Description = coupon.Details;
+                        CouponDisplay.Amount = coupon.Value;
                         CouponDisplay.CouponID = coupon.ID.ToString();
 
                         e.Item.Visible = true;

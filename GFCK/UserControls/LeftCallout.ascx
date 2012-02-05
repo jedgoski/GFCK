@@ -9,9 +9,7 @@
                             <div class="innerbox6">
                                 <div class="innerbox7">
                                     <div class="innerbox8">
-                                        <div class="innerbox9">
-                                            Specials
-                                        </div>
+                                        <div class="innerbox9">&nbsp;</div>
                                     </div>
                                 </div>
                             </div>

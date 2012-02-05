@@ -67,6 +67,24 @@ namespace GFCK.Manufacturer {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl couponInformation;
         
         /// <summary>
+        /// txtValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtValue;
+        
+        /// <summary>
+        /// txtDiscount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDiscount;
+        
+        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>
@@ -110,15 +128,6 @@ namespace GFCK.Manufacturer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlImage imgCurrent;
-        
-        /// <summary>
-        /// txtValue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtValue;
         
         /// <summary>
         /// txtStartDate control.
@@ -175,6 +184,33 @@ namespace GFCK.Manufacturer {
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden txtEnabled;
         
         /// <summary>
+        /// imgUploadMarketing control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload imgUploadMarketing;
+        
+        /// <summary>
+        /// lblCurrentMarketing control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblCurrentMarketing;
+        
+        /// <summary>
+        /// litImageMarketing control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litImageMarketing;
+        
+        /// <summary>
         /// chkGlutenFreeFacility control.
         /// </summary>
         /// <remarks>
@@ -184,24 +220,6 @@ namespace GFCK.Manufacturer {
         protected global::System.Web.UI.WebControls.CheckBox chkGlutenFreeFacility;
         
         /// <summary>
-        /// chkContainGluten20PPM control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkContainGluten20PPM;
-        
-        /// <summary>
-        /// chkLessThan5PPM control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkLessThan5PPM;
-        
-        /// <summary>
         /// chkCaseinFree control.
         /// </summary>
         /// <remarks>
@@ -209,6 +227,24 @@ namespace GFCK.Manufacturer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkCaseinFree;
+        
+        /// <summary>
+        /// chkEggFree control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkEggFree;
+        
+        /// <summary>
+        /// chkContainGluten20PPM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkContainGluten20PPM;
         
         /// <summary>
         /// chkSoyFree control.
@@ -229,13 +265,13 @@ namespace GFCK.Manufacturer {
         protected global::System.Web.UI.WebControls.CheckBox chkNutFree;
         
         /// <summary>
-        /// chkEggFree control.
+        /// chkLessThan10PPM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkEggFree;
+        protected global::System.Web.UI.WebControls.CheckBox chkLessThan10PPM;
         
         /// <summary>
         /// chkCornFree control.
@@ -256,6 +292,15 @@ namespace GFCK.Manufacturer {
         protected global::System.Web.UI.WebControls.CheckBox chkYeastFree;
         
         /// <summary>
+        /// chkLessThan5PPM control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkLessThan5PPM;
+        
+        /// <summary>
         /// txtBarcode1Value control.
         /// </summary>
         /// <remarks>
@@ -272,15 +317,6 @@ namespace GFCK.Manufacturer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBarcode2Value;
-        
-        /// <summary>
-        /// txtBottomAdvertisement control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBottomAdvertisement;
         
         /// <summary>
         /// btnCancel control.

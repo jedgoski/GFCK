@@ -12,12 +12,11 @@
 			        .dialog({
 			            autoOpen: true,
 			            width: 883,
-			            height: 900,
 			            modal: true,
 			            stack: true,
 			            resizable: false,
 			            title: 'Printing Coupon...',
-			            position: 'left',
+			            position: [0,0],
 			            close: function (event, ui) {
 			                $(this).dialog('destroy');
 			                $("#cp123").remove();

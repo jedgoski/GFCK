@@ -35,7 +35,7 @@ namespace GFCK
             }
             Coupon c = _couponDAO.GetCoupon(couponID);
             imgProduct.Src = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", c.Image);
-            litValue.Text = String.Format("<font size='4'><b>Save {0:C}</b></font><br /><br />", Convert.ToDecimal(c.Value));
+            litValue.Text = String.Format("<font size='4'><b>{0}</b></font><br /><br />", c.Value);
             litDescription.Text = String.Format("{0}", c.Details);
             litTerms.Text = c.Terms;
 
@@ -48,6 +48,7 @@ namespace GFCK
             if (c.YeastFree) listItems.Add("Yeast Free");
             if (c.ContainGluten20PPM) listItems.Add("Contains Gluten at 20PPM");
             if (c.LessThan5PPM) listItems.Add("Contains less than 5PPM of Gluten");
+            if (c.LessThan10PPM) listItems.Add("Contains less than 10PPM of Gluten");
             if (c.GlutenFreeFacility) listItems.Add("Made in Gluten Free Facility");
             rptFree.DataSource = listItems;
             rptFree.DataBind();

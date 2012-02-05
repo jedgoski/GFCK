@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GFCK.Account {
+namespace GFCK {
     
     
-    public partial class Login {
+    public partial class online {
         
         /// <summary>
-        /// LoginUser control.
+        /// rptCoupons control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Login LoginUser;
+        protected global::System.Web.UI.WebControls.Repeater rptCoupons;
     }
 }

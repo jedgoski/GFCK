@@ -32,7 +32,7 @@
                                         </div>
                                         <div class="product_box_price">
                                             <div class="indent">
-                                                <strong>Save <asp:Literal ID="litPrice" runat='server' /></strong><br />
+                                                <strong><asp:Literal ID="litPrice" runat='server' /></strong><br />
                                             </div>
                                         </div>
                                         <div class="text" style="width: 97%;height:45px;overflow:hidden;">

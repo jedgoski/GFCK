@@ -19,10 +19,11 @@
     <link rel="stylesheet" type="text/css" href="/css/stylesheet_css_buttons.css" />
     <link rel="stylesheet" type="text/css" href="/css/stylesheet_main.css" />
     <link rel="stylesheet" type="text/css" href="/css/stylesheet_tm.css" />
-    <link rel="stylesheet" type="text/css" media="print" href="/css/print_stylesheet.css" />
     <script type="text/javascript" src="/scripts/jquery-1.6.4.min.js"></script>
-		<link type="text/css" href="/css/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
-		<script type="text/javascript" src="/scripts/jquery-ui-1.8.16.custom.min.js"></script>
+    <link type="text/css" href="/css/ui-lightness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />	
+	<script type="text/javascript" src="/scripts/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.pajinate.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print_stylesheet.css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -65,19 +66,19 @@
                                     <img src="/images/pixel_trans.gif" alt="pixel" width="5" height="1" />
                                 </td>
                                 <td id="column_right" style="width: 192px">
+                                    <a href="http://www.amazon.com/Gluten-Free-Foods-Diet/b?ie=UTF8&node=2204829011&ref_=amb_link_354170522_3&_encoding=UTF8&tag=glufrecoukin-20&linkCode=ur2&camp=1789&creative=390957"><img src="/images/amazon.png" />Shop Gluten Free on Amazon.com, <br />Save More With Subscribe &amp; Save</a><img src="https://www.assoc-amazon.com/e/ir?t=glufrecoukin-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                                    <uc:RightCallout id="RightCallout" runat="server" Visible="false" /><br /><br /><hr /><br /><br />
                                     <script type="text/javascript"><!--
-                                    google_ad_client = "ca-pub-2781745982249374";
-                                    /* GFCK */
-                                    google_ad_slot = "6309960687";
-                                    google_ad_width = 200;
-                                    google_ad_height = 200;
+                                        google_ad_client = "ca-pub-2781745982249374";
+                                        /* GFCK */
+                                        google_ad_slot = "6309960687";
+                                        google_ad_width = 200;
+                                        google_ad_height = 200;
                                     //-->
                                     </script>
                                     <script type="text/javascript"
                                     src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-                                    </script>                                    
-                                    <uc:RightCallout id="RightCallout" runat="server" Visible="false" /><br /><br /><hr /><br /><br />
-                                    <a href="http://www.amazon.com/Gluten-Free-Foods-Diet/b?ie=UTF8&node=2204829011&ref_=amb_link_354170522_3&_encoding=UTF8&tag=glufrecoukin-20&linkCode=ur2&camp=1789&creative=390957"><img src="/images/amazon.png" />Shop Gluten Free on Amazon.com, <br />Save More With Subscribe &amp; Save</a><img src="https://www.assoc-amazon.com/e/ir?t=glufrecoukin-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                                    </script>                            
                                 </td>
                             </tr>
                         </table>
@@ -87,9 +88,9 @@
         </div>
         <div class="footer_t">
             <div align="left" style="float:left;padding-left:70px;padding-top:10px;font-size:12pt;font-weight:bold;">We Support:</div>
-            <div style="float:left;padding-left:70px;padding-top:10px;">
-                <img src="/images/autism_research_institute.png" height="100px" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="/images/gluten_intolerance_group.jpg" height="100px" />
+            <div style="float:left;padding-left:120px;padding-top:10px;">
+                <img src="/images/autism_research_institute.png" height="70px" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="/images/gluten_intolerance_group.jpg" height="70px" />
             </div>
             <br class="clearBoth" />
             <uc:Footer id="Footer" runat="server" />

@@ -72,6 +72,9 @@
     <Content Include="Admin\default.aspx" />
     <Content Include="Admin\Action.aspx" />
     <Content Include="contact-us.aspx" />
+    <Content Include="other.aspx" />
+    <Content Include="online.aspx" />
+    <Content Include="Scripts\jquery.pajinate.min.js" />
     <Content Include="Terms.aspx" />
     <Content Include="Privacy-Policy.aspx" />
     <Content Include="OnlineBarcodeDemo.aspx" />
@@ -468,6 +471,20 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="other.aspx.cs">
+      <DependentUpon>other.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="other.aspx.designer.cs">
+      <DependentUpon>other.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="online.aspx.cs">
+      <DependentUpon>online.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="online.aspx.designer.cs">
+      <DependentUpon>online.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.Master.cs">
       <DependentUpon>Home.Master</DependentUpon>

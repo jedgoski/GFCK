@@ -49,6 +49,7 @@ namespace Engine.DAO.Object
                     coupon.ExpirationDate = (row["ExpirationDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["ExpirationDate"]);
                     coupon.GlutenFreeFacility = Convert.ToBoolean(row["GlutenFreeFacility"]);
                     coupon.ContainGluten20PPM = Convert.ToBoolean(row["ContainGluten20PPM"]);
+                    coupon.LessThan10PPM = Convert.ToBoolean(row["LessThan10PPM"]);
                     coupon.LessThan5PPM = Convert.ToBoolean(row["LessThan5PPM"]);
                     coupon.CaseinFree = Convert.ToBoolean(row["CaseinFree"]);
                     coupon.SoyFree = Convert.ToBoolean(row["SoyFree"]);
@@ -142,6 +143,7 @@ namespace Engine.DAO.Object
                     coupon.ExpirationDate = (row["ExpirationDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["ExpirationDate"]);
                     coupon.GlutenFreeFacility = Convert.ToBoolean(row["GlutenFreeFacility"]);
                     coupon.ContainGluten20PPM = Convert.ToBoolean(row["ContainGluten20PPM"]);
+                    coupon.LessThan10PPM = Convert.ToBoolean(row["LessThan10PPM"]);
                     coupon.LessThan5PPM = Convert.ToBoolean(row["LessThan5PPM"]);
                     coupon.CaseinFree = Convert.ToBoolean(row["CaseinFree"]);
                     coupon.SoyFree = Convert.ToBoolean(row["SoyFree"]);
@@ -204,6 +206,7 @@ namespace Engine.DAO.Object
                 coupon.ExpirationDate = (row["ExpirationDate"] == DBNull.Value) ? DateTime.MinValue : Convert.ToDateTime(row["ExpirationDate"]);
                 coupon.GlutenFreeFacility = Convert.ToBoolean(row["GlutenFreeFacility"]);
                 coupon.ContainGluten20PPM = Convert.ToBoolean(row["ContainGluten20PPM"]);
+                coupon.LessThan10PPM = Convert.ToBoolean(row["LessThan10PPM"]);
                 coupon.LessThan5PPM = Convert.ToBoolean(row["LessThan5PPM"]);
                 coupon.CaseinFree = Convert.ToBoolean(row["CaseinFree"]);
                 coupon.SoyFree = Convert.ToBoolean(row["SoyFree"]);
@@ -258,10 +261,10 @@ namespace Engine.DAO.Object
                                 Barcode2Type={21},
                                 Barcode2Value={22},
                                 NumberOfCoupons={23},
-                                BottomAdvertisement={24},
-                                CreatedDate={25},
-                                UpdatedDate={26},
-                                Enabled={27}", 
+                                CreatedDate={24},
+                                UpdatedDate={25},
+                                Enabled={26},
+                                LessThan10PPM={27}", 
                                 coupon.ID,
                                 coupon.MerchantID,
                                 coupon.TemplateID,
@@ -286,10 +289,10 @@ namespace Engine.DAO.Object
                                 coupon.Barcode2Type,
                                 coupon.Barcode2Value,
                                 coupon.NumberOfCoupons,
-                                coupon.BottomAdvertisement,
                                 coupon.CreatedDate,
                                 coupon.UpdatedDate,
-                                coupon.Enabled
+                                coupon.Enabled,
+                                coupon.LessThan10PPM
                                 );
             try
             {
@@ -313,6 +316,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@ExpirationDate", SqlDbType.DateTime, 12, coupon.ExpirationDate);
                 AddSQLParameter("@GlutenFreeFacility", SqlDbType.Bit, 2, coupon.GlutenFreeFacility);
                 AddSQLParameter("@ContainGluten20PPM", SqlDbType.Bit, 2, coupon.ContainGluten20PPM);
+                AddSQLParameter("@LessThan10PPM", SqlDbType.Bit, 2, coupon.LessThan10PPM);
                 AddSQLParameter("@LessThan5PPM", SqlDbType.Bit, 2, coupon.LessThan5PPM);
                 AddSQLParameter("@CaseinFree", SqlDbType.Bit, 2, coupon.CaseinFree);
                 AddSQLParameter("@SoyFree", SqlDbType.Bit, 2, coupon.SoyFree);
@@ -325,7 +329,14 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@Barcode2Type", SqlDbType.NVarChar, 50, coupon.Barcode2Type);
                 AddSQLParameter("@Barcode2Value", SqlDbType.NVarChar, 50, coupon.Barcode2Value);
                 AddSQLParameter("@NumberOfCoupons", SqlDbType.Int, 2, coupon.NumberOfCoupons);
-                AddSQLParameter("@BottomAdvertisement", SqlDbType.NVarChar, 255, coupon.BottomAdvertisement);
+                if (coupon.BottomAdvertisement == "keep")
+                {
+                    AddSQLParameter("@BottomAdvertisement", SqlDbType.NVarChar, 255, null);
+                }
+                else
+                {
+                    AddSQLParameter("@BottomAdvertisement", SqlDbType.NVarChar, 255, coupon.BottomAdvertisement);
+                }
                 AddSQLParameter("@Enabled", SqlDbType.Bit, 2, coupon.Enabled);
                 AddSQLParameter("@Name", SqlDbType.NVarChar, 100, coupon.Name);
                 GetExecuteNonQueryByCommand("dbo.UpdateCoupon");
@@ -373,7 +384,8 @@ namespace Engine.DAO.Object
                                 CreatedDate={27},
                                 UpdatedDate={28},
                                 Deleted={29},
-                                Name={30}",
+                                Name={30},
+                                LessThan5PPM={31}",
                                 coupon.ID,
                                 coupon.MerchantID,
                                 coupon.TemplateID,
@@ -402,7 +414,8 @@ namespace Engine.DAO.Object
                                 coupon.CreatedDate,
                                 coupon.UpdatedDate,
                                 coupon.Enabled,
-                                coupon.Name
+                                coupon.Name,
+                                coupon.LessThan10PPM
                                 );
             try
             {
@@ -420,6 +433,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@ExpirationDate", SqlDbType.DateTime, 12, coupon.ExpirationDate);
                 AddSQLParameter("@GlutenFreeFacility", SqlDbType.Bit, 2, coupon.GlutenFreeFacility);
                 AddSQLParameter("@ContainGluten20PPM", SqlDbType.Bit, 2, coupon.ContainGluten20PPM);
+                AddSQLParameter("@LessThan10PPM", SqlDbType.Bit, 2, coupon.LessThan10PPM);
                 AddSQLParameter("@LessThan5PPM", SqlDbType.Bit, 2, coupon.LessThan5PPM);
                 AddSQLParameter("@CaseinFree", SqlDbType.Bit, 2, coupon.CaseinFree);
                 AddSQLParameter("@SoyFree", SqlDbType.Bit, 2, coupon.SoyFree);
@@ -432,7 +446,7 @@ namespace Engine.DAO.Object
                 AddSQLParameter("@Barcode2Type", SqlDbType.NVarChar, 50, coupon.Barcode2Type);
                 AddSQLParameter("@Barcode2Value", SqlDbType.NVarChar, 50, coupon.Barcode2Value);
                 AddSQLParameter("@NumberOfCoupons", SqlDbType.Int, 2, coupon.NumberOfCoupons);
-                AddSQLParameter("@BottomAdvertisement", SqlDbType.NVarChar, 255, coupon.BottomAdvertisement);
+                AddSQLParameter("@BottomAdvertisement", SqlDbType.NVarChar, 255, null);
                 AddSQLParameter("@Enabled", SqlDbType.Bit, 2, coupon.Enabled);
                 AddSQLParameter("@Name", SqlDbType.NVarChar, 100, coupon.Name);
                 id = GetExecuteScalarByCommand("dbo.AddCoupon");
