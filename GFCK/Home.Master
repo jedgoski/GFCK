@@ -94,7 +94,6 @@
             </div>
             <br class="clearBoth" />
             <uc:Footer id="Footer" runat="server" />
-            <img src="/images/0901_GreenHosting_RGB_Shadow.png" height="65px" />
             <br />
             <br />
         </div>

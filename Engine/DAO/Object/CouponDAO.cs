@@ -79,10 +79,10 @@ namespace Engine.DAO.Object
             return coupons;
         }
 
-        public List<Coupon> GetAllCouponsByCategory(int categoryID, string filter, string searchTerm)
+        public List<Coupon> GetAllCouponsByCategory(int categoryID, string filter, string searchTerm, string ipAddress)
         {
             List<Coupon> coupons = null;
-            _log.DebugFormat(@"dbo.GetAllCouponsByCategory: categoryID={0}, filter={1}, searchTerm={2}", categoryID, filter, searchTerm);
+            _log.DebugFormat(@"dbo.GetAllCouponsByCategory: categoryID={0}, filter={1}, searchTerm={2}, ipAddress={3}", categoryID, filter, searchTerm, ipAddress);
             try
             {
 
@@ -123,6 +123,7 @@ namespace Engine.DAO.Object
                 {
                     AddSQLParameter("@searchTerm", SqlDbType.NVarChar,"");
                 }
+                AddSQLParameter("@IPAddress", SqlDbType.VarChar, 50, ipAddress);
  
                 DataSet ds = GetDatasetByCommand("dbo.GetAllCouponsByCategoryID");
                 foreach (DataRow row in ds.Tables[0].Rows)
@@ -161,7 +162,9 @@ namespace Engine.DAO.Object
                     coupon.UpdatedDate = row["UpdatedDate"] != DBNull.Value ? Convert.ToDateTime(row["UpdatedDate"]) : DateTime.MinValue;
                     coupon.Enabled = Convert.ToBoolean(row["Enabled"]);
                     coupon.Clicks = (row["prints"] == DBNull.Value) ? 0 : Convert.ToInt32(row["prints"]);
-                    coupons.Add(coupon);
+                    int couponPrints = (row["ipPrints"] == DBNull.Value) ? 0 : Convert.ToInt32(row["ipPrints"]);
+                    if(couponPrints < 3)
+                        coupons.Add(coupon);
                 }
 
             }
@@ -173,9 +176,9 @@ namespace Engine.DAO.Object
             return coupons;
         }
 
-        public List<Coupon> GetAllCouponsByCategory(int categoryID, string filter)
+        public List<Coupon> GetAllCouponsByCategory(int categoryID, string filter, string ipAddress)
         {
-            return GetAllCouponsByCategory(categoryID, filter, null);
+            return GetAllCouponsByCategory(categoryID, filter, null, ipAddress);
         }
 
         public Coupon GetCoupon(Int64 ID)

@@ -9,12 +9,20 @@ using log4net;
 using Engine.Domain.Object;
 using System.Web.UI.HtmlControls;
 
+using System.Net;
+using System.IO;
+using System.Drawing;
+
 namespace GFCK
 {
     public partial class detail : System.Web.UI.Page
     {
         public static readonly ILog _log = LogManager.GetLogger(typeof(detail));
         FactoryDAO _factoryDAO = FactoryDAO.GetInstance();
+        public bool ThumbnailCallback()
+        {
+            return false;
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,6 +42,17 @@ namespace GFCK
                 divPrint.Visible = true;
             }
             Coupon c = _couponDAO.GetCoupon(couponID);
+            /*
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", c.Image));
+            request.Method = "GET";
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream s = response.GetResponseStream();
+            Bitmap myBitmap = new Bitmap(s);
+ 
+            System.Drawing.Image.GetThumbnailImageAbort myCallback = new System.Drawing.Image.GetThumbnailImageAbort(ThumbnailCallback);
+            System.Drawing.Image myThumbnail = myBitmap.GetThumbnailImage(40, 40, myCallback, IntPtr.Zero);
+            myThumbnail.Save("C:/Users/Jed/GFCK/test.jpg");
+            */
             imgProduct.Src = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", c.Image);
             litValue.Text = String.Format("<font size='4'><b>{0}</b></font><br /><br />", c.Value);
             litDescription.Text = String.Format("{0}", c.Details);

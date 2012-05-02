@@ -210,7 +210,7 @@
  <br />
 <label class="inputLabel">Terms and Redemption:<span class="alert">*</span></label>
 <asp:TextBox ID="txtTerms" runat="server" CssClass="tblarge" TextMode="MultiLine" Rows="4" Columns="50" /><br class="clearBoth" />
-<input type="hidden" id="txtEnabled" runat="server" />
+<input type="hidden" id="txtEnabled" runat="server" value="false" />
  <br />
 <label class="inputLabel">Marketing Image:</label>
 <asp:FileUpload ID="imgUploadMarketing" runat="server" CssClass="tblarge" Width="400px" /><br class="clearBoth" />
@@ -223,47 +223,47 @@
  <h2>Please check all that apply:</h2><br />
  <table width="600px">
  <tr><td width="45%">
-<label class="inputLabel" style="width:185px">Gluten Free Faclility:</label>
+<label class="inputLabel1" style="width:185px">Gluten Free Faclility:</label>
 <asp:CheckBox ID="chkGlutenFreeFacility" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td width="35%" nowrap>
-<label class="inputLabel">Casein/Dairy Free:</label>
+<label class="inputLabel1">Casein/Dairy Free:</label>
 <asp:CheckBox ID="chkCaseinFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td width="20%" nowrap>
-<label class="inputLabel">Egg Free:</label>
+<label class="inputLabel1">Egg Free:</label>
 <asp:CheckBox ID="chkEggFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  </tr>
  <tr><td>
-<label class="inputLabel" style="width:185px">Gluten tested at less than 20PPM:</label>
+<label class="inputLabel1" style="width:185px">Gluten tested at less than 20PPM:</label>
 <asp:CheckBox ID="chkContainGluten20PPM" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td>
-<label class="inputLabel">Soy Free:</label>
+<label class="inputLabel1">Soy Free:</label>
 <asp:CheckBox ID="chkSoyFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td>
-<label class="inputLabel">Nut Free:</label>
+<label class="inputLabel1">Nut Free:</label>
 <asp:CheckBox ID="chkNutFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  </tr>
  <tr>
  <td>
-<label class="inputLabel" style="width:185px">Gluten tested at less than 10PPM:</label>
+<label class="inputLabel1" style="width:185px">Gluten tested at less than 10PPM:</label>
 <asp:CheckBox ID="chkLessThan10PPM" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td>
-<label class="inputLabel">Corn Free:</label>
+<label class="inputLabel1">Corn Free:</label>
 <asp:CheckBox ID="chkCornFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td>
-<label class="inputLabel">Yeast Free:</label>
+<label class="inputLabel1">Yeast Free:</label>
 <asp:CheckBox ID="chkYeastFree" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td> </tr>
  <tr>
  <td>
-<label class="inputLabel" style="width:185px">Gluten tested at less than 5PPM:</label>
+<label class="inputLabel1" style="width:185px">Gluten tested at less than 5PPM:</label>
 <asp:CheckBox ID="chkLessThan5PPM" runat="server" CssClass="tblarge" /><br class="clearBoth" />
  </td>
  <td>&nbsp;

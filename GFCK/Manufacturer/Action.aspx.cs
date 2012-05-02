@@ -120,11 +120,15 @@ namespace GFCK.Manufacturer
                     bool success = false;
                     string err = "";
                     FileUpload img = (FileUpload)imgUpload;
-                    if (!CheckFileType(img.PostedFile.FileName))
+                    if (img == null)
                     {
-                        err = "Sorry, Please only upload images for coupon.";
+                        err = "Bad image.";
                     }
-                    if (img.HasFile && img.PostedFile != null && img.PostedFile.ContentLength > 5242880)
+                    else if (img.HasFile && img.PostedFile != null && !CheckFileType(img.PostedFile.FileName))
+                    {
+                       err = "Sorry, Please only upload images for coupon.";
+                    }
+                    else if (img.HasFile && img.PostedFile != null && img.PostedFile.ContentLength > 5242880)
                     {
                         err = "Sorry, File size is too large. Coupon image needs to be under 5MB.";
                     }
@@ -168,10 +172,19 @@ namespace GFCK.Manufacturer
                     {
                         _log.Error(string.Format("An error occurred with the message '{0}' when writing an object", amazonS3Exception.Message));
                     }
+                    lblError.Text = "Error saving coupon to S3.";
                     lblError.Visible = true;
                     lblAddSuccessfull.Visible = false;
                     lblEditSuccessfull.Visible = false;
                     _log.Debug("Unable to Add a Coupon.");
+                }
+                catch (Exception ex)
+                {
+                    lblError.Text = "Error saving image.";
+                    lblError.Visible = true;
+                    lblAddSuccessfull.Visible = false;
+                    lblEditSuccessfull.Visible = false;
+                    _log.DebugFormat("Unable to Add a Coupon. {0}", ex.Message);
                 }
 
                 //upload marketing image now only if no errors
@@ -182,11 +195,15 @@ namespace GFCK.Manufacturer
                         bool success = false;
                         string err = "";
                         FileUpload img = (FileUpload)imgUploadMarketing;
-                        if (!CheckFileType(img.PostedFile.FileName))
+                        if (img == null)
                         {
-                            err = "Sorry, Please only upload images for advertisement.";
+                            err = "Bad image.";
                         }
-                        if (img.HasFile && img.PostedFile != null && img.PostedFile.ContentLength > 10485760)
+                        else if (img.HasFile && img.PostedFile != null && !CheckFileType(img.PostedFile.FileName))
+                        {
+                            err = "Sorry, Please only upload images for coupon.";
+                        }
+                        else if (img.HasFile && img.PostedFile != null && img.PostedFile.ContentLength > 10485760)
                         {
                             err = "Sorry, File size is too large. Advertisement image needs to be under 10MB.";
                         }
@@ -201,13 +218,16 @@ namespace GFCK.Manufacturer
                             coupon.BottomAdvertisement = "keep";
                             success = couponDAO.UpdateCoupon(coupon);
                         }
-                        // Need to update the record
+
                         if (success)
                         {
                             // Update was successfull
                             lblEditSuccessfull.Visible = true;
                             lblError.Visible = false;
                             lblAddSuccessfull.Visible = false;
+
+                            //if everything went smooth, return to manufacturer page
+                            Response.Redirect("/manufacturer/default.aspx");
                         }
                         else
                         {
@@ -230,23 +250,34 @@ namespace GFCK.Manufacturer
                         {
                             _log.Error(string.Format("An error occurred with the message '{0}' when writing an object", amazonS3Exception.Message));
                         }
+                        lblError.Text = "Error saving coupon to S3";
                         lblError.Visible = true;
                         lblAddSuccessfull.Visible = false;
                         lblEditSuccessfull.Visible = false;
                         _log.Debug("Unable to Add a Coupon.");
+                    }
+                    catch (Exception ex)
+                    {
+                        lblError.Text = "Error saving marketing materials";
+                        lblError.Visible = true;
+                        lblAddSuccessfull.Visible = false;
+                        lblEditSuccessfull.Visible = false;
+                        _log.DebugFormat("Unable to Add a Coupon. {0}", ex.Message);
                     }
                 }
             }
             catch (Exception ex)
             {
                 _log.ErrorFormat("Exception Occurred: Exception={0}", ex.Message);
+                lblError.Text = String.Format("Error saving coupon. {0}", ex.Message);
                 lblError.Visible = true;
                 lblAddSuccessfull.Visible = false;
                 lblEditSuccessfull.Visible = false;
             }
         }
         private bool CheckFileType(string fileName){
-            string ext = System.IO.Path.GetExtension(fileName);
+            //string ext = System.IO.Path.GetExtension(fileName);
+            string ext = fileName.Substring(fileName.LastIndexOf('.'), 4);
             switch (ext.ToLower()){
                 case ".gif":
                     return true;
@@ -254,7 +285,7 @@ namespace GFCK.Manufacturer
                     return true;
                 case ".jpg":
                     return true;
-                case ".jpeg":
+                case ".jpe":
                     return true;
                 default:
                     return false;
@@ -262,44 +293,98 @@ namespace GFCK.Manufacturer
         }
         private bool AddImageToAmazon(Coupon coupon, HttpPostedFile File, string ext)
         {
-            string accessKeyID = WebConfigurationManager.AppSettings["AWSAccessKey"];
-            string secretAccessKeyID = WebConfigurationManager.AppSettings["AWSSecretKey"];
+            string count = "";
+            string keyname = "";
+            //ext = ".jpg";
+            //try
+            //{
+                string accessKeyID = WebConfigurationManager.AppSettings["AWSAccessKey"];
+                string secretAccessKeyID = WebConfigurationManager.AppSettings["AWSSecretKey"];
+                
+                AmazonS3Config s3Config = new AmazonS3Config();
+                s3Config.UseSecureStringForAwsSecretKey = false;
 
-            client = Amazon.AWSClientFactory.CreateAmazonS3Client(accessKeyID, secretAccessKeyID);
+                client = Amazon.AWSClientFactory.CreateAmazonS3Client(accessKeyID, secretAccessKeyID, s3Config);
+                //count += "1";
+                ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
+                Byte[] imgByte = new byte[0];
+                //count += "2";
+                //Create byte Array with file len
+                imgByte = new Byte[File.ContentLength];
+                //count += "3";
+                //force the control to load data in array
+                File.InputStream.Read(imgByte, 0, File.ContentLength);
+                //count += "4";
+                //count += ext;
+                //count += _merchantname;
+                //count += _couponID.ToString();
+                //count += File.FileName;
+                //count += File.FileName.Substring(0, File.FileName.IndexOf("."));
+                //count += ":";
+                //count += string.Format("{0}{1}", _couponID.ToString(), ext);
+                keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0, File.FileName.IndexOf(".")), string.Format("{0}{1}", _couponID.ToString(), ext)));
+                //keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0, File.FileName.IndexOf(".")), _couponID.ToString()));
+                count += keyname;
+                /*try
+                {
+                    //first try deleting old item if applicable
+                    DeleteObjectRequest delete_request = new DeleteObjectRequest();
+                    delete_request.WithBucketName("gfck").WithKey(string.Format("coupon/{0}", keyname));
+                    S3Response delete_response = client.DeleteObject(delete_request);
+                    delete_response.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    _log.ErrorFormat("Error trying to delete object from bucket: {0} with exception {1}", keyname, ex.Message);
+                }*/
+                string BUCKET_NAME = String.Format("gfck/coupon/{0}", _merchantname);
+                try
+                {
+                    //add the bucket just in case not already there.
+                    //PutObjectRequest request1 = new PutObjectRequest();
+                    PutBucketRequest req = new PutBucketRequest();
+                    req.WithBucketName(BUCKET_NAME);
+                    //count += "6";
+                    //request1.WithBucketName("gfck").WithContentType(File.ContentType).WithCannedACL(S3CannedACL.PublicReadWrite).WithKey(BUCKET_NAME);
+                    //S3Response response = client.PutObject(request1);
+                    //response.Dispose();
+                    client.PutBucket(req);
+                }
+                catch (Exception ex)
+                {
+                    _log.DebugFormat("This bucket already exists: {0} with exception {1}", BUCKET_NAME, ex.Message);
+                }
 
-            ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
-            Byte[] imgByte = new byte[0];
-            //Create byte Array with file len
-            imgByte = new Byte[File.ContentLength];
-            //force the control to load data in array
-            File.InputStream.Read(imgByte, 0, File.ContentLength);
-            string keyname = string.Format("{0}/{1}", _merchantname, File.FileName.Replace(File.FileName.Substring(0, File.FileName.IndexOf(".")), string.Format("{0}{1}", _couponID.ToString(), ext)));
-            /*try
-            {
-                //first try deleting old item if applicable
-                DeleteObjectRequest delete_request = new DeleteObjectRequest();
-                delete_request.WithBucketName("gfck").WithKey(string.Format("coupon/{0}", keyname));
-                S3Response delete_response = client.DeleteObject(delete_request);
-                delete_response.Dispose();
-            }
+                //count += "5";
+                PutObjectRequest request = new PutObjectRequest();
+                //count += "6";
+                request.WithBucketName("gfck").WithContentType(File.ContentType).WithCannedACL(S3CannedACL.PublicRead).WithKey(string.Format("coupon/{0}", keyname)).WithInputStream(File.InputStream);
+                count += "here";
+                S3Response response = client.PutObject(request);
+                count += "7";
+                response.Dispose();
+                count += "8";
+                if (ext == "")
+                {
+                    coupon.Image = keyname;
+                }
+                else
+                {
+                    coupon.BottomAdvertisement = keyname;
+                }
+                count += "9";
+
+                return couponDAO.UpdateCoupon(coupon);
+            /*}
             catch (Exception ex)
             {
-                _log.ErrorFormat("Error trying to delete object from bucket: {0} with exception {1}", keyname, ex.Message);
+                _log.ErrorFormat("Exception Occurred: Exception={0}", ex.Message);
+                lblError.Text = String.Format("Error with coupon image. {0} {1} {2}", count, keyName, ex.Message);
+                lblError.Visible = true;
+                lblAddSuccessfull.Visible = false;
+                lblEditSuccessfull.Visible = false;
+                return false;
             }*/
-
-            PutObjectRequest request = new PutObjectRequest();
-            request.WithBucketName("gfck").WithContentType(File.ContentType).WithCannedACL(S3CannedACL.PublicRead).WithKey(string.Format("coupon/{0}", keyname)).WithInputStream(File.InputStream);
-            S3Response response = client.PutObject(request);
-            response.Dispose();
-            if (ext == "")
-            {
-                coupon.Image = keyname;
-            }
-            else
-            {
-                coupon.BottomAdvertisement = keyname;
-            }
-            return couponDAO.UpdateCoupon(coupon);
         }
 
         protected void GetMode()

@@ -5,11 +5,19 @@
 	    $(document).ready(function () {
 	        //$("#dialog1").jqprint();
 	        window.print();
+	        setTimeout(function () {
+	            hideAll();
+	        }, 2000);
 	    });
+
+	    function hideAll() {
+	        $(".ui-dialog").hide();
+	        $(".ui-widget-overlay").hide();
+	    }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="dialog1" title="test" class="column-center-background" style="width:8.5in; height:11in; overflow:hidden;">
+    <div id="dialog1" title="coupon" class="column-center-background" style="width:8.5in; height:11in; overflow:hidden;">
         <!--content_center-->
         <div class="coupon">
             <div class="couponheading">
@@ -17,7 +25,7 @@
                 <div style="float:right; padding-right:20px;width:200px;text-align:right;">Expires <asp:Literal ID="litExpDate" runat="server" /></div>
             </div>
             <div class="couponbody">
-                <div style="float:left;"><img id="img" runat="server" style="height:100%" /></div>
+                <div style="float:left;"><img id="img" runat="server" style="max-height:1.7in;max-width:1.7in;height:100%"  /></div>
                 <div class="couponContent">
                     <div class="dotscan"><img id="dotscan" runat="server" />
                     &nbsp;<asp:Literal ID="litDotScan" runat="server" /></div>

@@ -24,9 +24,9 @@
                             <div id="productsListingTopNumber" class="navSplitPagesResulthead back"><table><tr>
                                 <td width="22px">&nbsp;</td>
                                 <td width="250px">Name and Category</td>
-                                <td width="50px">Value</td>
-                                <td width="90px">Prints used</td>
-                                <td width="40px">Expires</td></tr></table>
+                                <td width="100px">Value</td>
+                                <td width="75px">Prints used</td>
+                                <td width="50px">Expires</td></tr></table>
                             </div>
                             <div id="productsListingListingTopLinks" class="navSplitPagesLinks forward">
                                     &nbsp;
@@ -42,9 +42,9 @@
                                 <td width="22px"><img id="img" runat="server" height="20" width="20" src="/images/coupon.jpg" /></td>
                                 <td width="250px"><a href="#" id="linkEdit" runat="server"><b><asp:Literal ID="litCouponName" runat="server" /></b>
                                 (<asp:Literal ID="litCategory" runat="server" />)</a></td>
-                                <td width="50px"><b>$<asp:Literal ID="litValue" runat="server" /></b></td>
-                                <td width="90px"><b><asp:Literal ID="litClicks" runat="server" /></b></td>
-                                <td width="40px"><b><asp:Literal ID="litExpires" runat="server" /></b></td></tr></table>
+                                <td width="100px"><b><asp:Literal ID="litValue" runat="server" /></b></td>
+                                <td width="75px"><b><asp:Literal ID="litClicks" runat="server" /></b></td>
+                                <td width="50px"><b><asp:Literal ID="litExpires" runat="server" /></b></td></tr></table>
                             </div>
                             <div id="productsListingListingTopLinks" class="navSplitPagesLinks forward">
                                     <a href="#" id="linkDelete" runat="server">Inactivate</a>

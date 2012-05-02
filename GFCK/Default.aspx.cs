@@ -34,9 +34,10 @@ namespace GFCK
         protected void LoadData()
         {
             string filter = (Session["filter"] == null) ? "" : Session["filter"].ToString();
+            string ip = Request.UserHostAddress;
 
             ICouponDAO couponDAO = _factoryDAO.GetCouponDAO();
-            _coupons = couponDAO.GetAllCouponsByCategory(_categoryID, filter, _searchTerm);
+            _coupons = couponDAO.GetAllCouponsByCategory(_categoryID, filter, _searchTerm, ip);
 
             rptCoupons.DataSource = _coupons;
             rptCoupons.DataBind();
