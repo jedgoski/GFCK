@@ -21,7 +21,7 @@
 <body id="indexBody">
     <form runat="server">
     <!--bof-header logo and navigation display-->
-    <div class="main_t1" style="width:8.5in;">
+    <div class="main_t1" style="width:8in;">
         <div class="content_t">
             <table border="0" cellspacing="0" cellpadding="0" id="contentMainWrapper" style="width: 100%;">
                 <tr>

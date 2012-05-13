@@ -75,7 +75,14 @@ namespace GFCK
 
                         Merchant m = merchantDAO.GetMerchant(coupon.MerchantID);
                         CouponDisplay.Name = m.MerchantName;
-                        CouponDisplay.Picture = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", coupon.Image); //"https://s3.amazonaws.com/gfck/coupon/Carvel/3.gif";// coupon.Image.ToString();
+                        if (!String.IsNullOrEmpty(coupon.Image))
+                        {
+                            CouponDisplay.Picture = string.Format("https://s3.amazonaws.com/gfck/coupon/{0}", coupon.Image); //"https://s3.amazonaws.com/gfck/coupon/Carvel/3.gif";// coupon.Image.ToString();
+                        }
+                        else
+                        {
+                            CouponDisplay.Picture = "";
+                        }
                         CouponDisplay.Description = coupon.Name;
                         CouponDisplay.Amount = coupon.Discount;
                         CouponDisplay.CouponID = coupon.ID.ToString();

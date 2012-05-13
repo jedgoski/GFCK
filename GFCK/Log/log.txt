@@ -1,817 +1,296 @@
-2012-04-29 07:52:47,933 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 07:52:47,996 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,001 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,001 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,002 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,002 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,002 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,003 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,003 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,004 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,004 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,005 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,005 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 07:52:48,520 [9192] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 07:52:48,521 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,521 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,522 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,522 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,522 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,523 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,523 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,523 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,523 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,524 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,524 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:52:48,524 [9192] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 07:52:50,403 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 07:52:50,408 [10704] DEBUG GFCK.detail [(null)] - number of prints on couponid: 17
-2012-04-29 07:52:50,408 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 07:52:52,799 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 07:52:52,800 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 07:52:52,801 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=17,
-                                PrintedDate=04/29/2012 07:52:52,
-                                IPAddress=::1
-2012-04-29 07:54:57,114 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 07:54:57,128 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,131 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,132 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,132 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,133 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,133 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,134 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,134 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,134 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,135 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,135 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:54:57,135 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 07:55:01,516 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 07:55:01,516 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:55:01,532 [10704] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 07:55:04,292 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 07:55:04,311 [10704] DEBUG GFCK.detail [(null)] - number of prints on couponid: 17
-2012-04-29 07:55:04,311 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 07:55:07,641 [12116] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 07:55:07,642 [12116] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 07:55:07,642 [12116] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 07:55:10,596 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 07:55:10,597 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 07:55:10,597 [10704] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=15,
-                                PrintedDate=04/29/2012 07:55:10,
-                                IPAddress=::1
-2012-04-29 07:59:24,908 [12116] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 07:59:24,923 [12116] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 07:59:27,329 [8472] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 07:59:27,331 [8472] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 07:59:27,331 [8472] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 07:59:29,061 [8472] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 07:59:29,062 [8472] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 07:59:29,063 [8472] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=15,
-                                PrintedDate=04/29/2012 07:59:29,
-                                IPAddress=::1
-2012-04-29 08:06:24,735 [8472] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,751 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,766 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:06:24,766 [8472] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 08:06:25,981 [12132] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 08:06:26,007 [12132] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 08:06:26,007 [12132] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 08:06:27,874 [8472] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 08:06:27,876 [8472] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 08:06:27,876 [8472] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=15,
-                                PrintedDate=04/29/2012 08:06:27,
-                                IPAddress=::1
-2012-04-29 08:07:29,317 [12000] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 08:07:29,339 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,343 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,344 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,344 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,345 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,345 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,345 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,346 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,346 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,347 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,347 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:07:29,348 [12000] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 08:07:32,187 [12000] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 08:07:32,189 [12000] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 08:07:32,189 [12000] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 08:07:35,150 [12132] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 08:07:35,151 [12132] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 08:07:35,151 [12132] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 08:07:37,141 [10276] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 08:07:37,141 [10276] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 08:07:37,141 [10276] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+2012-05-13 10:59:34,223 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 10:59:34,738 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:34,761 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:34,762 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:34,762 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:34,763 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:34,773 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:34,774 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 10:59:48,669 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 10:59:48,669 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:48,669 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:48,669 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:48,684 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:48,684 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:48,700 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 10:59:48,700 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:01:01,864 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
+2012-05-13 11:01:01,879 [12076] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
+2012-05-13 11:01:01,879 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
+2012-05-13 11:03:41,861 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
+2012-05-13 11:03:41,876 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
+2012-05-13 11:03:41,876 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
                                 CouponID=24,
-                                PrintedDate=04/29/2012 08:07:37,
+                                PrintedDate=05/13/2012 11:03:41,
                                 IPAddress=::1
-2012-04-29 08:08:55,951 [7960] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:08:55,967 [7960] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 08:08:58,354 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 08:08:58,356 [12148] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 08:08:58,356 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 08:09:00,095 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 08:09:00,096 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 08:09:00,097 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+2012-05-13 11:05:52,522 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:05:52,538 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:05:52,553 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:05:52,553 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:05:52,553 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:05:52,553 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:05:52,553 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:05:52,553 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:06:12,287 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
+2012-05-13 11:06:12,287 [12016] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
+2012-05-13 11:06:12,287 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
+2012-05-13 11:06:56,265 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
+2012-05-13 11:06:56,265 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
+2012-05-13 11:06:56,265 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
                                 CouponID=24,
-                                PrintedDate=04/29/2012 08:09:00,
+                                PrintedDate=05/13/2012 11:06:56,
                                 IPAddress=::1
-2012-04-29 08:09:38,559 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 08:09:38,622 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,637 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:09:38,653 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 08:09:40,927 [7960] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 08:09:40,927 [7960] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 08:09:40,927 [7960] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 08:09:42,967 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 08:09:42,968 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 08:09:42,970 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=24,
-                                PrintedDate=04/29/2012 08:09:42,
-                                IPAddress=::1
-2012-04-29 08:10:21,794 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:10:21,810 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 08:10:24,104 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 08:10:24,110 [12148] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 08:10:24,110 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 08:10:29,979 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 08:10:29,980 [12148] DEBUG GFCK.detail [(null)] - number of prints on couponid: 7
-2012-04-29 08:10:29,980 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 08:10:31,744 [12236] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 08:10:31,746 [12236] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 08:10:31,747 [12236] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+2012-05-13 11:42:29,639 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:42:29,889 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:42:29,904 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:42:29,904 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:42:29,904 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:42:29,920 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:42:29,920 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:42:34,538 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
+2012-05-13 11:42:34,538 [12016] DEBUG GFCK.detail [(null)] - number of prints on couponid: 7
+2012-05-13 11:42:34,538 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
+2012-05-13 11:42:37,377 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
+2012-05-13 11:42:37,377 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
+2012-05-13 11:42:37,377 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
                                 CouponID=7,
-                                PrintedDate=04/29/2012 08:10:31,
+                                PrintedDate=05/13/2012 11:42:37,
                                 IPAddress=::1
-2012-04-29 08:11:46,027 [12236] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 08:11:46,042 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,042 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,042 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,042 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,042 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,042 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,042 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,042 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,042 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,058 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,058 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,058 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:11:46,058 [12236] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 08:11:56,694 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=25
-2012-04-29 08:11:56,727 [12148] DEBUG GFCK.detail [(null)] - number of prints on couponid: 25
-2012-04-29 08:11:56,727 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=25
-2012-04-29 08:12:00,386 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=25
-2012-04-29 08:12:00,387 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=25
-2012-04-29 08:12:00,387 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=25,
-                                PrintedDate=04/29/2012 08:12:00,
-                                IPAddress=::1
-2012-04-29 08:14:47,535 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 08:14:47,551 [12148] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 08:14:49,260 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=25
-2012-04-29 08:14:49,266 [12148] DEBUG GFCK.detail [(null)] - number of prints on couponid: 25
-2012-04-29 08:14:49,266 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=25
-2012-04-29 08:14:50,587 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=25
-2012-04-29 08:14:50,587 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=25
-2012-04-29 08:14:50,588 [12148] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=25,
-                                PrintedDate=04/29/2012 08:14:50,
-                                IPAddress=::1
-2012-04-29 15:30:17,074 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 15:30:17,121 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 15:30:34,500 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 15:30:34,500 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 15:30:34,500 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 15:30:37,573 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 15:30:37,573 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 15:30:37,588 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=24,
-                                PrintedDate=04/29/2012 15:30:37,
-                                IPAddress=::1
-2012-04-29 17:32:46,783 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=18
-2012-04-29 17:32:46,783 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 18
-2012-04-29 17:32:46,783 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=18
-2012-04-29 17:37:58,313 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:37:58,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:37:58,329 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 17:38:01,043 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 17:38:01,059 [11468] DEBUG GFCK.detail [(null)] - number of prints on couponid: 17
-2012-04-29 17:38:01,059 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 17:38:08,968 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 17:38:08,968 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 17:38:08,984 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=17,
-                                PrintedDate=04/29/2012 17:38:08,
-                                IPAddress=::1
-2012-04-29 17:38:20,949 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 17:38:20,949 [11468] DEBUG GFCK.detail [(null)] - number of prints on couponid: 17
-2012-04-29 17:38:20,949 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 17:38:40,246 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 17:38:40,246 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 17:38:40,246 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=17,
-                                PrintedDate=04/29/2012 17:38:40,
-                                IPAddress=::1
-2012-04-29 17:40:58,484 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:40:58,500 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,500 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:40:58,515 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 17:41:01,124 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 17:41:01,127 [11468] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 17:41:01,127 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 17:41:02,771 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 17:41:02,772 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 17:41:02,773 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=15,
-                                PrintedDate=04/29/2012 17:41:02,
-                                IPAddress=::1
-2012-04-29 17:41:13,922 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 17:41:13,922 [11468] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 17:41:13,922 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 17:41:17,374 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 17:41:17,374 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 17:41:17,375 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=15,
-                                PrintedDate=04/29/2012 17:41:17,
-                                IPAddress=::1
-2012-04-29 17:42:43,270 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:42:43,286 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 17:42:45,985 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 17:42:45,985 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 17:42:45,985 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 17:42:47,810 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 17:42:47,825 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 17:42:47,825 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=15,
-                                PrintedDate=04/29/2012 17:42:47,
-                                IPAddress=::1
-2012-04-29 17:45:56,351 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:45:56,351 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:45:56,367 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 17:46:04,697 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 17:46:04,713 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 17
-2012-04-29 17:46:04,713 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 17:46:06,507 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 17:46:06,507 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 17:46:06,507 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=17,
-                                PrintedDate=04/29/2012 17:46:06,
-                                IPAddress=::1
-2012-04-29 17:47:03,609 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:03,625 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 17:47:06,792 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 17:47:06,792 [11468] DEBUG GFCK.detail [(null)] - number of prints on couponid: 17
-2012-04-29 17:47:06,792 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 17:47:10,676 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 17:47:10,676 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 17:47:10,676 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 17:47:15,730 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 17:47:15,746 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 17:47:15,746 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 17:47:18,601 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 17:47:18,601 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 17:47:18,601 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=24,
-                                PrintedDate=04/29/2012 17:47:18,
-                                IPAddress=::1
-2012-04-29 17:47:41,313 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:47:41,313 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,313 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,313 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,313 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,329 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,329 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,329 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,329 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,329 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,329 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,329 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,329 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:47:41,329 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 17:47:45,426 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 17:47:45,427 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 17:47:45,427 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 17:47:47,185 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 17:47:47,185 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 17:47:47,186 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=24,
-                                PrintedDate=04/29/2012 17:47:47,
-                                IPAddress=::1
-2012-04-29 17:48:19,298 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:48:19,313 [11468] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 17:48:23,443 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 17:48:23,443 [11468] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 17:48:23,443 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 17:48:26,314 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 17:48:26,314 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 7
-2012-04-29 17:48:26,314 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 17:48:27,764 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 17:48:27,764 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 17:48:27,764 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+2012-05-13 11:45:41,350 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:45:41,366 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:45:41,366 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:45:41,366 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:45:41,366 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:45:41,366 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:45:41,366 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:45:43,799 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
+2012-05-13 11:45:43,799 [12076] DEBUG GFCK.detail [(null)] - number of prints on couponid: 7
+2012-05-13 11:45:43,799 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
+2012-05-13 11:45:46,623 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
+2012-05-13 11:45:46,623 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
+2012-05-13 11:45:46,623 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
                                 CouponID=7,
-                                PrintedDate=04/29/2012 17:48:27,
+                                PrintedDate=05/13/2012 11:45:46,
                                 IPAddress=::1
-2012-04-29 17:50:05,138 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 17:50:05,138 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 7
-2012-04-29 17:50:05,138 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 17:50:06,729 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 17:50:06,729 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 17:50:06,745 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+2012-05-13 11:52:20,879 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:52:21,097 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:52:21,113 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:52:21,113 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:52:21,113 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:52:21,113 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:52:21,113 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:52:23,328 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
+2012-05-13 11:52:23,328 [12016] DEBUG GFCK.detail [(null)] - number of prints on couponid: 7
+2012-05-13 11:52:23,328 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
+2012-05-13 11:52:25,715 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
+2012-05-13 11:52:25,715 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
+2012-05-13 11:52:25,715 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
                                 CouponID=7,
-                                PrintedDate=04/29/2012 17:50:06,
+                                PrintedDate=05/13/2012 11:52:25,
                                 IPAddress=::1
-2012-04-29 17:50:15,019 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 17:50:15,020 [12880] DEBUG GFCK.detail [(null)] - number of prints on couponid: 7
-2012-04-29 17:50:15,020 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 17:50:16,400 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 17:50:16,401 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 17:50:16,402 [11468] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=7,
-                                PrintedDate=04/29/2012 17:50:16,
+2012-05-13 11:53:40,207 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:53:40,223 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:53:40,223 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:53:40,238 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:53:40,254 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:53:40,254 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:53:42,141 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=20
+2012-05-13 11:53:42,157 [12076] DEBUG GFCK.detail [(null)] - number of prints on couponid: 20
+2012-05-13 11:53:42,157 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=20
+2012-05-13 11:53:43,982 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=20
+2012-05-13 11:53:43,982 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=20
+2012-05-13 11:53:43,982 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=20,
+                                PrintedDate=05/13/2012 11:53:43,
                                 IPAddress=::1
-2012-04-29 17:51:23,131 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:23,147 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,268 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,284 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,284 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,284 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:25,284 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,182 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,198 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,198 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,198 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 17:51:30,198 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
-2012-04-29 18:03:26,860 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=
-2012-04-29 18:03:26,938 [12880] ERROR Engine.DAO.Object.CouponDAO [(null)] - Exception Occured: Exception=System.Data.SqlClient.SqlException: Procedure or function 'GetAllCouponsByCategoryID' expects parameter '@IPAddress', which was not supplied.
-   at Engine.Util.SqlDataHelper.GetDatasetByCommand(String Command) in C:\Users\Jed\GFCK\Engine\Util\SqlDataHelper.cs:line 143
-   at Engine.DAO.Object.CouponDAO.GetAllCouponsByCategory(Int32 categoryID, String filter, String searchTerm) in C:\Users\Jed\GFCK\Engine\DAO\Object\CouponDAO.cs:line 127
-2012-04-29 18:05:12,940 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:07:15,155 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:07:15,170 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:08:12,734 [11596] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=14
-2012-04-29 18:08:12,734 [11596] DEBUG GFCK.detail [(null)] - number of prints on couponid: 14
-2012-04-29 18:08:12,734 [11596] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=14
-2012-04-29 18:08:14,560 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=14
-2012-04-29 18:08:14,560 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=14
-2012-04-29 18:08:14,560 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=14,
-                                PrintedDate=04/29/2012 18:08:14,
+2012-05-13 11:54:14,796 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:54:14,796 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:54:14,796 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:54:14,796 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:54:14,796 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:54:14,796 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:54:17,557 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=20
+2012-05-13 11:54:17,557 [12016] DEBUG GFCK.detail [(null)] - number of prints on couponid: 20
+2012-05-13 11:54:17,557 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=20
+2012-05-13 11:54:19,195 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=20
+2012-05-13 11:54:19,195 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=20
+2012-05-13 11:54:19,195 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=20,
+                                PrintedDate=05/13/2012 11:54:19,
                                 IPAddress=::1
-2012-04-29 18:08:37,024 [11596] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=14
-2012-04-29 18:08:37,024 [11596] DEBUG GFCK.detail [(null)] - number of prints on couponid: 14
-2012-04-29 18:08:37,024 [11596] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=14
-2012-04-29 18:08:42,453 [11596] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=14
-2012-04-29 18:08:42,484 [11596] DEBUG GFCK.detail [(null)] - number of prints on couponid: 14
-2012-04-29 18:08:42,484 [11596] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=14
-2012-04-29 18:09:13,370 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:09:17,081 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,082 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,088 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,090 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,090 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,092 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,093 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,094 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,094 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,094 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:09:17,095 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,902 [11596] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:12:31,902 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,902 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,902 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,918 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,918 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,918 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,918 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,918 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,918 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,918 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:31,918 [11596] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:48,844 [12880] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,171 [12320] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:12:59,187 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,882 [12320] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:14:04,884 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,263 [8680] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:15:32,279 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:09,163 [8680] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:16:45,480 [12320] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=14
-2012-04-29 18:16:45,495 [12320] DEBUG GFCK.detail [(null)] - number of prints on couponid: 14
-2012-04-29 18:16:45,495 [12320] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=14
-2012-04-29 18:16:47,009 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=14
-2012-04-29 18:16:47,009 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=14
-2012-04-29 18:16:47,009 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=14,
-                                PrintedDate=04/29/2012 18:16:47,
+2012-05-13 11:54:28,065 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:54:28,069 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:54:28,069 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:54:28,069 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:54:28,070 [12016] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:54:30,048 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=21
+2012-05-13 11:54:30,049 [12016] DEBUG GFCK.detail [(null)] - number of prints on couponid: 21
+2012-05-13 11:54:30,050 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=21
+2012-05-13 11:54:32,164 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=21
+2012-05-13 11:54:32,164 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=21
+2012-05-13 11:54:32,164 [12016] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=21,
+                                PrintedDate=05/13/2012 11:54:32,
                                 IPAddress=::1
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:17:00,407 [12320] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,864 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:21:26,875 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,876 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,877 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,877 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,878 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,878 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,878 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,879 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,879 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,879 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:21:26,880 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:22:03,212 [12348] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:36:24,000 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=25
-2012-04-29 18:36:24,031 [12348] DEBUG GFCK.detail [(null)] - number of prints on couponid: 25
-2012-04-29 18:36:24,031 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=25
-2012-04-29 18:36:25,950 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=25
-2012-04-29 18:36:25,950 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=25
-2012-04-29 18:36:25,950 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=25,
-                                PrintedDate=04/29/2012 18:36:25,
+2012-05-13 11:55:41,215 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:55:41,231 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:55:41,231 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:55:41,231 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:55:41,231 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:55:42,573 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=21
+2012-05-13 11:55:42,573 [12076] DEBUG GFCK.detail [(null)] - number of prints on couponid: 21
+2012-05-13 11:55:42,573 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=21
+2012-05-13 11:55:44,382 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=21
+2012-05-13 11:55:44,382 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=21
+2012-05-13 11:55:44,382 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=21,
+                                PrintedDate=05/13/2012 11:55:44,
                                 IPAddress=::1
-2012-04-29 18:36:34,322 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=19
-2012-04-29 18:36:34,337 [12348] DEBUG GFCK.detail [(null)] - number of prints on couponid: 19
-2012-04-29 18:36:34,337 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=19
-2012-04-29 18:36:38,245 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=19
-2012-04-29 18:36:38,260 [6672] DEBUG GFCK.detail [(null)] - number of prints on couponid: 19
-2012-04-29 18:36:38,260 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=19
-2012-04-29 18:36:41,302 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=19
-2012-04-29 18:36:41,302 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=19
-2012-04-29 18:36:41,302 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=19,
-                                PrintedDate=04/29/2012 18:36:41,
+2012-05-13 11:57:37,983 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:57:37,998 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:57:37,998 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:57:37,998 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:57:37,998 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:57:40,057 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=21
+2012-05-13 11:57:40,057 [12076] DEBUG GFCK.detail [(null)] - number of prints on couponid: 21
+2012-05-13 11:57:40,057 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=21
+2012-05-13 11:57:42,491 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=21
+2012-05-13 11:57:42,491 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=21
+2012-05-13 11:57:42,491 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=21,
+                                PrintedDate=05/13/2012 11:57:42,
                                 IPAddress=::1
-2012-04-29 18:36:48,529 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=18
-2012-04-29 18:36:48,529 [12348] DEBUG GFCK.detail [(null)] - number of prints on couponid: 18
-2012-04-29 18:36:48,529 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=18
-2012-04-29 18:36:50,589 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=18
-2012-04-29 18:36:50,589 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=18
-2012-04-29 18:36:50,589 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=18,
-                                PrintedDate=04/29/2012 18:36:50,
+2012-05-13 11:58:02,131 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:58:02,161 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:58:02,165 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:58:02,165 [12076] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:58:03,801 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=22
+2012-05-13 11:58:03,803 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 22
+2012-05-13 11:58:03,803 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=22
+2012-05-13 11:58:05,657 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=22
+2012-05-13 11:58:05,658 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=22
+2012-05-13 11:58:05,658 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=22,
+                                PrintedDate=05/13/2012 11:58:05,
                                 IPAddress=::1
-2012-04-29 18:36:57,950 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 18:36:57,950 [12348] DEBUG GFCK.detail [(null)] - number of prints on couponid: 17
-2012-04-29 18:36:57,950 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 18:36:59,916 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=17
-2012-04-29 18:36:59,916 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=17
-2012-04-29 18:36:59,916 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=17,
-                                PrintedDate=04/29/2012 18:36:59,
+2012-05-13 11:59:11,805 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 11:59:11,821 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:59:11,837 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 11:59:11,837 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 11:59:13,521 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=22
+2012-05-13 11:59:13,521 [11964] DEBUG GFCK.detail [(null)] - number of prints on couponid: 22
+2012-05-13 11:59:13,521 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=22
+2012-05-13 11:59:15,159 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=22
+2012-05-13 11:59:15,159 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=22
+2012-05-13 11:59:15,159 [12076] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=22,
+                                PrintedDate=05/13/2012 11:59:15,
                                 IPAddress=::1
-2012-04-29 18:37:07,044 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 18:37:07,044 [12348] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 18:37:07,044 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 18:37:09,119 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 18:37:09,119 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 18:37:09,119 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=15,
-                                PrintedDate=04/29/2012 18:37:09,
+2012-05-13 12:02:07,208 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=22
+2012-05-13 12:02:07,208 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 22
+2012-05-13 12:02:07,208 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=22
+2012-05-13 12:34:15,373 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=22
+2012-05-13 12:34:15,529 [11964] DEBUG GFCK.detail [(null)] - number of prints on couponid: 22
+2012-05-13 12:34:15,529 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=22
+2012-05-13 12:34:20,646 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=22
+2012-05-13 12:34:20,646 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=22
+2012-05-13 12:34:20,646 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=22,
+                                PrintedDate=05/13/2012 12:34:20,
                                 IPAddress=::1
-2012-04-29 18:37:13,288 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 18:37:13,288 [6672] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 18:37:13,288 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 18:37:15,004 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 18:37:15,004 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 18:37:15,004 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=15,
-                                PrintedDate=04/29/2012 18:37:15,
+2012-05-13 12:34:36,932 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=22
+2012-05-13 12:34:36,932 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 22
+2012-05-13 12:34:36,932 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=22
+2012-05-13 12:34:41,097 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=22
+2012-05-13 12:34:41,097 [11964] DEBUG GFCK.detail [(null)] - number of prints on couponid: 22
+2012-05-13 12:34:41,097 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=22
+2012-05-13 12:35:04,872 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 12:35:04,887 [11964] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 12:35:04,934 [11964] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 12:35:07,446 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:35:07,446 [11964] DEBUG GFCK.detail [(null)] - number of prints on couponid: 23
+2012-05-13 12:35:07,446 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:35:09,427 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:35:09,427 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:35:09,427 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=23,
+                                PrintedDate=05/13/2012 12:35:09,
                                 IPAddress=::1
-2012-04-29 18:37:18,608 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 18:37:18,608 [6672] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 18:37:18,608 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 18:37:20,168 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 18:37:20,168 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 18:37:20,168 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=15,
-                                PrintedDate=04/29/2012 18:37:20,
+2012-05-13 12:36:07,459 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:36:07,459 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:36:07,459 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13
+2012-05-13 12:36:13,637 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:36:13,637 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 23
+2012-05-13 12:36:13,637 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:36:21,561 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:36:21,561 [11964] DEBUG GFCK.detail [(null)] - number of prints on couponid: 23
+2012-05-13 12:36:21,561 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:39:07,145 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 12:39:07,160 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 12:39:07,160 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 12:39:09,422 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:39:09,422 [11964] DEBUG GFCK.detail [(null)] - number of prints on couponid: 23
+2012-05-13 12:39:09,422 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:39:11,872 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:39:11,872 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:39:11,872 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=23,
+                                PrintedDate=05/13/2012 12:39:11,
                                 IPAddress=::1
-2012-04-29 18:37:29,541 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 18:37:29,541 [6672] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 18:37:29,541 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 18:37:34,673 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=15
-2012-04-29 18:37:34,673 [6672] DEBUG GFCK.detail [(null)] - number of prints on couponid: 15
-2012-04-29 18:37:34,673 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=15
-2012-04-29 18:37:40,322 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 18:37:40,322 [6672] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 18:37:40,322 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 18:37:42,932 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 18:37:42,932 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 18:37:42,932 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=24,
-                                PrintedDate=04/29/2012 18:37:42,
+2012-05-13 12:39:20,483 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:39:20,483 [11964] DEBUG GFCK.detail [(null)] - number of prints on couponid: 23
+2012-05-13 12:39:20,483 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:39:25,834 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:39:25,834 [11964] DEBUG GFCK.detail [(null)] - number of prints on couponid: 23
+2012-05-13 12:39:25,834 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:39:38,775 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 12:39:38,778 [11964] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
+2012-05-13 12:39:38,778 [11964] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 12:39:40,793 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:39:40,796 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 23
+2012-05-13 12:39:40,796 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:39:43,432 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=23
+2012-05-13 12:39:43,433 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=23
+2012-05-13 12:39:43,434 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
+                                CouponID=23,
+                                PrintedDate=05/13/2012 12:39:43,
                                 IPAddress=::1
-2012-04-29 18:37:47,612 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 18:37:47,628 [6672] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 18:37:47,628 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 18:37:49,219 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 18:37:49,219 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 18:37:49,219 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=24,
-                                PrintedDate=04/29/2012 18:37:49,
-                                IPAddress=::1
-2012-04-29 18:38:29,306 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
-2012-04-29 18:38:29,309 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:29,309 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:29,310 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:29,310 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:29,311 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:29,311 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:29,311 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:29,312 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:29,312 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:29,313 [6672] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1001
-2012-04-29 18:38:32,075 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 18:38:32,075 [12348] DEBUG GFCK.detail [(null)] - number of prints on couponid: 7
-2012-04-29 18:38:32,075 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 18:38:34,322 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=7
-2012-04-29 18:38:34,322 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=7
-2012-04-29 18:38:34,322 [12348] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=7,
-                                PrintedDate=04/29/2012 18:38:34,
-                                IPAddress=::1
-2012-04-29 18:38:42,702 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 18:38:42,702 [6672] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 18:38:42,702 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 18:38:44,948 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 18:38:44,948 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
-2012-04-29 18:38:44,948 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.AddCouponPrint: 
-                                CouponID=24,
-                                PrintedDate=04/29/2012 18:38:44,
-                                IPAddress=::1
-2012-04-29 18:38:50,268 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=24
-2012-04-29 18:38:50,268 [6672] DEBUG GFCK.detail [(null)] - number of prints on couponid: 24
-2012-04-29 18:38:50,268 [6672] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=24
+2012-05-13 12:41:09,174 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 12:41:09,190 [11964] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 12:41:12,653 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:41:12,653 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:41:12,653 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13
+2012-05-13 12:41:32,440 [11964] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 12:41:32,442 [11964] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 12:41:35,366 [11836] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:41:35,367 [11836] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:41:35,367 [11836] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13
+2012-05-13 12:41:47,976 [7400] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 12:41:47,976 [7400] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 12:41:53,139 [11836] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:41:53,139 [11836] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:41:53,139 [11836] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13
+2012-05-13 12:41:53,748 [7400] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:41:53,748 [7400] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:41:53,748 [7400] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13
+2012-05-13 12:42:08,240 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:42:08,240 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:42:08,240 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13
+2012-05-13 12:42:08,256 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:42:08,256 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:42:08,256 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13
+2012-05-13 12:42:44,445 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 12:42:44,445 [11372] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 12:42:48,891 [11836] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:42:48,891 [11836] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:42:48,891 [11836] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13
+2012-05-13 12:44:46,473 [11836] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 12:44:46,488 [11836] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 12:44:52,853 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:44:52,853 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:44:52,853 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13
+2012-05-13 12:45:02,097 [11836] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetAllCouponsByCategory: categoryID=0, filter=, searchTerm=, ipAddress=::1
+2012-05-13 12:45:02,100 [11836] DEBUG Engine.DAO.Object.MerchantDAO [(null)] - dbo.GetMerchant: MerchantID=1002
+2012-05-13 12:45:05,349 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCouponPrintsForCouponID: CouponID=13
+2012-05-13 12:45:05,350 [11372] DEBUG GFCK.detail [(null)] - number of prints on couponid: 13
+2012-05-13 12:45:05,350 [11372] DEBUG Engine.DAO.Object.CouponDAO [(null)] - dbo.GetCoupon: ID=13

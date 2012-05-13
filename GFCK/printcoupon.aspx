@@ -11,9 +11,25 @@
 	    });
 
 	    function hideAll() {
-	        $(".ui-dialog").hide();
-	        $(".ui-widget-overlay").hide();
+	        //var dialog123 = $("#cp123");
+	        //dialog123.parent().dialog('close');
+	        //$(".ui-dialog-titlebar-close").first().click();
+	        //jQuery(document).unbind('mousedown.dialog-overlay').unbind('mouseup.dialog-overlay');
+            //$(".ui-dialog").attr("style", "display:none");
+	        //$(".ui-widget-overlay").attr("style", "display:none");
+	        //dialog123.parent().next().hide();
+	        //dialog123.parent().attr('style', '');
+	        //ui-widget-overlay
+	        //dialog123.parent().html('');
+	        //$(".ui-dialog").hide();
+	        //$(".ui-widget-overlay").remove();
+	        //$(".ui-dialog-content").dialog('close');
 	    }
+        (function ($, undefined) {
+            if($.ui && $.ui.dialog){
+                $.ui.dialog.overlay.events = $.map('focus,keydown,keypress'.split(','), function(event) { return event + '.dialog-overlay'; }).join(' ');
+            }
+        }(jQuery));
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -42,7 +58,7 @@
         <!--<img src="/images/coupontest.png" />-->
         
         <div class="printthis"><br /><br /><br />
-            <img id="imgBanner" runat="server" visible="false" />
+            <img id="imgBanner" runat="server" visible="false" style="width:8in;" />
         </div>
         <!--eof content_center-->
     </div>

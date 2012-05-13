@@ -14,7 +14,7 @@
 		                var m = d.getMilliseconds();
 		                var time = min + s + m;
 
-		                var $dialog = $('<div></div>')
+		                var dialogdefault = $('<div></div>')
 			            .load($link.attr('href') + "&time=" + time)
 			            .dialog({
 			                autoOpen: false,
@@ -22,9 +22,12 @@
 			                height: 550,
 			                modal: true,
 			                resizable: false,
-			                title: 'Product Description'
+			                title: 'Product Description',
+			                position: 'top'
 			            });
-		                $dialog.dialog('open');
+			            window.parent.scrollTo(0,0);
+			            setTimeout(function () { dialogdefault.dialog('open'); }, 100);
+			            //setTimeout(function () { dialogdefault.dialog('close'); }, 1000);
 		                return false;
 		            });
 		        });
@@ -84,7 +87,7 @@
                     <ItemTemplate>
                         <uc1:CouponDisplay ID="cd" runat="server" />
                     </ItemTemplate>
-                    <FooterTemplate></div><br /><div class="page_navigation"></div></FooterTemplate>
+                    <FooterTemplate></div><br class="clearBoth" /><div class="page_navigation"></div></FooterTemplate>
                     </asp:Repeater>
             
             <!--

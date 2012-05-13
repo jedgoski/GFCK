@@ -25,7 +25,14 @@ namespace GFCK.UserControls.Coupon
             lblName.Text = Name;
             linkImage.HRef = linkSubmit.HRef = string.Format("/detail.aspx?id={0}", CouponID);
             //linkName.HRef = string.Format("/detail.aspx?id={0}", CouponID);
-            imgProduct.Src = Picture;
+            if (!String.IsNullOrEmpty(Picture))
+            {
+                imgProduct.Src = Picture;
+            }
+            else
+            {
+                imgProduct.Visible = false;
+            }
             litPrice.Text = Amount;
             litDesc.Text = Description;
         }

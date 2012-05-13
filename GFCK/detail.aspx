@@ -7,35 +7,42 @@
         var s = d.getSeconds();
         var m = d.getMilliseconds();
         var time = min + s + m;
-        var $dialog1 = $('<div id="cp123"></div>')
+        var dialog12 = $('<div id="cp123"></div>')
 			        .load('/printcoupon.aspx?time=' + time)
 			        .dialog({
-			            autoOpen: true,
+			            autoOpen: false,
 			            width: 883,
 			            modal: true,
 			            stack: true,
 			            resizable: false,
 			            title: 'Printing Coupon...',
-			            position: [0,0],
+			            position: [0, 0],
 			            close: function (event, ui) {
-			                $(this).dialog('destroy');
-			                $("#cp123").remove();
+			                //$(".ui-dialog-titlebar-close").first().click();
+
+			                //$(this).dialog('destroy');
+			                //$("#cp123").remove();
+			                $(".printme").show();
 			            }
 			        });
-                    //$("#dialog").html('');
-                    $dialog1.dialog('open');
+			        //$("#dialog").html('');
+			        //dialog12.attr("id", "dialog12");
+			        dialog12.dialog('open');
+			        setTimeout(function () { dialog12.dialog('close'); $(".printme").hide(); }, 2000);
                     //$(this).dialog('close');
                     //$dialog.dialog('close');
-    }
+			    }
 </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <div id="dialog" class="column-center-background" style="width:750px;">
+    <div id="dialog" class="column-center-background" style="width:768px;">
         <!--content_center-->
-        <div id="divPrint" runat="server">
-            <span class="printHeading" style="float:right;"><a href="#" onclick="printpage(); return false;"><img src="images/icons/print.gif" height="20px" style="margin-top:-3px" /></a></span>&nbsp;&nbsp;<span  class="printHeading" style="float:right;"><a href="#" onclick="printpage(); return false;">print coupon</a></span>
+        <div id="divPrint" class="printme" runat="server">
+            <span class="printHeading" style="float:right;color:Red;padding-left:5px;">LIMIT 3</span>
+            <span class="printHeading" style="float:right;"><a href="#" onclick="printpage(); return false;"><img src="images/icons/print.gif" height="20px" style="margin-top:-3px" /></a></span>
+            &nbsp;&nbsp;<span  class="printHeading" style="float:right;"><a href="#" onclick="printpage(); return false;">print coupon</a></span>
+            
         </div>
-        <br />
         <div class="centerColumn" id="productGeneral" style="padding: 0;">
             <!--bof Main Product Image -->
             <div id="productMainImage" class="centeredContent back">
