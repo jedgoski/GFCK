@@ -370,7 +370,6 @@
     <Content Include="images\user_menu_bg.gif" />
     <Content Include="images\user_menu_bg2.gif" />
     <Content Include="images\user_menu_box_bg.gif" />
-    <Content Include="Manufacturer\Coupons.aspx" />
     <Content Include="Manufacturer\Action.aspx" />
     <Content Include="Manufacturer\default.aspx" />
     <Content Include="Member\default.aspx" />
@@ -545,13 +544,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Manufacturer\Coupons.aspx.cs">
-      <DependentUpon>Coupons.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Manufacturer\Coupons.aspx.designer.cs">
-      <DependentUpon>Coupons.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manufacturer\Action.aspx.cs">
       <DependentUpon>Action.aspx</DependentUpon>

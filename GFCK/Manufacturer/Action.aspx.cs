@@ -82,7 +82,7 @@ namespace GFCK.Manufacturer
                 //coupon.Image = imgByte;
                 coupon.Name = txtName.Text;
                 coupon.Value = txtValue.Text;
-                coupon.Discount = txtDiscount.Text;
+                //coupon.Discount = txtDiscount.Text;
                 coupon.Details = txtDetails.Text;
                 coupon.Terms = txtTerms.Text;
                 coupon.StartDate = Convert.ToDateTime(txtStartDate.Text);
@@ -491,7 +491,7 @@ namespace GFCK.Manufacturer
                 imgCurrent.Visible = false;
             }
             txtValue.Text = coupon.Value;
-            txtDiscount.Text = coupon.Discount;
+            //txtDiscount.Text = coupon.Discount;
             txtDetails.Text = coupon.Details;
             txtTerms.Text = coupon.Terms;
             txtStartDate.Text = Convert.ToDateTime(coupon.StartDate).ToShortDateString();

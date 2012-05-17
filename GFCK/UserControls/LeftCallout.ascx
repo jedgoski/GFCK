@@ -27,12 +27,12 @@
                         <div class="background-bottom-left-4">
                             <div class="background-bottom-right-4">
                                 <div class="background-bottom-right-44">
-                                    <div class="box-indent">
+                                    <div class="box-indent" style="padding:5px;">
                                         <div class="box1_body">
                                             <div class="sideBoxContent centeredContent">
                                                 <div>
                                     <a href="#">
-                                        <img src="/images/banner2.jpg" alt="free shipping" title=" free shipping " width="90%"
+                                        <img src="/images/banner2.jpg" alt="free shipping" title=" free shipping " width="182px" height="160px"
                                             /></a></div>
                                             </div>
                                         </div>

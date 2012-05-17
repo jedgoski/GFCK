@@ -76,15 +76,6 @@ namespace GFCK.Manufacturer {
         protected global::System.Web.UI.WebControls.TextBox txtValue;
         
         /// <summary>
-        /// txtDiscount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiscount;
-        
-        /// <summary>
         /// txtName control.
         /// </summary>
         /// <remarks>
@@ -92,6 +83,15 @@ namespace GFCK.Manufacturer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtName;
+        
+        /// <summary>
+        /// txtDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDetails;
         
         /// <summary>
         /// ddlCategory control.
@@ -155,15 +155,6 @@ namespace GFCK.Manufacturer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNumberOfCoupons;
-        
-        /// <summary>
-        /// txtDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDetails;
         
         /// <summary>
         /// txtTerms control.

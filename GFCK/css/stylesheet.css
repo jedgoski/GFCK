@@ -273,7 +273,7 @@ ul{list-style-type:circle; list-style-position:inside;}
 
 .alert {
         color:#FF0000;
-        margin-left: 0.5em;
+        margin-left: 0.25em;
 		margin-right:5px;
         }
 .advisory {}

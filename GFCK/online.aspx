@@ -1,35 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Home.master" CodeBehind="online.aspx.cs" Inherits="GFCK.online" %>
-<%@ Register Src="/UserControls/Coupon/home.ascx" TagPrefix="uc1" TagName="CouponDisplay" %>
 
 <asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">
-		<script type="text/javascript">
-		    $(document).ready(function () {
-		        $('.dialog_link').each(function () {
-		            var $link = $(this);
-
-		            $link.click(function () {
-		                var d = new Date();
-		                var min = d.getMinutes();
-		                var s = d.getSeconds();
-		                var m = d.getMilliseconds();
-		                var time = min + s + m;
-
-		                var $dialog = $('<div></div>')
-			            .load($link.attr('href') + "&time=" + time)
-			            .dialog({
-			                autoOpen: false,
-			                width: 800,
-			                height: 550,
-			                modal: true,
-			                resizable: false,
-			                title: 'Product Description'
-			            });
-		                $dialog.dialog('open');
-		                return false;
-		            });
-		        });
-		    });
-		</script>
 </asp:Content>
 <asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
     <!--content_center-->
@@ -55,7 +26,7 @@
                                     <div class="title_inner5">
                                         <div class="title_inner6">
                                             <div class="title_inner7">
-                                                <h2 class="centerBoxHeading">&nbsp;</h2>
+                                                <h2 class="centerBoxHeading">Coming Soon</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -65,33 +36,8 @@
                     </div>
                 </div>
             </div>
-            <!--                                        <div class="maintep" style="margin-bottom:0px;">
-                                                    <div class="row11">
-                                                        <div class="inn1">
-                                                            <div class="inn2"><img src="/images/pixel_trans.gif" alt="" width="1" height="1" /></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row22">
-                                                        <div class="inn1">
-                                                            <div class="inn2">
- 
-            -->
-                    <asp:Repeater ID="rptCoupons" runat="server" OnItemDataBound="rptCoupons_ItemDataBound" > 
-                    <ItemTemplate>
-                        <uc1:CouponDisplay ID="cd" runat="server" />
-                    </ItemTemplate>
-                    </asp:Repeater>
-            
-            <!--
-                                                        </div>
-                                                    </div></div>
-                                                    <div class="row33">
-                                                        <div class="inn1">
-                                                            <div class="inn2"><img src="/images/pixel_trans.gif" alt="" width="1" height="1" /></div>
-                                                    </div>
-                                                </div>
-                                               </div>
--->
+
+            <!--Coming Soon-->
             <!-- eof: featured products  -->
         </div>
         <br />
