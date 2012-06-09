@@ -42,7 +42,7 @@
 
             AddRemoveError(document.getElementById('<%=txtValue.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtName.ClientID %>'));
-            AddRemoveError(document.getElementById('<%=txtDetails.ClientID %>'));
+            //AddRemoveError(document.getElementById('<%=txtDetails.ClientID %>'));
             AddRemoveErrorImage(document.getElementById('<%=imgUpload.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtStartDate.ClientID %>'));
             AddRemoveError(document.getElementById('<%=txtExpirationDate.ClientID %>'));
@@ -181,7 +181,7 @@
 <asp:TextBox ID="txtValue" runat="server" CssClass="tbsmall" Width="250px" onkeyup="RestrictSize(this, 50);" /><span class="alert">(50 characters max)</span><br class="clearBoth" /><br />
 <label class="inputLabel">Product Description:<span class="alert">*</span></label>
 <asp:TextBox ID="txtName" runat="server" CssClass="tblarge" MaxLength="100" onkeyup="RestrictSize(this, 100);" Width="350px" /><span class="alert">(100 characters max)</span><br class="clearBoth" /><br />
-<label class="inputLabel">Additional Product Info: <span class="alert" style="margin-right:0px;">*</span> <font class="alert" style="margin-right:0px;">(not displayed on coupon)</font></label>
+<label class="inputLabel">Additional Product Info: <font style="margin-right:0px;">(not displayed on coupon)</font></label>
 <asp:TextBox ID="txtDetails" runat="server" CssClass="tblarge" TextMode="MultiLine" Rows="4" Columns="50" /><br class="clearBoth" />
  <br />
  <label class="inputLabel">Category:<span class="alert">*</span></label>

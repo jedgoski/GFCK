@@ -11,9 +11,21 @@ namespace GFCK.UserControls
     {
         public bool Admin = false;
         public bool Manufacturer = false;
+        int _categoryID = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            categories.Visible = true;
+            if (Request.QueryString["c"] != null)
+            {
+                _categoryID = Convert.ToInt32(Request.QueryString["c"]);
+                if (_categoryID == 5)
+                {
+                    //don't display for restaurants(5)
+                    categories.Visible = false;
+                }
+            }
+
             if (!IsPostBack)
             {
                 string filter = (Session["filter"] == null) ? "" : Session["filter"].ToString();
@@ -69,7 +81,8 @@ namespace GFCK.UserControls
             filter = ApplyFilter(filter, chkYF.Checked, 6);
 
             Session["filter"] = filter;
-            Response.Redirect("/default.aspx");
+            string url = (_categoryID > 0) ? String.Format("/default.aspx?c={0}", _categoryID.ToString()) : "/default.aspx";
+            Response.Redirect(url);
         }
 
         private string ApplyFilter(string str, bool val, int place)
